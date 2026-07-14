@@ -1,3 +1,9 @@
+# Schedule-only pipeline: disable CI and PR triggers so it never runs (and never
+# attempts to commit/push, which requires credentials unavailable on PR builds)
+# on branch pushes or pull requests.
+trigger: none
+pr: none
+
 schedules:
 - cron: "35 16 * * *"
   displayName: 12:35 AM (UTC + 8:00) China Daily Run
