@@ -13,7 +13,8 @@ result, regression timing, workaround, and impact that the report needs. Use
 `follow_up_requirements` only for one due follow-up, then stop.
 
 For sufficient reports, resolve the current `src/<Service>` module with
-`infer_target_for_repo`. Build a clear `[Module] Summary` suggestion with
+`infer_ps_target` using only the sanitized issue view. Build a clear
+`[Module] Summary` suggestion with
 `pr_title_for(style="powershell")` and include
 `pr_format_guidance(style="powershell")`. Require a complete PR template,
 `Fixes #N`, focused tests, and the appropriate `ChangeLog.md` entry; there is
@@ -22,8 +23,12 @@ no Azure CLI-style enforced title gate.
 Include `codegen_execution_guidance` when generator-owned `*.Autorest` inputs
 or generated commands are involved. The coding agent must run the repository
 generator and provide its artifacts rather than hand-edit generated output.
-Post the evidence-based analysis and dispatch Copilot only after requirements,
-module, scope, verification, and metadata guidance are complete.
+Only after requirements, module, scope, verification, metadata guidance, and
+the complete sanitized analysis are ready, call
+`dispatch_powershell_copilot` exactly once. This compound action records
+recoverable pending analysis, assigns Copilot, and finalizes the analysis
+marker after assignment succeeds; do not post the analysis or assign Copilot
+separately.
 
 Never route this issue to Azure CLI or create an extension tracker. Never
 present a hypothesis as confirmed root cause.
