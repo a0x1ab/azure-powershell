@@ -1,0 +1,44 @@
+{
+  "Test-AzRelayName+[NoContext]+CheckExpanded+$POST+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/providers/Microsoft.Relay/checkNameAvailability?api-version=2026-07-01-preview+1": {
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/providers/Microsoft.Relay/checkNameAvailability?api-version=2026-07-01-preview",
+      "Content": "{\r\n  \"name\": \"relaynamespace-01\"\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "35" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-correlation-request-id": [ "a261bf1b-c419-4ac9-a128-b96f9e5578c8" ],
+        "x-ms-client-request-id": [ "dd76e8dd-7a1b-4796-a38a-2b95f6f38179_RP" ],
+        "x-ms-messaging-activity-id": [ "a0b6eadb-e718-4ea1-9532-bfc5691d30ed" ],
+        "x-ms-messaging-routing-id": [ "PROD|SOUTHEASTASIA|SOUTHEASTASIA|G8|2026-10-13T12:03:58" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=eea76376-6cf2-4f48-a713-64382d4b9625/southeastasia/91bc0da3-05cf-4241-9572-e9f9dbfb07a6" ],
+        "x-ms-throttling-version": [ "v2" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "1099" ],
+        "x-ms-request-id": [ "a261bf1b-c419-4ac9-a128-b96f9e5578c8" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20261013T120358Z:a261bf1b-c419-4ac9-a128-b96f9e5578c8" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 280F254AA636456698A44C56CF2CFC27 Ref B: SG2AA1040520029 Ref C: 2026-10-13T12:03:57Z" ],
+        "Date": [ "Tue, 13 Oct 2026 12:03:57 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "75" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"nameAvailable\":true,\"reason\":\"None\",\"message\":\"Namespace name available\"}",
+      "isContentBase64": false
+    }
+  }
+}

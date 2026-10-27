@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PsModuleName>Websites</PsModuleName>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Az.Test.props" />
+
+  <PropertyGroup>
+    <RootNamespace>$(LegacyAssemblyPrefix)$(PsModuleName)$(AzTestAssemblySuffix)</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Websites.Management.Sdk\Websites.Management.Sdk.csproj" />
+    <ProjectReference Include="..\Websites\Websites.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ScenarioTests\Resources\HelloJava.war">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ScenarioTests\Resources\nodejs-sample.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ScenarioTests\RoutingRuleTests.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

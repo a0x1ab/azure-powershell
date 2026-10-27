@@ -1,0 +1,15 @@
+# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+
+*.sln text eol=crlf
+*.cs text eol=crlf
+*.csproj text eol=crlf
+*.ps1 text eol=crlf
+*.psd1 text eol=crlf
+*.psm1 text eol=crlf
+*.ps1xml text eol=crlf
+build.proj text eol=crlf
+
+# Dev container scripts run in Linux containers and require LF line endings
+.devcontainer/*.ps1 text eol=lf
+.devcontainer/*.sh text eol=lf
