@@ -1,0 +1,62 @@
+### Example 1: Create a consumption PowerShell function app in Central US.
+
+```powershell
+New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                  -ResourceGroupName MyResourceGroupName `
+                  -Location centralUS `
+                  -StorageAccountName MyStorageAccountName `
+                  -Runtime PowerShell
+```
+
+This command creates a consumption PowerShell function app in Central US.
+
+### Example 2: Create a PowerShell function app which will be hosted in a service plan.
+
+
+```powershell
+New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                  -ResourceGroupName MyResourceGroupName `
+                  -PlanName MyPlanName `
+                  -StorageAccountName MyStorageAccountName `
+                  -Runtime PowerShell
+```
+
+This command creates a PowerShell function app which will be hosted in a service plan.
+
+### Example 3: Create a function app using a private ACR image.
+
+Note that the service plan and storage account must exist before this operation.
+
+```powershell
+New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                  -ResourceGroupName MyResourceGroupName `
+                  -PlanName MyPlanName `
+                  -StorageAccountName MyStorageAccountName `
+                  -DockerImageName myacr.azurecr.io/myimage:tag
+```
+
+This command creates a function app using a private ACR image.
+
+### Example 4: Create a function app on a container app.
+
+```powershell
+New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                  -ResourceGroupName MyResourceGroupName `
+                  -StorageAccountName MyStorageAccountName `
+                  -Environment MyEnvironment `
+                  -WorkloadProfileName MyWorkloadProfileName
+```
+
+This command creates a function app on a container app using the default .NET image.
+
+### Example 5: Create a PowerShell function app hosted in a Flex Consumption plan.
+
+```powershell
+New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                  -ResourceGroupName MyResourceGroupName `
+                  -FlexConsumptionLocation LocationWhereFlexConsumptionIsSupported `
+                  -StorageAccountName MyStorageAccountName `
+                  -Runtime PowerShell
+```
+
+This command creates a PowerShell function app hosted in a Flex Consumption plan.
