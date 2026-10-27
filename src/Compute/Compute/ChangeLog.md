@@ -20,6 +20,8 @@
 
 -->
 ## Upcoming Release
+* Added `-Tags` and `-Location` parameters to `New-AzSshKey` cmdlet
+* Added `-Tags` parameter to `Update-AzSshKey` cmdlet
 
 ## Version 11.3.0
 * Compute SDK generation updates:
