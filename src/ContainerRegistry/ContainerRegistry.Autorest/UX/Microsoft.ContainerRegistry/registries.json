@@ -1,0 +1,47 @@
+{
+  "resourceType": "registries",
+  "apiVersion": "2023-01-01-preview",
+  "learnMore": {
+    "url": "https://learn.microsoft.com/powershell/module/az.containerregistry"
+  },
+  "commands": [
+    {
+      "name": "Remove-AzContainerRegistry",
+      "description": "Deletes a container registry.",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.containerregistry/remove-azcontainerregistry"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-Name <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String>]"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Deletes a container registry.",
+          "parameters": [
+            {
+              "name": "-Name",
+              "value": "[Path.registryName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
