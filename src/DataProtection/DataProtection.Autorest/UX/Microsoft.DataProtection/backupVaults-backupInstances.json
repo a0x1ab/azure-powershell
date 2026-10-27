@@ -1,0 +1,138 @@
+{
+  "resourceType": "backupVaults/backupInstances",
+  "apiVersion": "2026-06-01",
+  "learnMore": {
+    "url": "https://learn.microsoft.com/powershell/module/az.dataprotection"
+  },
+  "commands": [
+    {
+      "name": "Get-AzDataProtectionBackupInstance",
+      "description": "Gets a backup instance with name in a backup vault",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}/backupInstances/{backupInstanceName}",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.dataprotection/get-azdataprotectionbackupinstance"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-Name <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String[]>]",
+              "-VaultName <String>"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Gets a backup instance with name in a backup vault",
+          "parameters": [
+            {
+              "name": "-Name",
+              "value": "[Path.backupInstanceName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            },
+            {
+              "name": "-VaultName",
+              "value": "[Path.vaultName]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Remove-AzDataProtectionBackupInstance",
+      "description": "Delete a backupInstances",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}/backupInstances/{backupInstanceName}",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.dataprotection/remove-azdataprotectionbackupinstance"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-Name <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String>]",
+              "-VaultName <String>"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Delete a backupInstances",
+          "parameters": [
+            {
+              "name": "-Name",
+              "value": "[Path.backupInstanceName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            },
+            {
+              "name": "-VaultName",
+              "value": "[Path.vaultName]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Resume-AzDataProtectionBackupInstanceProtection",
+      "description": "This operation will resume protection for a stopped backup instance",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}/backupInstances/{backupInstanceName}/resumeProtection",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.dataprotection/resume-azdataprotectionbackupinstanceprotection"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-BackupInstanceName <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String>]",
+              "-VaultName <String>"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "This operation will resume protection for a stopped backup instance",
+          "parameters": [
+            {
+              "name": "-BackupInstanceName",
+              "value": "[Path.backupInstanceName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            },
+            {
+              "name": "-VaultName",
+              "value": "[Path.vaultName]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
