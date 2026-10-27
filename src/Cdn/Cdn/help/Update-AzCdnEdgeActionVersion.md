@@ -1,5 +1,5 @@
 ---
-external help file: Az.Cdn-help.xml
+external help file:
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/update-azcdnedgeactionversion
 schema: 2.0.0
@@ -16,22 +16,21 @@ Update EdgeActionVersion resource
 ```
 Update-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
  [-SubscriptionId <String>] [-DeploymentType <String>] [-IsDefaultVersion <String>] [-Tag <Hashtable>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaJsonFilePath
 ```
 Update-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
- [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -JsonFilePath <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaJsonString
 ```
 Update-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
- [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -JsonString <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,25 +38,12 @@ Update EdgeActionVersion resource
 
 ## EXAMPLES
 
-### Example 1: Update Edge Action Version with expanded parameters
+### Example 1: Update an EdgeAction version
 ```powershell
-Update-AzCdnEdgeActionVersion -ResourceGroupName "testps-rg-da16jm" -EdgeActionName "edgeaction001" -Version "v1" -DeploymentType "zip" -IsDefaultVersion "False"
+Update-AzCdnEdgeActionVersion -ResourceGroupName testps-rg-da16jm -EdgeActionName edgeaction001 -Version v1 -DeploymentType zip -IsDefaultVersion False
 ```
 
-```output
-Name                      : v1
-Id                        : /subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/testps-rg-da16jm/providers/Microsoft.Cdn/edgeActions/edgeaction001/versions/v1
-Type                      : Microsoft.Cdn/edgeActions/versions
-Location                  : global
-ResourceGroupName         : testps-rg-da16jm
-DeploymentType            : zip
-IsDefaultVersion          : False
-ProvisioningState         : Succeeded
-ValidationStatus          : Succeeded
-LastPackageUpdateTime     : 10/27/2025 12:30:00 PM
-```
-
-Update an Edge Action Version with new configuration settings
+Updates the specified EdgeAction version.
 
 ## PARAMETERS
 

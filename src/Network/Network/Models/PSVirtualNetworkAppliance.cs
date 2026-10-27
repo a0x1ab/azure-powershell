@@ -23,14 +23,24 @@ namespace Microsoft.Azure.Commands.Network.Models
 
         public string BandwidthInGbps { get; set; }
 
+        public string PrivateIPAddressVersion { get; set; }
+
         public IList<PSVirtualNetworkApplianceIpConfiguration> IPConfigurations { get; set; }
 
         public PSSubnet Subnet { get; set; }
+
+        public PSResourceId CapacityProvider { get; set; }
 
         [JsonIgnore]
         public string SubnetText
         {
             get { return JsonConvert.SerializeObject(Subnet, Formatting.Indented, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore }); }
+        }
+
+        [JsonIgnore]
+        public string CapacityProviderText
+        {
+            get { return JsonConvert.SerializeObject(CapacityProvider, Formatting.Indented, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore }); }
         }
 
         [JsonIgnore]

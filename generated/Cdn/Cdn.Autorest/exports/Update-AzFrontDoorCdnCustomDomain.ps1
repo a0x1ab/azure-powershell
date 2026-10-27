@@ -43,6 +43,7 @@ To create the parameters described below, construct a hash table containing the 
 
 CUSTOMDOMAINUPDATEPROPERTY <IAfdDomainUpdateParameters>: The domain JSON object required for domain creation or update.
   [AzureDnsZoneId <String>]: Resource ID.
+  [MtlSettingScenario <String>]: Supported scenarios for establishing mTLS connection.
   [PropertiesPreValidatedCustomDomainResourceIdId <String>]: Resource ID.
   [TlsSetting <IAfdDomainHttpsParameters>]: The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
     CertificateType <String>: Defines the source of the SSL certificate.
@@ -53,6 +54,8 @@ CUSTOMDOMAINUPDATEPROPERTY <IAfdDomainUpdateParameters>: The domain JSON object 
     [MinimumTlsVersion <String>]: TLS protocol version that will be used for Https when cipherSuiteSetType is Customized.
     [Secret <IResourceReference>]: Resource reference to the secret. ie. subs/rg/profile/secret
       [Id <String>]: Resource ID.
+    [ServerTlsGroup <List<String>>]: Server TLS groups that will be used for Https when serverTlsGroupPolicy is Custom.
+    [ServerTlsGroupPolicy <String>]: Server TLS group policy that will be used for Https.
 
 INPUTOBJECT <ICdnIdentity>: Identity Parameter
   [CustomDomainName <String>]: Name of the domain under the profile which is unique globally.
@@ -62,7 +65,8 @@ INPUTOBJECT <ICdnIdentity>: Identity Parameter
   [Id <String>]: Resource identity path
   [OriginGroupName <String>]: Name of the origin group which is unique within the endpoint.
   [OriginName <String>]: Name of the origin which is unique within the profile.
-  [ProfileName <String>]: Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.
+  [PolicyName <String>]: The name of the CdnWebApplicationFirewallPolicy.
+  [ProfileName <String>]: Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [RouteName <String>]: Name of the routing rule.
   [RuleName <String>]: Name of the delivery rule which is unique within the endpoint.
@@ -80,7 +84,8 @@ PROFILEINPUTOBJECT <ICdnIdentity>: Identity Parameter
   [Id <String>]: Resource identity path
   [OriginGroupName <String>]: Name of the origin group which is unique within the endpoint.
   [OriginName <String>]: Name of the origin which is unique within the profile.
-  [ProfileName <String>]: Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.
+  [PolicyName <String>]: The name of the CdnWebApplicationFirewallPolicy.
+  [ProfileName <String>]: Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [RouteName <String>]: Name of the routing rule.
   [RuleName <String>]: Name of the delivery rule which is unique within the endpoint.
@@ -99,6 +104,8 @@ TLSSETTING <IAfdDomainHttpsParameters>: The configuration specifying how to enab
   [MinimumTlsVersion <String>]: TLS protocol version that will be used for Https when cipherSuiteSetType is Customized.
   [Secret <IResourceReference>]: Resource reference to the secret. ie. subs/rg/profile/secret
     [Id <String>]: Resource ID.
+  [ServerTlsGroup <List<String>>]: Server TLS groups that will be used for Https when serverTlsGroupPolicy is Custom.
+  [ServerTlsGroupPolicy <String>]: Server TLS group policy that will be used for Https.
 .Link
 https://learn.microsoft.com/powershell/module/az.cdn/update-azfrontdoorcdncustomdomain
 #>
@@ -113,7 +120,7 @@ param(
     [Parameter(ParameterSetName='UpdateViaJsonString', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Category('Path')]
     [System.String]
-    # Name of the domain under the profile which is unique globally
+    # Name of the domain under the profile which is unique globally.
     ${CustomDomainName},
 
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
@@ -121,7 +128,7 @@ param(
     [Parameter(ParameterSetName='UpdateViaJsonString', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Category('Path')]
     [System.String]
-    # Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.
+    # Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.
     ${ProfileName},
 
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
@@ -163,6 +170,15 @@ param(
     [System.String]
     # Resource ID.
     ${AzureDnsZoneId},
+
+    [Parameter(ParameterSetName='UpdateExpanded')]
+    [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
+    [Parameter(ParameterSetName='UpdateViaIdentityProfileExpanded')]
+    [Microsoft.Azure.PowerShell.Cmdlets.Cdn.PSArgumentCompleterAttribute("ClientCertificateRequiredAndValidated", "ClientCertificateRequiredAndOriginValidates", "ClientCertificateValidatedIfPresented", "CompleteMtlsPassthroughToOrigin")]
+    [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Category('Body')]
+    [System.String]
+    # Supported scenarios for establishing mTLS connection.
+    ${MtlSettingScenario},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
@@ -259,6 +275,36 @@ param(
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
 )
+
+dynamicparam {
+    $parameterSet = $PSCmdlet.ParameterSetName
+    $mapping = @{
+        UpdateExpanded = 'Az.Cdn.private\Update-AzFrontDoorCdnCustomDomain_UpdateExpanded';
+        UpdateViaIdentityExpanded = 'Az.Cdn.private\Update-AzFrontDoorCdnCustomDomain_UpdateViaIdentityExpanded';
+        UpdateViaIdentityProfile = 'Az.Cdn.private\Update-AzFrontDoorCdnCustomDomain_UpdateViaIdentityProfile';
+        UpdateViaIdentityProfileExpanded = 'Az.Cdn.private\Update-AzFrontDoorCdnCustomDomain_UpdateViaIdentityProfileExpanded';
+        UpdateViaJsonFilePath = 'Az.Cdn.private\Update-AzFrontDoorCdnCustomDomain_UpdateViaJsonFilePath';
+        UpdateViaJsonString = 'Az.Cdn.private\Update-AzFrontDoorCdnCustomDomain_UpdateViaJsonString';
+    }
+    if (-not $mapping.ContainsKey($parameterSet)) { $parameterSet = @($mapping.Keys)[0] }
+    try {
+        $targetCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet -bor [System.Management.Automation.CommandTypes]::Function, $PSBoundParameters)
+        $dynamicParams = @($targetCmd.Parameters.GetEnumerator() | Microsoft.PowerShell.Core\Where-Object { $_.Value.IsDynamic })
+        if ($dynamicParams.Length -gt 0) {
+            $paramDictionary = [System.Management.Automation.RuntimeDefinedParameterDictionary]::new()
+            foreach ($param in $dynamicParams) {
+                $param = $param.Value
+                if (-not $MyInvocation.MyCommand.Parameters.ContainsKey($param.Name)) {
+                    $dynParam = [System.Management.Automation.RuntimeDefinedParameter]::new($param.Name, $param.ParameterType, $param.Attributes)
+                    $paramDictionary.Add($param.Name, $dynParam)
+                }
+            }
+            return $paramDictionary
+        }
+    } catch {
+        throw
+    }
+}
 
 begin {
     try {

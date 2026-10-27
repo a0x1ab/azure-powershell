@@ -61,11 +61,18 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models
         [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Origin(Microsoft.Azure.PowerShell.Cmdlets.Cdn.PropertyOrigin.Owned)]
         public string OriginName { get => this._originName; set => this._originName = value; }
 
+        /// <summary>Backing field for <see cref="PolicyName" /> property.</summary>
+        private string _policyName;
+
+        /// <summary>The name of the CdnWebApplicationFirewallPolicy.</summary>
+        [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Origin(Microsoft.Azure.PowerShell.Cmdlets.Cdn.PropertyOrigin.Owned)]
+        public string PolicyName { get => this._policyName; set => this._policyName = value; }
+
         /// <summary>Backing field for <see cref="ProfileName" /> property.</summary>
         private string _profileName;
 
         /// <summary>
-        /// Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.
+        /// Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Origin(Microsoft.Azure.PowerShell.Cmdlets.Cdn.PropertyOrigin.Owned)]
         public string ProfileName { get => this._profileName; set => this._profileName = value; }
@@ -212,8 +219,19 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models
         SerializedName = @"originName",
         PossibleTypes = new [] { typeof(string) })]
         string OriginName { get; set; }
+        /// <summary>The name of the CdnWebApplicationFirewallPolicy.</summary>
+        [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Runtime.Info(
+        Required = false,
+        ReadOnly = false,
+        Read = true,
+        Create = true,
+        Update = true,
+        Description = @"The name of the CdnWebApplicationFirewallPolicy.",
+        SerializedName = @"policyName",
+        PossibleTypes = new [] { typeof(string) })]
+        string PolicyName { get; set; }
         /// <summary>
-        /// Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.
+        /// Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.Cdn.Runtime.Info(
         Required = false,
@@ -221,7 +239,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.",
+        Description = @"Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.",
         SerializedName = @"profileName",
         PossibleTypes = new [] { typeof(string) })]
         string ProfileName { get; set; }
@@ -332,8 +350,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models
         string OriginGroupName { get; set; }
         /// <summary>Name of the origin which is unique within the profile.</summary>
         string OriginName { get; set; }
+        /// <summary>The name of the CdnWebApplicationFirewallPolicy.</summary>
+        string PolicyName { get; set; }
         /// <summary>
-        /// Name of the Azure Front Door Standard or Azure Front Door Premium which is unique within the resource group.
+        /// Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is unique within the resource group.
         /// </summary>
         string ProfileName { get; set; }
         /// <summary>The name of the resource group. The name is case insensitive.</summary>

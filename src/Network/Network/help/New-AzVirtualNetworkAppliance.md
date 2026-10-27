@@ -14,8 +14,10 @@ Creates a new Virtual Network Appliance (VNA) resource.
 
 ```
 New-AzVirtualNetworkAppliance -Name <String> -ResourceGroupName <String> -Location <String> -SubnetId <String>
- -Bandwidth <String> [-Tag <Hashtable>] [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Bandwidth <String> [-PrivateIPAddressVersion <String>] [-CapacityProviderId <String>] [-Tag <Hashtable>]
+ [-Force] [-AsJob] 
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +43,31 @@ New-AzVirtualNetworkAppliance -Name "myVNA" -ResourceGroupName "myResourceGroup"
 
 Creates a new Virtual Network Appliance with 100 Gbps bandwidth and a tag.
 
+### Example 3: Create a Virtual Network Appliance that uses another VNA as a capacity provider
+```powershell
+$subnet = Get-AzVirtualNetworkSubnetConfig -Name "VirtualNetworkApplianceSubnet" -VirtualNetwork (Get-AzVirtualNetwork -Name "myVnet" -ResourceGroupName "myResourceGroup")
+$provider = Get-AzVirtualNetworkAppliance -Name "myProviderVNA" -ResourceGroupName "myResourceGroup"
+New-AzVirtualNetworkAppliance -Name "myVNA" -ResourceGroupName "myResourceGroup" -Location "eastus" -SubnetId $subnet.Id -Bandwidth "0" -CapacityProviderId $provider.Id
+```
+
+Creates a new Virtual Network Appliance that draws its bandwidth capacity from another Virtual Network Appliance.
+
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Run cmdlet in the background
@@ -59,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bandwidth
-Bandwidth of the Virtual Network Appliance in Gbps. Valid values are: 50, 100, 200.
+Bandwidth of the Virtual Network Appliance in Gbps.
 
 ```yaml
 Type: System.String
@@ -70,6 +96,36 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CapacityProviderId
+The resource ID of another Virtual Network Appliance to use as the capacity provider for this Virtual Network Appliance.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -127,6 +183,22 @@ Parameter Sets: (All)
 Aliases: ResourceName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PrivateIPAddressVersion
+Whether the Virtual Network Appliance is IPv4 or Dual Stack. Default is IPv4. Possible values: IPv4, DualStack.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: IPv4, DualStack
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

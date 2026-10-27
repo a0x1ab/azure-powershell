@@ -1,5 +1,5 @@
 ---
-external help file: Az.Cdn-help.xml
+external help file:
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/update-azcdnedgeaction
 schema: 2.0.0
@@ -16,21 +16,21 @@ Update EdgeAction resource
 ```
 Update-AzCdnEdgeAction -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-SkuName <String>] [-SkuTier <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaJsonFilePath
 ```
-Update-AzCdnEdgeAction -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzCdnEdgeAction -Name <String> -ResourceGroupName <String> -JsonFilePath <String>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpdateViaJsonString
 ```
-Update-AzCdnEdgeAction -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzCdnEdgeAction -Name <String> -ResourceGroupName <String> -JsonString <String>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,33 +38,12 @@ Update EdgeAction resource
 
 ## EXAMPLES
 
-### Example 1: Update Edge Action tags
+### Example 1: Update EdgeAction tags
 ```powershell
-$tags = @{"Environment" = "Staging"; "Owner" = "Team2"}
-Update-AzCdnEdgeAction -ResourceGroupName testps-rg-da16jm -Name edgeaction001 -Tag $tags
+Update-AzCdnEdgeAction -ResourceGroupName testps-rg-da16jm -EdgeActionName edgeaction001 -Tag @{Environment="Staging"}
 ```
 
-```output
-Location Name          Kind ResourceGroupName
--------- ----          ---- -----------------
-Global   edgeaction001      testps-rg-da16jm
-```
-
-Update an Edge Action's tags under the resource group
-
-### Example 2: Update Edge Action using JSON string
-```powershell
-$jsonString = '{"tags":{"Environment":"Development","Team":"DevOps"}}'
-Update-AzCdnEdgeAction -ResourceGroupName testps-rg-da16jm -Name edgeaction001 -JsonString $jsonString
-```
-
-```output
-Location Name          Kind ResourceGroupName
--------- ----          ---- -----------------
-Global   edgeaction001      testps-rg-da16jm
-```
-
-Update an Edge Action using JSON string configuration
+Updates tags on the specified EdgeAction resource.
 
 ## PARAMETERS
 

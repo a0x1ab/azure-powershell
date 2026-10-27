@@ -1,5 +1,5 @@
 ---
-external help file: Az.Cdn-help.xml
+external help file:
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/update-azcdnedgeactionexecutionfilter
 schema: 2.0.0
@@ -17,22 +17,21 @@ Update EdgeActionExecutionFilter resource
 Update-AzCdnEdgeActionExecutionFilter -EdgeActionName <String> -ExecutionFilter <String>
  -ResourceGroupName <String> [-SubscriptionId <String>] [-ExecutionFilterIdentifierHeaderName <String>]
  [-ExecutionFilterIdentifierHeaderValue <String>] [-Tag <Hashtable>] [-VersionId <String>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaJsonFilePath
 ```
 Update-AzCdnEdgeActionExecutionFilter -EdgeActionName <String> -ExecutionFilter <String>
- -ResourceGroupName <String> [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -ResourceGroupName <String> -JsonFilePath <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaJsonString
 ```
 Update-AzCdnEdgeActionExecutionFilter -EdgeActionName <String> -ExecutionFilter <String>
- -ResourceGroupName <String> [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -ResourceGroupName <String> -JsonString <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,24 +39,12 @@ Update EdgeActionExecutionFilter resource
 
 ## EXAMPLES
 
-### Example 1: Update Edge Action Execution Filter with expanded parameters
+### Example 1: Update an EdgeAction execution filter
 ```powershell
-Update-AzCdnEdgeActionExecutionFilter -ResourceGroupName "testps-rg-da16jm" -EdgeActionName "edgeaction001" -ExecutionFilter "filter001" -ExecutionFilterIdentifierHeaderName "X-Updated-Filter" -ExecutionFilterIdentifierHeaderValue "UpdatedValue"
+Update-AzCdnEdgeActionExecutionFilter -ResourceGroupName testps-rg-da16jm -EdgeActionName edgeaction001 -ExecutionFilter filter001 -ExecutionFilterIdentifierHeaderName "X-Updated-Filter" -ExecutionFilterIdentifierHeaderValue "UpdatedValue"
 ```
 
-```output
-Name                                  : filter001
-Id                                    : /subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/testps-rg-da16jm/providers/Microsoft.Cdn/edgeActions/edgeaction001/executionFilters/filter001
-Type                                  : Microsoft.Cdn/edgeActions/executionFilters
-Location                              : global
-ResourceGroupName                     : testps-rg-da16jm
-ProvisioningState                     : Succeeded
-ExecutionFilterIdentifierHeaderName  : X-Updated-Filter
-ExecutionFilterIdentifierHeaderValue : UpdatedValue
-LastUpdateTime                        : 10/27/2025 12:30:00 PM
-```
-
-Update an Edge Action Execution Filter with new header configuration
+Updates the specified EdgeAction execution filter.
 
 ## PARAMETERS
 

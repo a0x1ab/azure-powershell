@@ -1,5 +1,5 @@
 ---
-external help file: Az.Cdn-help.xml
+external help file:
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/remove-azcdnedgeactionversion
 schema: 2.0.0
@@ -14,8 +14,8 @@ Delete EdgeActionVersion resource
 
 ```
 Remove-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
- [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,16 +23,12 @@ Delete EdgeActionVersion resource
 
 ## EXAMPLES
 
-### Example 1: Remove an Edge Action Version
+### Example 1: Remove an EdgeAction version
 ```powershell
-Remove-AzCdnEdgeActionVersion -ResourceGroupName "testps-rg-da16jm" -EdgeActionName "edgeaction001" -Version "v1"
+Remove-AzCdnEdgeActionVersion -ResourceGroupName testps-rg-da16jm -EdgeActionName edgeaction001 -Version v1
 ```
 
-```output
-True
-```
-
-Remove a specific Edge Action Version
+Removes the specified EdgeAction version.
 
 ## PARAMETERS
 

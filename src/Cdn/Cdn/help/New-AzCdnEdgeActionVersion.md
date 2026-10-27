@@ -1,5 +1,5 @@
 ---
-external help file: Az.Cdn-help.xml
+external help file:
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/new-azcdnedgeactionversion
 schema: 2.0.0
@@ -15,23 +15,23 @@ Create EdgeActionVersion version
 ### CreateExpanded (Default)
 ```
 New-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
- [-SubscriptionId <String>] -Location <String> [-DeploymentType <String>] [-IsDefaultVersion <String>]
- [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Location <String> [-SubscriptionId <String>] [-DeploymentType <String>] [-IsDefaultVersion <String>]
+ [-ProvisioningState <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaJsonFilePath
 ```
 New-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
- [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -JsonFilePath <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaJsonString
 ```
 New-AzCdnEdgeActionVersion -EdgeActionName <String> -ResourceGroupName <String> -Version <String>
- [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -JsonString <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,25 +39,12 @@ Create EdgeActionVersion version
 
 ## EXAMPLES
 
-### Example 1: Create a new Edge Action Version
+### Example 1: Create an EdgeAction version
 ```powershell
-New-AzCdnEdgeActionVersion -ResourceGroupName "testps-rg-da16jm" -EdgeActionName "edgeaction001" -Version "v1" -Location "global" -DeploymentType "zip" -IsDefaultVersion "True"
+New-AzCdnEdgeActionVersion -ResourceGroupName testps-rg-da16jm -EdgeActionName edgeaction001 -Version v1 -Location global -DeploymentType zip -IsDefaultVersion True
 ```
 
-```output
-Name                      : v1
-Id                        : /subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/testps-rg-da16jm/providers/Microsoft.Cdn/edgeActions/edgeaction001/versions/v1
-Type                      : Microsoft.Cdn/edgeActions/versions
-Location                  : global
-ResourceGroupName         : testps-rg-da16jm
-DeploymentType            : zip
-IsDefaultVersion          : True
-ProvisioningState         : Succeeded
-ValidationStatus          : Succeeded
-LastPackageUpdateTime     : 10/27/2025 12:00:00 PM
-```
-
-Create a new Edge Action Version under the specified Edge Action
+Creates a version for the specified EdgeAction.
 
 ## PARAMETERS
 
@@ -188,6 +175,21 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProvisioningState
+The provisioning state
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False

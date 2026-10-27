@@ -32,5 +32,21 @@ namespace Commands.Network.Test.ScenarioTests
         {
             TestRunner.RunTestScript("Test-VirtualNetworkApplianceCRUD");
         }
+
+        [Fact]
+        [Trait(Category.AcceptanceType, Category.CheckIn)]
+        [Trait(Category.Owner, NrpTeamAlias.nvadev)]
+        public void TestVirtualNetworkApplianceDualStack()
+        {
+            TestRunner.RunTestScript("Test-VirtualNetworkApplianceDualStack");
+        }
+
+        [Fact]
+        [Trait(Category.AcceptanceType, Category.CheckIn)]
+        [Trait(Category.Owner, NrpTeamAlias.nvadev)]
+        public void TestVirtualNetworkApplianceCapacityProvider()
+        {
+            TestRunner.RunTestScript("Test-VirtualNetworkApplianceCapacityProvider");
+        }
     }
 }
