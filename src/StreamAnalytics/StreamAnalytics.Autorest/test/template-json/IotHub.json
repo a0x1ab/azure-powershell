@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "type": "Stream",
+    "serialization": {
+      "type": "Json",
+      "properties": {
+        "encoding": "UTF8"
+      }
+    },
+    "compression": {
+      "type": "None"
+    },
+    "partitionKey": "",
+    "datasource": {
+      "type": "Microsoft.Devices/IotHubs",
+      "properties": {
+        "iotHubNamespace": "iothubpsmaqx",
+        "sharedAccessPolicyName": "iothubowner",
+        "sharedAccessPolicyKey": "REDACTED",
+        "consumerGroupName": "$Default",
+        "endpoint": "messages/events"
+      }
+    }
+  }
+}
