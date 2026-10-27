@@ -18,6 +18,7 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+* Added examples for New-AzDataMigrationToSqlManagedInstance cmdlet
 
 ## Version 0.15.0
 * Bumped up data migration API to 2025-03-15-preview
