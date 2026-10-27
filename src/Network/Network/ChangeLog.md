@@ -19,6 +19,9 @@
 --->
 
 ## Upcoming Release
+* Added address prefix set management for application security groups
+    - Added `Get-AzAddressPrefixSet`, `New-AzAddressPrefixSet`, `Set-AzAddressPrefixSet`, and `Remove-AzAddressPrefixSet`
+    - Supports IPv4 and IPv6 prefixes in Classless Inter-Domain Routing (CIDR) notation
 * Added IPv6 support to Virtual Hub and Hub Virtual Network Connection cmdlets
     - `New-AzVirtualHub`: Added `-AddressPrefixV6` parameter to specify the IPv6 address prefix for the VirtualHub.
     - `Update-AzVirtualHub`: Added `-AddressPrefixV6` parameter to update the IPv6 address prefix for the VirtualHub.
