@@ -1,0 +1,68 @@
+<!--
+    Please leave this section at the top of the change log.
+
+    Changes for the upcoming release should go under the section titled "Upcoming Release", and should adhere to the following format:
+
+    ## Upcoming Release
+    * Overview of change #1
+        - Additional information about change #1
+    * Overview of change #2
+        - Additional information about change #2
+        - Additional information about change #2
+    * Overview of change #3
+    * Overview of change #4
+        - Additional information about change #4
+
+    ## YYYY.MM.DD - Version X.Y.Z (Previous Release)
+    * Overview of change #1
+        - Additional information about change #1
+-->
+## Upcoming Release
+* Upgraded API version to 2025-10-01-preview
+* Added `Invoke-AzDnsResolverBulkDnsResolverDomainList` for bulk domain upload
+* Upgraded code generator. See [details](https://go.microsoft.com/fwlink/?linkid=2340249).
+* Removed `-ActionBlockResponseCode` from `New/Update-AzDnsResolverPolicyDnsSecurityRule`
+* Changed `-DnsResolverDomainList` to optional on `New-AzDnsResolverPolicyDnsSecurityRule` (supports `ManagedDomainList`)
+* Changed `-Domain` to optional on `New-AzDnsResolverDomainList` (supports bulk upload)
+
+
+## Version 1.2.4
+* Fixed misleading breaking change warning on `New-AzDnsResolverDomainList` that incorrectly stated the cmdlet was being deprecated
+    - The cmdlet displayed "The cmdlet is being deprecated. There will be no replacement for it." when the intent was only to announce that the `Domain` parameter is no longer mandatory
+    - `New-AzDnsResolverDomainList` are now able to create domain lists without domains.
+
+## Version 1.2.3
+* Added announcement for upcoming breaking changes as part of the 2025-10-01-preview API migration:
+    - Removed parameter `ActionBlockResponseCode` from `New-AzDnsResolverPolicyDnsSecurityRule` and `Update-AzDnsResolverPolicyDnsSecurityRule`. The block response code is no longer configurable.
+    - Parameter `DnsResolverDomainList` is no longer mandatory on `New-AzDnsResolverPolicyDnsSecurityRule`. DNS security rules will support managed domain lists as an alternative to user-defined domain lists.
+    - Parameter `Domain` is no longer mandatory on `New-AzDnsResolverDomainList`. Domain lists will support bulk upload via the new cmdlet `Invoke-AzDnsResolverBulkDnsResolverDomainList`, which will be introduced in the upcoming release.
+
+## Version 1.2.1
+* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229
+
+## Version 1.1.1
+* Upgraded nuget package to signed package.
+
+## Version 1.1.0
+* Added 4 new DNS Resolver Policy (DNS Security Policy) resources into the cmdlets
+    - DNS Resolver Policy (DNS Security Policy)
+    - DNS Security Rule
+    - DNS Resolver Policy Link (DNS Security Policy Link)
+    - DNS Resolver Domain List
+
+## Version 1.0.0
+* General availability for module Az.DnsResolver
+
+## Version 0.2.2
+* Introduced secrets detection feature to safeguard sensitive data.
+
+## Version 0.2.1
+* Reformatted exception message for cmdlets
+* Upgraded API version to 2022-07-01
+
+## Version 0.2.0
+* Preview release for module Az.DnsResolver
+
+## Version 0.1.0
+* First preview release for module Az.DnsResolver
+
