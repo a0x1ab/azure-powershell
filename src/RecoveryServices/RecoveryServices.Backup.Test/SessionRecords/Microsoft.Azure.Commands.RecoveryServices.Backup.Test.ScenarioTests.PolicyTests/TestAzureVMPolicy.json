@@ -1,0 +1,1169 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault?api-version=2026-07-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdD9hcGktdmVyc2lvbj0yMDI2LTA3LTAx",
+      "RequestMethod": "PUT",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "25c06ad0-1ab2-4934-91d2-411880398487"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.RecoveryServicesClient/7.14.0"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "548"
+        ]
+      },
+      "RequestBody": "{\r\n  \"properties\": {\r\n    \"publicNetworkAccess\": \"Enabled\",\r\n    \"costManagementSettings\": {\r\n      \"granularityLevel\": \"VaultLevel\"\r\n    },\r\n    \"securitySettings\": {\r\n      \"softDeleteSettings\": {\r\n        \"softDeleteState\": \"AlwaysON\",\r\n        \"softDeleteRetentionPeriodInDays\": 14,\r\n        \"enhancedSecurityState\": \"AlwaysON\"\r\n      }\r\n    }\r\n  },\r\n  \"sku\": {\r\n    \"name\": \"Standard\"\r\n  },\r\n  \"tags\": {\r\n    \"DeleteBy\": \"06-2099\",\r\n    \"Owner\": \"hiaga\",\r\n    \"Purpose\": \"Testing\",\r\n    \"MABUsed\": \"Yes\"\r\n  },\r\n  \"location\": \"centraluseuap\"\r\n}",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Retry-After": [
+          "60"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/f20a1aa7-de9f-4b34-bc35-ac1d19f51c3f"
+        ],
+        "Azure-AsyncOperation": [
+          "https://management.azure.com/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationStatus/MjA0NzsyZTEzZDNmYS1jOTcxLTRhYTQtYWUzMi1kMWJiNWEwN2FmMDU=?api-version=2026-07-01&t=639232529725626993&c=MIIH9TCCBt2gAwIBAgIRAPDa4C9JdpzDdl9yhvBcNtYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgRVUyQyBDQSAwMTAeFw0yNjA3MjAyMzA3MDRaFw0yNzAxMTYwNTA3MDRaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMG_1TlJEDKMeYOsWAHT_Jh_858a_gwgniwC3IPJ45K5JPiptb0NYk7IMNebwt4Lbo4PdyRC_Fw808v2nC4J76i561Tdv2539uNEBY-vdQ5CPd35_ZLt-kS9H1h-Qc288K1Ug7SPSoZXt0tKFxm_X85t3YZdcuNYqYxk9q1s0Lu0WYniiDqX_DqZ1csPfyHgtEZc8vBSVl5fIh3LKnH3pw7yPbYmUGuvgO0bYmXc9rT1HGyFIM5zqJFVUMQbtjM273_hVQHMoy-ZVo8lv63sa2iU3VPHMEKJZ7Q9DPsGpJ0Ir-SMT8c69lXO7Wv-0y64CjlMZ8sLZOQidVPRKRQ3NQIDAQABo4IE8jCCBO4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUxRuFdzygTcCV5LvwnnSoeHAkhgEwHwYDVR0jBBgwFoAUz1EBqulDLGR2G0rwqsDykvhPw7swggHiBgNVHR8EggHZMIIB1TB1oHOgcYZvaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHegdaBzhnFodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyZXVhcC9jcmxzL2NjbWVlYXN0dXMyZXVhcHBraS9jY21lZWFzdHVzMmV1YXBpY2EwMS8zMC9jdXJyZW50LmNybDBmoGSgYoZgaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHugeaB3hnVodHRwOi8vY2NtZWVhc3R1czJldWFwcGtpLmVhc3R1czJldWFwLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJldWFwaWNhMDEvMzAvY3VycmVudC5jcmwwggHnBggrBgEFBQcBAQSCAdkwggHVMHgGCCsGAQUFBzAChmxodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwegYIKwYBBQUHMAKGbmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NhY2VydHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxL2NlcnQuY2VyMGkGCCsGAQUFBzAChl1odHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwcgYIKwYBBQUHMAKGZmh0dHA6Ly9jY21lZWFzdHVzMmV1YXBwa2kuZWFzdHVzMmV1YXAucGtpLmNvcmUud2luZG93cy5uZXQvY2VydGlmaWNhdGVBdXRob3JpdGllcy9jY21lZWFzdHVzMmV1YXBpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAm_gG_aSFikQfKF1IihOsfb6ZC4HFwKTGTh9Tq2Q0aiNHYrBKXvt2I5g-ZgV6EgMQ0or8btON08OrF2RQyXvT5C3tzv2WieKoM10xg_sHAMc1b0fhPMkcvWaCIcLZGbba9Qy0r2dpHd9KhYYz6U_JGtyoIC9Iwh3bj37AVBl2SzFKlq2bA0OsyoSd_h3qctXLNp8nFxfb6P7oBH1SDet_Yq2MCWezL87XbwmX-TESzwh_K5_pwCNgjbdui7Ym5hGLZaWEX6Q6HnkzgycnHt0_uqr5RcOpsGOSsW0tRnxAwnHWygcsKwBZO9O7gbREhyxtVQdJWSJtjT_fu3G6zqHtrQ&s=QCAGPKBDiq5pMILZngULl8gic4NSEV0IB4LdXXjSjDUKrmPlCjvkuMoU1OYX5naXhNClfoylrdHvnAonuPzEdmzTIuwXXIFrrbO4blqXp7pLdpKHl8pzKbBB_ItbYMhrWH-KyDOatTbPdKLCp5tfA9h4zDRlB_pEkG8HUkVy8gzVFAoJsW6JdfdNNKgbcz_OZJVsWv04Oj6wdVD-03pr8w64CLLLrksfmq-w9ljWSM8GxiX24k_6a48yfwbkgPtnZ_KgWtyY4Og96c0htTTjOhFpyZADUkMIzB03cN3-QFvLlwGIH6zicXSN3dLOK5GdLk9i3V54uU3xeSiicv76JA&h=VHwAPSly0518PypLdC3WQV1KCWftg1bO4yTWpWxyHrg"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "43e97ad0-ecb1-4426-a8aa-71969d86bd7c"
+        ],
+        "x-ms-client-request-id": [
+          "25c06ad0-1ab2-4934-91d2-411880398487"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "799"
+        ],
+        "x-ms-correlation-request-id": [
+          "43e97ad0-ecb1-4426-a8aa-71969d86bd7c"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T110932Z:43e97ad0-ecb1-4426-a8aa-71969d86bd7c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 45A73DAEE4684C4BA800AFD297E3CA4A Ref B: PNQ231110908029 Ref C: 2026-08-25T11:09:31Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:09:32 GMT"
+        ],
+        "Content-Length": [
+          "1176"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"location\": \"centraluseuap\",\r\n  \"name\": \"ps-test-runtime-vault\",\r\n  \"etag\": \"W/\\\"datetime'2026-08-25T11%3A09%3A32.3606885Z'\\\"\",\r\n  \"tags\": {\r\n    \"DeleteBy\": \"06-2099\",\r\n    \"Owner\": \"hiaga\",\r\n    \"Purpose\": \"Testing\",\r\n    \"MABUsed\": \"Yes\"\r\n  },\r\n  \"properties\": {\r\n    \"provisioningState\": \"Provisioning\",\r\n    \"privateEndpointStateForBackup\": \"None\",\r\n    \"privateEndpointStateForSiteRecovery\": \"None\",\r\n    \"costManagementSettings\": {\r\n      \"granularityLevel\": \"VaultLevel\"\r\n    },\r\n    \"securitySettings\": {\r\n      \"softDeleteSettings\": {\r\n        \"softDeleteRetentionPeriodInDays\": 14,\r\n        \"softDeleteState\": \"AlwaysON\",\r\n        \"enhancedSecurityState\": \"AlwaysON\"\r\n      },\r\n      \"multiUserAuthorization\": \"Invalid\",\r\n      \"sourceScanConfiguration\": {\r\n        \"state\": \"Disabled\"\r\n      }\r\n    },\r\n    \"redundancySettings\": {\r\n      \"standardTierStorageRedundancy\": \"GeoRedundant\",\r\n      \"crossRegionRestore\": \"Disabled\"\r\n    },\r\n    \"regionOfChoiceSettings\": {\r\n      \"status\": \"Disabled\"\r\n    },\r\n    \"secureScore\": \"Adequate\",\r\n    \"bcdrSecurityLevel\": \"Good\",\r\n    \"publicNetworkAccess\": \"Enabled\",\r\n    \"restoreSettings\": {\r\n      \"crossSubscriptionRestoreSettings\": {\r\n        \"crossSubscriptionRestoreState\": \"Enabled\"\r\n      }\r\n    }\r\n  },\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults\",\r\n  \"sku\": {\r\n    \"name\": \"Standard\"\r\n  }\r\n}",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationStatus/MjA0NzsyZTEzZDNmYS1jOTcxLTRhYTQtYWUzMi1kMWJiNWEwN2FmMDU=?api-version=2026-07-01&t=639232529725626993&c=MIIH9TCCBt2gAwIBAgIRAPDa4C9JdpzDdl9yhvBcNtYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgRVUyQyBDQSAwMTAeFw0yNjA3MjAyMzA3MDRaFw0yNzAxMTYwNTA3MDRaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMG_1TlJEDKMeYOsWAHT_Jh_858a_gwgniwC3IPJ45K5JPiptb0NYk7IMNebwt4Lbo4PdyRC_Fw808v2nC4J76i561Tdv2539uNEBY-vdQ5CPd35_ZLt-kS9H1h-Qc288K1Ug7SPSoZXt0tKFxm_X85t3YZdcuNYqYxk9q1s0Lu0WYniiDqX_DqZ1csPfyHgtEZc8vBSVl5fIh3LKnH3pw7yPbYmUGuvgO0bYmXc9rT1HGyFIM5zqJFVUMQbtjM273_hVQHMoy-ZVo8lv63sa2iU3VPHMEKJZ7Q9DPsGpJ0Ir-SMT8c69lXO7Wv-0y64CjlMZ8sLZOQidVPRKRQ3NQIDAQABo4IE8jCCBO4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUxRuFdzygTcCV5LvwnnSoeHAkhgEwHwYDVR0jBBgwFoAUz1EBqulDLGR2G0rwqsDykvhPw7swggHiBgNVHR8EggHZMIIB1TB1oHOgcYZvaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHegdaBzhnFodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyZXVhcC9jcmxzL2NjbWVlYXN0dXMyZXVhcHBraS9jY21lZWFzdHVzMmV1YXBpY2EwMS8zMC9jdXJyZW50LmNybDBmoGSgYoZgaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHugeaB3hnVodHRwOi8vY2NtZWVhc3R1czJldWFwcGtpLmVhc3R1czJldWFwLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJldWFwaWNhMDEvMzAvY3VycmVudC5jcmwwggHnBggrBgEFBQcBAQSCAdkwggHVMHgGCCsGAQUFBzAChmxodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwegYIKwYBBQUHMAKGbmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NhY2VydHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxL2NlcnQuY2VyMGkGCCsGAQUFBzAChl1odHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwcgYIKwYBBQUHMAKGZmh0dHA6Ly9jY21lZWFzdHVzMmV1YXBwa2kuZWFzdHVzMmV1YXAucGtpLmNvcmUud2luZG93cy5uZXQvY2VydGlmaWNhdGVBdXRob3JpdGllcy9jY21lZWFzdHVzMmV1YXBpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAm_gG_aSFikQfKF1IihOsfb6ZC4HFwKTGTh9Tq2Q0aiNHYrBKXvt2I5g-ZgV6EgMQ0or8btON08OrF2RQyXvT5C3tzv2WieKoM10xg_sHAMc1b0fhPMkcvWaCIcLZGbba9Qy0r2dpHd9KhYYz6U_JGtyoIC9Iwh3bj37AVBl2SzFKlq2bA0OsyoSd_h3qctXLNp8nFxfb6P7oBH1SDet_Yq2MCWezL87XbwmX-TESzwh_K5_pwCNgjbdui7Ym5hGLZaWEX6Q6HnkzgycnHt0_uqr5RcOpsGOSsW0tRnxAwnHWygcsKwBZO9O7gbREhyxtVQdJWSJtjT_fu3G6zqHtrQ&s=QCAGPKBDiq5pMILZngULl8gic4NSEV0IB4LdXXjSjDUKrmPlCjvkuMoU1OYX5naXhNClfoylrdHvnAonuPzEdmzTIuwXXIFrrbO4blqXp7pLdpKHl8pzKbBB_ItbYMhrWH-KyDOatTbPdKLCp5tfA9h4zDRlB_pEkG8HUkVy8gzVFAoJsW6JdfdNNKgbcz_OZJVsWv04Oj6wdVD-03pr8w64CLLLrksfmq-w9ljWSM8GxiX24k_6a48yfwbkgPtnZ_KgWtyY4Og96c0htTTjOhFpyZADUkMIzB03cN3-QFvLlwGIH6zicXSN3dLOK5GdLk9i3V54uU3xeSiicv76JA&h=VHwAPSly0518PypLdC3WQV1KCWftg1bO4yTWpWxyHrg",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9vcGVyYXRpb25TdGF0dXMvTWpBME56c3laVEV6WkRObVlTMWpPVGN4TFRSaFlUUXRZV1V6TWkxa01XSmlOV0V3TjJGbU1EVT0/YXBpLXZlcnNpb249MjAyNi0wNy0wMSZ0PTYzOTIzMjUyOTcyNTYyNjk5MyZjPU1JSUg5VENDQnQyZ0F3SUJBZ0lSQVBEYTRDOUpkcHpEZGw5eWh2QmNOdFl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUVBeE1yUTBOTlJTQkhNU0JVVEZNZ1VsTkJJREl3TkRnZ1UwaEJNalUySURJd05Ea2dSVlV5UXlCRFFTQXdNVEFlRncweU5qQTNNakF5TXpBM01EUmFGdzB5TnpBeE1UWXdOVEEzTURSYU1FQXhQakE4QmdOVkJBTVROV0Z6ZVc1amIzQmxjbUYwYVc5dWMybG5ibWx1WjJObGNuUnBabWxqWVhSbExtMWhibUZuWlcxbGJuUXVZWHAxY21VdVkyOXRNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXZNR18xVGxKRURLTWVZT3NXQUhUX0poXzg1OGFfZ3dnbml3QzNJUEo0NUs1SlBpcHRiME5ZazdJTU5lYnd0NExibzRQZHlSQ19GdzgwOHYybkM0Sjc2aTU2MVRkdjI1Mzl1TkVCWS12ZFE1Q1BkMzVfWkx0LWtTOUgxaC1RYzI4OEsxVWc3U1BTb1pYdDB0S0Z4bV9YODV0M1laZGN1TllxWXhrOXExczBMdTBXWW5paURxWF9EcVoxY3NQZnlIZ3RFWmM4dkJTVmw1ZkloM0xLbkgzcHc3eVBiWW1VR3V2Z08wYlltWGM5clQxSEd5RklNNXpxSkZWVU1RYnRqTTI3M19oVlFITW95LVpWbzhsdjYzc2EyaVUzVlBITUVLSlo3UTlEUHNHcEowSXItU01UOGM2OWxYTzdXdi0weTY0Q2psTVo4c0xaT1FpZFZQUktSUTNOUUlEQVFBQm80SUU4akNDQk80d2daMEdBMVVkSUFTQmxUQ0JrakFNQmdvckJnRUVBWUkzZXdFQk1HWUdDaXNHQVFRQmdqZDdBZ0l3V0RCV0JnZ3JCZ0VGQlFjQ0FqQktIa2dBTXdBekFHVUFNQUF4QURrQU1nQXhBQzBBTkFCa0FEWUFOQUF0QURRQVpnQTRBR01BTFFCaEFEQUFOUUExQUMwQU5RQmlBR1FBWVFCbUFHWUFaQUExQUdVQU13QXpBR1F3REFZS0t3WUJCQUdDTjNzREFqQU1CZ29yQmdFRUFZSTNld1FDTUF3R0ExVWRFd0VCX3dRQ01BQXdIUVlEVlIwbEJCWXdGQVlJS3dZQkJRVUhBd0VHQ0NzR0FRVUZCd01DTUE0R0ExVWREd0VCX3dRRUF3SUZvREFkQmdOVkhRNEVGZ1FVeFJ1RmR6eWdUY0NWNUx2d25uU29lSEFraGdFd0h3WURWUjBqQkJnd0ZvQVV6MUVCcXVsRExHUjJHMHJ3cXNEeWt2aFB3N3N3Z2dIaUJnTlZIUjhFZ2dIWk1JSUIxVEIxb0hPZ2NZWnZhSFIwY0RvdkwzQnlhVzFoY25rdFkyUnVMbkJyYVM1amIzSmxMbmRwYm1SdmQzTXVibVYwTDJWaGMzUjFjekpsZFdGd0wyTnliSE12WTJOdFpXVmhjM1IxY3pKbGRXRndjR3RwTDJOamJXVmxZWE4wZFhNeVpYVmhjR2xqWVRBeEx6TXdMMk4xY25KbGJuUXVZM0pzTUhlZ2RhQnpobkZvZEhSd09pOHZjMlZqYjI1a1lYSjVMV05rYmk1d2Eya3VZMjl5WlM1M2FXNWtiM2R6TG01bGRDOWxZWE4wZFhNeVpYVmhjQzlqY214ekwyTmpiV1ZsWVhOMGRYTXlaWFZoY0hCcmFTOWpZMjFsWldGemRIVnpNbVYxWVhCcFkyRXdNUzh6TUM5amRYSnlaVzUwTG1OeWJEQm1vR1NnWW9aZ2FIUjBjRG92TDJOeWJDNXRhV055YjNOdlpuUXVZMjl0TDJWaGMzUjFjekpsZFdGd0wyTnliSE12WTJOdFpXVmhjM1IxY3pKbGRXRndjR3RwTDJOamJXVmxZWE4wZFhNeVpYVmhjR2xqWVRBeEx6TXdMMk4xY25KbGJuUXVZM0pzTUh1Z2VhQjNoblZvZEhSd09pOHZZMk50WldWaGMzUjFjekpsZFdGd2NHdHBMbVZoYzNSMWN6SmxkV0Z3TG5CcmFTNWpiM0psTG5kcGJtUnZkM011Ym1WMEwyTmxjblJwWm1sallYUmxRWFYwYUc5eWFYUnBaWE12WTJOdFpXVmhjM1IxY3pKbGRXRndhV05oTURFdk16QXZZM1Z5Y21WdWRDNWpjbXd3Z2dIbkJnZ3JCZ0VGQlFjQkFRU0NBZGt3Z2dIVk1IZ0dDQ3NHQVFVRkJ6QUNobXhvZEhSd09pOHZjSEpwYldGeWVTMWpaRzR1Y0d0cExtTnZjbVV1ZDJsdVpHOTNjeTV1WlhRdlpXRnpkSFZ6TW1WMVlYQXZZMkZqWlhKMGN5OWpZMjFsWldGemRIVnpNbVYxWVhCd2Eya3ZZMk50WldWaGMzUjFjekpsZFdGd2FXTmhNREV2WTJWeWRDNWpaWEl3ZWdZSUt3WUJCUVVITUFLR2JtaDBkSEE2THk5elpXTnZibVJoY25rdFkyUnVMbkJyYVM1amIzSmxMbmRwYm1SdmQzTXVibVYwTDJWaGMzUjFjekpsZFdGd0wyTmhZMlZ5ZEhNdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3Y0d0cEwyTmpiV1ZsWVhOMGRYTXlaWFZoY0dsallUQXhMMk5sY25RdVkyVnlNR2tHQ0NzR0FRVUZCekFDaGwxb2RIUndPaTh2WTNKc0xtMXBZM0p2YzI5bWRDNWpiMjB2WldGemRIVnpNbVYxWVhBdlkyRmpaWEowY3k5alkyMWxaV0Z6ZEhWek1tVjFZWEJ3YTJrdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3YVdOaE1ERXZZMlZ5ZEM1alpYSXdjZ1lJS3dZQkJRVUhNQUtHWm1oMGRIQTZMeTlqWTIxbFpXRnpkSFZ6TW1WMVlYQndhMmt1WldGemRIVnpNbVYxWVhBdWNHdHBMbU52Y21VdWQybHVaRzkzY3k1dVpYUXZZMlZ5ZEdsbWFXTmhkR1ZCZFhSb2IzSnBkR2xsY3k5alkyMWxaV0Z6ZEhWek1tVjFZWEJwWTJFd01UQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtX2dHX2FTRmlrUWZLRjFJaWhPc2ZiNlpDNEhGd0tUR1RoOVRxMlEwYWlOSFlyQktYdnQySTVnLVpnVjZFZ01RMG9yOGJ0T04wOE9yRjJSUXlYdlQ1QzN0enYyV2llS29NMTB4Z19zSEFNYzFiMGZoUE1rY3ZXYUNJY0xaR2JiYTlReTByMmRwSGQ5S2hZWXo2VV9KR3R5b0lDOUl3aDNiajM3QVZCbDJTekZLbHEyYkEwT3N5b1NkX2gzcWN0WExOcDhuRnhmYjZQN29CSDFTRGV0X1lxMk1DV2V6TDg3WGJ3bVgtVEVTendoX0s1X3B3Q05namJkdWk3WW01aEdMWmFXRVg2UTZIbmt6Z3ljbkh0MF91cXI1UmNPcHNHT1NzVzB0Um54QXduSFd5Z2NzS3dCWk85TzdnYlJFaHl4dFZRZEpXU0p0alRfZnUzRzZ6cUh0clEmcz1RQ0FHUEtCRGlxNXBNSUxabmdVTGw4Z2ljNE5TRVYwSUI0TGRYWGpTakRVS3JtUGxDanZrdU1vVTFPWVg1bmFYaE5DbGZveWxyZEh2bkFvbnVQekVkbXpUSXV3WFhJRnJyYk80YmxxWHA3cExkcEtIbDhwektiQkJfSXRiWU1ocldILUt5RE9hdFRiUGRLTENwNXRmQTloNHpEUmxCX3BFa0c4SFVrVnk4Z3pWRkFvSnNXNkpkZmROTktnYmN6X09aSlZzV3YwNE9qNndkVkQtMDNwcjh3NjRDTExMcmtzZm1xLXc5bGpXU004R3hpWDI0a182YTQ4eWZ3YmtnUHRuWl9LZ1d0eVk0T2c5NmMwaHRUVGpPaEZweVpBRFVrTUl6QjAzY04zLVFGdkxsd0dJSDZ6aWNYU04zZExPSzVHZExrOWkzVjU0dVUzeGVTaWljdjc2SkEmaD1WSHdBUFNseTA1MThQeXBMZEMzV1FWMUtDV2Z0ZzFiTzR5VFdwV3h5SHJn",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "25c06ad0-1ab2-4934-91d2-411880398487"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.RecoveryServicesClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "374d5169-2bc6-4378-90f8-45ecfabf9e77"
+        ],
+        "x-ms-client-request-id": [
+          "25c06ad0-1ab2-4934-91d2-411880398487"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/d6383706-d7a1-4140-a0ea-9abbe053c331"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "374d5169-2bc6-4378-90f8-45ecfabf9e77"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111033Z:374d5169-2bc6-4378-90f8-45ecfabf9e77"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 76B57C17CCB4404F89AE1BFEAA8DDAD0 Ref B: PNQ231110908029 Ref C: 2026-08-25T11:10:32Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:33 GMT"
+        ],
+        "Content-Length": [
+          "334"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationStatus/MjA0NzsyZTEzZDNmYS1jOTcxLTRhYTQtYWUzMi1kMWJiNWEwN2FmMDU=\",\r\n  \"name\": \"MjA0NzsyZTEzZDNmYS1jOTcxLTRhYTQtYWUzMi1kMWJiNWEwN2FmMDU=\",\r\n  \"status\": \"Succeeded\"\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault?api-version=2026-07-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdD9hcGktdmVyc2lvbj0yMDI2LTA3LTAx",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "25c06ad0-1ab2-4934-91d2-411880398487"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.RecoveryServicesClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "f5eaf393-db9e-42f1-9f8f-91a4e784844c"
+        ],
+        "x-ms-client-request-id": [
+          "25c06ad0-1ab2-4934-91d2-411880398487"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "f5eaf393-db9e-42f1-9f8f-91a4e784844c"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111034Z:f5eaf393-db9e-42f1-9f8f-91a4e784844c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: ED6CD7B084D74074A27BFF67312D4676 Ref B: PNQ231110908029 Ref C: 2026-08-25T11:10:33Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:34 GMT"
+        ],
+        "Content-Length": [
+          "1210"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"location\": \"centraluseuap\",\r\n  \"name\": \"ps-test-runtime-vault\",\r\n  \"etag\": \"W/\\\"datetime'2026-08-25T11%3A09%3A33.8786484Z'\\\"\",\r\n  \"tags\": {\r\n    \"DeleteBy\": \"06-2099\",\r\n    \"Owner\": \"hiaga\",\r\n    \"Purpose\": \"Testing\",\r\n    \"MABUsed\": \"Yes\"\r\n  },\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"privateEndpointStateForBackup\": \"None\",\r\n    \"privateEndpointStateForSiteRecovery\": \"None\",\r\n    \"costManagementSettings\": {\r\n      \"granularityLevel\": \"VaultLevel\"\r\n    },\r\n    \"backupStorageVersion\": \"Unassigned\",\r\n    \"securitySettings\": {\r\n      \"softDeleteSettings\": {\r\n        \"softDeleteRetentionPeriodInDays\": 14,\r\n        \"softDeleteState\": \"AlwaysON\",\r\n        \"enhancedSecurityState\": \"AlwaysON\"\r\n      },\r\n      \"multiUserAuthorization\": \"Disabled\",\r\n      \"sourceScanConfiguration\": {\r\n        \"state\": \"Disabled\"\r\n      }\r\n    },\r\n    \"redundancySettings\": {\r\n      \"standardTierStorageRedundancy\": \"GeoRedundant\",\r\n      \"crossRegionRestore\": \"Disabled\"\r\n    },\r\n    \"regionOfChoiceSettings\": {\r\n      \"status\": \"Disabled\"\r\n    },\r\n    \"secureScore\": \"Adequate\",\r\n    \"bcdrSecurityLevel\": \"Good\",\r\n    \"publicNetworkAccess\": \"Enabled\",\r\n    \"restoreSettings\": {\r\n      \"crossSubscriptionRestoreSettings\": {\r\n        \"crossSubscriptionRestoreState\": \"Enabled\"\r\n      }\r\n    }\r\n  },\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults\",\r\n  \"sku\": {\r\n    \"name\": \"Standard\"\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "4356a586-dcc1-4452-8d7c-5881890613c7"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/faf0dcb8-ff6d-410d-a9b6-5c0ba00d58d7"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "771cbe5a-47f1-4978-91ce-4d5611b8cd65"
+        ],
+        "x-ms-client-request-id": [
+          "4356a586-dcc1-4452-8d7c-5881890613c7"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "771cbe5a-47f1-4978-91ce-4d5611b8cd65"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111035Z:771cbe5a-47f1-4978-91ce-4d5611b8cd65"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: A854357181054967B59C8271EAC26782 Ref B: PNQ231110907062 Ref C: 2026-08-25T11:10:34Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:34 GMT"
+        ],
+        "Content-Length": [
+          "2"
+        ],
+        "Content-Type": [
+          "application/json"
+        ]
+      },
+      "ResponseBody": "{}",
+      "StatusCode": 404
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "4356a586-dcc1-4452-8d7c-5881890613c7"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "7e044fa1-1edf-4395-ae5a-117f53a379b2"
+        ],
+        "x-ms-client-request-id": [
+          "4356a586-dcc1-4452-8d7c-5881890613c7"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/b6e3146b-8cc2-4796-9353-53b6bc688b9e"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "7e044fa1-1edf-4395-ae5a-117f53a379b2"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111037Z:7e044fa1-1edf-4395-ae5a-117f53a379b2"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 9FBD3D55C27C4A6CBABC45AC89FEE08E Ref B: PNQ231110907062 Ref C: 2026-08-25T11:10:36Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:36 GMT"
+        ],
+        "Content-Length": [
+          "1517"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy\",\r\n  \"name\": \"newPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V2\",\r\n    \"instantRPDetails\": {},\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 7,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "23667c53-a7af-4eeb-8c85-daa3de9f3595"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "f8ce201a-9d94-4a3e-9436-7f1cca1d6d7b"
+        ],
+        "x-ms-client-request-id": [
+          "23667c53-a7af-4eeb-8c85-daa3de9f3595"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/d422e395-a404-4709-8c3c-148aea67c314"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "f8ce201a-9d94-4a3e-9436-7f1cca1d6d7b"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111040Z:f8ce201a-9d94-4a3e-9436-7f1cca1d6d7b"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 3037E846CD4948F09D0906B17ABE3267 Ref B: PNQ231110909036 Ref C: 2026-08-25T11:10:39Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:40 GMT"
+        ],
+        "Content-Length": [
+          "1517"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy\",\r\n  \"name\": \"newPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V2\",\r\n    \"instantRPDetails\": {},\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 7,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "b10dd222-c7e7-4ea5-a269-41b5c3ae646a"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "af36ec5e-bb65-4708-b5db-e46af17ded77"
+        ],
+        "x-ms-client-request-id": [
+          "b10dd222-c7e7-4ea5-a269-41b5c3ae646a"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/cc683bbd-96fe-42c0-8096-72d5f9130bd2"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "af36ec5e-bb65-4708-b5db-e46af17ded77"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111041Z:af36ec5e-bb65-4708-b5db-e46af17ded77"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: BAE612D76A0744C49CA541D94D7080E0 Ref B: PNQ231110908036 Ref C: 2026-08-25T11:10:41Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:40 GMT"
+        ],
+        "Content-Length": [
+          "1517"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy\",\r\n  \"name\": \"newPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V2\",\r\n    \"instantRPDetails\": {},\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 7,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "d984a3e7-222e-474c-aa9e-5a99cc25151f"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "95fc1dd2-82d7-44f2-b5de-0f3e9c25fe21"
+        ],
+        "x-ms-client-request-id": [
+          "d984a3e7-222e-474c-aa9e-5a99cc25151f"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/aeb37c63-3f5b-4330-82d1-3a07746fce06"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "95fc1dd2-82d7-44f2-b5de-0f3e9c25fe21"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111043Z:95fc1dd2-82d7-44f2-b5de-0f3e9c25fe21"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 726657CFFD3E4FAC8D513C0C09ED40E5 Ref B: PNQ231110909025 Ref C: 2026-08-25T11:10:43Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:43 GMT"
+        ],
+        "Content-Length": [
+          "1596"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy\",\r\n  \"name\": \"newPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V2\",\r\n    \"instantRPDetails\": {\r\n      \"azureBackupRGNamePrefix\": \"RecoveryServices\",\r\n      \"azureBackupRGNameSuffix\": \"Policy\"\r\n    },\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 5,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "PUT",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "4356a586-dcc1-4452-8d7c-5881890613c7"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "2032"
+        ]
+      },
+      "RequestBody": "{\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 7,\r\n    \"timeZone\": \"UTC\",\r\n    \"policyType\": \"V2\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "b8f94eb7-3337-4b12-956c-14ed454dcbc3"
+        ],
+        "x-ms-client-request-id": [
+          "4356a586-dcc1-4452-8d7c-5881890613c7"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/deabbd0b-d5ae-4e73-aea1-2cd64a48d8b4"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "799"
+        ],
+        "x-ms-correlation-request-id": [
+          "b8f94eb7-3337-4b12-956c-14ed454dcbc3"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111036Z:b8f94eb7-3337-4b12-956c-14ed454dcbc3"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: C4E82FDD54684BCEA73902E8848D8C98 Ref B: PNQ231110907062 Ref C: 2026-08-25T11:10:35Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:35 GMT"
+        ],
+        "Content-Length": [
+          "1517"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy\",\r\n  \"name\": \"newPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V2\",\r\n    \"instantRPDetails\": {},\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T03:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 7,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "PUT",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "b10dd222-c7e7-4ea5-a269-41b5c3ae646a"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "2224"
+        ]
+      },
+      "RequestBody": "{\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"instantRPDetails\": {\r\n      \"azureBackupRGNamePrefix\": \"RecoveryServices\",\r\n      \"azureBackupRGNameSuffix\": \"Policy\"\r\n    },\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 5,\r\n    \"timeZone\": \"UTC\",\r\n    \"policyType\": \"V2\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "239949e8-a10a-4688-a3f0-19c34e140363"
+        ],
+        "x-ms-client-request-id": [
+          "b10dd222-c7e7-4ea5-a269-41b5c3ae646a"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/8457c72f-f1a2-437a-b221-782d362207a6"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "799"
+        ],
+        "x-ms-correlation-request-id": [
+          "239949e8-a10a-4688-a3f0-19c34e140363"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111043Z:239949e8-a10a-4688-a3f0-19c34e140363"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 1CDCF0AD012F49CA8499E5ADD9763057 Ref B: PNQ231110908036 Ref C: 2026-08-25T11:10:42Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:42 GMT"
+        ],
+        "Content-Length": [
+          "1596"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy\",\r\n  \"name\": \"newPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V2\",\r\n    \"instantRPDetails\": {\r\n      \"azureBackupRGNamePrefix\": \"RecoveryServices\",\r\n      \"azureBackupRGNameSuffix\": \"Policy\"\r\n    },\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicyV2\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"dailySchedule\": {\r\n        \"scheduleRunTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ]\r\n      }\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 180,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      },\r\n      \"weeklySchedule\": {\r\n        \"daysOfTheWeek\": [\r\n          \"Sunday\"\r\n        ],\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 104,\r\n          \"durationType\": \"Weeks\"\r\n        }\r\n      },\r\n      \"monthlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 60,\r\n          \"durationType\": \"Months\"\r\n        }\r\n      },\r\n      \"yearlySchedule\": {\r\n        \"retentionScheduleFormatType\": \"Weekly\",\r\n        \"monthsOfYear\": [\r\n          \"January\"\r\n        ],\r\n        \"retentionScheduleWeekly\": {\r\n          \"daysOfTheWeek\": [\r\n            \"Sunday\"\r\n          ],\r\n          \"weeksOfTheMonth\": [\r\n            \"First\"\r\n          ]\r\n        },\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T10:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 10,\r\n          \"durationType\": \"Years\"\r\n        }\r\n      }\r\n    },\r\n    \"tieringPolicy\": {\r\n      \"ArchivedRP\": {\r\n        \"tieringMode\": \"DoNotTier\",\r\n        \"duration\": 0,\r\n        \"durationType\": \"Invalid\"\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 5,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/DefaultPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9EZWZhdWx0UG9saWN5P2FwaS12ZXJzaW9uPTIwMjYtMDgtMDE=",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "31cb6729-4204-4e3b-9cf4-2a1a3c25f4cc"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "74addac1-8d39-41c6-9541-ecc6a0548b25"
+        ],
+        "x-ms-client-request-id": [
+          "31cb6729-4204-4e3b-9cf4-2a1a3c25f4cc"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/63e2e6f0-8c0b-42e1-8269-033aa06f2ed0"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "74addac1-8d39-41c6-9541-ecc6a0548b25"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111041Z:74addac1-8d39-41c6-9541-ecc6a0548b25"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: B07E103967024FBFB77DC0EEB0767F4D Ref B: PNQ231110909054 Ref C: 2026-08-25T11:10:40Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:40 GMT"
+        ],
+        "Content-Length": [
+          "783"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/DefaultPolicy\",\r\n  \"name\": \"DefaultPolicy\",\r\n  \"type\": \"Microsoft.RecoveryServices/vaults/backupPolicies\",\r\n  \"properties\": {\r\n    \"backupManagementType\": \"AzureIaasVM\",\r\n    \"policyType\": \"V1\",\r\n    \"instantRPDetails\": {},\r\n    \"schedulePolicy\": {\r\n      \"schedulePolicyType\": \"SimpleSchedulePolicy\",\r\n      \"scheduleRunFrequency\": \"Daily\",\r\n      \"scheduleRunTimes\": [\r\n        \"2026-08-25T21:00:00Z\"\r\n      ],\r\n      \"scheduleWeeklyFrequency\": 0\r\n    },\r\n    \"retentionPolicy\": {\r\n      \"retentionPolicyType\": \"LongTermRetentionPolicy\",\r\n      \"dailySchedule\": {\r\n        \"retentionTimes\": [\r\n          \"2026-08-25T21:00:00Z\"\r\n        ],\r\n        \"retentionDuration\": {\r\n          \"count\": 30,\r\n          \"durationType\": \"Days\"\r\n        }\r\n      }\r\n    },\r\n    \"instantRpRetentionRangeInDays\": 2,\r\n    \"timeZone\": \"UTC\",\r\n    \"protectedItemsCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupResourceGuardProxies?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBSZXNvdXJjZUd1YXJkUHJveGllcz9hcGktdmVyc2lvbj0yMDI2LTA4LTAx",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "b10dd222-c7e7-4ea5-a269-41b5c3ae646a"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "af40de05-763f-4987-8a92-ae7f6fa16b2b"
+        ],
+        "x-ms-client-request-id": [
+          "b10dd222-c7e7-4ea5-a269-41b5c3ae646a"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/44fedb20-206f-4fe2-a9c3-a3e1661d663a"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "af40de05-763f-4987-8a92-ae7f6fa16b2b"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111042Z:af40de05-763f-4987-8a92-ae7f6fa16b2b"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: BEEE4E82F4834587B1E9945DD6261DA6 Ref B: PNQ231110908036 Ref C: 2026-08-25T11:10:41Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:41 GMT"
+        ],
+        "Content-Length": [
+          "12"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"value\": []\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/backupPolicies/newPolicy?api-version=2026-08-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9iYWNrdXBQb2xpY2llcy9uZXdQb2xpY3k/YXBpLXZlcnNpb249MjAyNi0wOC0wMQ==",
+      "RequestMethod": "DELETE",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "4e957eb6-a4a2-452a-827e-bfecf4b8c8b5"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.Backup.RecoveryServicesBackupClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "0682577c-48d9-4197-942e-21caee8de3d6"
+        ],
+        "x-ms-client-request-id": [
+          "4e957eb6-a4a2-452a-827e-bfecf4b8c8b5"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/c5f6687a-23d1-49ac-bc5e-5679094d5550"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [
+          "799"
+        ],
+        "x-ms-correlation-request-id": [
+          "0682577c-48d9-4197-942e-21caee8de3d6"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111044Z:0682577c-48d9-4197-942e-21caee8de3d6"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 1181766CF989478D9ED1EC9CAF884BB5 Ref B: PNQ231110908025 Ref C: 2026-08-25T11:10:43Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:44 GMT"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault?api-version=2026-07-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdD9hcGktdmVyc2lvbj0yMDI2LTA3LTAx",
+      "RequestMethod": "DELETE",
+      "RequestHeaders": {
+        "Accept-Language": [
+          "en-US"
+        ],
+        "x-ms-client-request-id": [
+          "95db32c9-d774-4679-93ec-c80e4d33dcf1"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.RecoveryServicesClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Location": [
+          "https://management.azure.com/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationResults/MTAyMztmOWYwZWYxOC0wMTFhLTQ4OTgtOTc0ZC03Y2ExYTAwOWU4MDc=?api-version=2026-07-01&t=639232530454930333&c=MIIH9TCCBt2gAwIBAgIRAPDa4C9JdpzDdl9yhvBcNtYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgRVUyQyBDQSAwMTAeFw0yNjA3MjAyMzA3MDRaFw0yNzAxMTYwNTA3MDRaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMG_1TlJEDKMeYOsWAHT_Jh_858a_gwgniwC3IPJ45K5JPiptb0NYk7IMNebwt4Lbo4PdyRC_Fw808v2nC4J76i561Tdv2539uNEBY-vdQ5CPd35_ZLt-kS9H1h-Qc288K1Ug7SPSoZXt0tKFxm_X85t3YZdcuNYqYxk9q1s0Lu0WYniiDqX_DqZ1csPfyHgtEZc8vBSVl5fIh3LKnH3pw7yPbYmUGuvgO0bYmXc9rT1HGyFIM5zqJFVUMQbtjM273_hVQHMoy-ZVo8lv63sa2iU3VPHMEKJZ7Q9DPsGpJ0Ir-SMT8c69lXO7Wv-0y64CjlMZ8sLZOQidVPRKRQ3NQIDAQABo4IE8jCCBO4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUxRuFdzygTcCV5LvwnnSoeHAkhgEwHwYDVR0jBBgwFoAUz1EBqulDLGR2G0rwqsDykvhPw7swggHiBgNVHR8EggHZMIIB1TB1oHOgcYZvaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHegdaBzhnFodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyZXVhcC9jcmxzL2NjbWVlYXN0dXMyZXVhcHBraS9jY21lZWFzdHVzMmV1YXBpY2EwMS8zMC9jdXJyZW50LmNybDBmoGSgYoZgaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHugeaB3hnVodHRwOi8vY2NtZWVhc3R1czJldWFwcGtpLmVhc3R1czJldWFwLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJldWFwaWNhMDEvMzAvY3VycmVudC5jcmwwggHnBggrBgEFBQcBAQSCAdkwggHVMHgGCCsGAQUFBzAChmxodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwegYIKwYBBQUHMAKGbmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NhY2VydHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxL2NlcnQuY2VyMGkGCCsGAQUFBzAChl1odHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwcgYIKwYBBQUHMAKGZmh0dHA6Ly9jY21lZWFzdHVzMmV1YXBwa2kuZWFzdHVzMmV1YXAucGtpLmNvcmUud2luZG93cy5uZXQvY2VydGlmaWNhdGVBdXRob3JpdGllcy9jY21lZWFzdHVzMmV1YXBpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAm_gG_aSFikQfKF1IihOsfb6ZC4HFwKTGTh9Tq2Q0aiNHYrBKXvt2I5g-ZgV6EgMQ0or8btON08OrF2RQyXvT5C3tzv2WieKoM10xg_sHAMc1b0fhPMkcvWaCIcLZGbba9Qy0r2dpHd9KhYYz6U_JGtyoIC9Iwh3bj37AVBl2SzFKlq2bA0OsyoSd_h3qctXLNp8nFxfb6P7oBH1SDet_Yq2MCWezL87XbwmX-TESzwh_K5_pwCNgjbdui7Ym5hGLZaWEX6Q6HnkzgycnHt0_uqr5RcOpsGOSsW0tRnxAwnHWygcsKwBZO9O7gbREhyxtVQdJWSJtjT_fu3G6zqHtrQ&s=Ei-y5y7_2rGeHBV46_B17ySYCX7ikwPK8BcR9nn2aI-aYMl03RE_JdQY835QiY0BBM8stPtKDKCd0mch9IjM5jK0XfwGq7H04wdsoLVbXi8XrwR5Tt4VLJlY0pC54YD4UdhFtOz0kvoihWTUKbQ2_RBYBUWt0Lx8yWaZUpsnv0aO8jsmtQifzZZ8BnCIvTQHf4uSJc07pOs76Nclf6zUSloqCjiMC9mMlxx4gJJwAMevndTsxqHqVizOKlmQJO6KYXHTdySgZjlIJrzNlKr-O4YS3wQWrU9Z9paI6w-ZuL8lgpkLs4i9y8Ysef_nVG-kg5mPtCFzxh7t4GSO10PNhw&h=5T8EjdbmCl4eRhvV0i624R4CH8-we2uPwGD_mTcUhII"
+        ],
+        "Retry-After": [
+          "60"
+        ],
+        "Azure-AsyncOperation": [
+          "https://management.azure.com/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationStatus/MTAyMztmOWYwZWYxOC0wMTFhLTQ4OTgtOTc0ZC03Y2ExYTAwOWU4MDc=?api-version=2026-07-01&t=639232530454930333&c=MIIH9TCCBt2gAwIBAgIRAPDa4C9JdpzDdl9yhvBcNtYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgRVUyQyBDQSAwMTAeFw0yNjA3MjAyMzA3MDRaFw0yNzAxMTYwNTA3MDRaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMG_1TlJEDKMeYOsWAHT_Jh_858a_gwgniwC3IPJ45K5JPiptb0NYk7IMNebwt4Lbo4PdyRC_Fw808v2nC4J76i561Tdv2539uNEBY-vdQ5CPd35_ZLt-kS9H1h-Qc288K1Ug7SPSoZXt0tKFxm_X85t3YZdcuNYqYxk9q1s0Lu0WYniiDqX_DqZ1csPfyHgtEZc8vBSVl5fIh3LKnH3pw7yPbYmUGuvgO0bYmXc9rT1HGyFIM5zqJFVUMQbtjM273_hVQHMoy-ZVo8lv63sa2iU3VPHMEKJZ7Q9DPsGpJ0Ir-SMT8c69lXO7Wv-0y64CjlMZ8sLZOQidVPRKRQ3NQIDAQABo4IE8jCCBO4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUxRuFdzygTcCV5LvwnnSoeHAkhgEwHwYDVR0jBBgwFoAUz1EBqulDLGR2G0rwqsDykvhPw7swggHiBgNVHR8EggHZMIIB1TB1oHOgcYZvaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHegdaBzhnFodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyZXVhcC9jcmxzL2NjbWVlYXN0dXMyZXVhcHBraS9jY21lZWFzdHVzMmV1YXBpY2EwMS8zMC9jdXJyZW50LmNybDBmoGSgYoZgaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHugeaB3hnVodHRwOi8vY2NtZWVhc3R1czJldWFwcGtpLmVhc3R1czJldWFwLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJldWFwaWNhMDEvMzAvY3VycmVudC5jcmwwggHnBggrBgEFBQcBAQSCAdkwggHVMHgGCCsGAQUFBzAChmxodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwegYIKwYBBQUHMAKGbmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NhY2VydHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxL2NlcnQuY2VyMGkGCCsGAQUFBzAChl1odHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwcgYIKwYBBQUHMAKGZmh0dHA6Ly9jY21lZWFzdHVzMmV1YXBwa2kuZWFzdHVzMmV1YXAucGtpLmNvcmUud2luZG93cy5uZXQvY2VydGlmaWNhdGVBdXRob3JpdGllcy9jY21lZWFzdHVzMmV1YXBpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAm_gG_aSFikQfKF1IihOsfb6ZC4HFwKTGTh9Tq2Q0aiNHYrBKXvt2I5g-ZgV6EgMQ0or8btON08OrF2RQyXvT5C3tzv2WieKoM10xg_sHAMc1b0fhPMkcvWaCIcLZGbba9Qy0r2dpHd9KhYYz6U_JGtyoIC9Iwh3bj37AVBl2SzFKlq2bA0OsyoSd_h3qctXLNp8nFxfb6P7oBH1SDet_Yq2MCWezL87XbwmX-TESzwh_K5_pwCNgjbdui7Ym5hGLZaWEX6Q6HnkzgycnHt0_uqr5RcOpsGOSsW0tRnxAwnHWygcsKwBZO9O7gbREhyxtVQdJWSJtjT_fu3G6zqHtrQ&s=n18l0lvoL29fuKvQpDerLUO8AvzWmhcAL-QKu7B5JtUNP7iNcf2KM_LjuWYOGQDFGsTvuXoedZXjNRJdYEoKBRBLPjwCaFNXvuOA3qBVtPDlwvIFvkOSflScDnRVbR_d1j3jVH7OGccCZQHNQSXzsOlHzhVuUb_xVkUjEOWRqf0E2pt5XMduzPE7b5HcgFBmAc8Ut2Lb01ousvgd6ryA4Y_EZ6vLRF2tVbfoxFBCpEQeliixr0xS2jvIxbHtoQw4ZgboDCPNjNqbD-MHTv6t4uAv4AfA-0N25f_2XETaT9DSSKzNSEwzLb7m5zg2srjmZSB287fMDuIIw5crCRTB-g&h=2O4cIp8JIrWC93hNyrBmJU9s0wF7xjamc82Hhcg1j3E"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "00000000-0000-0000-0000-000000000000"
+        ],
+        "x-ms-client-request-id": [
+          "00000000-0000-0000-0000-000000000000"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/8bfcd645-b981-41c3-8e58-7c55a35d2804"
+        ],
+        "x-ms-throttling-version": [
+          "v1"
+        ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [
+          "199"
+        ],
+        "x-ms-correlation-request-id": [
+          "a13b4486-01ac-488a-b597-8620e4f98cd0"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111045Z:a13b4486-01ac-488a-b597-8620e4f98cd0"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: AA74CC114CA1436088D07BCF2AA3A038 Ref B: PNQ231110909031 Ref C: 2026-08-25T11:10:45Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:10:44 GMT"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 202
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationStatus/MTAyMztmOWYwZWYxOC0wMTFhLTQ4OTgtOTc0ZC03Y2ExYTAwOWU4MDc=?api-version=2026-07-01&t=639232530454930333&c=MIIH9TCCBt2gAwIBAgIRAPDa4C9JdpzDdl9yhvBcNtYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgRVUyQyBDQSAwMTAeFw0yNjA3MjAyMzA3MDRaFw0yNzAxMTYwNTA3MDRaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMG_1TlJEDKMeYOsWAHT_Jh_858a_gwgniwC3IPJ45K5JPiptb0NYk7IMNebwt4Lbo4PdyRC_Fw808v2nC4J76i561Tdv2539uNEBY-vdQ5CPd35_ZLt-kS9H1h-Qc288K1Ug7SPSoZXt0tKFxm_X85t3YZdcuNYqYxk9q1s0Lu0WYniiDqX_DqZ1csPfyHgtEZc8vBSVl5fIh3LKnH3pw7yPbYmUGuvgO0bYmXc9rT1HGyFIM5zqJFVUMQbtjM273_hVQHMoy-ZVo8lv63sa2iU3VPHMEKJZ7Q9DPsGpJ0Ir-SMT8c69lXO7Wv-0y64CjlMZ8sLZOQidVPRKRQ3NQIDAQABo4IE8jCCBO4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUxRuFdzygTcCV5LvwnnSoeHAkhgEwHwYDVR0jBBgwFoAUz1EBqulDLGR2G0rwqsDykvhPw7swggHiBgNVHR8EggHZMIIB1TB1oHOgcYZvaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHegdaBzhnFodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyZXVhcC9jcmxzL2NjbWVlYXN0dXMyZXVhcHBraS9jY21lZWFzdHVzMmV1YXBpY2EwMS8zMC9jdXJyZW50LmNybDBmoGSgYoZgaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHugeaB3hnVodHRwOi8vY2NtZWVhc3R1czJldWFwcGtpLmVhc3R1czJldWFwLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJldWFwaWNhMDEvMzAvY3VycmVudC5jcmwwggHnBggrBgEFBQcBAQSCAdkwggHVMHgGCCsGAQUFBzAChmxodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwegYIKwYBBQUHMAKGbmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NhY2VydHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxL2NlcnQuY2VyMGkGCCsGAQUFBzAChl1odHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwcgYIKwYBBQUHMAKGZmh0dHA6Ly9jY21lZWFzdHVzMmV1YXBwa2kuZWFzdHVzMmV1YXAucGtpLmNvcmUud2luZG93cy5uZXQvY2VydGlmaWNhdGVBdXRob3JpdGllcy9jY21lZWFzdHVzMmV1YXBpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAm_gG_aSFikQfKF1IihOsfb6ZC4HFwKTGTh9Tq2Q0aiNHYrBKXvt2I5g-ZgV6EgMQ0or8btON08OrF2RQyXvT5C3tzv2WieKoM10xg_sHAMc1b0fhPMkcvWaCIcLZGbba9Qy0r2dpHd9KhYYz6U_JGtyoIC9Iwh3bj37AVBl2SzFKlq2bA0OsyoSd_h3qctXLNp8nFxfb6P7oBH1SDet_Yq2MCWezL87XbwmX-TESzwh_K5_pwCNgjbdui7Ym5hGLZaWEX6Q6HnkzgycnHt0_uqr5RcOpsGOSsW0tRnxAwnHWygcsKwBZO9O7gbREhyxtVQdJWSJtjT_fu3G6zqHtrQ&s=n18l0lvoL29fuKvQpDerLUO8AvzWmhcAL-QKu7B5JtUNP7iNcf2KM_LjuWYOGQDFGsTvuXoedZXjNRJdYEoKBRBLPjwCaFNXvuOA3qBVtPDlwvIFvkOSflScDnRVbR_d1j3jVH7OGccCZQHNQSXzsOlHzhVuUb_xVkUjEOWRqf0E2pt5XMduzPE7b5HcgFBmAc8Ut2Lb01ousvgd6ryA4Y_EZ6vLRF2tVbfoxFBCpEQeliixr0xS2jvIxbHtoQw4ZgboDCPNjNqbD-MHTv6t4uAv4AfA-0N25f_2XETaT9DSSKzNSEwzLb7m5zg2srjmZSB287fMDuIIw5crCRTB-g&h=2O4cIp8JIrWC93hNyrBmJU9s0wF7xjamc82Hhcg1j3E",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9vcGVyYXRpb25TdGF0dXMvTVRBeU16dG1PV1l3WldZeE9DMHdNVEZoTFRRNE9UZ3RPVGMwWkMwM1kyRXhZVEF3T1dVNE1EYz0/YXBpLXZlcnNpb249MjAyNi0wNy0wMSZ0PTYzOTIzMjUzMDQ1NDkzMDMzMyZjPU1JSUg5VENDQnQyZ0F3SUJBZ0lSQVBEYTRDOUpkcHpEZGw5eWh2QmNOdFl3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUVBeE1yUTBOTlJTQkhNU0JVVEZNZ1VsTkJJREl3TkRnZ1UwaEJNalUySURJd05Ea2dSVlV5UXlCRFFTQXdNVEFlRncweU5qQTNNakF5TXpBM01EUmFGdzB5TnpBeE1UWXdOVEEzTURSYU1FQXhQakE4QmdOVkJBTVROV0Z6ZVc1amIzQmxjbUYwYVc5dWMybG5ibWx1WjJObGNuUnBabWxqWVhSbExtMWhibUZuWlcxbGJuUXVZWHAxY21VdVkyOXRNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXZNR18xVGxKRURLTWVZT3NXQUhUX0poXzg1OGFfZ3dnbml3QzNJUEo0NUs1SlBpcHRiME5ZazdJTU5lYnd0NExibzRQZHlSQ19GdzgwOHYybkM0Sjc2aTU2MVRkdjI1Mzl1TkVCWS12ZFE1Q1BkMzVfWkx0LWtTOUgxaC1RYzI4OEsxVWc3U1BTb1pYdDB0S0Z4bV9YODV0M1laZGN1TllxWXhrOXExczBMdTBXWW5paURxWF9EcVoxY3NQZnlIZ3RFWmM4dkJTVmw1ZkloM0xLbkgzcHc3eVBiWW1VR3V2Z08wYlltWGM5clQxSEd5RklNNXpxSkZWVU1RYnRqTTI3M19oVlFITW95LVpWbzhsdjYzc2EyaVUzVlBITUVLSlo3UTlEUHNHcEowSXItU01UOGM2OWxYTzdXdi0weTY0Q2psTVo4c0xaT1FpZFZQUktSUTNOUUlEQVFBQm80SUU4akNDQk80d2daMEdBMVVkSUFTQmxUQ0JrakFNQmdvckJnRUVBWUkzZXdFQk1HWUdDaXNHQVFRQmdqZDdBZ0l3V0RCV0JnZ3JCZ0VGQlFjQ0FqQktIa2dBTXdBekFHVUFNQUF4QURrQU1nQXhBQzBBTkFCa0FEWUFOQUF0QURRQVpnQTRBR01BTFFCaEFEQUFOUUExQUMwQU5RQmlBR1FBWVFCbUFHWUFaQUExQUdVQU13QXpBR1F3REFZS0t3WUJCQUdDTjNzREFqQU1CZ29yQmdFRUFZSTNld1FDTUF3R0ExVWRFd0VCX3dRQ01BQXdIUVlEVlIwbEJCWXdGQVlJS3dZQkJRVUhBd0VHQ0NzR0FRVUZCd01DTUE0R0ExVWREd0VCX3dRRUF3SUZvREFkQmdOVkhRNEVGZ1FVeFJ1RmR6eWdUY0NWNUx2d25uU29lSEFraGdFd0h3WURWUjBqQkJnd0ZvQVV6MUVCcXVsRExHUjJHMHJ3cXNEeWt2aFB3N3N3Z2dIaUJnTlZIUjhFZ2dIWk1JSUIxVEIxb0hPZ2NZWnZhSFIwY0RvdkwzQnlhVzFoY25rdFkyUnVMbkJyYVM1amIzSmxMbmRwYm1SdmQzTXVibVYwTDJWaGMzUjFjekpsZFdGd0wyTnliSE12WTJOdFpXVmhjM1IxY3pKbGRXRndjR3RwTDJOamJXVmxZWE4wZFhNeVpYVmhjR2xqWVRBeEx6TXdMMk4xY25KbGJuUXVZM0pzTUhlZ2RhQnpobkZvZEhSd09pOHZjMlZqYjI1a1lYSjVMV05rYmk1d2Eya3VZMjl5WlM1M2FXNWtiM2R6TG01bGRDOWxZWE4wZFhNeVpYVmhjQzlqY214ekwyTmpiV1ZsWVhOMGRYTXlaWFZoY0hCcmFTOWpZMjFsWldGemRIVnpNbVYxWVhCcFkyRXdNUzh6TUM5amRYSnlaVzUwTG1OeWJEQm1vR1NnWW9aZ2FIUjBjRG92TDJOeWJDNXRhV055YjNOdlpuUXVZMjl0TDJWaGMzUjFjekpsZFdGd0wyTnliSE12WTJOdFpXVmhjM1IxY3pKbGRXRndjR3RwTDJOamJXVmxZWE4wZFhNeVpYVmhjR2xqWVRBeEx6TXdMMk4xY25KbGJuUXVZM0pzTUh1Z2VhQjNoblZvZEhSd09pOHZZMk50WldWaGMzUjFjekpsZFdGd2NHdHBMbVZoYzNSMWN6SmxkV0Z3TG5CcmFTNWpiM0psTG5kcGJtUnZkM011Ym1WMEwyTmxjblJwWm1sallYUmxRWFYwYUc5eWFYUnBaWE12WTJOdFpXVmhjM1IxY3pKbGRXRndhV05oTURFdk16QXZZM1Z5Y21WdWRDNWpjbXd3Z2dIbkJnZ3JCZ0VGQlFjQkFRU0NBZGt3Z2dIVk1IZ0dDQ3NHQVFVRkJ6QUNobXhvZEhSd09pOHZjSEpwYldGeWVTMWpaRzR1Y0d0cExtTnZjbVV1ZDJsdVpHOTNjeTV1WlhRdlpXRnpkSFZ6TW1WMVlYQXZZMkZqWlhKMGN5OWpZMjFsWldGemRIVnpNbVYxWVhCd2Eya3ZZMk50WldWaGMzUjFjekpsZFdGd2FXTmhNREV2WTJWeWRDNWpaWEl3ZWdZSUt3WUJCUVVITUFLR2JtaDBkSEE2THk5elpXTnZibVJoY25rdFkyUnVMbkJyYVM1amIzSmxMbmRwYm1SdmQzTXVibVYwTDJWaGMzUjFjekpsZFdGd0wyTmhZMlZ5ZEhNdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3Y0d0cEwyTmpiV1ZsWVhOMGRYTXlaWFZoY0dsallUQXhMMk5sY25RdVkyVnlNR2tHQ0NzR0FRVUZCekFDaGwxb2RIUndPaTh2WTNKc0xtMXBZM0p2YzI5bWRDNWpiMjB2WldGemRIVnpNbVYxWVhBdlkyRmpaWEowY3k5alkyMWxaV0Z6ZEhWek1tVjFZWEJ3YTJrdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3YVdOaE1ERXZZMlZ5ZEM1alpYSXdjZ1lJS3dZQkJRVUhNQUtHWm1oMGRIQTZMeTlqWTIxbFpXRnpkSFZ6TW1WMVlYQndhMmt1WldGemRIVnpNbVYxWVhBdWNHdHBMbU52Y21VdWQybHVaRzkzY3k1dVpYUXZZMlZ5ZEdsbWFXTmhkR1ZCZFhSb2IzSnBkR2xsY3k5alkyMWxaV0Z6ZEhWek1tVjFZWEJwWTJFd01UQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtX2dHX2FTRmlrUWZLRjFJaWhPc2ZiNlpDNEhGd0tUR1RoOVRxMlEwYWlOSFlyQktYdnQySTVnLVpnVjZFZ01RMG9yOGJ0T04wOE9yRjJSUXlYdlQ1QzN0enYyV2llS29NMTB4Z19zSEFNYzFiMGZoUE1rY3ZXYUNJY0xaR2JiYTlReTByMmRwSGQ5S2hZWXo2VV9KR3R5b0lDOUl3aDNiajM3QVZCbDJTekZLbHEyYkEwT3N5b1NkX2gzcWN0WExOcDhuRnhmYjZQN29CSDFTRGV0X1lxMk1DV2V6TDg3WGJ3bVgtVEVTendoX0s1X3B3Q05namJkdWk3WW01aEdMWmFXRVg2UTZIbmt6Z3ljbkh0MF91cXI1UmNPcHNHT1NzVzB0Um54QXduSFd5Z2NzS3dCWk85TzdnYlJFaHl4dFZRZEpXU0p0alRfZnUzRzZ6cUh0clEmcz1uMThsMGx2b0wyOWZ1S3ZRcERlckxVTzhBdnpXbWhjQUwtUUt1N0I1SnRVTlA3aU5jZjJLTV9ManVXWU9HUURGR3NUdnVYb2VkWlhqTlJKZFlFb0tCUkJMUGp3Q2FGTlh2dU9BM3FCVnRQRGx3dklGdmtPU2ZsU2NEblJWYlJfZDFqM2pWSDdPR2NjQ1pRSE5RU1h6c09sSHpoVnVVYl94VmtVakVPV1JxZjBFMnB0NVhNZHV6UEU3YjVIY2dGQm1BYzhVdDJMYjAxb3VzdmdkNnJ5QTRZX0VaNnZMUkYydFZiZm94RkJDcEVRZWxpaXhyMHhTMmp2SXhiSHRvUXc0Wmdib0RDUE5qTnFiRC1NSFR2NnQ0dUF2NEFmQS0wTjI1Zl8yWEVUYVQ5RFNTS3pOU0V3ekxiN201emcyc3JqbVpTQjI4N2ZNRHVJSXc1Y3JDUlRCLWcmaD0yTzRjSXA4SklyV0M5M2hOeXJCbUpVOXMwd0Y3eGphbWM4MkhoY2cxajNF",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "95db32c9-d774-4679-93ec-c80e4d33dcf1"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.RecoveryServicesClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "06bc1abe-de7c-4eff-ae08-a6af2c596bb9"
+        ],
+        "x-ms-client-request-id": [
+          "95db32c9-d774-4679-93ec-c80e4d33dcf1"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/cfb791f6-7c2a-4630-8125-da0e7d63a78a"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "06bc1abe-de7c-4eff-ae08-a6af2c596bb9"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111145Z:06bc1abe-de7c-4eff-ae08-a6af2c596bb9"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: D8DF90D962A64A0CB2EEDC04D2B63549 Ref B: PNQ231110909031 Ref C: 2026-08-25T11:11:45Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:11:45 GMT"
+        ],
+        "Content-Length": [
+          "334"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationStatus/MTAyMztmOWYwZWYxOC0wMTFhLTQ4OTgtOTc0ZC03Y2ExYTAwOWU4MDc=\",\r\n  \"name\": \"MTAyMztmOWYwZWYxOC0wMTFhLTQ4OTgtOTc0ZC03Y2ExYTAwOWU4MDc=\",\r\n  \"status\": \"Succeeded\"\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ps-test-runtime/providers/Microsoft.RecoveryServices/vaults/ps-test-runtime-vault/operationResults/MTAyMztmOWYwZWYxOC0wMTFhLTQ4OTgtOTc0ZC03Y2ExYTAwOWU4MDc=?api-version=2026-07-01&t=639232530454930333&c=MIIH9TCCBt2gAwIBAgIRAPDa4C9JdpzDdl9yhvBcNtYwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgRVUyQyBDQSAwMTAeFw0yNjA3MjAyMzA3MDRaFw0yNzAxMTYwNTA3MDRaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMG_1TlJEDKMeYOsWAHT_Jh_858a_gwgniwC3IPJ45K5JPiptb0NYk7IMNebwt4Lbo4PdyRC_Fw808v2nC4J76i561Tdv2539uNEBY-vdQ5CPd35_ZLt-kS9H1h-Qc288K1Ug7SPSoZXt0tKFxm_X85t3YZdcuNYqYxk9q1s0Lu0WYniiDqX_DqZ1csPfyHgtEZc8vBSVl5fIh3LKnH3pw7yPbYmUGuvgO0bYmXc9rT1HGyFIM5zqJFVUMQbtjM273_hVQHMoy-ZVo8lv63sa2iU3VPHMEKJZ7Q9DPsGpJ0Ir-SMT8c69lXO7Wv-0y64CjlMZ8sLZOQidVPRKRQ3NQIDAQABo4IE8jCCBO4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUxRuFdzygTcCV5LvwnnSoeHAkhgEwHwYDVR0jBBgwFoAUz1EBqulDLGR2G0rwqsDykvhPw7swggHiBgNVHR8EggHZMIIB1TB1oHOgcYZvaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHegdaBzhnFodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyZXVhcC9jcmxzL2NjbWVlYXN0dXMyZXVhcHBraS9jY21lZWFzdHVzMmV1YXBpY2EwMS8zMC9jdXJyZW50LmNybDBmoGSgYoZgaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czJldWFwL2NybHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxLzMwL2N1cnJlbnQuY3JsMHugeaB3hnVodHRwOi8vY2NtZWVhc3R1czJldWFwcGtpLmVhc3R1czJldWFwLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJldWFwaWNhMDEvMzAvY3VycmVudC5jcmwwggHnBggrBgEFBQcBAQSCAdkwggHVMHgGCCsGAQUFBzAChmxodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwegYIKwYBBQUHMAKGbmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czJldWFwL2NhY2VydHMvY2NtZWVhc3R1czJldWFwcGtpL2NjbWVlYXN0dXMyZXVhcGljYTAxL2NlcnQuY2VyMGkGCCsGAQUFBzAChl1odHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vZWFzdHVzMmV1YXAvY2FjZXJ0cy9jY21lZWFzdHVzMmV1YXBwa2kvY2NtZWVhc3R1czJldWFwaWNhMDEvY2VydC5jZXIwcgYIKwYBBQUHMAKGZmh0dHA6Ly9jY21lZWFzdHVzMmV1YXBwa2kuZWFzdHVzMmV1YXAucGtpLmNvcmUud2luZG93cy5uZXQvY2VydGlmaWNhdGVBdXRob3JpdGllcy9jY21lZWFzdHVzMmV1YXBpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAm_gG_aSFikQfKF1IihOsfb6ZC4HFwKTGTh9Tq2Q0aiNHYrBKXvt2I5g-ZgV6EgMQ0or8btON08OrF2RQyXvT5C3tzv2WieKoM10xg_sHAMc1b0fhPMkcvWaCIcLZGbba9Qy0r2dpHd9KhYYz6U_JGtyoIC9Iwh3bj37AVBl2SzFKlq2bA0OsyoSd_h3qctXLNp8nFxfb6P7oBH1SDet_Yq2MCWezL87XbwmX-TESzwh_K5_pwCNgjbdui7Ym5hGLZaWEX6Q6HnkzgycnHt0_uqr5RcOpsGOSsW0tRnxAwnHWygcsKwBZO9O7gbREhyxtVQdJWSJtjT_fu3G6zqHtrQ&s=Ei-y5y7_2rGeHBV46_B17ySYCX7ikwPK8BcR9nn2aI-aYMl03RE_JdQY835QiY0BBM8stPtKDKCd0mch9IjM5jK0XfwGq7H04wdsoLVbXi8XrwR5Tt4VLJlY0pC54YD4UdhFtOz0kvoihWTUKbQ2_RBYBUWt0Lx8yWaZUpsnv0aO8jsmtQifzZZ8BnCIvTQHf4uSJc07pOs76Nclf6zUSloqCjiMC9mMlxx4gJJwAMevndTsxqHqVizOKlmQJO6KYXHTdySgZjlIJrzNlKr-O4YS3wQWrU9Z9paI6w-ZuL8lgpkLs4i9y8Ysef_nVG-kg5mPtCFzxh7t4GSO10PNhw&h=5T8EjdbmCl4eRhvV0i624R4CH8-we2uPwGD_mTcUhII",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvMzgzMDRlMTMtMzU3ZS00MDVlLTllOWEtMjIwMzUxZGNjZThjL3Jlc291cmNlR3JvdXBzL3BzLXRlc3QtcnVudGltZS9wcm92aWRlcnMvTWljcm9zb2Z0LlJlY292ZXJ5U2VydmljZXMvdmF1bHRzL3BzLXRlc3QtcnVudGltZS12YXVsdC9vcGVyYXRpb25SZXN1bHRzL01UQXlNenRtT1dZd1pXWXhPQzB3TVRGaExUUTRPVGd0T1RjMFpDMDNZMkV4WVRBd09XVTRNRGM9P2FwaS12ZXJzaW9uPTIwMjYtMDctMDEmdD02MzkyMzI1MzA0NTQ5MzAzMzMmYz1NSUlIOVRDQ0J0MmdBd0lCQWdJUkFQRGE0QzlKZHB6RGRsOXlodkJjTnRZd0RRWUpLb1pJaHZjTkFRRUxCUUF3TmpFME1ESUdBMVVFQXhNclEwTk5SU0JITVNCVVRGTWdVbE5CSURJd05EZ2dVMGhCTWpVMklESXdORGtnUlZVeVF5QkRRU0F3TVRBZUZ3MHlOakEzTWpBeU16QTNNRFJhRncweU56QXhNVFl3TlRBM01EUmFNRUF4UGpBOEJnTlZCQU1UTldGemVXNWpiM0JsY21GMGFXOXVjMmxuYm1sdVoyTmxjblJwWm1sallYUmxMbTFoYm1GblpXMWxiblF1WVhwMWNtVXVZMjl0TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF2TUdfMVRsSkVES01lWU9zV0FIVF9KaF84NThhX2d3Z25pd0MzSVBKNDVLNUpQaXB0YjBOWWs3SU1OZWJ3dDRMYm80UGR5UkNfRnc4MDh2Mm5DNEo3Nmk1NjFUZHYyNTM5dU5FQlktdmRRNUNQZDM1X1pMdC1rUzlIMWgtUWMyODhLMVVnN1NQU29aWHQwdEtGeG1fWDg1dDNZWmRjdU5ZcVl4azlxMXMwTHUwV1luaWlEcVhfRHFaMWNzUGZ5SGd0RVpjOHZCU1ZsNWZJaDNMS25IM3B3N3lQYlltVUd1dmdPMGJZbVhjOXJUMUhHeUZJTTV6cUpGVlVNUWJ0ak0yNzNfaFZRSE1veS1aVm84bHY2M3NhMmlVM1ZQSE1FS0paN1E5RFBzR3BKMElyLVNNVDhjNjlsWE83V3YtMHk2NENqbE1aOHNMWk9RaWRWUFJLUlEzTlFJREFRQUJvNElFOGpDQ0JPNHdnWjBHQTFVZElBU0JsVENCa2pBTUJnb3JCZ0VFQVlJM2V3RUJNR1lHQ2lzR0FRUUJnamQ3QWdJd1dEQldCZ2dyQmdFRkJRY0NBakJLSGtnQU13QXpBR1VBTUFBeEFEa0FNZ0F4QUMwQU5BQmtBRFlBTkFBdEFEUUFaZ0E0QUdNQUxRQmhBREFBTlFBMUFDMEFOUUJpQUdRQVlRQm1BR1lBWkFBMUFHVUFNd0F6QUdRd0RBWUtLd1lCQkFHQ04zc0RBakFNQmdvckJnRUVBWUkzZXdRQ01Bd0dBMVVkRXdFQl93UUNNQUF3SFFZRFZSMGxCQll3RkFZSUt3WUJCUVVIQXdFR0NDc0dBUVVGQndNQ01BNEdBMVVkRHdFQl93UUVBd0lGb0RBZEJnTlZIUTRFRmdRVXhSdUZkenlnVGNDVjVMdndublNvZUhBa2hnRXdId1lEVlIwakJCZ3dGb0FVejFFQnF1bERMR1IyRzByd3FzRHlrdmhQdzdzd2dnSGlCZ05WSFI4RWdnSFpNSUlCMVRCMW9IT2djWVp2YUhSMGNEb3ZMM0J5YVcxaGNua3RZMlJ1TG5CcmFTNWpiM0psTG5kcGJtUnZkM011Ym1WMEwyVmhjM1IxY3pKbGRXRndMMk55YkhNdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3Y0d0cEwyTmpiV1ZsWVhOMGRYTXlaWFZoY0dsallUQXhMek13TDJOMWNuSmxiblF1WTNKc01IZWdkYUJ6aG5Gb2RIUndPaTh2YzJWamIyNWtZWEo1TFdOa2JpNXdhMmt1WTI5eVpTNTNhVzVrYjNkekxtNWxkQzlsWVhOMGRYTXlaWFZoY0M5amNteHpMMk5qYldWbFlYTjBkWE15WlhWaGNIQnJhUzlqWTIxbFpXRnpkSFZ6TW1WMVlYQnBZMkV3TVM4ek1DOWpkWEp5Wlc1MExtTnliREJtb0dTZ1lvWmdhSFIwY0RvdkwyTnliQzV0YVdOeWIzTnZablF1WTI5dEwyVmhjM1IxY3pKbGRXRndMMk55YkhNdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3Y0d0cEwyTmpiV1ZsWVhOMGRYTXlaWFZoY0dsallUQXhMek13TDJOMWNuSmxiblF1WTNKc01IdWdlYUIzaG5Wb2RIUndPaTh2WTJOdFpXVmhjM1IxY3pKbGRXRndjR3RwTG1WaGMzUjFjekpsZFdGd0xuQnJhUzVqYjNKbExuZHBibVJ2ZDNNdWJtVjBMMk5sY25ScFptbGpZWFJsUVhWMGFHOXlhWFJwWlhNdlkyTnRaV1ZoYzNSMWN6SmxkV0Z3YVdOaE1ERXZNekF2WTNWeWNtVnVkQzVqY213d2dnSG5CZ2dyQmdFRkJRY0JBUVNDQWRrd2dnSFZNSGdHQ0NzR0FRVUZCekFDaG14b2RIUndPaTh2Y0hKcGJXRnllUzFqWkc0dWNHdHBMbU52Y21VdWQybHVaRzkzY3k1dVpYUXZaV0Z6ZEhWek1tVjFZWEF2WTJGalpYSjBjeTlqWTIxbFpXRnpkSFZ6TW1WMVlYQndhMmt2WTJOdFpXVmhjM1IxY3pKbGRXRndhV05oTURFdlkyVnlkQzVqWlhJd2VnWUlLd1lCQlFVSE1BS0dibWgwZEhBNkx5OXpaV052Ym1SaGNua3RZMlJ1TG5CcmFTNWpiM0psTG5kcGJtUnZkM011Ym1WMEwyVmhjM1IxY3pKbGRXRndMMk5oWTJWeWRITXZZMk50WldWaGMzUjFjekpsZFdGd2NHdHBMMk5qYldWbFlYTjBkWE15WlhWaGNHbGpZVEF4TDJObGNuUXVZMlZ5TUdrR0NDc0dBUVVGQnpBQ2hsMW9kSFJ3T2k4dlkzSnNMbTFwWTNKdmMyOW1kQzVqYjIwdlpXRnpkSFZ6TW1WMVlYQXZZMkZqWlhKMGN5OWpZMjFsWldGemRIVnpNbVYxWVhCd2Eya3ZZMk50WldWaGMzUjFjekpsZFdGd2FXTmhNREV2WTJWeWRDNWpaWEl3Y2dZSUt3WUJCUVVITUFLR1ptaDBkSEE2THk5alkyMWxaV0Z6ZEhWek1tVjFZWEJ3YTJrdVpXRnpkSFZ6TW1WMVlYQXVjR3RwTG1OdmNtVXVkMmx1Wkc5M2N5NXVaWFF2WTJWeWRHbG1hV05oZEdWQmRYUm9iM0pwZEdsbGN5OWpZMjFsWldGemRIVnpNbVYxWVhCcFkyRXdNVEFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBbV9nR19hU0Zpa1FmS0YxSWloT3NmYjZaQzRIRndLVEdUaDlUcTJRMGFpTkhZckJLWHZ0Mkk1Zy1aZ1Y2RWdNUTBvcjhidE9OMDhPckYyUlF5WHZUNUMzdHp2MldpZUtvTTEweGdfc0hBTWMxYjBmaFBNa2N2V2FDSWNMWkdiYmE5UXkwcjJkcEhkOUtoWVl6NlVfSkd0eW9JQzlJd2gzYmozN0FWQmwyU3pGS2xxMmJBME9zeW9TZF9oM3FjdFhMTnA4bkZ4ZmI2UDdvQkgxU0RldF9ZcTJNQ1dlekw4N1hid21YLVRFU3p3aF9LNV9wd0NOZ2piZHVpN1ltNWhHTFphV0VYNlE2SG5remd5Y25IdDBfdXFyNVJjT3BzR09Tc1cwdFJueEF3bkhXeWdjc0t3QlpPOU83Z2JSRWh5eHRWUWRKV1NKdGpUX2Z1M0c2enFIdHJRJnM9RWkteTV5N18yckdlSEJWNDZfQjE3eVNZQ1g3aWt3UEs4QmNSOW5uMmFJLWFZTWwwM1JFX0pkUVk4MzVRaVkwQkJNOHN0UHRLREtDZDBtY2g5SWpNNWpLMFhmd0dxN0gwNHdkc29MVmJYaThYcndSNVR0NFZMSmxZMHBDNTRZRDRVZGhGdE96MGt2b2loV1RVS2JRMl9SQllCVVd0MEx4OHlXYVpVcHNudjBhTzhqc210UWlmelpaOEJuQ0l2VFFIZjR1U0pjMDdwT3M3Nk5jbGY2elVTbG9xQ2ppTUM5bU1seHg0Z0pKd0FNZXZuZFRzeHFIcVZpek9LbG1RSk82S1lYSFRkeVNnWmpsSUpyek5sS3ItTzRZUzN3UVdyVTlaOXBhSTZ3LVp1TDhsZ3BrTHM0aTl5OFlzZWZfblZHLWtnNW1QdENGenhoN3Q0R1NPMTBQTmh3Jmg9NVQ4RWpkYm1DbDRlUmh2VjBpNjI0UjRDSDgtd2UydVB3R0RfbVRjVWhJSQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "95db32c9-d774-4679-93ec-c80e4d33dcf1"
+        ],
+        "User-Agent": [
+          "FxVersion/8.0.2926.32403",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26200",
+          "Microsoft.Azure.Management.RecoveryServices.RecoveryServicesClient/7.14.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "x-ms-request-id": [
+          "00000000-0000-0000-0000-000000000000"
+        ],
+        "x-ms-client-request-id": [
+          "00000000-0000-0000-0000-000000000000"
+        ],
+        "x-ms-operation-identifier": [
+          "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=352782de-cadf-4f14-ad97-08cd2617ef55/centraluseuap/d9cfd38c-89f3-4d71-9bae-ddfb7e662668"
+        ],
+        "x-ms-throttling-version": [
+          "v2"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "1099"
+        ],
+        "x-ms-correlation-request-id": [
+          "eecada31-3814-49b8-a761-1efa875a3370"
+        ],
+        "x-ms-routing-request-id": [
+          "CENTRALUSEUAP:20260825T111146Z:eecada31-3814-49b8-a761-1efa875a3370"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: 41AADF966DC54ECA9BB1B45DAC2B38F9 Ref B: PNQ231110909031 Ref C: 2026-08-25T11:11:45Z"
+        ],
+        "Date": [
+          "Tue, 25 Aug 2026 11:11:45 GMT"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 204
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "38304e13-357e-405e-9e9a-220351dcce8c"
+  }
+}

@@ -1,0 +1,66 @@
+<!--
+    Please leave this section at the top of the change log.
+
+    Changes for the upcoming release should go under the section titled "Upcoming Release", and should adhere to the following format:
+
+    ## Upcoming Release
+    * Overview of change #1
+        - Additional information about change #1
+    * Overview of change #2
+        - Additional information about change #2
+        - Additional information about change #2
+    * Overview of change #3
+    * Overview of change #4
+        - Additional information about change #4
+
+    ## YYYY.MM.DD - Version X.Y.Z (Previous Release)
+    * Overview of change #1
+        - Additional information about change #1
+-->
+## Upcoming Release
+* Upgraded API version to 2026-07-01-preview.
+* Added support for Relay dedicated clusters.
+    - Added cmdlets `Get-AzRelayCluster`, `New-AzRelayCluster`, `Set-AzRelayCluster` and `Remove-AzRelayCluster`.
+    - Added cmdlets `Get-AzRelayClusterNamespace`, `Get-AzRelayClusterSku` and `Get-AzRelayClusterAvailableClusterRegion`.
+    - `Set-AzRelayCluster` now reads the existing cluster before updating so that tags or capacity can be updated without re-specifying `-Location` and `-SkuCapacity`.
+* Added `ClusterArmId` parameter to `New-AzRelayNamespace` and `Update-AzRelayNamespace` to assign a namespace to a dedicated cluster.
+* Added `MinimumTlsVersion` parameter to `New-AzRelayNamespace` and `Update-AzRelayNamespace`.
+* Fixed `Update-AzRelayNamespace` failing with "The server responded with an unrecognized response, Status: Accepted" by handling the namespace update (PATCH) as a long-running operation.
+
+## Version 3.0.0
+* Introduced various new features by upgrading code generator. Please see details [here](https://github.com/Azure/azure-powershell/blob/main/documentation/Autorest-powershell-v4-new-features.md).
+
+## Version 2.1.2
+* Update the outputs of breaking change announcements.
+
+## Version 2.1.1
+* Added breaking change announcement for below commands.
+  - `Get-AzRelayNamespace`
+  - `Get-AzRelayNamespaceNetworkRuleSet`
+  - `Set-AzRelayNamespaceNetworkRuleSet`
+
+## Version 2.1.0
+* Upgraded nuget package to signed package.
+
+## Version 2.0.1
+* Introduced secrets detection feature to safeguard sensitive data.
+
+## Version 2.0.0
+* Updated API version to 2021-11-01
+
+## Version 1.0.4
+* Added breaking change message for cmdlets.
+    * `Set-AzRelayNamespace`
+    * `Get-AzRelayOperation`
+
+## Version 1.0.3
+* Update references in .psd1 to use relative path
+
+## Version 1.0.2
+* Fixed miscellaneous typos across module
+
+## Version 1.0.1
+* Fix typos in customer-facing messages
+
+## Version 1.0.0
+* General availability of `Az.Relay` module

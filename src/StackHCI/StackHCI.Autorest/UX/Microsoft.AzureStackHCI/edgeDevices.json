@@ -1,0 +1,75 @@
+{
+  "resourceType": "edgeDevices",
+  "apiVersion": "2024-04-01",
+  "learnMore": {
+    "url": "https://learn.microsoft.com/powershell/module/az.stackhci"
+  },
+  "commands": [
+    {
+      "name": "Get-AzStackHciEdgeDevice",
+      "description": "Get a EdgeDevice",
+      "path": "/{resourceUri}/providers/Microsoft.AzureStackHCI/edgeDevices/{edgeDeviceName}",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhciedgedevice"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-Name <String>",
+              "-ResourceUri <String>"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Get a EdgeDevice",
+          "parameters": [
+            {
+              "name": "-Name",
+              "value": "[Path.edgeDeviceName]"
+            },
+            {
+              "name": "-ResourceUri",
+              "value": "[Path.resourceUri]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Remove-AzStackHciEdgeDevice",
+      "description": "Delete a EdgeDevice",
+      "path": "/{resourceUri}/providers/Microsoft.AzureStackHCI/edgeDevices/{edgeDeviceName}",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.stackhci/remove-azstackhciedgedevice"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-Name <String>",
+              "-ResourceUri <String>"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Delete a EdgeDevice",
+          "parameters": [
+            {
+              "name": "-Name",
+              "value": "[Path.edgeDeviceName]"
+            },
+            {
+              "name": "-ResourceUri",
+              "value": "[Path.resourceUri]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
