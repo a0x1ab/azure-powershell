@@ -1,0 +1,51 @@
+{
+  "Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint+[NoContext]+List+$GET+https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/ml-psh-test/providers/Microsoft.MachineLearningServices/workspaces/mlworkspace-test1/outboundNetworkDependenciesEndpoints?api-version=2024-04-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/ml-psh-test/providers/Microsoft.MachineLearningServices/workspaces/mlworkspace-test1/outboundNetworkDependenciesEndpoints?api-version=2024-04-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "156" ],
+        "x-ms-client-request-id": [ "d2979025-8259-4f16-9782-a45ba6bfcf7b" ],
+        "CommandName": [ "Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint" ],
+        "FullCommandName": [ "Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v14.3.0", "PSVersion/v7.5.4", "Az.MachineLearningServices/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "Vary": [ "Accept-Encoding" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "248" ],
+        "x-ms-operation-identifier": [ "tenantId=213e87ed-8e08-4eb4-a63c-c073058f7b00,objectId=5dce0ce9-f0a7-437f-aea2-760d05c62ca9/eastus/056d8789-bfdb-4e3b-805b-72439c09c6ae" ],
+        "Request-Context": [ "appId=cid-v1:2d2e8e63-272e-4b3c-8598-4ee570a0e70d" ],
+        "x-ms-response-type": [ "standard" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "azureml-served-by-cluster": [ "vienna-eastus2-02" ],
+        "x-request-time": [ "0.036" ],
+        "x-ms-ratelimit-remaining-subscription-global-reads": [ "3748" ],
+        "x-ms-request-id": [ "c1ef9b55-3e79-4f9e-b205-b8459248ad2b" ],
+        "x-ms-correlation-request-id": [ "c1ef9b55-3e79-4f9e-b205-b8459248ad2b" ],
+        "x-ms-routing-request-id": [ "EASTUS:20251104T094009Z:c1ef9b55-3e79-4f9e-b205-b8459248ad2b" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: E8187FEDA4A04AE98F9BEB008B5D85A6 Ref B: JKT201051406023 Ref C: 2025-11-04T09:40:09Z" ],
+        "Date": [ "Tue, 04 Nov 2025 09:40:08 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "5041" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\n  \"value\": [\n    {\n      \"properties\": {\n        \"category\": \"Azure Active Directory\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"login.microsoftonline.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 80\n              },\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Azure portal\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"management.azure.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Azure Resource Manager\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"management.azure.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Azure Machine Learning studio\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"ml.azure.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"API\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"*.azureml.ms\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Integrated notebook\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"*.notebooks.azure.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"storageaccount1104ml.file.core.windows.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              },\n              {\n                \"port\": 445\n              }\n            ]\n          },\n          {\n            \"domainName\": \"storageaccount1104ml.dfs.core.windows.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"storageaccount1104ml.blob.core.windows.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"graph.microsoft.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"*.aznbcontent.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Compute \",\n        \"endpoints\": [\n          {\n            \"domainName\": \"*.instances.azureml.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"*.instances.azureml.ms\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              },\n              {\n                \"port\": 18881\n              },\n              {\n                \"port\": 8787\n              }\n            ]\n          },\n          {\n            \"domainName\": \"graph.microsoft.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"*.vault.azure.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"*.blob.core.windows.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"*.table.core.windows.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          },\n          {\n            \"domainName\": \"*.queue.core.windows.net\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Microsoft Container Registry\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"mcr.microsoft.com\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"properties\": {\n        \"category\": \"Azure Machine Learning pre-built images\",\n        \"endpoints\": [\n          {\n            \"domainName\": \"viennaglobal.azurecr.io\",\n            \"endpointDetails\": [\n              {\n                \"port\": 443\n              }\n            ]\n          }\n        ]\n      }\n    }\n  ]\n}",
+      "isContentBase64": false
+    }
+  }
+}
