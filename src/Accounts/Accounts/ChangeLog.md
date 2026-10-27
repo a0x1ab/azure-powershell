@@ -19,6 +19,7 @@
 -->
 
 ## Upcoming Release
+* Prepared AutoRest-generated cmdlets for upcoming Change Safety support (no user-visible changes yet).
 
 ## Version 5.5.1
 * Upgraded `Azure.Core` dependency from 1.50.0 to 1.56.0.

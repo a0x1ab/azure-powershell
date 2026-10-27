@@ -77,6 +77,7 @@ namespace Microsoft.Azure.Commands.Common
             prependStep(UniqueId.Instance.SendAsync);
             appendStep(new UserAgent(invocationInfo).SendAsync);
             appendStep(this.SendHandler(GetDefaultContext(_provider, invocationInfo), AzureEnvironment.Endpoint.ActiveDirectoryServiceEndpointResourceId));
+            this.AddAcquirePolicyTokenHandler(invocationInfo, appendStep);
         }
 
         internal void AddRequestUserAgentHandler(
@@ -120,6 +121,46 @@ namespace Microsoft.Azure.Commands.Common
                     endpointResourceIdKey = endpointResourceIdKey ?? AzureEnvironment.Endpoint.ActiveDirectoryServiceEndpointResourceId;
                     var context = GetDefaultContext(_provider, invocationInfo);
                     return await AuthenticationHelper(context, endpointResourceIdKey, endpointSuffixKey, request, cancelToken, cancelAction, signal, next);
+                });
+        }
+
+        /// <summary>
+        /// Conditionally appends a change safety step to the HTTP pipeline that acquires an Azure Policy
+        /// token and stamps it onto outgoing write requests. When the feature is off (neither
+        /// -AcquirePolicyToken nor -ChangeReference supplied) no pipeline step is added, so there is no
+        /// added cost for the common case.
+        /// </summary>
+        private void AddAcquirePolicyTokenHandler(InvocationInfo invocationInfo, PipelineChangeDelegate appendStep)
+        {
+            AddAcquirePolicyTokenHandler(invocationInfo?.BoundParameters, appendStep);
+        }
+
+        /// <summary>
+        /// Testable core of <see cref="AddAcquirePolicyTokenHandler(InvocationInfo, PipelineChangeDelegate)"/>.
+        /// Evaluates the change safety bound parameters up front and only appends a pipeline step when the
+        /// feature is requested. The write-verb gate lives inside <c>StampPolicyTokenAsync</c>, so GET
+        /// sub-requests are skipped even though the step is added for the cmdlet.
+        /// </summary>
+        internal static void AddAcquirePolicyTokenHandler(IDictionary<string, object> boundParameters, PipelineChangeDelegate appendStep)
+        {
+            if (boundParameters == null) { return; }
+
+            bool acquire = boundParameters.TryGetValue(Microsoft.WindowsAzure.Commands.Common.ChangeSafetyParameters.AcquirePolicyTokenParamName, out var acquireVal)
+                && acquireVal is SwitchParameter sp && sp.IsPresent;
+            string changeReference = boundParameters.TryGetValue(Microsoft.WindowsAzure.Commands.Common.ChangeSafetyParameters.ChangeReferenceParamName, out var crVal)
+                ? crVal as string : null;
+            bool shouldAcquire = acquire || !string.IsNullOrEmpty(changeReference);
+            if (!shouldAcquire) { return; } // feature off -> no added pipeline step (zero cost)
+
+            bool isWhatIf = boundParameters.TryGetValue("WhatIf", out var whatIfVal)
+                && whatIfVal is SwitchParameter whatIfSp
+                && whatIfSp.IsPresent;
+            var acquirer = new Microsoft.WindowsAzure.Commands.Common.PolicyTokenAcquirer();
+            appendStep(
+                async (request, cancelToken, cancelAction, signal, next) =>
+                {
+                    await acquirer.StampPolicyTokenAsync(request, true, changeReference, isWhatIf, null, null, cancelToken).ConfigureAwait(false);
+                    return await next(request, cancelToken, cancelAction, signal);
                 });
         }
 
@@ -192,6 +233,56 @@ namespace Microsoft.Azure.Commands.Common
             }
 
             return string.Empty;
+        }
+
+        /// <summary>
+        /// The cmdlet will call this on write-verb cmdlets to obtain the Change Safety dynamic parameters
+        /// (-AcquirePolicyToken and -ChangeReference).
+        /// </summary>
+        /// <param name="resourceId"><c>string</c>containing the expected resource id (ie, ARM).</param>
+        /// <param name="moduleName"><c>string</c>containing the name of the module being loaded.</param>
+        /// <param name="invocationInfo">The <see cref="System.Management.Automation.InvocationInfo" /> from the cmdlet</param>
+        /// <param name="correlationId">The <see cref="string" /> containing the correlation id for the cmdlet</param>
+        /// <returns>A <see cref="RuntimeDefinedParameterDictionary" /> of the Change Safety parameters.</returns>
+        /// <remarks>
+        /// <paramref name="resourceId" />, <paramref name="moduleName" /> and <paramref name="correlationId" /> are
+        /// intentionally unused; they exist only to match the shared VTable delegate contract (mirroring
+        /// <see cref="GetParameterValue" />) so the generated Stage C <c>Module.cs</c> wrapper can invoke this uniformly.
+        /// </remarks>
+        public object GetDynamicParametersValue(string resourceId, string moduleName, InvocationInfo invocationInfo, string correlationId)
+        {
+            var commandName = invocationInfo?.MyCommand?.Name ?? string.Empty;
+            return BuildChangeSafetyDynamicParameters(commandName);
+        }
+
+        /// <summary>
+        /// Testable core of <see cref="GetDynamicParametersValue" />. Builds the Change Safety dynamic parameter
+        /// dictionary for the given command name, gating out read-verb cmdlets.
+        /// </summary>
+        internal static RuntimeDefinedParameterDictionary BuildChangeSafetyDynamicParameters(string commandName)
+        {
+            var dict = new RuntimeDefinedParameterDictionary();
+            // Defensive read-verb gate (safety net; the generator only emits the call on write-verb cmdlets):
+            if (IsReadVerbCommand(commandName))
+            {
+                return dict;
+            }
+
+            Microsoft.WindowsAzure.Commands.Common.ChangeSafetyParameters.AddChangeSafetyParameters(dict);
+            return dict;
+        }
+
+        /// <summary>
+        /// Returns true when the supplied command name uses a read-only verb (Get/Test/List/Show) and therefore
+        /// should not receive the Change Safety dynamic parameters.
+        /// </summary>
+        internal static bool IsReadVerbCommand(string commandName)
+        {
+            commandName = commandName ?? string.Empty;
+            return commandName.StartsWith("Get", StringComparison.OrdinalIgnoreCase)
+                || commandName.StartsWith("Test", StringComparison.OrdinalIgnoreCase)
+                || commandName.StartsWith("List", StringComparison.OrdinalIgnoreCase)
+                || commandName.StartsWith("Show", StringComparison.OrdinalIgnoreCase);
         }
 
         internal async Task<HttpResponseMessage> AuthenticationHelper(IAzureContext context, string endpointResourceIdKey, string endpointSuffixKey, HttpRequestMessage request, CancellationToken cancelToken, Action cancelAction, SignalDelegate signal, NextDelegate next, TokenAudienceConverterDelegate tokenAudienceConverter = null)
