@@ -1,0 +1,904 @@
+{
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault?api-version=2026-03-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "268" ],
+        "x-ms-client-request-id": [ "1416ff07-ed2d-435c-9234-c6acd9228976" ],
+        "CommandName": [ "Get-AzDataProtectionBackupVault" ],
+        "FullCommandName": [ "Get-AzDataProtectionBackupVault_Get2" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-request-id": [ "ef941d57-1898-408d-9ae1-2dab8d2a651e" ],
+        "x-ms-correlation-request-id": [ "ef941d57-1898-408d-9ae1-2dab8d2a651e" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211302Z:ef941d57-1898-408d-9ae1-2dab8d2a651e" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 43B75EF4EA774624980DB82A6A469930 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:13:02Z" ],
+        "Date": [ "Sun, 17 May 2026 21:13:02 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "910" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"location\":\"eastasia\",\"tags\":{},\"identity\":{\"type\":\"SystemAssigned\",\"principalId\":\"5fba9784-40fe-4a39-b588-ab60cd983cbf\",\"tenantId\":\"72f988bf-86f1-41af-91ab-2d7cd011db47\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"storageSettings\":[{\"datastoreType\":\"VaultStore\",\"type\":\"LocallyRedundant\"}],\"isVaultProtectedByResourceGuard\":false,\"securitySettings\":{\"softDeleteSettings\":{\"state\":\"AlwaysOn\",\"retentionDurationInDays\":14.0},\"immutabilitySettings\":{\"state\":\"Disabled\"}},\"featureSettings\":{\"crossSubscriptionRestoreSettings\":{\"state\":\"Enabled\"}},\"secureScore\":\"Adequate\",\"bcdrSecurityLevel\":\"Good\",\"replicatedRegions\":[],\"regionOfChoiceSettings\":{\"status\":\"NotApplicable\"}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourcegroups/pgflexrestorefix/providers/Microsoft.DataProtection/BackupVaults/pgflexrestorevault\",\"name\":\"pgflexrestorevault\",\"type\":\"Microsoft.DataProtection/backupVaults\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances?api-version=2026-03-01+2": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "269" ],
+        "x-ms-client-request-id": [ "3653fbda-4719-49b9-8807-3619c6c702af" ],
+        "CommandName": [ "Get-AzDataProtectionBackupInstance" ],
+        "FullCommandName": [ "Get-AzDataProtectionBackupInstance_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/43eba930-76e2-425c-9b18-8f54372a48de" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "f2edf398-f50e-4980-9f7f-0359fc7d47ce" ],
+        "x-ms-correlation-request-id": [ "f2edf398-f50e-4980-9f7f-0359fc7d47ce" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211303Z:f2edf398-f50e-4980-9f7f-0359fc7d47ce" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 083F050724644B5EAAD0EC6010F53D75 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:13:02Z" ],
+        "Date": [ "Sun, 17 May 2026 21:13:03 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1992" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"properties\":{\"friendlyName\":\"pgflexrestore\",\"dataSourceInfo\":{\"resourceID\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"resourceUri\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"datasourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"resourceName\":\"pgflexrestore\",\"resourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"resourceLocation\":\"eastasia\",\"objectType\":\"Datasource\"},\"dataSourceSetInfo\":{\"resourceID\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"resourceUri\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"datasourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"resourceName\":\"pgflexrestore\",\"resourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"resourceLocation\":\"eastasia\",\"objectType\":\"DatasourceSet\"},\"policyInfo\":{\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"policyVersion\":\"\"},\"protectionStatus\":{\"status\":\"ProtectionConfigured\"},\"currentProtectionState\":\"ProtectionConfigured\",\"provisioningState\":\"Succeeded\",\"identityDetails\":{\"useSystemAssignedIdentity\":true},\"objectType\":\"BackupInstance\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"name\":\"pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances\"}]}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints?api-version=2026-03-01+3": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "270" ],
+        "x-ms-client-request-id": [ "35854217-5a04-4264-ae64-16012ccb2234" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionRecoveryPoint" ],
+        "FullCommandName": [ "Get-AzDataProtectionRecoveryPoint_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/825ef0c4-3786-4a50-a5ec-4b435ef90669" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "34e5413f-2748-4e2a-90c2-2713a585458e" ],
+        "x-ms-correlation-request-id": [ "34e5413f-2748-4e2a-90c2-2713a585458e" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211304Z:34e5413f-2748-4e2a-90c2-2713a585458e" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 6562D8B286004006AB69CF413A5E69C9 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:13:03Z" ],
+        "Date": [ "Sun, 17 May 2026 21:13:03 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "19373" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-05-10T23:00:55.1819185Z\",\"expiryTime\":null,\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":null,\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/014064ca88b14183bed92a0f37ea67a3\",\"name\":\"014064ca88b14183bed92a0f37ea67a3\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"0d2fc085eddd4ac1a19dab7cb4dba405\",\"recoveryPointTime\":\"2026-05-03T22:59:18.1647292Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"0d2fc085eddd4ac1a19dab7cb4dba405\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-05-03T22:59:18.2250926Z\",\"expiryTime\":\"2036-05-03T22:59:18.2250926Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-05-03T22:59:18.2250926Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/0d2fc085eddd4ac1a19dab7cb4dba405\",\"name\":\"0d2fc085eddd4ac1a19dab7cb4dba405\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"8c3ce536867a4c4c9018e6b11f2664e6\",\"recoveryPointTime\":\"2026-04-26T23:01:16.5122739Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"8c3ce536867a4c4c9018e6b11f2664e6\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-04-26T23:01:16.6528518Z\",\"expiryTime\":\"2036-04-26T23:01:16.6528518Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-04-26T23:01:16.6528518Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/8c3ce536867a4c4c9018e6b11f2664e6\",\"name\":\"8c3ce536867a4c4c9018e6b11f2664e6\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"f61741b98c1648d3802f5d2b35982061\",\"recoveryPointTime\":\"2026-04-19T23:01:42.4595366Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"f61741b98c1648d3802f5d2b35982061\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-04-19T23:01:42.5343456Z\",\"expiryTime\":\"2036-04-19T23:01:42.5343456Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-04-19T23:01:42.5343456Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/f61741b98c1648d3802f5d2b35982061\",\"name\":\"f61741b98c1648d3802f5d2b35982061\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"0fcce7cceaf84b6d9f85868fcfc7c28d\",\"recoveryPointTime\":\"2026-04-12T22:59:16.7625280Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"0fcce7cceaf84b6d9f85868fcfc7c28d\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-04-12T22:59:16.8982158Z\",\"expiryTime\":\"2036-04-12T22:59:16.8982158Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-04-12T22:59:16.8982158Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/0fcce7cceaf84b6d9f85868fcfc7c28d\",\"name\":\"0fcce7cceaf84b6d9f85868fcfc7c28d\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"c57bc6de6b124114ad82a5edfd0a3b8d\",\"recoveryPointTime\":\"2026-04-05T23:01:45.7600725Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"c57bc6de6b124114ad82a5edfd0a3b8d\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-04-05T23:01:45.7902073Z\",\"expiryTime\":\"2036-04-05T23:01:45.7902073Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-04-05T23:01:45.7902073Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/c57bc6de6b124114ad82a5edfd0a3b8d\",\"name\":\"c57bc6de6b124114ad82a5edfd0a3b8d\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"218fa5af4a664b4b91ea1fed2f784f65\",\"recoveryPointTime\":\"2026-03-29T23:01:07.5114911Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"218fa5af4a664b4b91ea1fed2f784f65\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-03-29T23:01:07.5893867Z\",\"expiryTime\":\"2036-03-29T23:01:07.5893867Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-03-29T23:01:07.5893867Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/218fa5af4a664b4b91ea1fed2f784f65\",\"name\":\"218fa5af4a664b4b91ea1fed2f784f65\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"d4e4bde690704037b25586a9aa7aa8a3\",\"recoveryPointTime\":\"2026-03-22T23:02:16.3524924Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"d4e4bde690704037b25586a9aa7aa8a3\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-03-22T23:02:16.4399069Z\",\"expiryTime\":\"2036-03-22T23:02:16.4399069Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-03-22T23:02:16.4399069Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/d4e4bde690704037b25586a9aa7aa8a3\",\"name\":\"d4e4bde690704037b25586a9aa7aa8a3\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"5ed7ed553b4b4eaf813ef4f252761fc2\",\"recoveryPointTime\":\"2026-03-15T22:40:01.4829531Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"5ed7ed553b4b4eaf813ef4f252761fc2\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-03-15T22:40:01.5891932Z\",\"expiryTime\":\"2036-03-15T22:40:01.5891932Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-03-15T22:40:01.5891932Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/5ed7ed553b4b4eaf813ef4f252761fc2\",\"name\":\"5ed7ed553b4b4eaf813ef4f252761fc2\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"3ac3765724e14dc9b523a892f3e4b4e0\",\"recoveryPointTime\":\"2026-03-08T22:42:00.9811974Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"3ac3765724e14dc9b523a892f3e4b4e0\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-03-08T22:42:01.1121310Z\",\"expiryTime\":\"2036-03-08T22:42:01.1121310Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-03-08T22:42:01.1121310Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/3ac3765724e14dc9b523a892f3e4b4e0\",\"name\":\"3ac3765724e14dc9b523a892f3e4b4e0\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"a0601c84366c4bd2b46f25c960e9ddb7\",\"recoveryPointTime\":\"2026-02-15T22:42:05.9767265Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"a0601c84366c4bd2b46f25c960e9ddb7\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-02-15T22:42:06.1121586Z\",\"expiryTime\":\"2036-02-15T22:42:06.1121586Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-02-15T22:42:06.1121586Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/a0601c84366c4bd2b46f25c960e9ddb7\",\"name\":\"a0601c84366c4bd2b46f25c960e9ddb7\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"4922847cb87b44f6aed686490047c6ec\",\"recoveryPointTime\":\"2026-02-08T22:41:58.9431952Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"4922847cb87b44f6aed686490047c6ec\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-02-08T22:41:59.0779839Z\",\"expiryTime\":\"2036-02-08T22:41:59.0779839Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-02-08T22:41:59.0779839Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/4922847cb87b44f6aed686490047c6ec\",\"name\":\"4922847cb87b44f6aed686490047c6ec\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"757e20a49d554f7ebd1b95a93ae9248d\",\"recoveryPointTime\":\"2026-01-25T22:39:01.3598909Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"757e20a49d554f7ebd1b95a93ae9248d\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-01-25T22:39:01.4702508Z\",\"expiryTime\":\"2036-01-25T22:39:01.4702508Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-01-25T22:39:01.4702508Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/757e20a49d554f7ebd1b95a93ae9248d\",\"name\":\"757e20a49d554f7ebd1b95a93ae9248d\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"0ed55760bbbb44dc965b369847c2beeb\",\"recoveryPointTime\":\"2026-01-16T09:56:56.9758374Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"0ed55760bbbb44dc965b369847c2beeb\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-01-16T09:56:57.1175848Z\",\"expiryTime\":\"2036-01-16T09:56:57.1175848Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-01-16T09:56:57.1175848Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/0ed55760bbbb44dc965b369847c2beeb\",\"name\":\"0ed55760bbbb44dc965b369847c2beeb\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"44bf761d74134b82a6a8dd31a3f53b66\",\"recoveryPointTime\":\"2026-01-11T22:39:03.9931079Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"44bf761d74134b82a6a8dd31a3f53b66\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-01-11T22:39:04.0677372Z\",\"expiryTime\":\"2036-01-11T22:39:04.0677372Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-01-11T22:39:04.0677372Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/44bf761d74134b82a6a8dd31a3f53b66\",\"name\":\"44bf761d74134b82a6a8dd31a3f53b66\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"a97bb0e514b349bebd29a07ea92f1c94\",\"recoveryPointTime\":\"2026-01-04T22:38:58.1581894Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"a97bb0e514b349bebd29a07ea92f1c94\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2026-01-04T22:38:58.2305947Z\",\"expiryTime\":\"2036-01-04T22:38:58.2305947Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2036-01-04T22:38:58.2305947Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/a97bb0e514b349bebd29a07ea92f1c94\",\"name\":\"a97bb0e514b349bebd29a07ea92f1c94\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"},{\"properties\":{\"objectType\":\"AzureBackupDiscreteRecoveryPoint\",\"recoveryPointId\":\"28412ae3c5114c3fb8e27f37ea03fe93\",\"recoveryPointTime\":\"2025-12-31T17:00:43.3602548Z\",\"recoveryPointType\":\"Full\",\"friendlyName\":\"28412ae3c5114c3fb8e27f37ea03fe93\",\"recoveryPointDataStoresDetails\":[{\"id\":\"e69db2a9-7eee-4c86-87b8-ab2d843c1d62\",\"type\":\"VaultStore\",\"creationTime\":\"2025-12-31T17:00:43.4341913Z\",\"expiryTime\":\"2035-12-31T17:00:43.4341913Z\",\"metaData\":null,\"visible\":true,\"state\":\"COMMITTED\",\"rehydrationExpiryTime\":null,\"rehydrationStatus\":null}],\"retentionTagName\":\"Default\",\"retentionTagVersion\":\"639027953749044252\",\"policyName\":\"testpol\",\"policyVersion\":null,\"expiryTime\":\"2035-12-31T17:00:43.4341913Z\",\"recoveryPointState\":\"Completed\"},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/recoveryPoints/28412ae3c5114c3fb8e27f37ea03fe93\",\"name\":\"28412ae3c5114c3fb8e27f37ea03fe93\",\"type\":\"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints\"}]}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$POST+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/validateRestore?api-version=2026-03-01+4": {
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/validateRestore?api-version=2026-03-01",
+      "Content": "{\r\n  \"restoreRequestObject\": {\r\n    \"objectType\": \"AzureBackupRecoveryPointBasedRestoreRequest\",\r\n    \"restoreTargetInfo\": {\r\n      \"objectType\": \"RestoreFilesTargetInfo\",\r\n      \"recoveryOption\": \"FailIfExists\",\r\n      \"restoreLocation\": \"eastasia\",\r\n      \"targetDetails\": {\r\n        \"filePrefix\": \"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\",\r\n        \"restoreTargetLocationType\": \"AzureBlobs\",\r\n        \"url\": \"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\r\n        \"targetResourceArmId\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/afs-pstest-rg/providers/Microsoft.Storage/storageAccounts/afspstestsa/blobServices/default/containers/pgflex-csr\"\r\n      }\r\n    },\r\n    \"sourceDataStoreType\": \"VaultStore\",\r\n    \"recoveryPointId\": \"014064ca88b14183bed92a0f37ea67a3\"\r\n  }\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "817" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 202,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "Location": [ "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationResults/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849377642\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=1xTtENu8GrBLJrdSWAR4y-QNQifD5EZ60rKbPupzJZ4BcYr09r8rWJr32qqWdxdJ46jlOXMuAiT-dFNON3iBYjBy4UuqXfFafyu8TRLrX4XEmum2yHbpSeYr2EURCdeeOp6vc9cn3ABL8Vj0H3vfWc_21aXzO6_QTqWpIWl3rn1AJUl8ZAa2aA6X2PNErEwMmd4MT0xfX0mKFvc-hsqfj2EpEQYE21pAKqi4Ay5VTw15A3BZzZ4BEf4BimAYmFO87RsV6U5Cs6t2mwjAyyeGwc2JFYTWdS09D88kUE9YTd44EawbPoADzSpk1OMpzpH2DrbiM3uM3DQm_i28YlhKUA\u0026h=e4kP7desv5pDNAiPhibdr8P_wjfpE6gSlFGASLHxwMc" ],
+        "Retry-After": [ "10" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Azure-AsyncOperation": [ "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/d72a2e74-ceac-4644-ab0d-eeae727a5105" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "799" ],
+        "x-ms-ratelimit-remaining-subscription-global-writes": [ "11999" ],
+        "x-ms-request-id": [ "5f5f103d-9825-42b5-8912-6d9f2061d99b" ],
+        "x-ms-correlation-request-id": [ "5f5f103d-9825-42b5-8912-6d9f2061d99b" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211304Z:5f5f103d-9825-42b5-8912-6d9f2061d99b" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 0AF28873962B41AFA7655244D8DA6312 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:13:04Z" ],
+        "Date": [ "Sun, 17 May 2026 21:13:04 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null,
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8+5": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "272" ],
+        "x-ms-client-request-id": [ "b031d431-80b6-4b26-86e0-b69ef806dbe3" ],
+        "CommandName": [ "Az.DataProtection.Internal\\Test-AzDataProtectionBackupInstanceRestore" ],
+        "FullCommandName": [ "Test-AzDataProtectionBackupInstanceRestore_Validate1" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/ea4061f0-1d2f-4ff5-9a1f-e17cec8908c6" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "e020d6f9-811d-411b-94af-dad5ab5f7505" ],
+        "x-ms-correlation-request-id": [ "e020d6f9-811d-411b-94af-dad5ab5f7505" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211315Z:e020d6f9-811d-411b-94af-dad5ab5f7505" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: EABFAE4E36DA48A19A7CE32C59B3D988 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:13:15Z" ],
+        "Date": [ "Sun, 17 May 2026 21:13:14 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "483" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==\",\"name\":\"MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==\",\"status\":\"Inprogress\",\"startTime\":\"2026-05-17T21:13:04.759646Z\",\"endTime\":\"0001-01-01T00:00:00Z\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8+6": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "273" ],
+        "x-ms-client-request-id": [ "b031d431-80b6-4b26-86e0-b69ef806dbe3" ],
+        "CommandName": [ "Az.DataProtection.Internal\\Test-AzDataProtectionBackupInstanceRestore" ],
+        "FullCommandName": [ "Test-AzDataProtectionBackupInstanceRestore_Validate1" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/ced37bb4-7b8f-4e60-8404-5eb54adfabac" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "243fc601-67a4-4fde-8844-0f5cfdc55431" ],
+        "x-ms-correlation-request-id": [ "243fc601-67a4-4fde-8844-0f5cfdc55431" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211346Z:243fc601-67a4-4fde-8844-0f5cfdc55431" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: F02C5FF5F4544399B51B2E33FFE66ED0 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:13:45Z" ],
+        "Date": [ "Sun, 17 May 2026 21:13:45 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "483" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==\",\"name\":\"MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==\",\"status\":\"Inprogress\",\"startTime\":\"2026-05-17T21:13:04.759646Z\",\"endTime\":\"0001-01-01T00:00:00Z\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8+7": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849216416\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=GEK5jSAJiea0OC8Q2TKUXbW2166aRGAOVmEaPw9uhN18P8qhVknJaXMNWoNJBZI4Yk48dMY6SdakEvbv2oNkaz7bvNE8LYxc0FCBXVDANMHp_ovisWFQXGQdF_EXu7JvxsV7wCousoYmLT8PA7CmM-Xjgat7_kuTcvRNxkj8pnvItj3f7O_KrbwjXLTXrqWu67pTkJFCYrSkiyGMHp0NPFnM47cN7BYqutWU_6xlJcr6X9JGSZEFISybLZhkmtMXPiL6oc4dameTTwyVEd2OP5J05fZxtOFiq_h2iYNYQeuegkqqoHWLa86Ry9kr33Z8EJbzShEOIiFIE7a6I7XB_w\u0026h=n_O17qdAE6bZru1RS-RB4ZCb3VXPEHQWmxXcsQakKV8",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "274" ],
+        "x-ms-client-request-id": [ "b031d431-80b6-4b26-86e0-b69ef806dbe3" ],
+        "CommandName": [ "Az.DataProtection.Internal\\Test-AzDataProtectionBackupInstanceRestore" ],
+        "FullCommandName": [ "Test-AzDataProtectionBackupInstanceRestore_Validate1" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/cba43338-6432-42af-bf39-4ed7d26a88be" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "4043aa49-73d3-43bd-9d6b-db01eaa9b054" ],
+        "x-ms-correlation-request-id": [ "4043aa49-73d3-43bd-9d6b-db01eaa9b054" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211416Z:4043aa49-73d3-43bd-9d6b-db01eaa9b054" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 0186882D4C034F9E83354C0EC59170A5 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:14:16Z" ],
+        "Date": [ "Sun, 17 May 2026 21:14:16 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "482" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==\",\"name\":\"MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==\",\"status\":\"Succeeded\",\"startTime\":\"2026-05-17T21:13:04.759646Z\",\"endTime\":\"2026-05-17T21:13:47Z\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationResults/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849377642\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=1xTtENu8GrBLJrdSWAR4y-QNQifD5EZ60rKbPupzJZ4BcYr09r8rWJr32qqWdxdJ46jlOXMuAiT-dFNON3iBYjBy4UuqXfFafyu8TRLrX4XEmum2yHbpSeYr2EURCdeeOp6vc9cn3ABL8Vj0H3vfWc_21aXzO6_QTqWpIWl3rn1AJUl8ZAa2aA6X2PNErEwMmd4MT0xfX0mKFvc-hsqfj2EpEQYE21pAKqi4Ay5VTw15A3BZzZ4BEf4BimAYmFO87RsV6U5Cs6t2mwjAyyeGwc2JFYTWdS09D88kUE9YTd44EawbPoADzSpk1OMpzpH2DrbiM3uM3DQm_i28YlhKUA\u0026h=e4kP7desv5pDNAiPhibdr8P_wjfpE6gSlFGASLHxwMc+8": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationResults/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146491849377642\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=1xTtENu8GrBLJrdSWAR4y-QNQifD5EZ60rKbPupzJZ4BcYr09r8rWJr32qqWdxdJ46jlOXMuAiT-dFNON3iBYjBy4UuqXfFafyu8TRLrX4XEmum2yHbpSeYr2EURCdeeOp6vc9cn3ABL8Vj0H3vfWc_21aXzO6_QTqWpIWl3rn1AJUl8ZAa2aA6X2PNErEwMmd4MT0xfX0mKFvc-hsqfj2EpEQYE21pAKqi4Ay5VTw15A3BZzZ4BEf4BimAYmFO87RsV6U5Cs6t2mwjAyyeGwc2JFYTWdS09D88kUE9YTd44EawbPoADzSpk1OMpzpH2DrbiM3uM3DQm_i28YlhKUA\u0026h=e4kP7desv5pDNAiPhibdr8P_wjfpE6gSlFGASLHxwMc",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "275" ],
+        "x-ms-client-request-id": [ "b031d431-80b6-4b26-86e0-b69ef806dbe3" ],
+        "CommandName": [ "Az.DataProtection.Internal\\Test-AzDataProtectionBackupInstanceRestore" ],
+        "FullCommandName": [ "Test-AzDataProtectionBackupInstanceRestore_Validate1" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "Retry-After": [ "30" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/southcentralus/9b9e1d24-d1d5-4c72-8622-0f956223100f" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Azure-AsyncOperation": [ "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxOzNmNTc1YTI5LWNlNDUtNGVlZC1hMzRmLTIyM2ZmZjQ2YzQ1MA==?api-version=2026-03-01\u0026t=639146492576503703\u0026c=MIIHlTCCBn2gAwIBAgIRAPJcAXyj4PVuWaPsZt01Ea8wDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgV1VTMiBDQSAwMTAeFw0yNjA0MTMxMDI3MjdaFw0yNjEwMDgxNjI3MjdaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGh44O6OT9eV5zBoE7LVtpq9r87ylQlFliZM7nTFJS6yTj-Ehw3wVWNvnoX-mNFNhmSwdl67kN8W7qk2b-xaDQGvIByXgc0l_A0_66drbjOLw0cVSofjs2VuaxmZRXhJFvM-pt3sXePdevW81JLjMk1YjICdX1r66KxgNYw9bCx-F6txnRsnbEUxeVuuTSII1T4pd9kSGMoM0XsK6OuAWsqAD44880TL7KnfxAAzvx4vR90NSV3y0uLJa8HaKT-yziXCH7CgXY0sGB68jGkpbM3IU2ZOoV259sHfU5b9LAPFIMS11xuvr6G4i-bYfmc-Yd9iBvPW4J94HCylLRHUMQIDAQABo4IEkjCCBI4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUC7Fq4o2xVsICe40dVrso6r4tnS4wHwYDVR0jBBgwFoAUrONy-gOyc549lcjvh1uu3Ruh7WgwggGyBgNVHR8EggGpMIIBpTBpoGegZYZjaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L3dlc3R1czIvY3Jscy9jY21ld2VzdHVzMnBraS9jY21ld2VzdHVzMmljYTAxLzY4L2N1cnJlbnQuY3JsMGugaaBnhmVodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC93ZXN0dXMyL2NybHMvY2NtZXdlc3R1czJwa2kvY2NtZXdlc3R1czJpY2EwMS82OC9jdXJyZW50LmNybDBaoFigVoZUaHR0cDovL2NybC5taWNyb3NvZnQuY29tL3dlc3R1czIvY3Jscy9jY21ld2VzdHVzMnBraS9jY21ld2VzdHVzMmljYTAxLzY4L2N1cnJlbnQuY3JsMG-gbaBrhmlodHRwOi8vY2NtZXdlc3R1czJwa2kud2VzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWV3ZXN0dXMyaWNhMDEvNjgvY3VycmVudC5jcmwwggG3BggrBgEFBQcBAQSCAakwggGlMGwGCCsGAQUFBzAChmBodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvd2VzdHVzMi9jYWNlcnRzL2NjbWV3ZXN0dXMycGtpL2NjbWV3ZXN0dXMyaWNhMDEvY2VydC5jZXIwbgYIKwYBBQUHMAKGYmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L3dlc3R1czIvY2FjZXJ0cy9jY21ld2VzdHVzMnBraS9jY21ld2VzdHVzMmljYTAxL2NlcnQuY2VyMF0GCCsGAQUFBzAChlFodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vd2VzdHVzMi9jYWNlcnRzL2NjbWV3ZXN0dXMycGtpL2NjbWV3ZXN0dXMyaWNhMDEvY2VydC5jZXIwZgYIKwYBBQUHMAKGWmh0dHA6Ly9jY21ld2VzdHVzMnBraS53ZXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZXdlc3R1czJpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAdA_pc38CxGkQIQwsCCkLD0bJLoyzIBBC9aOoZt_62ikFeWcKd4MODmGv5o67rlzoqG9qLks5cPaFQwJhg3L5V1bsM5ZXEPy95fL7WHprXALxsLOSFbQBHXan_PGzM8uR9YuYncRSDnWjShzs9tbd9T0Q67l77KYnEN9Hd0eLLkAPXn2AZVICXD1p0uIWNRLn1zDuKStSoEt2WiHS5Yt--0O_iZ77Bdk_aJ83VwOt8SKlGc74nyEIqYek4f2bSDaw99S97Zm10aCosKcDSLj7j7TNKhKPcgpic_bQq12NL8Nlh0jxmzIbSLV3LIjmpBqH1257FEVU4DUx_nJAP03fEg\u0026s=UzEsDCKh4HWd_A7Cmj8T0sOsCZ7nO1s2q-RGgo4p7lVCby0U5_AvVdOGGUc5oAwWzsAZJ24KEO7l4idieX-8zF6LubfZqPrkU5NrCxw169I_7RC91n3GKHlzTKkmaOfMPvRnqp9wm-2L-IO2VvE8KwBQrclyFB2YkHRRbH_qW4AEeRWEavAA4el0tE46IXqxLc7jYURDgr1uRlNtr_1d806ZwbwtXhnBiCTFRTEJptX9GfDcczu1HD-uNMOkYprIrHFeGFggfLCZASA_ow2bRXFR03jpbuxd7V6I7dHukRQkB-aM3jIaCq45yopIWJ9rgmH4VD0sf__I5t7X4a3-hA\u0026h=sXbS8cOI-gFcTAkrwoKiNMW8C-E-HFSRlMVsA3db1Z4" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "dd268004-04d7-4819-a560-1b79b5e6f3d0" ],
+        "x-ms-correlation-request-id": [ "dd268004-04d7-4819-a560-1b79b5e6f3d0" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20260517T211417Z:dd268004-04d7-4819-a560-1b79b5e6f3d0" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 37D0549177E14BF99B94D8535C973389 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:14:16Z" ],
+        "Date": [ "Sun, 17 May 2026 21:14:17 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "41" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"objectType\":\"OperationJobExtendedInfo\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$POST+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/restore?api-version=2026-03-01+9": {
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b/restore?api-version=2026-03-01",
+      "Content": "{\r\n  \"objectType\": \"AzureBackupRecoveryPointBasedRestoreRequest\",\r\n  \"restoreTargetInfo\": {\r\n    \"objectType\": \"RestoreFilesTargetInfo\",\r\n    \"recoveryOption\": \"FailIfExists\",\r\n    \"restoreLocation\": \"eastasia\",\r\n    \"targetDetails\": {\r\n      \"filePrefix\": \"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\",\r\n      \"restoreTargetLocationType\": \"AzureBlobs\",\r\n      \"url\": \"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\r\n      \"targetResourceArmId\": \"/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/afs-pstest-rg/providers/Microsoft.Storage/storageAccounts/afspstestsa/blobServices/default/containers/pgflex-csr\"\r\n    }\r\n  },\r\n  \"sourceDataStoreType\": \"VaultStore\",\r\n  \"recoveryPointId\": \"014064ca88b14183bed92a0f37ea67a3\"\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "755" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 202,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "Location": [ "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationResults/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492585160759\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=ci4YLP7s9T86IKtqEmHPwTisWRT1KfOME_f8jbGQ1piMdYyUYcjRm_MZyXIbZvD99_NW0R4x7aOHdLRM9S4nsBvgChldWOKcEkfUJPtewpndpJUUsZxG_HvKpgfoHShK__tPl4ukVNII-csk39mc2R6AjcmkSMQkuOhHVOpsKJxzB7hVqflMylsKbuUymoJ8xqOysu8yervNpm6fUdq6reUZ4l82a9I7BfeeheVonhDL06eGS55CuB2zaCG60LaJGG6FHC_ixlIXPXCqS2KpArTiO0fSFd7WrHWiZt6bp-Dg05zJU5jnYm2ryd1T1G-E-WifQ420rR1VgkjarC9rXA\u0026h=KHdHBO_AByu8bfeOqWG09pMtE54oHkk2vByvAAZI2o0" ],
+        "Retry-After": [ "30" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Azure-AsyncOperation": [ "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492585004523\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=IXxavaS8wQbpkYeO9Jq8FBrGsR9685chgpXHWB6O8bOyte7im4EPakTEqgjEqa2LxtKX92OubBJz7lF8g7mJFWwPxIvuC5feDd5coN5ITVtizuYTE13jQzARYXv7nN31U0NTBCQBUx3jsccBFKydO6cRqehxHF442qmOgfhBAix-zZLDV9r-u-K0fuU9znT8ludauF6I4QwXT3kkViWZN_o85LhykVzpj4REkjMC6hEgRmomlW27JPRHAZA6Vt2eeh9EVSzVH24mXUYIkbKuNLEPye0Kq8pkmpWKzwNEurCwT--1NcsWe-9MxuhVLNpeY4gYRGCmMD-xZJWYSAvKkA\u0026h=GxEg-uL3ndS6X6xWojYGFBPNxQYymMAFcgkbOZZBfsY" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/93ff2fe8-cfc7-4c40-8892-6f91d7bb75a8" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "799" ],
+        "x-ms-ratelimit-remaining-subscription-global-writes": [ "11999" ],
+        "x-ms-request-id": [ "f9cc432e-9be3-4267-b791-6f66f2cb708a" ],
+        "x-ms-correlation-request-id": [ "f9cc432e-9be3-4267-b791-6f66f2cb708a" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211418Z:f9cc432e-9be3-4267-b791-6f66f2cb708a" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: C28D3407F1004FE989E848B721C71B0A Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:14:17Z" ],
+        "Date": [ "Sun, 17 May 2026 21:14:17 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null,
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492585004523\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=IXxavaS8wQbpkYeO9Jq8FBrGsR9685chgpXHWB6O8bOyte7im4EPakTEqgjEqa2LxtKX92OubBJz7lF8g7mJFWwPxIvuC5feDd5coN5ITVtizuYTE13jQzARYXv7nN31U0NTBCQBUx3jsccBFKydO6cRqehxHF442qmOgfhBAix-zZLDV9r-u-K0fuU9znT8ludauF6I4QwXT3kkViWZN_o85LhykVzpj4REkjMC6hEgRmomlW27JPRHAZA6Vt2eeh9EVSzVH24mXUYIkbKuNLEPye0Kq8pkmpWKzwNEurCwT--1NcsWe-9MxuhVLNpeY4gYRGCmMD-xZJWYSAvKkA\u0026h=GxEg-uL3ndS6X6xWojYGFBPNxQYymMAFcgkbOZZBfsY+10": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492585004523\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=IXxavaS8wQbpkYeO9Jq8FBrGsR9685chgpXHWB6O8bOyte7im4EPakTEqgjEqa2LxtKX92OubBJz7lF8g7mJFWwPxIvuC5feDd5coN5ITVtizuYTE13jQzARYXv7nN31U0NTBCQBUx3jsccBFKydO6cRqehxHF442qmOgfhBAix-zZLDV9r-u-K0fuU9znT8ludauF6I4QwXT3kkViWZN_o85LhykVzpj4REkjMC6hEgRmomlW27JPRHAZA6Vt2eeh9EVSzVH24mXUYIkbKuNLEPye0Kq8pkmpWKzwNEurCwT--1NcsWe-9MxuhVLNpeY4gYRGCmMD-xZJWYSAvKkA\u0026h=GxEg-uL3ndS6X6xWojYGFBPNxQYymMAFcgkbOZZBfsY",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "277" ],
+        "x-ms-client-request-id": [ "acd6b42f-cf0a-494c-ab5a-3a04ba6f9648" ],
+        "CommandName": [ "Az.DataProtection.Internal\\Start-AzDataProtectionBackupInstanceRestore" ],
+        "FullCommandName": [ "Start-AzDataProtectionBackupInstanceRestore_Trigger" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/889dec8e-621d-455f-8e0a-eb4d30eea918" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "b1cfc319-e4d7-4647-84f7-9668eebb5f2d" ],
+        "x-ms-correlation-request-id": [ "b1cfc319-e4d7-4647-84f7-9668eebb5f2d" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211449Z:b1cfc319-e4d7-4647-84f7-9668eebb5f2d" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: A5277FB6675244EDAD3159D15EB278A0 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:14:48Z" ],
+        "Date": [ "Sun, 17 May 2026 21:14:48 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "747" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==\",\"name\":\"MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==\",\"status\":\"Succeeded\",\"startTime\":\"2026-05-17T21:14:18.3955837Z\",\"endTime\":\"2026-05-17T21:14:20Z\",\"properties\":{\"jobId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourcegroups/pgflexrestorefix/providers/Microsoft.DataProtection/BackupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"objectType\":\"OperationJobExtendedInfo\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationResults/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492585160759\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=ci4YLP7s9T86IKtqEmHPwTisWRT1KfOME_f8jbGQ1piMdYyUYcjRm_MZyXIbZvD99_NW0R4x7aOHdLRM9S4nsBvgChldWOKcEkfUJPtewpndpJUUsZxG_HvKpgfoHShK__tPl4ukVNII-csk39mc2R6AjcmkSMQkuOhHVOpsKJxzB7hVqflMylsKbuUymoJ8xqOysu8yervNpm6fUdq6reUZ4l82a9I7BfeeheVonhDL06eGS55CuB2zaCG60LaJGG6FHC_ixlIXPXCqS2KpArTiO0fSFd7WrHWiZt6bp-Dg05zJU5jnYm2ryd1T1G-E-WifQ420rR1VgkjarC9rXA\u0026h=KHdHBO_AByu8bfeOqWG09pMtE54oHkk2vByvAAZI2o0+11": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationResults/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492585160759\u0026c=MIIHkDCCBnigAwIBAgIQKvarjzNu-eUU0WvJBNs2jzANBgkqhkiG9w0BAQsFADA2MTQwMgYDVQQDEytDQ01FIEcxIFRMUyBSU0EgMjA0OCBTSEEyNTYgMjA0OSBFVVMyIENBIDAxMB4XDTI2MDQxMDA2MjcyNVoXDTI2MTAwNTEyMjcyNVowQDE-MDwGA1UEAxM1YXN5bmNvcGVyYXRpb25zaWduaW5nY2VydGlmaWNhdGUubWFuYWdlbWVudC5henVyZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa5xYaz9-RuoQSIX-IOaPZzXmdEI06i-0jUk4lgydujtBqFkSl1rQpD1sG0ZBSyUMCM0JEvpr2CYodxI2mvdD287OA7WLRZaYOqqLohWCIwR9swj-bYTUJ9FUQqJDUCfGZrNXqENELVkNM60xVzOvX5olCZYuIuvQ4JxkMj3tb26nLEPCJmGriG_jBw2T_57x9XcW0vU5ixaJV5J2NSoypJZW6zBO0wC0yLJStGIm9GthLxgu20sEVRmqnASRDLa8IfajjVLPT2bG0F7OI8pb3uvzmpgTHs11BC2q8phhTWcDR1bvsLmQ_XM6ggxs74rrHoV-o02MW8kSGmBEFSmrRAgMBAAGjggSOMIIEijCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwDAYDVR0TAQH_BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH_BAQDAgWgMB0GA1UdDgQWBBTZEMwwzFfHea5EXCKkWBtGcU4u2zAfBgNVHSMEGDAWgBT87D7bqnwfgh4FuKEG-UPnArMKuTCCAa4GA1UdHwSCAaUwggGhMGigZqBkhmJodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBqoGigZoZkaHR0cDovL3NlY29uZGFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvZWFzdHVzMi9jcmxzL2NjbWVlYXN0dXMycGtpL2NjbWVlYXN0dXMyaWNhMDEvOC9jdXJyZW50LmNybDBZoFegVYZTaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY3Jscy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxLzgvY3VycmVudC5jcmwwbqBsoGqGaGh0dHA6Ly9jY21lZWFzdHVzMnBraS5lYXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZWVhc3R1czJpY2EwMS84L2N1cnJlbnQuY3JsMIIBtwYIKwYBBQUHAQEEggGpMIIBpTBsBggrBgEFBQcwAoZgaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMG4GCCsGAQUFBzAChmJodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC9lYXN0dXMyL2NhY2VydHMvY2NtZWVhc3R1czJwa2kvY2NtZWVhc3R1czJpY2EwMS9jZXJ0LmNlcjBdBggrBgEFBQcwAoZRaHR0cDovL2NybC5taWNyb3NvZnQuY29tL2Vhc3R1czIvY2FjZXJ0cy9jY21lZWFzdHVzMnBraS9jY21lZWFzdHVzMmljYTAxL2NlcnQuY2VyMGYGCCsGAQUFBzAChlpodHRwOi8vY2NtZWVhc3R1czJwa2kuZWFzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWVlYXN0dXMyaWNhMDEwDQYJKoZIhvcNAQELBQADggEBAFSlMECIQNkudN5v3FwD-JnoMgGpAj1gniWvptRtf2AjuHBp7uYGFBAPN8ENCQhy0mVDy2JAlb5N8C8pGTeCVaBRj0X2mWszL0PYwqkM9QF3ZK31U6dJTVh50Lf4ql158ggHngQQm94o4J3nJZYldcGjV--rdPMwpvDzOL-bgMqWhpGDX8oVIGdSzCQI4Yhlw5Zoa-cjOhYdCfJJvkVCS3_BVF2i_6aiyC7NFkyL5gL04A7M0tUq8Rfi43iYsUI6f56kmEIcHSUOGgbnmxsk5bFNe9Gr8gqZ0rwK6094an056Xvg_fwfpwv5T4bYu5wP_nvC9Du597JRArq8oXmYDiw\u0026s=ci4YLP7s9T86IKtqEmHPwTisWRT1KfOME_f8jbGQ1piMdYyUYcjRm_MZyXIbZvD99_NW0R4x7aOHdLRM9S4nsBvgChldWOKcEkfUJPtewpndpJUUsZxG_HvKpgfoHShK__tPl4ukVNII-csk39mc2R6AjcmkSMQkuOhHVOpsKJxzB7hVqflMylsKbuUymoJ8xqOysu8yervNpm6fUdq6reUZ4l82a9I7BfeeheVonhDL06eGS55CuB2zaCG60LaJGG6FHC_ixlIXPXCqS2KpArTiO0fSFd7WrHWiZt6bp-Dg05zJU5jnYm2ryd1T1G-E-WifQ420rR1VgkjarC9rXA\u0026h=KHdHBO_AByu8bfeOqWG09pMtE54oHkk2vByvAAZI2o0",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "278" ],
+        "x-ms-client-request-id": [ "acd6b42f-cf0a-494c-ab5a-3a04ba6f9648" ],
+        "CommandName": [ "Az.DataProtection.Internal\\Start-AzDataProtectionBackupInstanceRestore" ],
+        "FullCommandName": [ "Start-AzDataProtectionBackupInstanceRestore_Trigger" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "Retry-After": [ "30" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/southcentralus/58f3fc85-efd0-4ac1-b5ff-5bb0de3653ca" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Azure-AsyncOperation": [ "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/providers/Microsoft.DataProtection/locations/eastasia/operationStatus/MTdhYzU1ZmQtNGFmZi00MGM2LTlhYzgtNzEwYzUyNGExZTgxO2ZjOThmYjY2LWViZDItNDliYy1hMzI1LWM0YmM4MDkzYjJhOQ==?api-version=2026-03-01\u0026t=639146492900080360\u0026c=MIIHlTCCBn2gAwIBAgIRAPJcAXyj4PVuWaPsZt01Ea8wDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UEAxMrQ0NNRSBHMSBUTFMgUlNBIDIwNDggU0hBMjU2IDIwNDkgV1VTMiBDQSAwMTAeFw0yNjA0MTMxMDI3MjdaFw0yNjEwMDgxNjI3MjdaMEAxPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGh44O6OT9eV5zBoE7LVtpq9r87ylQlFliZM7nTFJS6yTj-Ehw3wVWNvnoX-mNFNhmSwdl67kN8W7qk2b-xaDQGvIByXgc0l_A0_66drbjOLw0cVSofjs2VuaxmZRXhJFvM-pt3sXePdevW81JLjMk1YjICdX1r66KxgNYw9bCx-F6txnRsnbEUxeVuuTSII1T4pd9kSGMoM0XsK6OuAWsqAD44880TL7KnfxAAzvx4vR90NSV3y0uLJa8HaKT-yziXCH7CgXY0sGB68jGkpbM3IU2ZOoV259sHfU5b9LAPFIMS11xuvr6G4i-bYfmc-Yd9iBvPW4J94HCylLRHUMQIDAQABo4IEkjCCBI4wgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMAwGA1UdEwEB_wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB_wQEAwIFoDAdBgNVHQ4EFgQUC7Fq4o2xVsICe40dVrso6r4tnS4wHwYDVR0jBBgwFoAUrONy-gOyc549lcjvh1uu3Ruh7WgwggGyBgNVHR8EggGpMIIBpTBpoGegZYZjaHR0cDovL3ByaW1hcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L3dlc3R1czIvY3Jscy9jY21ld2VzdHVzMnBraS9jY21ld2VzdHVzMmljYTAxLzY4L2N1cnJlbnQuY3JsMGugaaBnhmVodHRwOi8vc2Vjb25kYXJ5LWNkbi5wa2kuY29yZS53aW5kb3dzLm5ldC93ZXN0dXMyL2NybHMvY2NtZXdlc3R1czJwa2kvY2NtZXdlc3R1czJpY2EwMS82OC9jdXJyZW50LmNybDBaoFigVoZUaHR0cDovL2NybC5taWNyb3NvZnQuY29tL3dlc3R1czIvY3Jscy9jY21ld2VzdHVzMnBraS9jY21ld2VzdHVzMmljYTAxLzY4L2N1cnJlbnQuY3JsMG-gbaBrhmlodHRwOi8vY2NtZXdlc3R1czJwa2kud2VzdHVzMi5wa2kuY29yZS53aW5kb3dzLm5ldC9jZXJ0aWZpY2F0ZUF1dGhvcml0aWVzL2NjbWV3ZXN0dXMyaWNhMDEvNjgvY3VycmVudC5jcmwwggG3BggrBgEFBQcBAQSCAakwggGlMGwGCCsGAQUFBzAChmBodHRwOi8vcHJpbWFyeS1jZG4ucGtpLmNvcmUud2luZG93cy5uZXQvd2VzdHVzMi9jYWNlcnRzL2NjbWV3ZXN0dXMycGtpL2NjbWV3ZXN0dXMyaWNhMDEvY2VydC5jZXIwbgYIKwYBBQUHMAKGYmh0dHA6Ly9zZWNvbmRhcnktY2RuLnBraS5jb3JlLndpbmRvd3MubmV0L3dlc3R1czIvY2FjZXJ0cy9jY21ld2VzdHVzMnBraS9jY21ld2VzdHVzMmljYTAxL2NlcnQuY2VyMF0GCCsGAQUFBzAChlFodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vd2VzdHVzMi9jYWNlcnRzL2NjbWV3ZXN0dXMycGtpL2NjbWV3ZXN0dXMyaWNhMDEvY2VydC5jZXIwZgYIKwYBBQUHMAKGWmh0dHA6Ly9jY21ld2VzdHVzMnBraS53ZXN0dXMyLnBraS5jb3JlLndpbmRvd3MubmV0L2NlcnRpZmljYXRlQXV0aG9yaXRpZXMvY2NtZXdlc3R1czJpY2EwMTANBgkqhkiG9w0BAQsFAAOCAQEAdA_pc38CxGkQIQwsCCkLD0bJLoyzIBBC9aOoZt_62ikFeWcKd4MODmGv5o67rlzoqG9qLks5cPaFQwJhg3L5V1bsM5ZXEPy95fL7WHprXALxsLOSFbQBHXan_PGzM8uR9YuYncRSDnWjShzs9tbd9T0Q67l77KYnEN9Hd0eLLkAPXn2AZVICXD1p0uIWNRLn1zDuKStSoEt2WiHS5Yt--0O_iZ77Bdk_aJ83VwOt8SKlGc74nyEIqYek4f2bSDaw99S97Zm10aCosKcDSLj7j7TNKhKPcgpic_bQq12NL8Nlh0jxmzIbSLV3LIjmpBqH1257FEVU4DUx_nJAP03fEg\u0026s=JuGhAEmBv4iFMjHIDip8sijkEjw4D9AyvSuwZEd8erVeiB9UeMVJKpk34BNPEqsCv09YkT_Gi68CQ7COdnv1fD8pJGyV742PVxL_u_3xTJ5P--INYTVA6tPQbNX82Sw8h7lIC4B-zEQu3A1_rRbleZLKR-3BdZXu05IAH-sKNun2RBMQYsjEg4PZl-ijr67qZlHOZJq1Dv_5qUs_BuuKjNfZTQ0JL4da-SXfbJl_N3g3VqgYIS2ucdz-_fF3_KV0Tbc7771hJ8Bw1nlR74QQvUkNkpl0rIaGwig7b602Q9a6y3FjQ16Co4lOGrXsFkZ5DTjFibLbtgQ7rXTiidT4TA\u0026h=Moi45gR4_F9kycTPFE7qLruYWC3IW8CfkacLFLkZVfI" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "9d6ffb69-f6c0-4d9d-8b8b-3f01897e0f73" ],
+        "x-ms-correlation-request-id": [ "9d6ffb69-f6c0-4d9d-8b8b-3f01897e0f73" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20260517T211450Z:9d6ffb69-f6c0-4d9d-8b8b-3f01897e0f73" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 8F782E587F7844A0A8F1C28638735A9D Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:14:49Z" ],
+        "Date": [ "Sun, 17 May 2026 21:14:49 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "250" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"jobId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourcegroups/pgflexrestorefix/providers/Microsoft.DataProtection/BackupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"objectType\":\"OperationJobExtendedInfo\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+12": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "279" ],
+        "x-ms-client-request-id": [ "7239f6b8-ea4c-45ce-9764-f79aa40b6042" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/13da5ed0-cba4-4ecd-8d4f-4a067bc6722c" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "5a863c87-7edf-4d4d-9f1f-c989005fe931" ],
+        "x-ms-correlation-request-id": [ "5a863c87-7edf-4d4d-9f1f-c989005fe931" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211500Z:5a863c87-7edf-4d4d-9f1f-c989005fe931" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: E4521C00547E48C88561EE07F4ECA6FB Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:15:00Z" ],
+        "Date": [ "Sun, 17 May 2026 21:14:59 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+13": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "280" ],
+        "x-ms-client-request-id": [ "96885291-360e-451f-8a96-a8e9eb01d80f" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/c3057b5c-1fd5-4ea7-b5f8-6ad45a4135ed" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "7215fb17-f95b-49a6-9705-e9de3d73f1bb" ],
+        "x-ms-correlation-request-id": [ "7215fb17-f95b-49a6-9705-e9de3d73f1bb" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211511Z:7215fb17-f95b-49a6-9705-e9de3d73f1bb" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: E5FA101CD48743C1B86A2B3D5703600F Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:15:10Z" ],
+        "Date": [ "Sun, 17 May 2026 21:15:10 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+14": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "281" ],
+        "x-ms-client-request-id": [ "435b0e7d-b062-45ea-851b-b58317f326b4" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/47c6573b-1ace-4332-905c-2cb612269ae4" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "c2c4292e-b068-4236-b416-9893ac61a5b0" ],
+        "x-ms-correlation-request-id": [ "c2c4292e-b068-4236-b416-9893ac61a5b0" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211521Z:c2c4292e-b068-4236-b416-9893ac61a5b0" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 6C4413DF2D994E43AA178C4586C408CF Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:15:21Z" ],
+        "Date": [ "Sun, 17 May 2026 21:15:20 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+15": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "282" ],
+        "x-ms-client-request-id": [ "86e72881-dc06-4e3c-9e60-5fdb017a3249" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/dd1170be-450d-44ce-904c-5824e0bf58ea" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "0b3a9a4f-cf24-41a4-ab60-3aa1a6285c68" ],
+        "x-ms-correlation-request-id": [ "0b3a9a4f-cf24-41a4-ab60-3aa1a6285c68" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211531Z:0b3a9a4f-cf24-41a4-ab60-3aa1a6285c68" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: EF5C1D434C814003ACEB092E30F7B115 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:15:31Z" ],
+        "Date": [ "Sun, 17 May 2026 21:15:31 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+16": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "283" ],
+        "x-ms-client-request-id": [ "340fb0e5-2eca-406e-82f1-1faa31e9f3a2" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/fa04f01c-cf21-466d-aa86-7a0cb956e0cf" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "efc62a52-28a1-41ee-811e-6ff56809944b" ],
+        "x-ms-correlation-request-id": [ "efc62a52-28a1-41ee-811e-6ff56809944b" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211542Z:efc62a52-28a1-41ee-811e-6ff56809944b" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 06349EA2E5FD4D6BB5EBEBA6D24DE07B Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:15:42Z" ],
+        "Date": [ "Sun, 17 May 2026 21:15:41 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+17": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "284" ],
+        "x-ms-client-request-id": [ "b2b08696-ebb3-4c2b-8922-6b65b272ab98" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/85f88e48-6c66-4f0a-bd9d-6a1e01ae06f8" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "86f346cd-b164-4ad7-915d-1a319491ec86" ],
+        "x-ms-correlation-request-id": [ "86f346cd-b164-4ad7-915d-1a319491ec86" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211552Z:86f346cd-b164-4ad7-915d-1a319491ec86" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: F3194E9B1F0645DC99E2FFF385FDD836 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:15:52Z" ],
+        "Date": [ "Sun, 17 May 2026 21:15:52 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+18": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "285" ],
+        "x-ms-client-request-id": [ "ed02c295-0ea7-4537-b9a4-e5039fce7127" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/43efedb2-d6e0-4357-a409-4030330ed41a" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "87ad7dd8-9322-43f1-9a7f-d7eb349d3418" ],
+        "x-ms-correlation-request-id": [ "87ad7dd8-9322-43f1-9a7f-d7eb349d3418" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211603Z:87ad7dd8-9322-43f1-9a7f-d7eb349d3418" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 10A8AE37043B47BB99A2B4D028DBCE4A Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:16:03Z" ],
+        "Date": [ "Sun, 17 May 2026 21:16:02 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+19": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "286" ],
+        "x-ms-client-request-id": [ "fb4280fc-29e1-44b5-87c5-faa0b4a02995" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/20164b2f-c78d-4ed6-a3eb-d0b8c4317c15" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "576bc38a-5965-4cf7-abdc-da0d165ad8de" ],
+        "x-ms-correlation-request-id": [ "576bc38a-5965-4cf7-abdc-da0d165ad8de" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211613Z:576bc38a-5965-4cf7-abdc-da0d165ad8de" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 98880D4637A64628943C2589F9E65B61 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:16:13Z" ],
+        "Date": [ "Sun, 17 May 2026 21:16:13 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+20": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "287" ],
+        "x-ms-client-request-id": [ "7b58dc4f-41a6-4a3f-aadc-bb7646eabb6b" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/44148c4f-7cb4-4332-a4fa-e07941a40785" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "e8576005-23f6-40f2-91a7-73ba5134853c" ],
+        "x-ms-correlation-request-id": [ "e8576005-23f6-40f2-91a7-73ba5134853c" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211624Z:e8576005-23f6-40f2-91a7-73ba5134853c" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 9C2C8D00C822498F8062D57D61C197AD Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:16:24Z" ],
+        "Date": [ "Sun, 17 May 2026 21:16:23 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2494" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A14%3A19.1876479Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":null,\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"InProgress\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT0S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"InProgress\",\"taskProgress\":null,\"additionalDetails\":null}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  },
+  "Start-AzDataProtectionBackupInstanceRestore+[NoContext]+CrossSubscriptionRestore+$GET+https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01+21": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677?api-version=2026-03-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "288" ],
+        "x-ms-client-request-id": [ "a8d3a1e0-4e65-403b-a9ab-9e17aa35aa02" ],
+        "CommandName": [ "Az.DataProtection.internal\\Get-AzDataProtectionJob" ],
+        "FullCommandName": [ "Get-AzDataProtectionJob_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v11.5.0", "PSVersion/v7.6.1", "Az.DataProtection/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "x-ms-operation-identifier": [ "tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=025ad709-9e1c-4597-b09f-f331c3d683f8/eastasia/0b3856e4-59e0-445c-9af1-32c3b96169c6" ],
+        "x-ms-ratelimit-remaining-subscription-resource-requests": [ "1099" ],
+        "x-ms-request-id": [ "78423474-b5a8-43a2-89ea-cae3947fedbf" ],
+        "x-ms-correlation-request-id": [ "78423474-b5a8-43a2-89ea-cae3947fedbf" ],
+        "x-ms-routing-request-id": [ "EASTASIA:20260517T211634Z:78423474-b5a8-43a2-89ea-cae3947fedbf" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 3A316F2F0C45469F87849E00B03A82F4 Ref B: SN4AA2022304049 Ref C: 2026-05-17T21:16:34Z" ],
+        "Date": [ "Sun, 17 May 2026 21:16:34 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "2669" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"properties\":{\"activityID\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"subscriptionId\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"backupInstanceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupInstances/pgflexrestore-pgflexrestore-06f0849b-ded6-47bc-abb0-ad747251d02b\",\"policyId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupPolicies/testpol\",\"dataSourceId\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgflexrestore\",\"vaultName\":\"pgflexrestorevault\",\"backupInstanceFriendlyName\":\"pgflexrestore\",\"policyName\":\"testpol\",\"sourceResourceGroup\":\"pgflexrestorefix\",\"dataSourceSetName\":\"pgflexrestore\",\"dataSourceName\":\"pgflexrestore\",\"sourceDataStoreName\":null,\"sourceDataStoreType\":\"VaultStore\",\"destinationDataStoreName\":null,\"progressEnabled\":true,\"etag\":\"W/\\\"datetime\u00272026-05-17T21%3A16%3A26.6636506Z\u0027\\\"\",\"sourceSubscriptionID\":\"2c6832bf-90ef-457a-a663-9aeae88a7f80\",\"dataSourceLocation\":\"eastasia\",\"startTime\":\"2026-05-17T21:14:18.748648Z\",\"endTime\":\"2026-05-17T21:16:26.4091725Z\",\"dataSourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\",\"operationCategory\":\"Restore\",\"operation\":\"Restore\",\"status\":\"Completed\",\"restoreType\":null,\"isUserTriggered\":true,\"rehydrationPriority\":null,\"supportedActions\":[\"\"],\"duration\":\"PT2M7.6605245S\",\"progressUrl\":null,\"isCrossRegionRestore\":null,\"errorDetails\":null,\"extendedInfo\":{\"backupInstanceState\":null,\"dataTransferredInBytes\":null,\"targetRecoverPoint\":null,\"isAutohealJob\":null,\"autohealParentFailedJobId\":null,\"sourceRecoverPoint\":{\"recoveryPointID\":\"014064ca88b14183bed92a0f37ea67a3\",\"recoveryPointTime\":\"2026-05-10T23:00:55.1175519Z\"},\"recoveryDestination\":\"https://afspstestsa.blob.core.windows.net/pgflex-csr\",\"subTasks\":[{\"taskId\":1,\"taskName\":\"Trigger Restore\",\"taskStatus\":\"Completed\",\"taskProgress\":null,\"additionalDetails\":{\"DataTransferredInBytes\":\"6551411\",\"TaskId\":\"acd6b42f-cf0a-494c-ab5a-3a04ba6f9648\",\"DatasourceType\":\"Microsoft.DBforPostgreSQL/flexibleServers\"}}],\"additionalDetails\":{\"Restore File Prefix\":\"pgflex-csr-pstest-restoreasfiles-17-05-2026-3-34-0\"},\"warningDetails\":null}},\"id\":\"/subscriptions/2c6832bf-90ef-457a-a663-9aeae88a7f80/resourceGroups/pgflexrestorefix/providers/Microsoft.DataProtection/backupVaults/pgflexrestorevault/backupJobs/1805c679-92de-4c83-808a-f6d4bd1de677\",\"name\":\"1805c679-92de-4c83-808a-f6d4bd1de677\",\"type\":\"Microsoft.DataProtection/backupVaults/backupJobs\"}",
+      "isContentBase64": false
+    }
+  }
+}
