@@ -1,0 +1,76 @@
+{
+  "New-AzAvailabilityGroupListener+[NoContext]+CreateExpanded-LoadBalancerConfiguration+$PUT+https://management.azure.com/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/azpssqlcluster/availabilityGroupListeners/aglblistener?api-version=2022-08-01-preview+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/azpssqlcluster/availabilityGroupListeners/aglblistener?api-version=2022-08-01-preview",
+      "Content": "{\r\n  \"properties\": {\r\n    \"availabilityGroupName\": \"ag1\",\r\n    \"loadBalancerConfigurations\": [\r\n      {\r\n        \"privateIpAddress\": {\r\n          \"ipAddress\": \"192.168.16.7\",\r\n          \"subnetResourceId\": \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.Network/virtualNetworks/azpstestsqlvn/subnets/subnet1\"\r\n        },\r\n        \"loadBalancerResourceId\": \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.Network/loadBalancers/azpstestlb\",\r\n        \"probePort\": 7777,\r\n        \"sqlVirtualMachineInstances\": [ \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/azpstestsql1\", \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/azpstestsql2\" ]\r\n      }\r\n    ],\r\n    \"port\": 1433\r\n  }\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "983" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 404,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "4393f647-5272-49ce-a81f-8d8e3e869a3c" ],
+        "x-ms-correlation-request-id": [ "4393f647-5272-49ce-a81f-8d8e3e869a3c" ],
+        "x-ms-routing-request-id": [ "EASTUS:20260216T030524Z:4393f647-5272-49ce-a81f-8d8e3e869a3c" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: B6D6F86081CF480F95847FCC2E20B09E Ref B: SG2AA1070301054 Ref C: 2026-02-16T03:05:24Z" ],
+        "Date": [ "Mon, 16 Feb 2026 03:05:24 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "370" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"ParentResourceNotFound\",\"message\":\"Failed to perform \u0027write\u0027 on resource(s) of type \u0027SqlVirtualMachineGroups/AvailabilityGroupListeners\u0027, because the parent resource \u0027/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/SqlVirtualMachineGroups/azpssqlcluster\u0027 could not be found.\"}}",
+      "isContentBase64": false
+    }
+  },
+  "New-AzAvailabilityGroupListener+[NoContext]+CreateExpanded-MultiSubnetIPConfiguration+$PUT+https://management.azure.com/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/azpssqlcluster/availabilityGroupListeners/agmslistener?api-version=2022-08-01-preview+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/azpssqlcluster/availabilityGroupListeners/agmslistener?api-version=2022-08-01-preview",
+      "Content": "{\r\n  \"properties\": {\r\n    \"availabilityGroupName\": \"ag2\",\r\n    \"multiSubnetIpConfigurations\": [\r\n      {\r\n        \"privateIpAddress\": {\r\n          \"ipAddress\": \"192.168.16.9\",\r\n          \"subnetResourceId\": \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.Network/virtualNetworks/azpstestsqlvn/subnets/subnet1\"\r\n        },\r\n        \"sqlVirtualMachineInstance\": \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/azpstestsql1\"\r\n      },\r\n      {\r\n        \"privateIpAddress\": {\r\n          \"ipAddress\": \"192.168.17.9\",\r\n          \"subnetResourceId\": \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.Network/virtualNetworks/azpstestsqlvn/subnets/subnet2\"\r\n        },\r\n        \"sqlVirtualMachineInstance\": \"/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/azpstestsql2\"\r\n      }\r\n    ],\r\n    \"port\": 1433\r\n  }\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "1106" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 404,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "c4b8f349-6553-4da6-9de2-6923f7b1dc98" ],
+        "x-ms-correlation-request-id": [ "c4b8f349-6553-4da6-9de2-6923f7b1dc98" ],
+        "x-ms-routing-request-id": [ "EASTUS:20260216T030525Z:c4b8f349-6553-4da6-9de2-6923f7b1dc98" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: E78004E251694F639B1D4501169C22E3 Ref B: SG2AA1070301054 Ref C: 2026-02-16T03:05:25Z" ],
+        "Date": [ "Mon, 16 Feb 2026 03:05:25 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "370" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"ParentResourceNotFound\",\"message\":\"Failed to perform \u0027write\u0027 on resource(s) of type \u0027SqlVirtualMachineGroups/AvailabilityGroupListeners\u0027, because the parent resource \u0027/subscriptions/e77b08cc-d20a-411b-aa8e-6b453f1f7971/resourceGroups/azpstest-sqlvm-gp/providers/Microsoft.SqlVirtualMachine/SqlVirtualMachineGroups/azpssqlcluster\u0027 could not be found.\"}}",
+      "isContentBase64": false
+    }
+  }
+}

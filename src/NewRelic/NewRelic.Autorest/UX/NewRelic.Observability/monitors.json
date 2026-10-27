@@ -1,0 +1,123 @@
+{
+  "resourceType": "monitors",
+  "apiVersion": "2025-05-01-preview",
+  "learnMore": {
+    "url": "https://learn.microsoft.com/powershell/module/az.newrelic"
+  },
+  "commands": [
+    {
+      "name": "Get-AzNewRelicBillingInfo",
+      "description": "Retrieves marketplace and organization information mapped to the given New Relic monitor resource",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/getBillingInfo",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.newrelic/get-aznewrelicbillinginfo"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-MonitorName <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String[]>]"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Retrieves marketplace and organization information mapped to the given New Relic monitor resource",
+          "parameters": [
+            {
+              "name": "-MonitorName",
+              "value": "[Path.monitorName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Invoke-AzNewRelicHostMonitor",
+      "description": "Returns the payload that needs to be passed in the request body for installing the New Relic agent on a VM, providing the necessary configuration details",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/vmHostPayloads",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.newrelic/invoke-aznewrelichostmonitor"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-MonitorName <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String>]"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Returns the payload that needs to be passed in the request body for installing the New Relic agent on a VM, providing the necessary configuration details",
+          "parameters": [
+            {
+              "name": "-MonitorName",
+              "value": "[Path.monitorName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Invoke-AzNewRelicLatestMonitorLinkedSaaS",
+      "description": "Returns the latest SaaS linked to the newrelic organization of the underlying monitor.",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/latestLinkedSaaS",
+      "help": {
+        "learnMore": {
+          "url": "https://learn.microsoft.com/powershell/module/az.newrelic/invoke-aznewreliclatestmonitorlinkedsaas"
+        },
+        "parameterSets": [
+          {
+            "parameters": [
+              "-MonitorName <String>",
+              "-ResourceGroupName <String>",
+              "[-SubscriptionId <String>]"
+            ]
+          }
+        ]
+      },
+      "examples": [
+        {
+          "description": "Returns the latest SaaS linked to the newrelic organization of the underlying monitor.",
+          "parameters": [
+            {
+              "name": "-MonitorName",
+              "value": "[Path.monitorName]"
+            },
+            {
+              "name": "-ResourceGroupName",
+              "value": "[Path.resourceGroupName]"
+            },
+            {
+              "name": "-SubscriptionId",
+              "value": "[Path.subscriptionId]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
