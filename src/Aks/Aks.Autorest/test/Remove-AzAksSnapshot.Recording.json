@@ -1,0 +1,166 @@
+{
+  "Remove-AzAksSnapshot+[NoContext]+Delete+$PUT+https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01",
+      "Content": "{\r\n  \"location\": \"eastus\",\r\n  \"properties\": {\r\n    \"creationData\": {\r\n      \"sourceResourceId\": \"/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourcegroups/AKS_TEST_RG/providers/Microsoft.ContainerService/managedClusters/AKS_Test_Cluster/agentPools/default\"\r\n    },\r\n    \"snapshotType\": \"NodePool\"\r\n  }\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "313" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=213e87ed-8e08-4eb4-a63c-c073058f7b00,objectId=2fdc06a3-8018-46f5-ac20-cec39e684201/eastus/c877260e-958c-42f4-bb92-b1b059e9acd7" ],
+        "x-ms-correlation-request-id": [ "827b66c4-2b6e-4840-8d31-7a1349f4d199" ],
+        "x-ms-request-id": [ "44e77522-efc2-4abe-8b5f-471a8cb284a3" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "199" ],
+        "x-ms-ratelimit-remaining-subscription-global-writes": [ "2999" ],
+        "x-ms-routing-request-id": [ "EASTUS:20251104T091640Z:827b66c4-2b6e-4840-8d31-7a1349f4d199" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 0FCFF199441E457CA1270557658CB502 Ref B: JKT201051406023 Ref C: 2025-11-04T09:16:40Z" ],
+        "Date": [ "Tue, 04 Nov 2025 09:16:40 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "938" ],
+        "Content-Type": [ "application/json" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\n \"name\": \"snapshot1\",\n \"id\": \"/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1\",\n \"type\": \"Microsoft.ContainerService/Snapshots\",\n \"location\": \"eastus\",\n \"systemData\": {\n  \"createdBy\": \"yanxu1@microsoft.com\",\n  \"createdByType\": \"User\",\n  \"createdAt\": \"2025-11-04T09:16:40.8029917Z\",\n  \"lastModifiedBy\": \"yanxu1@microsoft.com\",\n  \"lastModifiedByType\": \"User\",\n  \"lastModifiedAt\": \"2025-11-04T09:16:40.8029917Z\"\n },\n \"properties\": {\n  \"creationData\": {\n   \"sourceResourceId\": \"/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourcegroups/AKS_TEST_RG/providers/Microsoft.ContainerService/managedClusters/AKS_Test_Cluster/agentPools/default\"\n  },\n  \"snapshotType\": \"NodePool\",\n  \"kubernetesVersion\": \"1.32.7\",\n  \"nodeImageVersion\": \"AKSUbuntu-2204containerd-202510.19.1\",\n  \"osType\": \"Linux\",\n  \"osSku\": \"Ubuntu\",\n  \"vmSize\": \"standard_a2_v2\"\n }\n}",
+      "isContentBase64": false
+    }
+  },
+  "Remove-AzAksSnapshot+[NoContext]+Delete+$DELETE+https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01+2": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "2" ],
+        "x-ms-client-request-id": [ "dc077dc0-edfa-4591-8cdf-0f93728a8a3f" ],
+        "CommandName": [ "Remove-AzAksSnapshot" ],
+        "FullCommandName": [ "Remove-AzAksSnapshot_Delete" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.5.4", "Az.Aks/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=213e87ed-8e08-4eb4-a63c-c073058f7b00,objectId=2fdc06a3-8018-46f5-ac20-cec39e684201/eastus/98e673ba-bb0c-4fa5-91b9-da41030bf026" ],
+        "x-ms-correlation-request-id": [ "8003362b-cc9f-40e6-ac05-02d2015b3a94" ],
+        "x-ms-request-id": [ "f7f1817f-3c2d-451e-8e11-01ee7e5bec45" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [ "199" ],
+        "x-ms-ratelimit-remaining-subscription-global-deletes": [ "2999" ],
+        "x-ms-routing-request-id": [ "EASTUS:20251104T091642Z:8003362b-cc9f-40e6-ac05-02d2015b3a94" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 79AB98EA0E6D41D2AB4392D8A48012A2 Ref B: JKT201051406023 Ref C: 2025-11-04T09:16:41Z" ],
+        "Date": [ "Tue, 04 Nov 2025 09:16:41 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null,
+      "isContentBase64": false
+    }
+  },
+  "Remove-AzAksSnapshot+[NoContext]+DeleteViaIdentity+$PUT+https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01",
+      "Content": "{\r\n  \"location\": \"eastus\",\r\n  \"properties\": {\r\n    \"creationData\": {\r\n      \"sourceResourceId\": \"/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourcegroups/AKS_TEST_RG/providers/Microsoft.ContainerService/managedClusters/AKS_Test_Cluster/agentPools/default\"\r\n    },\r\n    \"snapshotType\": \"NodePool\"\r\n  }\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "313" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=213e87ed-8e08-4eb4-a63c-c073058f7b00,objectId=2fdc06a3-8018-46f5-ac20-cec39e684201/eastus/76f29ce9-525a-49de-97f3-e97c7d908bd3" ],
+        "x-ms-correlation-request-id": [ "f62a2af6-592a-426b-be46-286282011f66" ],
+        "x-ms-request-id": [ "e69a436a-8fbc-49e3-83ed-c09fffffbea2" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "199" ],
+        "x-ms-ratelimit-remaining-subscription-global-writes": [ "2999" ],
+        "x-ms-routing-request-id": [ "EASTUS:20251104T091642Z:f62a2af6-592a-426b-be46-286282011f66" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 53A12A260BBE45E080CFAA1DD76FE838 Ref B: JKT201051406023 Ref C: 2025-11-04T09:16:42Z" ],
+        "Date": [ "Tue, 04 Nov 2025 09:16:42 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "934" ],
+        "Content-Type": [ "application/json" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\n \"name\": \"snapshot1\",\n \"id\": \"/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1\",\n \"type\": \"Microsoft.ContainerService/Snapshots\",\n \"location\": \"eastus\",\n \"systemData\": {\n  \"createdBy\": \"yanxu1@microsoft.com\",\n  \"createdByType\": \"User\",\n  \"createdAt\": \"2025-11-04T09:16:42.68732Z\",\n  \"lastModifiedBy\": \"yanxu1@microsoft.com\",\n  \"lastModifiedByType\": \"User\",\n  \"lastModifiedAt\": \"2025-11-04T09:16:42.68732Z\"\n },\n \"properties\": {\n  \"creationData\": {\n   \"sourceResourceId\": \"/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourcegroups/AKS_TEST_RG/providers/Microsoft.ContainerService/managedClusters/AKS_Test_Cluster/agentPools/default\"\n  },\n  \"snapshotType\": \"NodePool\",\n  \"kubernetesVersion\": \"1.32.7\",\n  \"nodeImageVersion\": \"AKSUbuntu-2204containerd-202510.19.1\",\n  \"osType\": \"Linux\",\n  \"osSku\": \"Ubuntu\",\n  \"vmSize\": \"standard_a2_v2\"\n }\n}",
+      "isContentBase64": false
+    }
+  },
+  "Remove-AzAksSnapshot+[NoContext]+DeleteViaIdentity+$DELETE+https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01+2": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/0e745469-49f8-48c9-873b-24ca87143db1/resourceGroups/AKS_TEST_RG/providers/Microsoft.ContainerService/snapshots/snapshot1?api-version=2025-08-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "4" ],
+        "x-ms-client-request-id": [ "bf676e02-5aa0-4a70-942a-17da4d0d0f01" ],
+        "CommandName": [ "Remove-AzAksSnapshot" ],
+        "FullCommandName": [ "Remove-AzAksSnapshot_DeleteViaIdentity" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.5.4", "Az.Aks/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-operation-identifier": [ "tenantId=213e87ed-8e08-4eb4-a63c-c073058f7b00,objectId=2fdc06a3-8018-46f5-ac20-cec39e684201/eastus/31a2ebdc-df39-4247-84e7-b3b09f61f01b" ],
+        "x-ms-correlation-request-id": [ "74e1d502-c588-4a87-92b2-c67eb3426792" ],
+        "x-ms-request-id": [ "5586d624-f0ed-4f8e-8181-dcf0d3c06fa5" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [ "199" ],
+        "x-ms-ratelimit-remaining-subscription-global-deletes": [ "2999" ],
+        "x-ms-routing-request-id": [ "EASTUS:20251104T091643Z:74e1d502-c588-4a87-92b2-c67eb3426792" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: C61E8F3F161D46248733B9B6C0598582 Ref B: JKT201051406023 Ref C: 2025-11-04T09:16:43Z" ],
+        "Date": [ "Tue, 04 Nov 2025 09:16:43 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null,
+      "isContentBase64": false
+    }
+  }
+}
