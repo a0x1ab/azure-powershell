@@ -46,6 +46,9 @@ namespace Microsoft.Azure.Commands.Common
                     // this gets called when the generated cmdlet needs a value
                     GetParameterValue = ContextAdapter.Instance.GetParameterValue,
 
+                    // this gets called on write-verb cmdlets to obtain the Change Safety dynamic parameters
+                    GetDynamicParametersValue = ContextAdapter.Instance.GetDynamicParametersValue,
+
                     // this gets called for every event that is signaled
                     EventListener = module.EventListener,
 
