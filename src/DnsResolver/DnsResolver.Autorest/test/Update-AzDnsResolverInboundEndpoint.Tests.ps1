@@ -1,0 +1,32 @@
+$TestRecordingFile = Join-Path $PSScriptRoot 'Update-AzDnsResolverInboundEndpoint.Recording.json'
+$currentPath = $PSScriptRoot
+while(-not $mockingPath) { $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File; $currentPath = Split-Path -Path $currentPath -Parent }
+. ($mockingPath | Select-Object -First 1).FullName
+Describe 'Update-AzDnsResolverInboundEndpoint' {
+    BeforeAll {
+        $subscriptionId = '97db216c-169d-4ea9-9d98-114adba0aa20'; $location = 'westus2'
+        $rgName = "ps-ie-upd-27243"
+        if ($TestMode -ne 'playback') {
+            Select-AzSubscription -SubscriptionId $subscriptionId
+            New-AzResourceGroup -Name $rgName -Location $location
+            $vnet = New-AzVirtualNetwork -Name "vnet-ie-u" -ResourceGroupName $rgName -Location $location -AddressPrefix "10.0.0.0/16"
+            Add-AzVirtualNetworkSubnetConfig -Name "snet-ie-u" -VirtualNetwork $vnet -AddressPrefix "10.0.1.0/24" -Delegation @((New-AzDelegation -Name "dnsResolvers" -ServiceName "Microsoft.Network/dnsResolvers")) | Out-Null
+            $vnet | Set-AzVirtualNetwork | Out-Null
+            $vnetId = "/subscriptions/$subscriptionId/resourceGroups/$rgName/providers/Microsoft.Network/virtualNetworks/vnet-ie-u"
+            New-AzDnsResolver -Name "resolver-ie-u" -ResourceGroupName $rgName -VirtualNetworkId $vnetId -Location $location
+            $subnetId = "/subscriptions/$subscriptionId/resourceGroups/$rgName/providers/Microsoft.Network/virtualNetworks/vnet-ie-u/subnets/snet-ie-u"
+            $ipConfig = New-AzDnsResolverIPConfigurationObject -SubnetId $subnetId -PrivateIPAllocationMethod "Dynamic"
+            New-AzDnsResolverInboundEndpoint -DnsResolverName "resolver-ie-u" -Name "ie-upd-1" -ResourceGroupName $rgName -Location $location -IPConfiguration @($ipConfig)
+        }
+    }
+    AfterAll {
+        if ($TestMode -ne 'playback') { Remove-AzResourceGroup -Name $rgName -ErrorAction SilentlyContinue -AsJob | Out-Null }
+    }
+    It 'Update inbound endpoint tags' {
+        $tag = @{ "updated" = "true" }
+        $ep = Update-AzDnsResolverInboundEndpoint -DnsResolverName "resolver-ie-u" -Name "ie-upd-1" -ResourceGroupName $rgName -Tag $tag
+        $ep.ProvisioningState | Should -Be "Succeeded"
+        $ep.Tag.Count | Should -Be 1
+    }
+}
+

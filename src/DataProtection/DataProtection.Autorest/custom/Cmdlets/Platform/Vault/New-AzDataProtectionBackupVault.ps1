@@ -1,0 +1,184 @@
+function New-AzDataProtectionBackupVault
+{
+    [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.ModelCmdletAttribute()]
+	[OutputType('PSObject')]
+    [CmdletBinding(PositionalBinding=$false, SupportsShouldProcess)]
+    [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Description('Creates or updates a BackupVault resource belonging to a resource group.')]
+    [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Runtime.PreviewMessage("**********************************************************************************************`n
+    * This cmdlet will undergo a breaking change in Az v16.0.0, to be released on May 2026. *`n
+    * At least one change applies to this cmdlet.                                           *`n
+    * See all possible breaking changes at https://go.microsoft.com/fwlink/?linkid=2333486  *`n
+    ***************************************************************************************************")]
+
+    param(
+        [Parameter(Mandatory=$false, HelpMessage='Subscription Id of the vault')]
+        [System.String]
+        ${SubscriptionId},
+
+        [Parameter(Mandatory, HelpMessage='Resource Group Name of the backup vault')]
+        [System.String]
+        ${ResourceGroupName},
+
+        [Parameter(Mandatory, HelpMessage='Name of the backup vault')]
+        [System.String]
+        ${VaultName},
+
+        [Parameter(HelpMessage='Optional ETag.')]
+        [System.String]
+        ${ETag},
+
+        [Parameter(HelpMessage='Determines whether to enable a system-assigned identity for the resource.')]
+        [System.Management.Automation.SwitchParameter]
+        ${EnableSystemAssignedIdentity},
+
+        [Parameter(Mandatory, HelpMessage='Resource location.')]
+        [System.String]
+        ${Location},
+
+        [Parameter(Mandatory, HelpMessage='Storage Settings of the vault. Use New-AzDataProtectionBackupVaultStorageSetting Cmdlet to Create.')]
+        [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.IStorageSetting[]]
+        ${StorageSetting},
+
+        [Parameter(Mandatory=$false, HelpMessage='Parameter to Enable or Disable built-in azure monitor alerts for job failures. Security alerts cannot be disabled.')]
+        [System.String]
+        [ValidateSet('Enabled','Disabled')]
+        ${AzureMonitorAlertsForAllJobFailure},
+
+        [Parameter(Mandatory=$false, HelpMessage='Immutability state of the vault. Allowed values are Disabled, Unlocked, Locked.')]
+        [System.String]
+        [ValidateSet('Disabled','Unlocked', 'Locked')]
+        ${ImmutabilityState},
+
+        [Parameter(Mandatory=$false, HelpMessage='Cost Management Granularity of the vault. Allowed values are VaultLevel, ProtectedItemLevel, ProtectedItemWithParentTag.')]
+        [System.String]
+        [ValidateSet('VaultLevel', 'ProtectedItemLevel', 'ProtectedItemWithParentTag')]
+        ${CostManagementGranularity},
+
+        [Parameter(Mandatory=$false, HelpMessage='Cross region restore state of the vault. Allowed values are Disabled, Enabled.')]
+        [System.String]
+        [ValidateSet('Disabled','Enabled')]
+        ${CrossRegionRestoreState},
+        
+        [Parameter(Mandatory=$false, HelpMessage='Cross subscription restore state of the vault. Allowed values are Disabled, Enabled, PermanentlyDisabled.')]
+        [System.String]
+        [ValidateSet('Disabled','Enabled', 'PermanentlyDisabled')]
+        ${CrossSubscriptionRestoreState},
+        
+        [Parameter(Mandatory=$false, HelpMessage='Soft delete retention duration in days')]
+        [System.Double]
+        ${SoftDeleteRetentionDurationInDay},
+
+        [Parameter(Mandatory=$false, HelpMessage='Soft delete state of the vault. Allowed values are Off, On, AlwaysOn')]
+        [System.String]
+        [ValidateSet('Off','On', 'AlwaysOn')]  
+        ${SoftDeleteState},
+
+        [Parameter(HelpMessage='Resource tags.')]
+        [System.Collections.Hashtable]
+        ${Tag},
+
+        [Parameter(HelpMessage='The array of user assigned identities associated with the resource. The elements in array will be ARM resource ids in the form: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}."')]
+        [System.String[]]
+        ${UserAssignedIdentity},
+
+        [Parameter(Mandatory=$false, HelpMessage='Enable CMK encryption state for a Backup Vault.')]
+        [System.String]
+        ${CmkEncryptionState},
+
+        [Parameter(Mandatory=$false, HelpMessage='Enable infrastructure encryption with CMK on this vault. Infrastructure encryption must be configured only when creating the vault.')]
+        [System.String]
+        ${CmkInfrastructureEncryption},
+
+        [Parameter(Mandatory=$false, HelpMessage='The identity type to be used for CMK encryption - SystemAssigned or UserAssigned Identity.')]
+        [System.String]
+        ${CmkIdentityType},
+
+        [Parameter(Mandatory=$false, HelpMessage='This parameter is required if the identity type is UserAssigned. Add the user assigned managed identity id to be used which has access permissions to the Key Vault.')]
+        [System.String]
+        ${CmkUserAssignedIdentityId},
+
+        [Parameter(Mandatory=$false, HelpMessage='The Key URI of the CMK key to be used for encryption. To enable auto-rotation of keys, exclude the version component from the Key URI. ')]
+        [System.String]
+        ${CmkEncryptionKeyUri},
+        
+        [Parameter()]
+        [Alias('AzureRMContext', 'AzureCredential')]
+        [ValidateNotNull()]
+        [System.Management.Automation.PSObject]
+        # The credentials, account, tenant, and subscription used for communication with Azure.
+        ${DefaultProfile},
+            
+        [Parameter()]
+        [System.Management.Automation.SwitchParameter]
+        # Run the command as a job
+        ${AsJob},
+    
+        [Parameter(DontShow)]
+        [System.Management.Automation.SwitchParameter]
+        # Wait for .NET debugger to attach
+        ${Break},
+    
+        [Parameter(DontShow)]
+        [ValidateNotNull()]
+        [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Runtime.SendAsyncStep[]]
+        # SendAsync Pipeline Steps to be appended to the front of the pipeline
+        ${HttpPipelineAppend},
+    
+        [Parameter(DontShow)]
+        [ValidateNotNull()]
+        [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Runtime.SendAsyncStep[]]
+        # SendAsync Pipeline Steps to be prepended to the front of the pipeline
+        ${HttpPipelinePrepend},
+    
+        [Parameter(DontShow)]
+        [System.Uri]
+        # The URI for the proxy server to use
+        ${Proxy},
+
+        [Parameter()]
+        [System.Management.Automation.SwitchParameter]
+        # Run the command asynchronously
+        ${NoWait},
+    
+        [Parameter(DontShow)]
+        [ValidateNotNull()]
+        [System.Management.Automation.PSCredential]
+        # Credentials for a proxy server to use for the remote call
+        ${ProxyCredential},
+    
+        [Parameter(DontShow)]
+        [System.Management.Automation.SwitchParameter]
+        # Use the default credentials for the proxy
+        ${ProxyUseDefaultCredentials}
+    )
+
+    process
+    {
+        $hasCmkEncryptionState = $PSBoundParameters.Remove("CmkEncryptionState")
+        $hasCmkIdentityType = $PSBoundParameters.Remove("CmkIdentityType")
+        $hasCmkUserAssignedIdentityId = $PSBoundParameters.Remove("CmkUserAssignedIdentityId")
+        $hasCmkEncryptionKeyUri = $PSBoundParameters.Remove("CmkEncryptionKeyUri")
+        $hasCmkInfrastructureEncryption = $PSBoundParameters.Remove("CmkInfrastructureEncryption")
+
+        $hasCostManagementGranularity = $PSBoundParameters.Remove("CostManagementGranularity")
+        if ($hasCostManagementGranularity) { $PSBoundParameters.Add("CostManagementSettingGranularityLevel", $CostManagementGranularity) }
+
+        if (-not $hasCmkEncryptionState -and -not $hasCmkIdentityType -and -not $hasCmkUserAssignedIdentityId -and -not $hasCmkEncryptionKeyUri) {
+            Az.DataProtection.Internal\New-AzDataProtectionBackupVault @PSBoundParameters
+            return
+        }
+
+        $encryptionSettings = [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.EncryptionSettings]::new()
+        $encryptionSettings.State = $CmkEncryptionState
+        $encryptionSettings.CmkInfrastructureEncryption = $CmkInfrastructureEncryption
+        $encryptionSettings.CmkIdentity = [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.CmkKekIdentity]::new()
+        $encryptionSettings.CmkIdentity.IdentityType = $CmkIdentityType
+        $encryptionSettings.CmkIdentity.IdentityId = $CmkUserAssignedIdentityId
+        $encryptionSettings.CmkKeyVaultProperty = [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.CmkKeyVaultProperties]::new()
+        $encryptionSettings.CmkKeyVaultProperty.KeyUri = $CmkEncryptionKeyUri
+
+        $PSBoundParameters.Add("EncryptionSetting", $encryptionSettings)
+
+        Az.DataProtection.Internal\New-AzDataProtectionBackupVault @PSBoundParameters
+    }
+}
