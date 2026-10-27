@@ -61,6 +61,14 @@ use-extension:
   "@autorest/powershell": "3.x"
 
 directive:
+  - where:
+      verb: (.*)
+    set:
+      breaking-change:
+        deprecated-by-version: '-'
+        deprecated-by-azversion: 16.0.0
+        change-effective-date: 2026/06/02
+        change-description: This module will be retired and replaced with a new one called Az.PostgreSqlFlexibleServer.
   - from: swagger-document
     where: $.paths..operationId
     transform: return $.replace(/^CheckNameAvailability_Execute$/g, "NameAvailability_Test")
