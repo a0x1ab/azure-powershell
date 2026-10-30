@@ -472,6 +472,90 @@ Describe "Uninstall-ModuleHelper" {
                 Assert-MockCalled Uninstall-Module -Exactly 0
             }
         }
+
+        Context "Uninstall-Module threw error" {
+            # Arrange
+            $VersionObj = New-Object -TypeName System.Version -ArgumentList "1.0" 
+            $moduleObj = New-Object -TypeName PSObject 
+            $moduleObj | Add-Member NoteProperty -Name "Path" -Value "TestPath"
+            $moduleObj | Add-Member NoteProperty Version($VersionObj)
+            $Script:mockCalled = 0
+            $mockTestPath = {
+                $Script:mockCalled++
+                if ($Script:mockCalled -eq 1)
+                {
+                    return $moduleObj
+                }
+                else {
+                    return $null
+                }
+            }   
+
+            Mock -CommandName Get-Module -MockWith $mockTestPath
+            Mock Uninstall-Module -Verifiable { throw "No match was found for the specified search criteria and module names" }
+            It "Should write error 'custom directory' to error pipeline" {
+                Uninstall-ModuleHelper -Module 'Module1' -Version '1.0' -Profile 'Profile1' -RemovePreviousVersions -ErrorVariable ev -ea SilentlyContinue 
+                ($null -ne ($ev -match "If you installed the module to a custom directory in your path")) | Should be $true
+                $Script:mockCalled | Should Be 1
+                Assert-VerifiableMocks
+            }
+        }
+
+        Context "Uninstall-Module threw error MSI Install" {
+            # Arrange
+            $VersionObj = New-Object -TypeName System.Version -ArgumentList "1.0" 
+            $moduleObj = New-Object -TypeName PSObject 
+            $moduleObj | Add-Member NoteProperty -Name "Path" -Value "${env:ProgramFiles(x86)}\Microsoft SDKs\Azure\PowerShell\"
+            $moduleObj | Add-Member NoteProperty Version($VersionObj)
+            $Script:mockCalled = 0
+            $mockTestPath = {
+                $Script:mockCalled++
+                if ($Script:mockCalled -eq 1)
+                {
+                    return $moduleObj
+                }
+                else {
+                    return $null
+                }
+            }   
+
+            Mock -CommandName Get-Module -MockWith $mockTestPath
+            Mock Uninstall-Module -Verifiable { throw "No match was found for the specified search criteria and module names" }
+            It "Should write error 'msi' to error pipeline" {
+                Uninstall-ModuleHelper -Module 'Module1' -Version '1.0' -Profile 'Profile1' -RemovePreviousVersions -ErrorVariable ev -ea SilentlyContinue 
+                ($ev -match "If you installed via an MSI") | Should not be $null
+                $Script:mockCalled | Should Be 1
+                Assert-VerifiableMocks
+            } 
+        }
+
+        Context "Uninstall-Module threw error In Use" {
+            # Arrange
+            $VersionObj = New-Object -TypeName System.Version -ArgumentList "1.0" 
+            $moduleObj = New-Object -TypeName PSObject 
+            $moduleObj | Add-Member NoteProperty -Name "Path" -Value "TestPath"
+            $moduleObj | Add-Member NoteProperty Version($VersionObj)
+            $Script:mockCalled = 0
+            $mockTestPath = {
+                $Script:mockCalled++
+                if ($Script:mockCalled -eq 1)
+                {
+                    return $moduleObj
+                }
+                else {
+                    return $null
+                }
+            }   
+
+            Mock -CommandName Get-Module -MockWith $mockTestPath
+            Mock Uninstall-Module -Verifiable { throw "The module is currently in use" }
+            It "Should write error 'in use' to error pipeline" {
+                Uninstall-ModuleHelper -Module 'Module1' -Version '1.0' -Profile 'Profile1' -RemovePreviousVersions -ErrorVariable ev -ea SilentlyContinue 
+                ($ev -match "The module is currently in use") | Should not be $null
+                $Script:mockCalled | Should Be 1
+                Assert-VerifiableMocks
+            } 
+        }
     }
 }
 
@@ -867,8 +951,8 @@ Describe "Get-AzureRmProfile" {
             It "Should return available profiles" {
                 $Result = (Get-AzureRmProfile -ListAvailable)
                 $Result.Count | Should be 2
-                $Result.ProfileName -ne $null | Should Be $true
-                $Result.Module1 -ne $null | Should Be $true
+                $Result.ProfileName | Should Not Be $null
+                $Result.Module1 | Should Not Be $null
                 Assert-VerifiableMocks
             }
         }
@@ -877,8 +961,8 @@ Describe "Get-AzureRmProfile" {
             It "Should return available profiles" {
                 $Result = (Get-AzureRmProfile -ListAvailable -Update)
                 $Result.Count | Should be 2
-                $Result.ProfileName -ne $null | Should Be $true
-                $Result.Module1 -ne $null | Should Be $true
+                $Result.ProfileName | Should Not Be $null
+                $Result.Module1 | Should Not Be $null
                 Assert-VerifiableMocks
             }
         }
@@ -888,8 +972,8 @@ Describe "Get-AzureRmProfile" {
             Mock Get-ProfilesInstalled -Verifiable -ParameterFilter {[REF]$IncompleteProfiles} { @{'Profile1'= @{'Module1' = @('1.0') ;'Module2'= @('1.0')}} } 
             It "Returns installed Profile" {
                 $Result = (Get-AzureRmProfile)
-                $Result.ProfileName -ne $null | Should Be $true
-                $Result.Module1 -ne $null | Should Be $true
+                $Result.ProfileName | Should Not Be $null
+                $Result.Module1 | Should Not Be $null
                 Assert-VerifiableMocks
             }
         }
