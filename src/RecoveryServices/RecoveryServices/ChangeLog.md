@@ -20,6 +20,7 @@
 ## Upcoming Release
 * Azure Site Recovery added support for protecting proximity placement group virtual machines for Azure to Azure provider.
 * Azure Backup Added Long term retention support for Azure FileShare Recovery Points.
+* Added private endpoint for Vault credential file for site recovery service.
 
 ## Version 2.8.0
 * Azure Site Recovery added support for doing reprotect and updated vm properties for Azure disk encrypted Virtual Machines.
