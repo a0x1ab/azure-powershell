@@ -11,7 +11,7 @@
 RootModule = ''
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.1.2'
 
 # Supported PSEditions
 CompatiblePSEditions = 'Core'
@@ -49,6 +49,8 @@ PowerShellVersion = '7.1'
 # RequiredModules = @(@{ModuleName="PSReadLine"; ModuleVersion="2.2.0-beta1"})
 
 NestedModules = @("Microsoft.Azure.PowerShell.Tools.AzPredictor.dll")
+
+ScriptsToProcess = @("PromptSurvey.ps1")
 
 # Format files (.ps1xml) to be loaded when importing this module
 
