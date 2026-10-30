@@ -323,13 +323,18 @@ namespace Microsoft.Azure.Commands.Resources
                     ResourceGroupName = ResourceGroupName,
                     ResourceName = ResourceName,
                     ResourceType = ResourceType,
-                    Subscription = DefaultProfile.DefaultContext.Subscription != null ? DefaultProfile.DefaultContext.Subscription.Id : "",
+                    Subscription = DefaultProfile.DefaultContext.Subscription != null ? DefaultProfile.DefaultContext.Subscription.Id : null,
                 },
                 CanDelegate = AllowDelegation.IsPresent ? true : false,
                 Description = Description,
                 Condition = Condition,
                 ConditionVersion = ConditionVersion,
             };
+
+            if (parameters.Scope == null && parameters.ResourceIdentifier.Subscription == null)
+            {
+                WriteTerminatingError(OdataHelper.ScopeAndSubscriptionBothNull(parameters.Scope, parameters.ResourceIdentifier.Subscription));
+            }
 
             AuthorizationClient.ValidateScope(parameters.Scope, true);
 
