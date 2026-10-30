@@ -41,13 +41,12 @@ Get firmware.
 
 ## EXAMPLES
 
-### Example 1: {{ List all the firmwares inside a workspace. }}
+### Example 1:  List all the firmwares inside a workspace. 
 ```powershell
-{{ Get-AzFirmwareAnalysisFirmware -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName }}
+Get-AzFirmwareAnalysisFirmware -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName
 ```
 
 ```output
-{{ 
 Description                  : 
 FileName                     : 
 FileSize                     :
@@ -67,19 +66,16 @@ SystemDataLastModifiedByType :
 Type                         : microsoft.iotfirmwaredefense/workspaces/firmwares
 Vendor                       : 
 Version                      : 
- }}
 ```
 
-{{ List all the firmwares inside a workspace.
-}}
+List all the firmwares inside a workspace.
 
-### Example 2: {{ Get a firmware inside a workspace. }}
+### Example 2:  Get a firmware inside a workspace. 
 ```powershell
-{{ Get-AzFirmwareAnalysisFirmware -Id FirmwareId -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName }}
+ Get-AzFirmwareAnalysisFirmware -Id FirmwareId -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName 
 ```
 
 ```output
-{{ 
 Description                  : 
 FileName                     : 
 FileSize                     :
@@ -99,11 +95,9 @@ SystemDataLastModifiedByType :
 Type                         : microsoft.iotfirmwaredefense/workspaces/firmwares
 Vendor                       : 
 Version                      : 
- }}
 ```
 
-{{ Get a firmware inside a workspace.
-}}
+Get a firmware inside a workspace.
 
 ## PARAMETERS
 

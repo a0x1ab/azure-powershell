@@ -29,13 +29,12 @@ The operation to update a firmware analysis workspaces.
 
 ## EXAMPLES
 
-### Example 1: {{ Update a firmware analysis workspace. }}
+### Example 1: Update a firmware analysis workspace.
 ```powershell
-{{ Update-AzFirmwareAnalysisWorkspace -ResourceGroupName resourceGroupName -Name workspaceName  }}
+Update-AzFirmwareAnalysisWorkspace -ResourceGroupName resourceGroupName -Name workspaceName
 ```
 
 ```output
-{{ 
 Id                           : 
 Location                     : 
 Name                         : 
@@ -49,11 +48,9 @@ SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType : 
 Tag                          : {}
 Type                         : microsoft.iotfirmwaredefense/workspaces
- }}
 ```
 
-{{ Update a firmware analysis workspace.
-}}
+Update a firmware analysis workspace.
 
 ## PARAMETERS
 

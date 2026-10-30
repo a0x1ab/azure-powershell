@@ -37,13 +37,12 @@ The operation to a url for tar file download.
 
 ## EXAMPLES
 
-### Example 1: {{ Get a url for tar file download. }}
+### Example 1: Get a url for tar file download.
 ```powershell
-{{ New-AzFirmwareAnalysisFirmwareDownloadUrl -FirmwareId firmwareId -ResourceGroupName resourceGroupName -WorkspaceName workspaceName }}
+New-AzFirmwareAnalysisFirmwareFilesystemDownloadUrl -FirmwareId firmwareId -ResourceGroupName resourceGroupName -WorkspaceName workspaceName
 ```
 
-{{ Get a url for tar file download.
-}}
+Get a url for tar file download.
 
 ## PARAMETERS
 

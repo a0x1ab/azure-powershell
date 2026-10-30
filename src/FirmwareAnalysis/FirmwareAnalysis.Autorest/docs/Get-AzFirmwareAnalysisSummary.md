@@ -12,13 +12,7 @@ Get an analysis result summary of a firmware by name.
 
 ## SYNTAX
 
-### List (Default)
-```
-Get-AzFirmwareAnalysisSummary -FirmwareId <String> -ResourceGroupName <String> -WorkspaceName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
-```
-
-### Get
+### Get (Default)
 ```
 Get-AzFirmwareAnalysisSummary -FirmwareId <String> -Name <String> -ResourceGroupName <String>
  -WorkspaceName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
@@ -47,13 +41,12 @@ Get an analysis result summary of a firmware by name.
 
 ## EXAMPLES
 
-### Example 1: {{ List all the analysis results summary for a firmware by analysis type CVE. }}
+### Example 1: List all the analysis results summary for a firmware by analysis type CVE.
 ```powershell
-{{ Get-AzFirmwareAnalysisSummary -FirmwareId FirmwareId -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName -Name Type }}
+Get-AzFirmwareAnalysisSummary -FirmwareId FirmwareId -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName -Name Type
 ```
 
 ```output
-{{
 Id                           : 
 Name                         : 
 Property                     : 
@@ -66,19 +59,17 @@ SystemDataLastModifiedAt     :
 SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType :
 Type                         : Microsoft.IoTFirmwareDefense/workspaces/firmwares/summaries
- }}
 ```
 
 {{ List all the analysis results summary for a firmware by analysis type CVE.
 }}
 
-### Example 2: {{ List all the analysis results summary for a firmware by analysis type Firmware. }}
+### Example 2: List all the analysis results summary for a firmware by analysis type Firmware.
 ```powershell
-{{ Get-AzFirmwareAnalysisSummary -FirmwareId FirmwareId -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName -Name Type }}
+Get-AzFirmwareAnalysisSummary -FirmwareId FirmwareId -ResourceGroupName ResourceGroupName -WorkspaceName WorkspaceName -Name Type
 ```
 
 ```output
-{{
 Id                           : 
 Name                         : 
 Property                     :
@@ -91,11 +82,9 @@ SystemDataLastModifiedAt     :
 SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType :
 Type                         : Microsoft.IoTFirmwareDefense/workspaces/firmwares/summaries
-}}
 ```
 
-{{ List all the analysis results summary for a firmware by analysis type Firmware.
-}}
+List all the analysis results summary for a firmware by analysis type Firmware.
 
 ## PARAMETERS
 
@@ -120,7 +109,7 @@ The id of the firmware.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, GetViaIdentityWorkspace, List
+Parameter Sets: Get, GetViaIdentityWorkspace
 Aliases:
 
 Required: True
@@ -183,7 +172,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -199,7 +188,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: False
@@ -230,7 +219,7 @@ The name of the firmware analysis workspace.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: True

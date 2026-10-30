@@ -58,21 +58,18 @@ The operation to get a url for file upload.
 
 ## EXAMPLES
 
-### Example 1: {{ Create a url for file upload. }}
+### Example 1: Create a url for file upload.
 ```powershell
-{{ New-AzFirmwareAnalysisWorkspaceUploadUrl -ResourceGroupName resourceGroupName -WorkspaceName workspaceName -FirmwareId firmwareId }}
+New-AzFirmwareAnalysisWorkspaceUploadUrl -ResourceGroupName resourceGroupName -WorkspaceName workspaceName -FirmwareId firmwareId
 ```
 
 ```output
-{{ 
 Url
 ---
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
- }}
 ```
 
-{{ Create a url for file upload.
-}}
+Create a url for file upload.
 
 ## PARAMETERS
 
