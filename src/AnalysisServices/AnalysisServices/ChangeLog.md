@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+* Removed Add-AzAnalysisServicesAccount cmdlet
+* Added aliases to Connect-AzAccount so that it can be used in place of Add-AzAnalysisServicesAccount, preventing any breaking changes.
 
 ## Version 1.0.2
 * Deprecated AddAzureASAccount cmdlet
