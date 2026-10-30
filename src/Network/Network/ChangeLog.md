@@ -19,6 +19,7 @@
 --->
 
 ## Upcoming Release
+* Added Managed HSM support to Application Gateway SSL certificate cmdlets (`New-AzApplicationGatewaySslCertificate`, `Set-AzApplicationGatewaySslCertificate`, `Add-AzApplicationGatewaySslCertificate`). New parameters `-HsmKeyId` and `-HsmPublicCertData` allow referencing keys stored in Managed HSM.
 * Added cmdlets for cloud service public IP address operations:
     - `Invoke-AzPublicIpAddressCloudServiceReservation`: reserve a cloud service public IP or roll back to dynamic allocation (`-IsRollback`).
     - `Invoke-AzPublicIpAddressDisassociateCloudServiceReservedIp`: disassociate a standalone reserved public IP from a cloud service public IP. Use `-PublicIpArmId` for the Azure Resource Manager (ARM) resource ID of the standalone public IP.
