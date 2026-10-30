@@ -147,6 +147,12 @@ If you would like to become an active contributor to this project, please follow
 
 Additional information about contributing to this repository can be found in the [`CONTRIBUTING.md`][Contributing] document and the [_Azure PowerShell Developer Guide_][DeveloperGuide] document.
 
+## Telemetry
+
+Azure PowerShell collects telemetry data by default. Microsoft aggregated collected data to identify patterns of usage to identify common issues and to improve the experience of Azure PowerShell. Microsoft Azure PowerShell does not collect any private or personal data.
+For example, the usage data helps identify issues such as cmdlets with low success and help prioritize our work.
+While we appreciate the insights this data provide, we also understand that not everyone wants to send usage data and you can disable data collection with the [`Disable-AzDataCollection`](https://docs.microsoft.com/en-us/powershell/module/az.accounts/disable-azdatacollection) cmdlet. You can also read our [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409) to learn more.
+
 ## Learn More
 
 * [Microsoft Azure Documentation][MicrosoftAzureDocs]
