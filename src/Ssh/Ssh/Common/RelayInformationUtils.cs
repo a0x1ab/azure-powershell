@@ -18,6 +18,8 @@ using Microsoft.Azure.PowerShell.Ssh.Helpers.HybridConnectivity;
 using Microsoft.Azure.PowerShell.Cmdlets.Ssh.AzureClients;
 using Microsoft.Azure.Commands.Common.Authentication.Abstractions;
 using Microsoft.Azure.PowerShell.Ssh.Helpers.HybridConnectivity.Models;
+using Microsoft.Azure.Management.Internal.Resources.Utilities.Models;
+
 
 namespace Microsoft.Azure.PowerShell.Cmdlets.Ssh.Common
 {
@@ -56,11 +58,15 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Ssh.Common
         }
 
         #region Internal Methods
-        public EndpointAccessResource GetRelayInformation(string rgName, string vmName, out string exceptionMessage)
+        public EndpointAccessResource GetRelayInformation(string resourceGroupName, string resourceName, string resourceType, out string exceptionMessage)
         {
-            // Make this not hardcoded in the future.
-            string id = $"/subscriptions/{_context.Subscription.Id}/resourceGroups/{rgName}/providers/Microsoft.HybridCompute/machines/{vmName}";
-            return GetRelayInformation(id, out exceptionMessage);
+            ResourceIdentifier id = new ResourceIdentifier();
+            id.ResourceGroupName = resourceGroupName;
+            id.Subscription = _context.Subscription.Id;
+            id.ResourceName = resourceName;
+            id.ResourceType = resourceType;
+
+            return GetRelayInformation(id.ToString(), out exceptionMessage);
         }
         
         internal EndpointAccessResource GetRelayInformation(string id, out string exceptionMessage)
@@ -122,8 +128,14 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.Ssh.Common
             }
             catch (ErrorResponseException exception)
             {
-                exceptionMessage = $"Unable to create default endpoint for the target Arc Server with error: {exception}. " +
-                    $"Contact Owner/Contributor of the resource.";
+                if (exception.Body.Error.Code == "AuthorizationFailed")
+                {
+                    exceptionMessage = "Failed to create default connectivty endpoint for target resource with an Authorization failure. This is a one time operation that must be performed by someone with Owner or Contributor role before anyone can connect to this resource. Contact the owner of the resource to create the connectivity endpoint. Instructions here: https://aka.ms/ssharc/create-default-endpoint";
+                }
+                else
+                {
+                    exceptionMessage = $"Failed to create default endpoint for the target Arc Server with error: {exception}.";
+                }
             }
 
             return false;
