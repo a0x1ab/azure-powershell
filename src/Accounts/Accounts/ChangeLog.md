@@ -19,6 +19,7 @@
 -->
 
 ## Upcoming Release
+* Fixed incorrect access token [#18105]
 * Fixed an issue that Az.Accounts failed to be imported if multiple environment variables, which only differ by case, are set. [#18304]
 
 ## Version 2.8.0
