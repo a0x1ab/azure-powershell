@@ -1,4 +1,5 @@
-﻿---
+
+---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 Module Name: AzureRM.Network
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.network/get-azurermbgpservicecommunity
@@ -8,6 +9,7 @@ schema: 2.0.0
 # Get-AzureRmBgpServiceCommunity
 
 ## SYNOPSIS
+Provides a list of all services / regions, BGP communities, and associated prefixes.
 
 ## SYNTAX
 
@@ -16,15 +18,15 @@ Get-AzureRmBgpServiceCommunity [-DefaultProfile <IAzureContextContainer>] [<Comm
 ```
 
 ## DESCRIPTION
+This cmdlet provides a list of all services / regions, BGP communities, and associated prefixes.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+Get-AzureRmBgpServiceCommunity
 ```
-
-{{ Add example description here }}
+This cmdlet provides a list of all services / regions, BGP communities, and associated prefixes.
 
 ## PARAMETERS
 
@@ -58,4 +60,26 @@ This cmdlet does not accept any input.
 ## NOTES
 
 ## RELATED LINKS
+[Move-AzureRmExpressRouteCircuit](Move-AzureRmExpressRouteCircuit.md)
 
+[New-AzureRmExpressRouteCircuit](New-AzureRmExpressRouteCircuit.md)
+
+[Remove-AzureRmExpressRouteCircuit](Remove-AzureRmExpressRouteCircuit.md)
+
+[Set-AzureRmExpressRouteCircuit](Set-AzureRmExpressRouteCircuit.md)
+
+[Get-AzureRmRouteFilter](Get-AzureRmRouteFilter.md)
+
+[Get-AzureRmRouteFilterRuleConfig](Get-AzureRmRouteFilterRuleConfig.md)
+
+[Remove-AzureRmRouteFilter](Remove-AzureRmRouteFilter.md)
+
+[Remove-AzureRmRouteFilterRuleConfig](Remove-AzureRmRouteFilterRuleConfig.md)
+
+[Set-AzureRmRouteFilter](Set-AzureRmRouteFilter.md)
+
+[Set-AzureRmRouteFilterRuleConfig](Set-AzureRmRouteFilterRuleConfig.md)
+
+[New-AzureRmRouteFilter](New-AzureRmRouteFilter.md)
+
+[New-AzureRmRouteFilterRuleConfig](New-AzureRmRouteFilterRuleConfig.md)
