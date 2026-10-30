@@ -35,6 +35,11 @@
     - 'New-AzApplicationGatewayFirewallCustomRuleGroupByVariable',
     - Also updated cmdlet to add the property of RateLimitDuration, RateLimitThreshold and GroupByUserSession
     - `New-AzureApplicationGatewayFirewallCustomRule`
+* Added new cmdlets to support Log Scrubbing Feature for Application Gateway WAF Firewall Policy
+    - 'New-AzApplicationGatewayFirewallPolicySettingLogScrubbingConfiguration',
+    - 'New-AzApplicationGatewayFirewallPolicySettingLogScrubbingRule',
+    - Also updated cmdlet to add the property of LogScrubbing 
+    - `New-AzApplicationGatewayFirewallPolicySetting`
 
 ## Version 5.6.0
 * Updated `New-AzLoadBalancer` and `Set-AzLoadBalancer` to validate surface level parameters for global tier load balancers
