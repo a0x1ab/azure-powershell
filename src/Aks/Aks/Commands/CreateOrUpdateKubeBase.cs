@@ -116,6 +116,9 @@ namespace Microsoft.Azure.Commands.Aks
         [Alias("SshKeyPath")]
         public string SshKeyValue { get; set; }
 
+        [Parameter(Mandatory = false, HelpMessage = "Grant the 'acrpull' role of the specified ACR to AKS Service Principal, e.g. myacr")]
+        public string AcrNameToAttach { get; set; }
+
         [Parameter(Mandatory = false, HelpMessage = "Run cmdlet in the background")]
         public SwitchParameter AsJob { get; set; }
 
@@ -271,17 +274,15 @@ namespace Microsoft.Azure.Commands.Aks
                 {
                     clientSecret = RandomBase64String(16);
                 }
-                var salt = RandomBase64String(3);
-                var url = $"http://{salt}.{DnsNamePrefix}.{Location}.cloudapp.azure.com";
 
-                acsServicePrincipal = BuildServicePrincipal(Name, url, clientSecret);
+                acsServicePrincipal = BuildServicePrincipal(Name, clientSecret);
                 WriteVerbose(Resources.CreatedANewServicePrincipalAndAssignedTheContributorRole);
                 StoreServicePrincipal(acsServicePrincipal);
             }
             return acsServicePrincipal;
         }
 
-        private AcsServicePrincipal BuildServicePrincipal(string name, string url, string clientSecret)
+        private AcsServicePrincipal BuildServicePrincipal(string name, string clientSecret)
         {
             var pwCreds = new PasswordCredential(
                 value: clientSecret,
@@ -291,8 +292,8 @@ namespace Microsoft.Azure.Commands.Aks
             var app = GraphClient.Applications.Create(new ApplicationCreateParameters(
                 false,
                 name,
-                new List<string> { url },
-                url,
+                new List<string> { },
+                null,
                 passwordCredentials: new List<PasswordCredential> { pwCreds }));
 
             ServicePrincipal sp = null;
@@ -316,6 +317,22 @@ namespace Microsoft.Azure.Commands.Aks
             return new AcsServicePrincipal { SpId = app.AppId, ClientSecret = clientSecret, ObjectId = app.ObjectId };
         }
 
+        protected RoleAssignment GetRoleAssignmentWithRoleDefinitionId(string roleDefinitionId)
+        {
+            RoleAssignment roleAssignment = null;
+            var actionSuccess = RetryAction(() =>
+            {
+                roleAssignment = AuthClient.RoleAssignments.List().Where(x => x.Properties.RoleDefinitionId == roleDefinitionId).FirstOrDefault();
+            });
+            if (!actionSuccess)
+            {
+                throw new AzPSInvalidOperationException(
+                    Resources.CouldNotGetAcrRoleAssignment,
+                    desensitizedMessage: Resources.CouldNotGetAcrRoleAssignment);
+            }
+            return roleAssignment;
+        }
+
         protected void AddAcrRoleAssignment(string acrName, string acrParameterName, AcsServicePrincipal acsServicePrincipal)
         {
             string acrResourceId = null;
@@ -335,8 +352,14 @@ namespace Microsoft.Azure.Commands.Aks
             }
 
             var roleId = GetRoleId("acrpull", acrResourceId);
+            RoleAssignment roleAssignment = GetRoleAssignmentWithRoleDefinitionId(roleId);
+            if (roleAssignment != null)
+            {
+                WriteWarning(string.Format(Resources.AcrRoleAssignmentIsAlreadyExist, acrResourceId));
+                return;
+            }
             var spObjectId = acsServicePrincipal.ObjectId;
-            if(spObjectId == null)
+            if (spObjectId == null)
             {
                 try
                 {
