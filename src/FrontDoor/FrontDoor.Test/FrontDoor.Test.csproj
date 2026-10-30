@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PsModuleName>FrontDoor</PsModuleName>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Az.Test.props" />
+
+  <PropertyGroup>
+    <RootNamespace>$(LegacyAssemblyPrefix)$(PsModuleName)$(AzTestAssemblySuffix).ScenarioTests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    	<ProjectReference Include="..\FrontDoor.Sdk\FrontDoor.Sdk.csproj" />
+  </ItemGroup>
+
+</Project>
