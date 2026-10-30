@@ -1,0 +1,652 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo?api-version=2021-06-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvYmEyMzU4YzItNDJmMi00MTM4LTg4ZGYtN2M2OGNmNjA4YmVhL3Jlc291cmNlR3JvdXBzL2JhdGNocG9ydGFsL3Byb3ZpZGVycy9NaWNyb3NvZnQuQmF0Y2gvYmF0Y2hBY2NvdW50cy9taWtlcG9ydGFsL2FwcGxpY2F0aW9ucy91cGRhdGVQb29sV2l0aEFwcGxpY2F0aW9uUGFja2FnZS92ZXJzaW9ucy9mb28/YXBpLXZlcnNpb249MjAyMS0wNi0wMQ==",
+      "RequestMethod": "PUT",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "36f26356-ccb0-408d-932d-315cfe09350f"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Management.Batch.BatchManagementClient/14.0.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "ETag": [
+          "W/\"0x8D9F0BDABE8965F\""
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1199"
+        ],
+        "x-ms-request-id": [
+          "34f2c7c0-af2f-4430-80b8-8cb0f57c734c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "x-ms-correlation-request-id": [
+          "768ada3f-dc44-4ff3-b136-ed62d60f2e26"
+        ],
+        "x-ms-routing-request-id": [
+          "NORTHCENTRALUS:20220215T195927Z:768ada3f-dc44-4ff3-b136-ed62d60f2e26"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:26 GMT"
+        ],
+        "Content-Length": [
+          "651"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:27 GMT"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"type\": \"Microsoft.Batch/batchAccounts/applications/versions\",\r\n  \"id\": \"/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo\",\r\n  \"name\": \"foo\",\r\n  \"etag\": \"W/\\\"0x8D9F0BDABE8965F\\\"\",\r\n  \"properties\": {\r\n    \"storageUrl\": \"https://mikebatchstorage.blob.core.windows.net/app-updatepoolwithapplicationp-ac92b20e868840b1aba6c25d9375fb85/foo?sv=2018-03-28&sr=b&sig=1xtcq7roAvvvql6QVkgz4u2m5J9m%2F8UebXnWEG3LYT0%3D&st=2022-02-15T19%3A54%3A27Z&se=2022-02-15T23%3A59%3A27Z&sp=rw\",\r\n    \"storageUrlExpiry\": \"2022-02-15T23:59:27.3372687Z\",\r\n    \"state\": \"Pending\"\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools?api-version=2022-01-01.15.0",
+      "EncodedRequestUri": "L3Bvb2xzP2FwaS12ZXJzaW9uPTIwMjItMDEtMDEuMTUuMA==",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"id\": \"testUpdatePoolWithAppPackages\",\r\n  \"vmSize\": \"standard_d1_v2\",\r\n  \"cloudServiceConfiguration\": {\r\n    \"osFamily\": \"4\",\r\n    \"osVersion\": \"*\"\r\n  },\r\n  \"targetDedicatedNodes\": 1,\r\n  \"targetLowPriorityNodes\": 0,\r\n  \"enableInterNodeCommunication\": true\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "e1a27e0f-894f-407e-9f7b-b246bae87a5b"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Tue, 15 Feb 2022 19:59:27 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/15.300.22.6302",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "263"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D9F0BDAC4218DC"
+        ],
+        "Location": [
+          "https://mikeportal.eastus.batch.azure.com/pools/testUpdatePoolWithAppPackages"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "afb30265-f8b8-4167-ba23-d65a2d05d428"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://mikeportal.eastus.batch.azure.com/pools/testUpdatePoolWithAppPackages"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:27 GMT"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:27 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo/activate?api-version=2021-06-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvYmEyMzU4YzItNDJmMi00MTM4LTg4ZGYtN2M2OGNmNjA4YmVhL3Jlc291cmNlR3JvdXBzL2JhdGNocG9ydGFsL3Byb3ZpZGVycy9NaWNyb3NvZnQuQmF0Y2gvYmF0Y2hBY2NvdW50cy9taWtlcG9ydGFsL2FwcGxpY2F0aW9ucy91cGRhdGVQb29sV2l0aEFwcGxpY2F0aW9uUGFja2FnZS92ZXJzaW9ucy9mb28vYWN0aXZhdGU/YXBpLXZlcnNpb249MjAyMS0wNi0wMQ==",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"format\": \"zip\"\r\n}",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "8f4f4e8e-96fa-4526-b34c-b5f936caf91e"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Management.Batch.BatchManagementClient/14.0.0.0"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "23"
+        ]
+      },
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "ETag": [
+          "W/\"0x8D9F0BDACB2A609\""
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1199"
+        ],
+        "x-ms-request-id": [
+          "7f48b4c5-3c6b-4a3d-af15-1fc697e5c5d5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "x-ms-correlation-request-id": [
+          "5af505b6-6c34-40ff-9bae-c8be21503800"
+        ],
+        "x-ms-routing-request-id": [
+          "NORTHCENTRALUS:20220215T195928Z:5af505b6-6c34-40ff-9bae-c8be21503800"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:28 GMT"
+        ],
+        "Content-Length": [
+          "715"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:28 GMT"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"type\": \"Microsoft.Batch/batchAccounts/applications/versions\",\r\n  \"id\": \"/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo\",\r\n  \"name\": \"foo\",\r\n  \"etag\": \"W/\\\"0x8D9F0BDACB2A609\\\"\",\r\n  \"properties\": {\r\n    \"storageUrl\": \"https://mikebatchstorage.blob.core.windows.net/app-updatepoolwithapplicationp-ac92b20e868840b1aba6c25d9375fb85/foo?sv=2018-03-28&sr=b&sig=Yly1TOtDbi3wjInqKOjB33FOxpAYnD6YVw4HWymAOE4%3D&st=2022-02-15T19%3A54%3A28Z&se=2022-02-15T23%3A59%3A28Z&sp=rw\",\r\n    \"storageUrlExpiry\": \"2022-02-15T23:59:28.6934237Z\",\r\n    \"state\": \"Active\",\r\n    \"format\": \"zip\",\r\n    \"lastActivationTime\": \"2022-02-15T19:59:28.6394226Z\"\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo?api-version=2021-06-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvYmEyMzU4YzItNDJmMi00MTM4LTg4ZGYtN2M2OGNmNjA4YmVhL3Jlc291cmNlR3JvdXBzL2JhdGNocG9ydGFsL3Byb3ZpZGVycy9NaWNyb3NvZnQuQmF0Y2gvYmF0Y2hBY2NvdW50cy9taWtlcG9ydGFsL2FwcGxpY2F0aW9ucy91cGRhdGVQb29sV2l0aEFwcGxpY2F0aW9uUGFja2FnZS92ZXJzaW9ucy9mb28/YXBpLXZlcnNpb249MjAyMS0wNi0wMQ==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "8f4f4e8e-96fa-4526-b34c-b5f936caf91e"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Management.Batch.BatchManagementClient/14.0.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "ETag": [
+          "W/\"0x8D9F0BDACB2A609\""
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11999"
+        ],
+        "x-ms-request-id": [
+          "8f7bd7cd-cb89-4637-b7ab-620a24dba6f6"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "x-ms-correlation-request-id": [
+          "381486ac-4089-4e78-ae24-8d9b2cc5ac43"
+        ],
+        "x-ms-routing-request-id": [
+          "NORTHCENTRALUS:20220215T195928Z:381486ac-4089-4e78-ae24-8d9b2cc5ac43"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:28 GMT"
+        ],
+        "Content-Length": [
+          "714"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:28 GMT"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"type\": \"Microsoft.Batch/batchAccounts/applications/versions\",\r\n  \"id\": \"/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo\",\r\n  \"name\": \"foo\",\r\n  \"etag\": \"W/\\\"0x8D9F0BDACB2A609\\\"\",\r\n  \"properties\": {\r\n    \"storageUrl\": \"https://mikebatchstorage.blob.core.windows.net/app-updatepoolwithapplicationp-ac92b20e868840b1aba6c25d9375fb85/foo?sv=2018-03-28&sr=b&sig=Yly1TOtDbi3wjInqKOjB33FOxpAYnD6YVw4HWymAOE4%3D&st=2022-02-15T19%3A54%3A28Z&se=2022-02-15T23%3A59%3A28Z&sp=rw\",\r\n    \"storageUrlExpiry\": \"2022-02-15T23:59:28.833071Z\",\r\n    \"state\": \"Active\",\r\n    \"format\": \"zip\",\r\n    \"lastActivationTime\": \"2022-02-15T19:59:28.6394226Z\"\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testUpdatePoolWithAppPackages?api-version=2022-01-01.15.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RVcGRhdGVQb29sV2l0aEFwcFBhY2thZ2VzP2FwaS12ZXJzaW9uPTIwMjItMDEtMDEuMTUuMA==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "79fc32c9-8584-4a24-8516-3080517e8169"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "95181af2-1f83-4f60-8b3d-e9ba017575eb"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/15.300.22.6302",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D9F0BDAC4218DC"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "7929d55c-bb86-43c0-94d7-a7b0f622582a"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:28 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:27 GMT"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://mikeportal.eastus.batch.azure.com/$metadata#pools/@Element\",\r\n  \"id\": \"testUpdatePoolWithAppPackages\",\r\n  \"url\": \"https://mikeportal.eastus.batch.azure.com/pools/testUpdatePoolWithAppPackages\",\r\n  \"eTag\": \"0x8D9F0BDAC4218DC\",\r\n  \"lastModified\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"creationTime\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"state\": \"active\",\r\n  \"stateTransitionTime\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"allocationState\": \"resizing\",\r\n  \"allocationStateTransitionTime\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"vmSize\": \"standard_d1_v2\",\r\n  \"resizeTimeout\": \"PT15M\",\r\n  \"currentDedicatedNodes\": 0,\r\n  \"targetDedicatedNodes\": 1,\r\n  \"currentLowPriorityNodes\": 0,\r\n  \"targetLowPriorityNodes\": 0,\r\n  \"enableAutoScale\": false,\r\n  \"enableInterNodeCommunication\": true,\r\n  \"taskSlotsPerNode\": 1,\r\n  \"taskSchedulingPolicy\": {\r\n    \"nodeFillType\": \"Spread\"\r\n  },\r\n  \"cloudServiceConfiguration\": {\r\n    \"osFamily\": \"4\",\r\n    \"osVersion\": \"*\"\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testUpdatePoolWithAppPackages?api-version=2022-01-01.15.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RVcGRhdGVQb29sV2l0aEFwcFBhY2thZ2VzP2FwaS12ZXJzaW9uPTIwMjItMDEtMDEuMTUuMA==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "22adf2c8-c2b8-451f-ab78-323471c2615d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "c3fdd18b-bdb3-4826-8edf-ff239d68dfa0"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/15.300.22.6302",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D9F0BDAD363D4D"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "bbe9146f-5e62-487b-91a2-6c7177eec3bc"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://mikeportal.eastus.batch.azure.com/$metadata#pools/@Element\",\r\n  \"id\": \"testUpdatePoolWithAppPackages\",\r\n  \"url\": \"https://mikeportal.eastus.batch.azure.com/pools/testUpdatePoolWithAppPackages\",\r\n  \"eTag\": \"0x8D9F0BDAD363D4D\",\r\n  \"lastModified\": \"2022-02-15T19:59:29.5134029Z\",\r\n  \"creationTime\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"state\": \"active\",\r\n  \"stateTransitionTime\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"allocationState\": \"resizing\",\r\n  \"allocationStateTransitionTime\": \"2022-02-15T19:59:27.9133916Z\",\r\n  \"vmSize\": \"standard_d1_v2\",\r\n  \"resizeTimeout\": \"PT15M\",\r\n  \"currentDedicatedNodes\": 0,\r\n  \"targetDedicatedNodes\": 1,\r\n  \"currentLowPriorityNodes\": 0,\r\n  \"targetLowPriorityNodes\": 0,\r\n  \"enableAutoScale\": false,\r\n  \"enableInterNodeCommunication\": true,\r\n  \"certificateReferences\": [],\r\n  \"applicationPackageReferences\": [\r\n    {\r\n      \"applicationId\": \"updatepoolwithapplicationpackage\",\r\n      \"version\": \"foo\"\r\n    }\r\n  ],\r\n  \"taskSlotsPerNode\": 1,\r\n  \"taskSchedulingPolicy\": {\r\n    \"nodeFillType\": \"Spread\"\r\n  },\r\n  \"cloudServiceConfiguration\": {\r\n    \"osFamily\": \"4\",\r\n    \"osVersion\": \"*\"\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testUpdatePoolWithAppPackages/updateproperties?api-version=2022-01-01.15.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RVcGRhdGVQb29sV2l0aEFwcFBhY2thZ2VzL3VwZGF0ZXByb3BlcnRpZXM/YXBpLXZlcnNpb249MjAyMi0wMS0wMS4xNS4w",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"certificateReferences\": [],\r\n  \"applicationPackageReferences\": [\r\n    {\r\n      \"applicationId\": \"updatePoolWithApplicationPackage\",\r\n      \"version\": \"foo\"\r\n    }\r\n  ],\r\n  \"metadata\": []\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "473172d4-1c8a-4fd3-b0ce-efa2bd6ecf20"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "0d49103e-0efc-4e04-a3ab-bb45e5536fb5"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/15.300.22.6302",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "195"
+        ]
+      },
+      "ResponseHeaders": {
+        "ETag": [
+          "0x8D9F0BDAD363D4D"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "4bfc610d-9df3-488c-a035-365a83f7588c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://mikeportal.eastus.batch.azure.com/pools/testUpdatePoolWithAppPackages/updateproperties"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "Content-Length": [
+          "0"
+        ],
+        "Last-Modified": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 204
+    },
+    {
+      "RequestUri": "/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage/versions/foo?api-version=2021-06-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvYmEyMzU4YzItNDJmMi00MTM4LTg4ZGYtN2M2OGNmNjA4YmVhL3Jlc291cmNlR3JvdXBzL2JhdGNocG9ydGFsL3Byb3ZpZGVycy9NaWNyb3NvZnQuQmF0Y2gvYmF0Y2hBY2NvdW50cy9taWtlcG9ydGFsL2FwcGxpY2F0aW9ucy91cGRhdGVQb29sV2l0aEFwcGxpY2F0aW9uUGFja2FnZS92ZXJzaW9ucy9mb28/YXBpLXZlcnNpb249MjAyMS0wNi0wMQ==",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "4df3c732-7eae-4a08-99ae-b2683f163b0f"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Management.Batch.BatchManagementClient/14.0.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-request-id": [
+          "2b770d54-297c-421a-8d35-8e8cf03250a2"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [
+          "14999"
+        ],
+        "x-ms-correlation-request-id": [
+          "41c1ffb3-a757-4fbb-88d8-1f8d3d715edc"
+        ],
+        "x-ms-routing-request-id": [
+          "NORTHCENTRALUS:20220215T195929Z:41c1ffb3-a757-4fbb-88d8-1f8d3d715edc"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/ba2358c2-42f2-4138-88df-7c68cf608bea/resourceGroups/batchportal/providers/Microsoft.Batch/batchAccounts/mikeportal/applications/updatePoolWithApplicationPackage?api-version=2021-06-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvYmEyMzU4YzItNDJmMi00MTM4LTg4ZGYtN2M2OGNmNjA4YmVhL3Jlc291cmNlR3JvdXBzL2JhdGNocG9ydGFsL3Byb3ZpZGVycy9NaWNyb3NvZnQuQmF0Y2gvYmF0Y2hBY2NvdW50cy9taWtlcG9ydGFsL2FwcGxpY2F0aW9ucy91cGRhdGVQb29sV2l0aEFwcGxpY2F0aW9uUGFja2FnZT9hcGktdmVyc2lvbj0yMDIxLTA2LTAx",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "14f5da74-22f4-4039-b030-389d4ed84c2b"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Management.Batch.BatchManagementClient/14.0.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-request-id": [
+          "c4e60565-eb0a-4979-b7fb-b541682d71d0"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [
+          "14998"
+        ],
+        "x-ms-correlation-request-id": [
+          "1ebf94fe-fae0-412c-ac7e-4770e5cbb507"
+        ],
+        "x-ms-routing-request-id": [
+          "NORTHCENTRALUS:20220215T195930Z:1ebf94fe-fae0-412c-ac7e-4770e5cbb507"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testUpdatePoolWithAppPackages?api-version=2022-01-01.15.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RVcGRhdGVQb29sV2l0aEFwcFBhY2thZ2VzP2FwaS12ZXJzaW9uPTIwMjItMDEtMDEuMTUuMA==",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "c0f8b2c3-fabb-4e78-913c-340ea7c7acaa"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Tue, 15 Feb 2022 19:59:30 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.30411.01",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.19044.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/15.300.22.6302",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "e9e317c4-3519-4f79-8418-3a739a735949"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Tue, 15 Feb 2022 19:59:29 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 202
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "ba2358c2-42f2-4138-88df-7c68cf608bea",
+    "AZURE_BATCH_ACCOUNT": "mikeportal",
+    "AZURE_BATCH_ENDPOINT": "https://mikeportal.eastus.batch.azure.com",
+    "AZURE_BATCH_RESOURCE_GROUP": "batchportal"
+  }
+}
