@@ -18,6 +18,7 @@
         - Additional information about change #1
 -->
 ## Current Release
+* Rename param TenantId in cmdlet Connect-AzureRmAccount to Tenant and add an aliad for TenantId
 
 ## Version 5.7.0
 * Fix issue with Get-AzureRmSubscription in CloudShell
