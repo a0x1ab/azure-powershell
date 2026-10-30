@@ -18,6 +18,16 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+* New action group receivers added for action group
+	-ItsmReceiver
+	-VoiceReceiver
+	-ArmRoleReceiver
+	-AzureFunctionReceiver
+	-LogicAppReceiver
+	-AutomationRunbookReceiver
+	-AzureAppPushReceiver
+* Use common alert schema enabled for the receivers. This is not applicable for SMS, Azure App push , ITSM and Voice recievers
+* Webhooks now supports Azure active directory authentication .
 
 ## Version 1.2.2
 * Fixed miscellaneous typos across module
