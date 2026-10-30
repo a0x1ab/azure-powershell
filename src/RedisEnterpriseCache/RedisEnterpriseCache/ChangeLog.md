@@ -1,0 +1,70 @@
+<!--
+    Please leave this section at the top of the change log.
+
+    Changes for the upcoming release should go under the section titled "Upcoming Release", and should adhere to the following format:
+
+    ## Upcoming Release
+    * Overview of change #1
+        - Additional information about change #1
+    * Overview of change #2
+        - Additional information about change #2
+        - Additional information about change #2
+    * Overview of change #3
+    * Overview of change #4
+        - Additional information about change #4
+
+    ## YYYY.MM.DD - Version X.Y.Z (Previous Release)
+    * Overview of change #1
+        - Additional information about change #1
+-->
+## Upcoming Release
+* Bumped module version to 3.0.0-preview for public preview release
+* Added support for API versions 2025-08-01-preview, 2026-02-01-preview, 2026-05-01-preview, and 2026-06-01-preview
+* Added `Get-AzRedisEnterpriseCacheMigration` cmdlet to get information about a migration in a Redis Enterprise cluster
+* Added `Start-AzRedisEnterpriseCacheMigration` cmdlet to start a new migration
+* Added `Undo-AzRedisEnterpriseCacheMigration` cmdlet to cancel or rollback a migration operation in a Redis Enterprise cluster
+* Added `Test-AzRedisEnterpriseCacheMigration` cmdlet to validate if a source Azure Cache for Redis resource can be migrated to a target Azure Managed Redis resource
+* Added `MaintenanceConfigurationMaintenanceWindow` parameter to `New-AzRedisEnterpriseCache` and `Update-AzRedisEnterpriseCache` for configuring maintenance windows
+* Added `NotifyKeyspaceEvents` parameter to `New-AzRedisEnterpriseCacheDatabase` and `Update-AzRedisEnterpriseCacheDatabase` for configuring keyspace notifications
+* Added `AccessString` parameter to `New-AzRedisEnterpriseCacheAccessPolicyAssignment` for configuring custom Redis ACL permissions on an access policy assignment
+
+## Version 2.0.0
+* [Upgraded code generator](https://go.microsoft.com/fwlink/?linkid=2340249)
+
+## Version 1.6.1
+* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229
+
+## Version 1.6.0
+* Added a new required property: PublicNetworkAccess for Cluster.
+* Updated the default value of AccessKeysAuthentication property for Database to 'Disabled'.
+
+## Version 1.5.0
+* Added support for listing all SKUs a cluster can scale to.
+* Added a new enum: NoCluster for Clustering policy.
+
+## Version 1.4.1
+* Upgraded nuget package to signed package.
+
+## Version 1.4.0
+* Added support for using Microsoft Entra token-based authentication.
+* Added the new properties of Cluster: highAvailability and redundancyMode.
+* Added new product SKUs.
+* Added the new properties of Database: accessKeysAuthentication.
+* Added Invoke-AzRedisEnterpriseCacheForceDatabaseLinkToReplicationGroup to force link geo replicated caches.
+* Added Update-AzRedisEnterpriseCacheDatabaseDbRedisVersion to upgrade the redis database version directly.
+
+## Version 1.2.1
+* Introduced secrets detection feature to safeguard sensitive data.
+
+## Version 1.2.0
+* Upgraded API version to 2023-03-01-preview
+
+## Version 1.1.0
+* Upgraded API version to 2022-01-01
+
+## Version 1.0.0
+* GA version of Az.RedisEnterpriseCache
+
+## Version 0.1.0
+* First preview release for module Az.RedisEnterpriseCache
+
