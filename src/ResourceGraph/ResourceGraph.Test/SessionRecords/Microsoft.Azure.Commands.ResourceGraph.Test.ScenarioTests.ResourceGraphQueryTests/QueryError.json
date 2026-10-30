@@ -1,0 +1,92 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/providers/Microsoft.ResourceGraph/resources?api-version=2024-04-01",
+      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVzb3VyY2VHcmFwaC9yZXNvdXJjZXM/YXBpLXZlcnNpb249MjAyNC0wNC0wMQ==",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "2267a4cb-5c97-41fc-af01-81487f0fcf0f"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/6.0.3624.51421",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.26100",
+          "Microsoft.Azure.Management.ResourceGraph.ResourceGraphClient/2.1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "228"
+        ]
+      },
+      "RequestBody": "{\r\n  \"subscriptions\": [\r\n    \"9e223dbe-3399-4e19-88eb-0975f02ac87f\"\r\n  ],\r\n  \"query\": \"where where\",\r\n  \"options\": {\r\n    \"$top\": 100,\r\n    \"$skip\": 0,\r\n    \"resultFormat\": \"objectArray\",\r\n    \"allowPartialScopes\": false\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-correlation-request-id": [
+          "5fdf9669-0923-4f74-ad58-494c6640e210"
+        ],
+        "x-ms-ratelimit-remaining-tenant-resource-requests": [
+          "13"
+        ],
+        "x-ms-user-quota-remaining": [
+          "13"
+        ],
+        "x-ms-user-quota-resets-after": [
+          "00:00:04"
+        ],
+        "x-ms-resource-graph-request-duration": [
+          "0:00:00:00.0816010"
+        ],
+        "x-ms-ratelimit-remaining-tenant-reads": [
+          "2199"
+        ],
+        "x-ms-request-id": [
+          "5fdf9669-0923-4f74-ad58-494c6640e210"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANWEST:20250210T023700Z:5fdf9669-0923-4f74-ad58-494c6640e210"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "X-Cache": [
+          "CONFIG_NOCACHE"
+        ],
+        "X-MSEdge-Ref": [
+          "Ref A: CBD8F21C9C414EF19C8F93683E18838D Ref B: TYO201151006060 Ref C: 2025-02-10T02:37:00Z"
+        ],
+        "Date": [
+          "Mon, 10 Feb 2025 02:37:00 GMT"
+        ],
+        "Content-Length": [
+          "488"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"error\": {\r\n    \"code\": \"BadRequest\",\r\n    \"message\": \"Please provide below info when asking for support: timestamp = 2025-02-10T02:37:00.7816380Z, correlationId = 5fdf9669-0923-4f74-ad58-494c6640e210.\",\r\n    \"details\": [\r\n      {\r\n        \"code\": \"InvalidQuery\",\r\n        \"message\": \"Query is invalid. Please refer to the documentation for the Azure Resource Graph service and fix the error before retrying.\"\r\n      },\r\n      {\r\n        \"code\": \"ParserFailure\",\r\n        \"message\": \"ParserFailure\",\r\n        \"line\": 1,\r\n        \"characterPositionInLine\": 11,\r\n        \"token\": \"<EOF>\",\r\n        \"expectedToken\": \"Ǒ\"\r\n      }\r\n    ]\r\n  }\r\n}",
+      "StatusCode": 400
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "9e223dbe-3399-4e19-88eb-0975f02ac87f"
+  }
+}
