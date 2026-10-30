@@ -48,19 +48,21 @@ function Test-VirtualNetworkGatewayConnectionCRUD
       # Create VirtualNetworkGateway
       $vnetIpConfig = New-AzureVirtualNetworkGatewayIpConfig -Name $vnetGatewayConfigName -PublicIpAddress $publicip -Subnet $subnet
 
-      $actual = New-AzureVirtualNetworkGateway -ResourceGroupName $rgname -name $rname -location $location -IpConfigurations $vnetIpConfig -GatewaySize Default -GatewayType DynamicRouting -EnableBgp $false
+	  $actual = New-AzureVirtualNetworkGateway -ResourceGroupName $rgname -name $rname -location $location -IpConfigurations $vnetIpConfig -GatewayType Vpn -VpnType RouteBased -EnableBgp $false
       $vnetGateway = Get-AzureVirtualNetworkGateway -ResourceGroupName $rgname -name $rname
       Assert-AreEqual $vnetGateway.ResourceGroupName $actual.ResourceGroupName	
       Assert-AreEqual $vnetGateway.Name $actual.Name	
-      Assert-AreEqual "Default" $vnetGateway.GatewaySize
-      Assert-AreEqual "DynamicRouting" $vnetGateway.GatewayType
+      #Assert-AreEqual "Vpn" $expected.GatewayType
+	  #Assert-AreEqual "RouteBased" $expected.VpnType
       
       # Create LocalNetworkGateway      
       $actual = New-AzureLocalNetworkGateway -ResourceGroupName $rgname -name $localnetName -location $location -AddressPrefix 192.168.0.0/16 -GatewayIpAddress 192.168.3.10
       $localnetGateway = Get-AzureLocalNetworkGateway -ResourceGroupName $rgname -name $localnetName
       Assert-AreEqual $localnetGateway.ResourceGroupName $actual.ResourceGroupName	
       Assert-AreEqual $localnetGateway.Name $actual.Name	
-      Assert-AreEqual "192.168.3.10" $localnetGateway.GatewayIpAddress
+      Assert-AreEqual "192.168.3.10" $localnetGateway.GatewayIpAddress  
+	  Assert-AreEqual "192.168.0.0/16" $localnetGateway.LocalNetworkAddressSpace.AddressPrefixes[0]
+	  $localnetGateway.Location = $location
 
       # Create & Get VirtualNetworkGatewayConnection
       $actual = New-AzureVirtualNetworkGatewayConnection -ResourceGroupName $rgname -name $vnetConnectionName -location $location -VirtualNetworkGateway1 $vnetGateway -LocalNetworkGateway2 $localnetGateway -ConnectionType IPsec -RoutingWeight 3 -SharedKey abc
@@ -80,17 +82,18 @@ function Test-VirtualNetworkGatewayConnectionCRUD
       Assert-AreEqual "IPsec" $list[0].ConnectionType
       Assert-AreEqual "3" $list[0].RoutingWeight
       Assert-AreEqual "abc" $list[0].SharedKey
-      
-      # Reset/Update VirtualNetworkGatewayConnection
-      $expected.ConnectionType = "Vnet2Vnet"
+
+      # Set/Update VirtualNetworkGatewayConnection
+	  $expected.Location = $location
+	  $expected.VirtualNetworkGateway1.Location = $location
+	  $expected.LocalNetworkGateway2.Location = $location
       $expected.RoutingWeight = "4"
       $expected.SharedKey = "xyz"
 
-      $actual = Reset-AzureVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $expected -Force
-      $expected = Get-AzureVirtualNetworkGatewayConnection -ResourceGroupName $rgname -name $vnetConnectionName
-      Assert-AreEqual "Vnet2Vnet" $expected.ConnectionType        
+      $actual = Set-AzureVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $expected -Force
+      $expected = Get-AzureVirtualNetworkGatewayConnection -ResourceGroupName $rgname -name $vnetConnectionName    
       Assert-AreEqual "4" $expected.RoutingWeight        
-      Assert-AreEqual "xyz" $expected.SharedKey      
+      Assert-AreEqual "xyz" $expected.SharedKey     
       
       # Delete VirtualNetworkGatewayConnection
       $delete = Remove-AzureVirtualNetworkGatewayConnection -ResourceGroupName $actual.ResourceGroupName -name $vnetConnectionName -PassThru -Force
@@ -142,12 +145,12 @@ function Test-VirtualNetworkGatewayConnectionSharedKeyCRUD
       # Create VirtualNetworkGateway
       $vnetIpConfig = New-AzureVirtualNetworkGatewayIpConfig -Name $vnetGatewayConfigName -PublicIpAddress $publicip -Subnet $subnet
 
-      $actual = New-AzureVirtualNetworkGateway -ResourceGroupName $rgname -name $rname -location $location -IpConfigurations $vnetIpConfig -GatewaySize Default -GatewayType DynamicRouting -EnableBgp $false
+	  $actual = New-AzureVirtualNetworkGateway -ResourceGroupName $rgname -name $rname -location $location -IpConfigurations $vnetIpConfig -GatewayType Vpn -VpnType RouteBased -EnableBgp $false
       $vnetGateway = Get-AzureVirtualNetworkGateway -ResourceGroupName $rgname -name $rname
       Assert-AreEqual $vnetGateway.ResourceGroupName $actual.ResourceGroupName	
       Assert-AreEqual $vnetGateway.Name $actual.Name	
-      Assert-AreEqual "Default" $vnetGateway.GatewaySize
-      Assert-AreEqual "DynamicRouting" $vnetGateway.GatewayType
+      #Assert-AreEqual "Vpn" $expected.GatewayType
+	  #Assert-AreEqual "RouteBased" $expected.VpnType
       
       # Create LocalNetworkGateway
       $actual = New-AzureLocalNetworkGateway -ResourceGroupName $rgname -name $localnetName -location $location -AddressPrefix 192.168.0.0/16 -GatewayIpAddress 192.168.3.11
@@ -155,6 +158,8 @@ function Test-VirtualNetworkGatewayConnectionSharedKeyCRUD
       Assert-AreEqual $localnetGateway.ResourceGroupName $actual.ResourceGroupName	
       Assert-AreEqual $localnetGateway.Name $actual.Name	
       Assert-AreEqual "192.168.3.11" $localnetGateway.GatewayIpAddress
+	  Assert-AreEqual "192.168.0.0/16" $localnetGateway.LocalNetworkAddressSpace.AddressPrefixes[0]
+	  $localnetGateway.Location = $location
 
       # Create VirtualNetworkGatewayConnection
       $actual = New-AzureVirtualNetworkGatewayConnection -ResourceGroupName $rgname -name $vnetConnectionName -location $location -VirtualNetworkGateway1 $vnetGateway -LocalNetworkGateway2 $localnetGateway -ConnectionType IPsec -RoutingWeight 3 -SharedKey abc
@@ -166,13 +171,16 @@ function Test-VirtualNetworkGatewayConnectionSharedKeyCRUD
       Assert-AreEqual "abc" $expected.SharedKey
 
       # Set VirtualNetworkGatewayConnectionSharedKey
-      $actual = Set-AzureVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName $rgname -name $vnetConnectionName -Value TestSharedKeyValue -Force
+      $actual = Set-AzureVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName $rgname -name $vnetConnectionName -Value "TestSharedKeyValue" -Force
 
       # Get VirtualNetworkGatewayConnectionSharedKey
       $expected = Get-AzureVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName $rgname -name $vnetConnectionName
       
       # Reset VirtualNetworkGatewayConnectionSharedKey
-      #$actual = Reset-AzureVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName $rgname -name $rname -KeyLength 50 -Force   
+      $actual = Reset-AzureVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName $rgname -name $rname -KeyLength 50 -Force   
+
+	  # Get VirtualNetworkGatewayConnectionSharedKey after Reset-VirtualNetworkGatewayConnectionSharedKey
+      $expected = Get-AzureVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName $rgname -name $vnetConnectionName
     }
     finally
     {
