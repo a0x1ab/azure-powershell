@@ -322,6 +322,56 @@ namespace Microsoft.Azure.Commands.KeyVault.SecurityDomain.Models
         }
 
         /// <summary>
+        /// Download a security domain exchange key.
+        /// This key is used to encrypt SD data before uploading to the HSM where SD is going to be restored.
+        /// </summary>
+        /// <param name="hsmName"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public string DownloadSecurityDomainExchangeKeyAsPem(string hsmName, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var httpRequest = CreateRequest(HttpMethod.Get, hsmName, $"/{_securityDomain}/upload");
+
+                HttpResponseMessage httpResponseMessage = HttpClient.SendAsync(httpRequest, cancellationToken).ConfigureAwait(false).GetAwaiter().GetResult();
+
+                if (httpResponseMessage.IsSuccessStatusCode)
+                {
+                    var response = httpResponseMessage.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+                    var key = JsonConvert.DeserializeObject<SecurityDomainTransferKey>(response);
+
+                    switch (key.KeyFormat)
+                    {
+                        case "pem":
+                            // Transitional, remove later
+                            return key.TransferKey;
+                        case "jwk":
+                            // handle below
+                            break;
+                        default:
+                            throw new Exception($"Unexpected key type {key.KeyFormat}");
+                    }
+
+                    // The transfer key is a JWK, need to parse it, and return the cert
+                    JWK jwk = JsonConvert.DeserializeObject<JWK>(key.TransferKey);
+                    return jwk.GetX5cAsPem();
+                }
+                else
+                {
+                    string response = httpResponseMessage.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+                    _writeDebug($"Invalid security domain response: {response}");
+                    throw new Exception(Resources.DownloadSecurityDomainKeyFail);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(Resources.DownloadSecurityDomainKeyFail, ex);
+            }
+        }
+
+        /// <summary>
         /// Decrypt security domain data.
         /// User must specify public key / private key / password* groups to decrypt SD.
         /// *password MAY be optional.
@@ -527,6 +577,19 @@ namespace Microsoft.Azure.Commands.KeyVault.SecurityDomain.Models
             {
                 throw new Exception(Resources.RestoreSecurityDomainFailure, ex);
             }
+        }
+
+        /// <summary>
+        /// Upload security domain data and initiate restoring.
+        /// </summary>
+        /// <param name="securityDomainData">Encrypted by exchange key</param>
+        /// <param name="cancellationToken"></param>
+        public void RestoreSecurityDomainBlob(SecurityDomainRestoreData securityDomainData, CancellationToken cancellationToken)
+        {
+            string securityDomain = JsonConvert.SerializeObject(new SecurityDomainWrapper
+            {
+                value = JsonConvert.SerializeObject(securityDomainData)
+            });
         }
     }
 }

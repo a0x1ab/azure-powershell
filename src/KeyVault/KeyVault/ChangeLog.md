@@ -18,6 +18,9 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+* Splitted steps of `Import-AzKeyVaultSecurityDomain` to avoid exposing keys online.
+    - Added `Initialize-AzKeyvaultSecurityDomainRecovery` and `Restore-AzKeyVaultSecurityDomainBlob`.
+    - Added `-ByRestoreBlob` in `Import-AzKeyVaultSecurityDomain`.
 * Fixed certificate policy bugs if DnsName is null. [#22642]
 * Supported multi-regions for Managed Hsm: Added `Add/Get/Remove-AzAzKeyVaultManagedHsmRegion`.
 * Added `Test-AzKeyVaultNameAvailability` and `Test-AzKeyVaultManagedHsmNameAvailability`.
