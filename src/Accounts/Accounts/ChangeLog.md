@@ -16,8 +16,9 @@
     ## YYYY.MM.DD - Version X.Y.Z (Previous Release)
     * Overview of change #1
         - Additional information about change #1
--->
+
 ## Upcoming Release
+* Fallback to first valid context if current default context key is "Default" which is invalid
 
 ## Version 2.2.7
 * Fixed incorrect warning message on Windows PowerShell [#14556]
