@@ -12,8 +12,8 @@
                     Get-RecordsNotInAllowList
                     Measure-SectionMissingAndOutputScript
                     Get-ScriptAnalyzerResult
-                    Redo-ImportModule
 #>
+$DebugPreference = 'Continue'
 
 $SYNOPSIS_HEADING = "## SYNOPSIS"
 $SYNTAX_HEADING = "## SYNTAX"
@@ -196,7 +196,7 @@ function Get-RecordsNotInAllowList{
             return $false
         }
         # Skip NeedDeleting in Storage
-        if($_.RuleName -eq "NeedDeleting" -and $_.Module -eq "Storage.Management"){
+        if($_.RuleName -eq "NeedDeleting" -and $_.Module -eq "Storage"){
             return $false
         }
         return $true
@@ -504,24 +504,4 @@ function Get-ScriptAnalyzerResult {
     $results = Get-NonExceptionRecord $results
 
     return $results
-}
-
-<#
-    .SYNOPSIS
-    Retry import-module
-#>
-function Redo-ImportModule {
-    param (
-        [string]$CommandName
-    )
-    $modulePath = "$PSScriptRoot\..\..\..\..\artifacts\Debug\Az.*\Az.*.psd1"
-    Get-Item $modulePath | Import-Module -Global
-    $GetCommand = Get-Command $CommandName -ErrorAction SilentlyContinue
-    if ($null -eq $GetCommand) {
-        return $false
-    }
-    else{
-        Write-Debug "Succeed by retrying import-module"
-        return $true
-    }
 }
