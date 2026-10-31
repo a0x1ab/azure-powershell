@@ -1,0 +1,481 @@
+{
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "423" ],
+        "x-ms-client-request-id": [ "d97bfbae-67a8-4be5-9a98-b9b05f175888" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "98fbfb95-a1c2-4ee6-9ad4-a5684dc40444_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11894" ],
+        "x-ms-correlation-request-id": [ "13a3565f-b7f5-41e8-8fcd-a9e00b7e46a5" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093619Z:13a3565f-b7f5-41e8-8fcd-a9e00b7e46a5" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:19 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "393" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Enabled\",\"defaultAction\":\"Allow\",\"virtualNetworkRules\":[],\"ipRules\":[]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$PUT+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+2": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": "{\n  \"properties\": {\n    \"defaultAction\": \"Allow\",\n    \"virtualNetworkRules\": [\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/AutomatedPowershellTesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"\n        }\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/AutomatedPowershellTesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"\n        }\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/AutomatedPowershellTesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"\n        }\n      }\n    ],\n    \"ipRules\": [\n      {\n        \"ipMask\": \"1.1.1.1\",\n        \"action\": \"Allow\"\n      },\n      {\n        \"ipMask\": \"2.2.2.2\",\n        \"action\": \"Allow\"\n      }\n    ],\n    \"publicNetworkAccess\": \"Enabled\"\n  }\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "1013" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "680a2b97-3328-44e4-a80f-b185fd58c9fc_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1182" ],
+        "x-ms-correlation-request-id": [ "fa7fb29b-9108-4720-9d71-9566e22f2881" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093627Z:fa7fb29b-9108-4720-9d71-9566e22f2881" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:27 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1174" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Enabled\",\"defaultAction\":\"Allow\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/AutomatedPowershellTesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/AutomatedPowershellTesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/AutomatedPowershellTesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+3": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "425" ],
+        "x-ms-client-request-id": [ "b07a761c-af0f-429f-a02b-ae5246c3787c" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "18a98342-09f1-49b5-a46d-f7ee97e84db0_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11893" ],
+        "x-ms-correlation-request-id": [ "a50f72cf-5a69-43f5-903f-3cb9a2ea5d0f" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093628Z:a50f72cf-5a69-43f5-903f-3cb9a2ea5d0f" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:28 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1174" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Enabled\",\"defaultAction\":\"Allow\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$PUT+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+4": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": "{\n  \"properties\": {\n    \"defaultAction\": \"Deny\",\n    \"virtualNetworkRules\": [\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      }\n    ],\n    \"ipRules\": [\n      {\n        \"ipMask\": \"1.1.1.1\",\n        \"action\": \"Allow\"\n      },\n      {\n        \"ipMask\": \"2.2.2.2\",\n        \"action\": \"Allow\"\n      }\n    ],\n    \"publicNetworkAccess\": \"Enabled\"\n  }\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "1165" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "83f14e75-f077-43b9-844d-61c11c5189ae_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1181" ],
+        "x-ms-correlation-request-id": [ "9a1c5314-be9f-43d4-8f0e-6769075b8c32" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093635Z:9a1c5314-be9f-43d4-8f0e-6769075b8c32" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:35 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1173" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Enabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+5": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "427" ],
+        "x-ms-client-request-id": [ "52a882b8-da48-46fc-924f-73e6e2d13fe7" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "0d2b926f-47a9-4d40-aa8c-a0d3805d183e_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11892" ],
+        "x-ms-correlation-request-id": [ "a93026fe-692a-4a2b-910d-199d09bfd37f" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093636Z:a93026fe-692a-4a2b-910d-199d09bfd37f" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:36 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1173" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Enabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$PUT+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+6": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": "{\n  \"properties\": {\n    \"defaultAction\": \"Deny\",\n    \"virtualNetworkRules\": [\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      }\n    ],\n    \"ipRules\": [\n      {\n        \"ipMask\": \"1.1.1.1\",\n        \"action\": \"Allow\"\n      },\n      {\n        \"ipMask\": \"2.2.2.2\",\n        \"action\": \"Allow\"\n      }\n    ],\n    \"publicNetworkAccess\": \"Disabled\"\n  }\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "1166" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "4f640076-d1e7-482c-a448-238f6ddcd256_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1180" ],
+        "x-ms-correlation-request-id": [ "6fd6c11c-3d4e-4297-a044-374661709a11" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093644Z:6fd6c11c-3d4e-4297-a044-374661709a11" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:44 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1174" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+7": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "429" ],
+        "x-ms-client-request-id": [ "934d9f40-3198-42c3-9c53-1b7c7b8bd1ef" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "5e78a85b-cf54-4906-b8d8-c52ebf06997a_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11891" ],
+        "x-ms-correlation-request-id": [ "3b296ba9-23f0-4ed9-bf6a-12286a0a2071" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093645Z:3b296ba9-23f0-4ed9-bf6a-12286a0a2071" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:44 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1174" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetExpanded+$PUT+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+8": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": "{\n  \"properties\": {\n    \"trustedServiceAccessEnabled\": true,\n    \"defaultAction\": \"Deny\",\n    \"virtualNetworkRules\": [\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      }\n    ],\n    \"ipRules\": [\n      {\n        \"ipMask\": \"1.1.1.1\",\n        \"action\": \"Allow\"\n      },\n      {\n        \"ipMask\": \"2.2.2.2\",\n        \"action\": \"Allow\"\n      }\n    ],\n    \"publicNetworkAccess\": \"Disabled\"\n  }\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "1207" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "989e606a-d124-4c13-a359-5ca9e6067acc_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1179" ],
+        "x-ms-correlation-request-id": [ "28d9b87a-237f-48b8-a766-c14ce50d6aad" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093653Z:28d9b87a-237f-48b8-a766-c14ce50d6aad" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:52 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1209" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}],\"trustedServiceAccessEnabled\":true}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetViaIdentityExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "431" ],
+        "x-ms-client-request-id": [ "e7fa3c44-e350-48e2-9138-5d59d73b20b9" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "9d6a64de-672f-405f-a033-45434a96a2e6_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11890" ],
+        "x-ms-correlation-request-id": [ "65af62e3-0a83-4a47-baeb-2e2eafcc144b" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093654Z:65af62e3-0a83-4a47-baeb-2e2eafcc144b" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:53 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1209" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}],\"trustedServiceAccessEnabled\":true}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetViaIdentityExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+2": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "432" ],
+        "x-ms-client-request-id": [ "9f59fa12-0b56-43c1-be63-c0b802ad8a6c" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_GetViaIdentity" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "1d8bca7a-4c1b-4a4f-9dec-16f647f5c07c_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11889" ],
+        "x-ms-correlation-request-id": [ "2aa3ba4e-3e01-4ef0-9d63-cadff7f62c79" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093654Z:2aa3ba4e-3e01-4ef0-9d63-cadff7f62c79" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:36:53 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1209" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}],\"trustedServiceAccessEnabled\":true}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetViaIdentityExpanded+$PUT+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+3": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": "{\n  \"properties\": {\n    \"trustedServiceAccessEnabled\": false,\n    \"defaultAction\": \"Deny\",\n    \"virtualNetworkRules\": [\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      },\n      {\n        \"subnet\": {\n          \"id\": \"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"\n        },\n        \"ignoreMissingVnetServiceEndpoint\": false\n      }\n    ],\n    \"ipRules\": [\n      {\n        \"ipMask\": \"1.1.1.1\",\n        \"action\": \"Allow\"\n      },\n      {\n        \"ipMask\": \"2.2.2.2\",\n        \"action\": \"Allow\"\n      }\n    ],\n    \"publicNetworkAccess\": \"Disabled\"\n  }\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "1208" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "ec4498af-e2d4-43e6-a6db-dfcd11dfa738_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1178" ],
+        "x-ms-correlation-request-id": [ "e46ce3e1-a483-4fe9-9cfa-80d526065262" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093701Z:e46ce3e1-a483-4fe9-9cfa-80d526065262" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:37:01 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1174" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  },
+  "Set-AzServiceBusNetworkRuleSet+[NoContext]+SetViaIdentityExpanded+$GET+https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview+4": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default?api-version=2022-10-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "434" ],
+        "x-ms-client-request-id": [ "45f24fc1-6e0f-4431-b753-bc3cf325c643" ],
+        "CommandName": [ "Get-AzServiceBusNetworkRuleSet" ],
+        "FullCommandName": [ "Get-AzServiceBusNetworkRuleSet_GetViaIdentity" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.1.3", "Az.ServiceBus/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "a6602c9c-d2f7-4456-97e4-8463f15f1982_M6SN1_M6SN1" ],
+        "Server-SB": [ "Service-Bus-Resource-Provider/SN1" ],
+        "Server": [ "Service-Bus-Resource-Provider/SN1", "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11888" ],
+        "x-ms-correlation-request-id": [ "9400f55a-a4af-4faf-b08a-fb2ab49809bf" ],
+        "x-ms-routing-request-id": [ "SOUTHCENTRALUS:20230213T093702Z:9400f55a-a4af-4faf-b08a-fb2ab49809bf" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 13 Feb 2023 09:37:01 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1174" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourceGroups/resourceGroupAutorestpnv5dx/providers/Microsoft.ServiceBus/namespaces/namespaceNamerkhezt/networkRuleSets/default\",\"name\":\"default\",\"type\":\"Microsoft.ServiceBus/Namespaces/NetworkRuleSets\",\"location\":\"East US\",\"properties\":{\"publicNetworkAccess\":\"Disabled\",\"defaultAction\":\"Deny\",\"virtualNetworkRules\":[{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default2\"},\"ignoreMissingVnetServiceEndpoint\":false},{\"subnet\":{\"id\":\"/subscriptions/326100e2-f69d-4268-8503-075374f62b6e/resourcegroups/automatedpowershelltesting/providers/Microsoft.Network/virtualNetworks/test-vn-northeurope/subnets/default3\"},\"ignoreMissingVnetServiceEndpoint\":false}],\"ipRules\":[{\"ipMask\":\"1.1.1.1\",\"action\":\"Allow\"},{\"ipMask\":\"2.2.2.2\",\"action\":\"Allow\"}]}}",
+      "isContentBase64": false
+    }
+  }
+}
