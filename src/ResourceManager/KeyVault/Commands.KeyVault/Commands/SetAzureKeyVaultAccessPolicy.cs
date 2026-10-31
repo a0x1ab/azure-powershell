@@ -370,7 +370,7 @@ namespace Microsoft.Azure.Commands.KeyVault
         [Parameter(Mandatory = false,
             ParameterSetName = ResourceIdByEmailAddress,
             HelpMessage = "Specifies certificate operation permissions to grant to a user or service principal.")]
-        [ValidateSet("get", "list", "delete", "create", "import", "update", "managecontacts", "getissuers", "listissuers", "setissuers", "deleteissuers", "manageissuers", "recover", "purge")]
+        [ValidateSet("get", "list", "delete", "create", "import", "update", "managecontacts", "getissuers", "listissuers", "setissuers", "deleteissuers", "manageissuers", "recover", "purge", "backup", "restore")]
         public string[] PermissionsToCertificates { get; set; }
 
         /// <summary>
@@ -412,7 +412,7 @@ namespace Microsoft.Azure.Commands.KeyVault
         [Parameter(Mandatory = false,
             ParameterSetName = ResourceIdByEmailAddress,
             HelpMessage = "Specifies managed storage account and sas definition  operation permissions to grant to a user or service principal.")]
-        [ValidateSet( "get", "list", "delete", "set", "update", "regeneratekey", "getsas", "listsas", "deletesas", "setsas")]
+        [ValidateSet( "get", "list", "delete", "set", "update", "regeneratekey", "getsas", "listsas", "deletesas", "setsas", "recover", "backup", "restore", "purge")]
         public string[] PermissionsToStorage { get; set; }
 
         [Parameter(Mandatory = false,
