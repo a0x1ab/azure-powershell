@@ -24,12 +24,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models
     {
         public string Id { get; set; }
 
-        public string Type { get; }
+        public string Type { get; set; }
 
         [Ps1Xml(Label = "Name", Target = ViewControl.Table, Position = 0)]
         public string Name { get; set; }
 
-        [Ps1Xml(Label = "RegistrationDefinitionId", Target = ViewControl.Table, ScriptBlock = "$_.Properties.RegistrationDefinitionId")]
+        [Ps1Xml(Label = "RegistrationDefinitionId", Target = ViewControl.Table, ScriptBlock = "$_.Properties.RegistrationDefinitionId", Position = 1)]
         public PSRegistrationAssignmentProperties Properties { get; set; }
 
         public PSRegistrationAssignment(RegistrationAssignment registrationAssignment)

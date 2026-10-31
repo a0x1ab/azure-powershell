@@ -18,15 +18,9 @@ Get-AzManagedServicesAssignment [-Scope <String>] [-ExpandRegistrationDefinition
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### ById
+### ByName
 ```
-Get-AzManagedServicesAssignment [-Scope <String>] -Id <String> [-ExpandRegistrationDefinition]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
-### ByResourceId
-```
-Get-AzManagedServicesAssignment -ResourceId <String> [-ExpandRegistrationDefinition]
+Get-AzManagedServicesAssignment -Name <String> [-Scope <String>] [-ExpandRegistrationDefinition]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -39,10 +33,10 @@ Gets a list of the registration assignments.
 ```powershell
 PS C:\> Get-AzManagedServicesAssignment
 
-Name                                 RegistrationDefinitionId
-----                                 ------------------------
-f2e18995-6c79-4ab7-876e-1b1c8393d12c /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/a156aad7-f3ce-4a46-b240-246242b6bd78
-ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8
+Name                                 RegistrationDefinitionId                                                                                                                             Scope
+----                                 ------------------------                                                                                                                             -----
+f2e18995-6c79-4ab7-876e-1b1c8393d12c /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/a156aad7-f3ce-4a46-b240-246242b6bd78 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
+ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
 ```
 
 Gets all registration assignments under the default scope.
@@ -52,11 +46,11 @@ Gets all registration assignments under the default scope.
 PS C:\> $assignments = Get-AzManagedServicesAssignment -ExpandRegistrationDefinition
 PS C:\> $assignments
 
-Name                                 RegistrationDefinitionId
-----                                 ------------------------
-f2e18995-6c79-4ab7-876e-1b1c8393d12c /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/a156aad7-f3ce-4a46-b240-246242b6bd78
-8b6d4693-efb0-4b58-ac94-625b6a321af3 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/bb2626be-3e11-442f-b0f1-9209508d4f52
-ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8
+Name                                 RegistrationDefinitionId                                                                                                                             Scope
+----                                 ------------------------                                                                                                                             -----
+f2e18995-6c79-4ab7-876e-1b1c8393d12c /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/a156aad7-f3ce-4a46-b240-246242b6bd78 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
+8b6d4693-efb0-4b58-ac94-625b6a321af3 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/bb2626be-3e11-442f-b0f1-9209508d4f52 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
+ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
 
 
 PS C:\> $assignments[2].Properties.RegistrationDefinition
@@ -73,12 +67,12 @@ Gets all registration assignments with the registration definition details.
 
 ### Example 3
 ```powershell
-PS C:\> $assignmnent = Get-AzManagedServicesAssignment -Id ddd0d277-e120-4de1-8498-52b8f767b699
+PS C:\> $assignmnent = Get-AzManagedServicesAssignment -Name ddd0d277-e120-4de1-8498-52b8f767b699
 PS C:\> $assignmnent
 
-Name                                 RegistrationDefinitionId
-----                                 ------------------------
-ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8
+Name                                 RegistrationDefinitionId                                                                                                                             Scope
+----                                 ------------------------                                                                                                                             -----
+ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
 
 PS C:\> $assignmnent.Properties.RegistrationDefinition
 
@@ -93,12 +87,12 @@ Gets a registration assignment without the registration definition details.
 
 ### Example 4
 ```powershell
-PS C:\> $assignmnentWithDef = Get-AzManagedServicesAssignment -Id ddd0d277-e120-4de1-8498-52b8f767b699 -ExpandRegistrationDefinition
+PS C:\> $assignmnentWithDef = Get-AzManagedServicesAssignment -Name ddd0d277-e120-4de1-8498-52b8f767b699 -ExpandRegistrationDefinition
 PS C:\> $assignmnentWithDef
 
-Name                                 RegistrationDefinitionId
-----                                 ------------------------
-ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8
+Name                                 RegistrationDefinitionId                                                                                                                             Scope
+----                                 ------------------------                                                                                                                             -----
+ddd0d277-e120-4de1-8498-52b8f767b699 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/cae481c0-de7c-42a8-86c1-5b170861caf8 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
 
 
 PS C:\> $assignmnentWithDef.Properties.RegistrationDefinition
@@ -117,10 +111,10 @@ Gets a registration assignment with registration definition details.
 ```powershell
 PS C:\> Get-AzManagedServicesAssignment -Scope /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/resourceGroups/newRG
 
-Name                                 RegistrationDefinitionId
-----                                 ------------------------
-c5deb1ba-8e27-4935-8af5-9242e7dabd24 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/447b1aff-b0fc-4959-989d-d77dc93f3509
-aa891268-329a-4637-b3f6-2877ea304f8b /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/46b981a7-63ff-4063-9961-9fce4ddea376
+Name                                 RegistrationDefinitionId                                                                                                                             Scope
+----                                 ------------------------                                                                                                                             -----
+c5deb1ba-8e27-4935-8af5-9242e7dabd24 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/447b1aff-b0fc-4959-989d-d77dc93f3509 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/resourceGroups/newRG
+aa891268-329a-4637-b3f6-2877ea304f8b /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/46b981a7-63ff-4063-9961-9fce4ddea376 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/resourceGroups/newRG
 ```
 
 Gets all the registration assignments.
@@ -128,16 +122,16 @@ Gets all the registration assignments.
 ### Example 6
 ```powershell
 PS C:\> $assignments = Get-AzManagedServicesAssignment
-PS C:\> $assignments[0].Id
-/subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationAssignments/f2e18995-6c79-4ab7-876e-1b1c8393d12c
-PS C:\> Get-AzManagedServicesAssignment -ResourceId $assignments[0].Id
-
-Name                                 RegistrationDefinitionId
-----                                 ------------------------
-f2e18995-6c79-4ab7-876e-1b1c8393d12c /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/a156aad7-f3ce-4a46-b240-246242b6bd78
+PS C:\> $assignments[0].Name
+f2e18995-6c79-4ab7-876e-1b1c8393d12c
+PS C:\> Get-AzManagedServicesAssignment -Name $assignments[0].Name
+Name                                 RegistrationDefinitionId                                                                                                                             Scope
+----                                 ------------------------                                                                                                                             -----
+f2e18995-6c79-4ab7-876e-1b1c8393d12c /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15/providers/Microsoft.ManagedServices/registrationDefinitions/a156aad7-f3ce-4a46-b240-246242b6bd78 /subscriptions/38bd4bef-41ff-45b5-b3af-d03e55a4ca15
 ```
 
-Gets the registration assignment given the fully qualified resource id.
+Gets the registration assignment given the name.
+
 
 ## PARAMETERS
 
@@ -171,8 +165,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-The Registration Assignment identifier (for example, b0c052e5-c437-4771-a476-8b1201158a57).
+### -Name
+The unique name of the Registration Assignment (for example 26c128c2-fefa-4340-9bb1-6e081c90ada2).
 ```yaml
 Type: System.String
 Parameter Sets: ById
@@ -182,20 +176,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceId
-The Registration Assignment ResourceId (for example, /subscriptions/bb6d49b2-603d-489f-b6ca-ca4dc497c749/providers/Microsoft.ManagedServices/registrationAssignments/b0c052e5-c437-4771-a476-8b1201158a57)
-```yaml
-Type: System.String
-Parameter Sets: ByResourceId
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

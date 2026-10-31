@@ -30,20 +30,15 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Commands
     public class RemoveAzureRmManagedServcicesAssignment : ManagedServicesCmdletBase
     {
         protected const string DefaultParameterSet = "Default";
-        protected const string ByResourceIdParameterSet = "ByResourceId";
         protected const string ByInputObjectParameterSet = "ByInputObject";
 
         [Parameter(Position = 0, ParameterSetName = DefaultParameterSet, Mandatory = false, HelpMessage = "The scope where the registration assignment should be created.")]
         [ScopeCompleter]
         public string Scope { get; set; }
 
-        [Parameter(ParameterSetName = DefaultParameterSet, Mandatory = true, HelpMessage = "The registration assignment Id.")]
+        [Parameter(ParameterSetName = DefaultParameterSet, Mandatory = true, HelpMessage = "The unique name of the Registration Assignment.")]
         [ValidateNotNullOrEmpty]
-        public string Id { get; set; }
-
-        [Parameter(ParameterSetName = ByResourceIdParameterSet, Mandatory = true, ValueFromPipelineByPropertyName = true, HelpMessage = "The fully qualified rsource id of the registration assignment.")]
-        [ValidateNotNullOrEmpty]
-        public string ResourceId { get; set; }
+        public string Name { get; set; }
 
         [Parameter(Mandatory = true, ValueFromPipeline = true, HelpMessage = "The registration assignment object.", ParameterSetName = ByInputObjectParameterSet)]
         [ValidateNotNull]
@@ -57,9 +52,14 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Commands
             string scope = null;
             string assignmentId = null;
 
-            if (this.IsParameterBound(x => x.Id))
+            if (this.IsParameterBound(x => x.Name))
             {
-                assignmentId = this.Id;
+                if (!this.Name.IsGuid())
+                {
+                    throw new ApplicationException("Name must be a valid GUID.");
+                }
+
+                assignmentId = this.Name;
                 scope = this.Scope ?? this.GetDefaultScope();
             }
             else if (this.IsParameterBound(x => x.InputObject))
@@ -68,14 +68,6 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Commands
                 if (!ManagedServicesUtility.TryParseAssignmentScopeFromResourceId(this.InputObject.Id, out scope))
                 {
                     throw new ApplicationException($"Unable to parse the scope from [{this.InputObject.Id}]");
-                }
-            }
-            else if (this.IsParameterBound(x => x.ResourceId))
-            {
-                assignmentId = this.ResourceId.GetResourceName();
-                if (!ManagedServicesUtility.TryParseAssignmentScopeFromResourceId(this.ResourceId, out scope))
-                {
-                    throw new ApplicationException($"Unable to parse the scope from [{this.ResourceId}]");
                 }
             }
 
