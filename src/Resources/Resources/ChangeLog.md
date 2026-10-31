@@ -18,7 +18,9 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
-* Fix for null reference bug in GetAzureRoleAssignmentCommand
+* Fixed for null reference bug in `Get-AzRoleAssignment`
+* Marked switch `-Force` and `-PassThru` optional in `Remove-AzADGroup` (#10849)
+* Fixed issue that `MailNickname` doesn't return in `Remove-AzADGroup` (#11167)
 
 ## Version 1.11.0
 * Refactored template deployment cmdlets
