@@ -1,0 +1,646 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"id\": \"taskCrudJob\",\r\n  \"priority\": 0,\r\n  \"poolInfo\": {\r\n    \"poolId\": \"testPool\"\r\n  }\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "ac8c3b39-2fb0-4ac0-b802-1cca81ddaa02"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "94"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9A5783572A"
+        ],
+        "Location": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/job-1"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "599eb3dc-7701-4892-8438-a1e69567cf10"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/job-1"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3M/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"id\": \"task1\",\r\n  \"commandLine\": \"cmd /c echo task1\"\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "3ddd47af-d30b-4561-b2c3-48fb9a827d96"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "60"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9A57CF2F76"
+        ],
+        "Location": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task1"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "3ea00e99-3c49-41c2-ba03-51c2422bb7f5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task1"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3M/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"id\": \"task2\",\r\n  \"commandLine\": \"cmd /c echo task2\"\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "19a3c77b-ac5a-45ec-b233-d6de02782af1"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "60"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9A57D7CBB0"
+        ],
+        "Location": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task2"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "c6a65553-8278-40f2-b16e-97a4d713470f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task2"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks?api-version=2020-03-01.11.0&$filter=id%20eq%20%27task1%27%20or%20id%20eq%20%27task2%27",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3M/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4wJiRmaWx0ZXI9aWQlMjBlcSUyMCUyN3Rhc2sxJTI3JTIwb3IlMjBpZCUyMGVxJTIwJTI3dGFzazIlMjc=",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "2d38f9f2-ae68-4ff1-b809-11de0e7f0f1b"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "88e396cf-f504-4c4e-b7d8-4f87a6be99b3"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#tasks\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"task1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task1\",\r\n      \"eTag\": \"0x8D7DD9A57CF2F76\",\r\n      \"creationTime\": \"2020-04-10T21:58:46.4112502Z\",\r\n      \"lastModified\": \"2020-04-10T21:58:46.4112502Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T21:58:46.4112502Z\",\r\n      \"commandLine\": \"cmd /c echo task1\",\r\n      \"userIdentity\": {\r\n        \"autoUser\": {\r\n          \"scope\": \"pool\",\r\n          \"elevationLevel\": \"nonadmin\"\r\n        }\r\n      },\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"retentionTime\": \"P7D\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"executionInfo\": {\r\n        \"retryCount\": 0,\r\n        \"requeueCount\": 0\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"task2\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task2\",\r\n      \"eTag\": \"0x8D7DD9A57D7CBB0\",\r\n      \"creationTime\": \"2020-04-10T21:58:46.4676784Z\",\r\n      \"lastModified\": \"2020-04-10T21:58:46.4676784Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T21:58:46.4676784Z\",\r\n      \"commandLine\": \"cmd /c echo task2\",\r\n      \"userIdentity\": {\r\n        \"autoUser\": {\r\n          \"scope\": \"pool\",\r\n          \"elevationLevel\": \"nonadmin\"\r\n        }\r\n      },\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"retentionTime\": \"P7D\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"executionInfo\": {\r\n        \"retryCount\": 0,\r\n        \"requeueCount\": 0\r\n      }\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks/task2?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3MvdGFzazI/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "PUT",
+      "RequestBody": "{\r\n  \"constraints\": {\r\n    \"maxTaskRetryCount\": 3\r\n  }\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "71dd5252-b804-4358-8db8-570b7b143b8d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "57"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9A57FD706F"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "19956374-5d7c-4a51-bd2f-9d7b27606289"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task2"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks/task2?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3MvdGFzazI/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "eee96b98-59e8-4ff3-896e-d61c1783e6bc"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9A57FD706F"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "d631344e-7b9c-4a63-9116-1a6fb514bf00"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#tasks/@Element\",\r\n  \"id\": \"task2\",\r\n  \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task2\",\r\n  \"eTag\": \"0x8D7DD9A57FD706F\",\r\n  \"creationTime\": \"2020-04-10T21:58:46.4676784Z\",\r\n  \"lastModified\": \"2020-04-10T21:58:46.7143791Z\",\r\n  \"state\": \"active\",\r\n  \"stateTransitionTime\": \"2020-04-10T21:58:46.4676784Z\",\r\n  \"commandLine\": \"cmd /c echo task2\",\r\n  \"userIdentity\": {\r\n    \"autoUser\": {\r\n      \"scope\": \"pool\",\r\n      \"elevationLevel\": \"nonadmin\"\r\n    }\r\n  },\r\n  \"constraints\": {\r\n    \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n    \"retentionTime\": \"P7D\",\r\n    \"maxTaskRetryCount\": 3\r\n  },\r\n  \"executionInfo\": {\r\n    \"retryCount\": 0,\r\n    \"requeueCount\": 0\r\n  }\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3M/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "850d48aa-9f5a-48d2-b522-afee7b758281"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "f5c318e8-0a07-4346-a79c-4e03507ec5d3"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:45 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#tasks\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"task1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task1\",\r\n      \"eTag\": \"0x8D7DD9A57CF2F76\",\r\n      \"creationTime\": \"2020-04-10T21:58:46.4112502Z\",\r\n      \"lastModified\": \"2020-04-10T21:58:46.4112502Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T21:58:46.4112502Z\",\r\n      \"commandLine\": \"cmd /c echo task1\",\r\n      \"userIdentity\": {\r\n        \"autoUser\": {\r\n          \"scope\": \"pool\",\r\n          \"elevationLevel\": \"nonadmin\"\r\n        }\r\n      },\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"retentionTime\": \"P7D\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"executionInfo\": {\r\n        \"retryCount\": 0,\r\n        \"requeueCount\": 0\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"task2\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/taskCrudJob/tasks/task2\",\r\n      \"eTag\": \"0x8D7DD9A57FD706F\",\r\n      \"creationTime\": \"2020-04-10T21:58:46.4676784Z\",\r\n      \"lastModified\": \"2020-04-10T21:58:46.7143791Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T21:58:46.4676784Z\",\r\n      \"commandLine\": \"cmd /c echo task2\",\r\n      \"userIdentity\": {\r\n        \"autoUser\": {\r\n          \"scope\": \"pool\",\r\n          \"elevationLevel\": \"nonadmin\"\r\n        }\r\n      },\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"retentionTime\": \"P7D\",\r\n        \"maxTaskRetryCount\": 3\r\n      },\r\n      \"executionInfo\": {\r\n        \"retryCount\": 0,\r\n        \"requeueCount\": 0\r\n      }\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3M/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "a63547c9-1a0b-4942-9398-33134a9d0447"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:47 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "22c3f4c8-a11a-4bd9-8f5f-6abc04a78e39"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#tasks\",\r\n  \"value\": []\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks/task1?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3MvdGFzazE/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "569b7e55-3a78-4ad4-9a1d-a79cf7b1618d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "a3a8861c-878b-468f-a8ee-f21803b3ed51"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob/tasks/task2?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2IvdGFza3MvdGFzazI/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "04880a89-ce5e-4021-a0e6-4f29f147115e"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "ef403f0a-0ea0-41ff-9137-d6479ca2336e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:46 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/taskCrudJob?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGFza0NydWRKb2I/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "861acf4d-a272-4d10-a9f8-3af290d40ac1"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 21:58:47 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "ed8b81b1-cb3d-428f-ade5-ffd0731b109e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 21:58:47 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 202
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "2915bbd6-1252-405f-8173-6c00428146d9",
+    "AZURE_BATCH_ACCOUNT": "matthchrwestcentralus",
+    "AZURE_BATCH_ENDPOINT": "https://matthchrwestcentralus.westcentralus.batch.azure.com",
+    "AZURE_BATCH_RESOURCE_GROUP": "matthchrwestcentralus"
+  }
+}

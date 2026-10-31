@@ -1,0 +1,1757 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"id\": \"testJobCompletesWhenTaskFails\",\r\n  \"priority\": 0,\r\n  \"poolInfo\": {\r\n    \"autoPoolSpecification\": {\r\n      \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n      \"poolLifetimeOption\": \"job\",\r\n      \"keepAlive\": false,\r\n      \"pool\": {\r\n        \"vmSize\": \"small\",\r\n        \"cloudServiceConfiguration\": {\r\n          \"osFamily\": \"4\",\r\n          \"osVersion\": \"\"\r\n        },\r\n        \"targetDedicatedNodes\": 3\r\n      }\r\n    }\r\n  },\r\n  \"onTaskFailure\": \"performexitoptionsjobaction\",\r\n  \"usesTaskDependencies\": false\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "0340855f-1ff2-4468-887d-e41724472595"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "514"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9AB3878678"
+        ],
+        "Location": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/job-1"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "7de7c3fa-18b3-422b-bbda-e0cc7317b491"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/job-1"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/jobs/testJobCompletesWhenTaskFails/tasks?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGVzdEpvYkNvbXBsZXRlc1doZW5UYXNrRmFpbHMvdGFza3M/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "POST",
+      "RequestBody": "{\r\n  \"id\": \"taskId-1\",\r\n  \"commandLine\": \"cmd /c exit 3\",\r\n  \"exitConditions\": {\r\n    \"exitCodeRanges\": [\r\n      {\r\n        \"start\": 2,\r\n        \"end\": 4,\r\n        \"exitOptions\": {\r\n          \"jobAction\": \"terminate\"\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}",
+      "RequestHeaders": {
+        "client-request-id": [
+          "ad39b986-4d64-40b3-82ef-600b8cd65528"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "251"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "0x8D7DD9AB3A0898B"
+        ],
+        "Location": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails/tasks/taskId-1"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "02a94f13-01ba-4a44-b15c-8b1826b8200d"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails/tasks/taskId-1"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "Last-Modified": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "6bbb3697-f8ce-4fb2-aa81-c30d404b72f8"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "2b4e660a-6b4b-41f5-8ed8-23729cd763f9"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b26f6544-a060-4cc2-8c83-d543b1a900ae"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "1014a447-7d21-4572-907c-5afdbcdbd986"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:01:20 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b8aaec53-a9e5-4237-b3f2-8a2b2ac14304"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:01:40 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "a701c73c-9315-40c5-8318-bbd2737a9911"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:01:40 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "cbd8a6df-e263-49be-9ede-5d494f1ae6fd"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:02:00 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "59f3680a-6fea-48c2-b293-8cca0dd28824"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:02:00 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "66269cd2-4cbb-4be0-844a-b29ab05ec46e"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:02:20 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "7c5f6409-1ffd-4b8c-8c97-467481e75a5e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:02:20 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "8ed307df-726f-44d0-8676-4f1727b8c671"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:02:40 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "94e42bf3-c8c2-431d-b530-b29fd4ab0c00"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:02:40 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "584cc8e7-30bb-4a52-a83e-b3cbdb0a272d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:03:01 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "4f5bd1a3-a517-44f2-9843-93119120bd0f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:03:01 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "e91aa8ce-197b-40d0-99ba-ad72d86706f7"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:03:21 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "a6dd0d81-2706-4bdf-904d-e8d81a214789"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:03:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "002f1f9e-cb94-4d20-ba06-2f4e4b63bc68"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:03:41 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "d99f6982-7e1f-4bc0-b54b-39b6937283f0"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:03:41 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "43659b68-09c6-49be-ba71-a8a10810f786"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:04:01 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "f358a876-308b-45ba-a77f-26ae5fbe627a"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:04:01 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "6a8e6d84-5993-4c67-b88c-2786df03e026"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:04:21 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "1e43083f-0d74-45b7-bdcb-4a988ba3c094"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:04:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "32d439ee-aca9-4579-91ae-75fce46ee770"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:04:41 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "732c082f-0467-48d8-ac09-68fe392e074c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:04:40 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "f9a5d43b-2641-4b94-9fce-67c6ce7f6c71"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:05:01 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "72f5023d-5b85-457e-ac8f-898ce7fb85f5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:05:00 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "3e4449c2-c0b9-4184-a44e-457151e5ffd2"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:05:21 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "4148d5f1-d628-4179-99d4-f01cd0be6bca"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:05:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "e7efb699-1cc1-4415-b084-d163e5a38df6"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:05:41 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "a98e65ca-6276-4bd6-9484-436908eb2db7"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:05:41 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "598ff056-b58a-48a6-93c6-c6e874a327ed"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:06:01 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "4e526e3d-f4f1-4c8f-b27d-977e55f1005c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:06:01 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "981ac04a-48a7-4422-8be6-fcd5e4f86120"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:06:21 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "0d1dc0d7-a6f7-420e-8b69-ba07b1a85c26"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:06:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "f7eb4c21-b64b-4496-b691-a67258a80ffb"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:06:41 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "87812107-cede-4c5a-aeaa-dfea80d68aac"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:06:41 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "5fa17085-14c1-493a-a50d-517ae2112ef8"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:07:01 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "c48b113f-569d-4b47-a6bb-dad8b5e5be9b"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:07:01 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "22606b00-66bb-4432-9cdc-02f5bbf74a3d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:07:21 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "b3e0b061-4612-4966-ae15-d13c7905a7e5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:07:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "cbc9de67-6e9e-446a-a7be-59fbab706bd5"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:07:41 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "ed3c3666-c42b-41ae-a0b2-6777baa1b877"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:07:41 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "825d441f-ed71-49e4-90ad-59fb0006cdf7"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:08:01 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "3e5a338c-e607-4437-a0f0-445c73cc4115"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:08:01 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "38f900b1-1291-4d05-8a96-1d1f7766938c"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:08:21 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "232162f6-9ecb-4b9d-831d-e37537759af7"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:08:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "137d352e-a66f-488c-9acc-f9b72ae92225"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:08:41 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "e48bd2a4-9bb7-4197-babb-0cce337e0436"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:08:41 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "45f34649-f558-49df-886e-bb5bc6645a5c"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:09:02 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "e03bffce-0ec6-4794-bc23-ddba5694b217"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:09:01 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9AB3878678\",\r\n      \"lastModified\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"active\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "6902202a-a2ba-46c7-bbbe-5f8f37b4c7ac"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:09:22 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "3df50464-2a95-446b-8593-67db2b7d1a5e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:09:22 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9BC837EBA1\",\r\n      \"lastModified\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"terminating\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\",\r\n        \"terminateReason\": \"TaskFailed\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "97bd8615-799c-49e3-bfca-1f63fdcb03f0"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:09:42 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "e1afa3fc-c2ab-4a2e-9a19-0f147d49c2a0"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:09:42 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9BC837EBA1\",\r\n      \"lastModified\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"terminating\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\",\r\n        \"terminateReason\": \"TaskFailed\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "93ed9d7c-1f44-492e-a63a-b4f30ad382ce"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:10:02 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "6e72d642-f748-4b38-924f-619c3b7983c8"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:10:02 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9BC837EBA1\",\r\n      \"lastModified\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"terminating\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\",\r\n        \"terminateReason\": \"TaskFailed\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "74b35648-ac08-430f-ab96-96f9ce85c21d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:10:22 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "cd4c41a8-2ee9-42aa-8838-c5908d8300b5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:10:22 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9BC837EBA1\",\r\n      \"lastModified\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"terminating\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\",\r\n        \"terminateReason\": \"TaskFailed\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    },\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "d2395555-78d6-4614-af3e-4db1c64ec494"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:10:42 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "647b4ce8-3843-4415-a9bd-b23da6b75e2d"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:10:42 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/$metadata#jobs\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testDisableEnableTerminateJobSchedule:job-1\",\r\n      \"eTag\": \"0x8D7DD9AA2115AC7\",\r\n      \"lastModified\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"creationTime\": \"2020-04-10T22:00:50.9812948Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"poolId\": \"testPool\"\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:00:50.9962951Z\",\r\n        \"endTime\": \"2020-04-10T22:00:52.8542858Z\",\r\n        \"poolId\": \"testPool\",\r\n        \"terminateReason\": \"TerminateWorkitem\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"noaction\"\r\n    },\r\n    {\r\n      \"id\": \"testJobCompletesWhenTaskFails\",\r\n      \"url\": \"https://matthchrwestcentralus.westcentralus.batch.azure.com/jobs/testJobCompletesWhenTaskFails\",\r\n      \"eTag\": \"0x8D7DD9BC837EBA1\",\r\n      \"lastModified\": \"2020-04-10T22:09:04.4991905Z\",\r\n      \"creationTime\": \"2020-04-10T22:01:20.277004Z\",\r\n      \"state\": \"completed\",\r\n      \"stateTransitionTime\": \"2020-04-10T22:10:35.7439621Z\",\r\n      \"previousState\": \"active\",\r\n      \"previousStateTransitionTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n      \"priority\": 0,\r\n      \"usesTaskDependencies\": false,\r\n      \"constraints\": {\r\n        \"maxWallClockTime\": \"P10675199DT2H48M5.4775807S\",\r\n        \"maxTaskRetryCount\": 0\r\n      },\r\n      \"poolInfo\": {\r\n        \"autoPoolSpecification\": {\r\n          \"autoPoolIdPrefix\": \"TestSpecPrefix\",\r\n          \"poolLifetimeOption\": \"job\",\r\n          \"keepAlive\": false,\r\n          \"pool\": {\r\n            \"vmSize\": \"small\",\r\n            \"maxTasksPerNode\": 1,\r\n            \"taskSchedulingPolicy\": {\r\n              \"nodeFillType\": \"Spread\"\r\n            },\r\n            \"resizeTimeout\": \"PT15M\",\r\n            \"targetDedicatedNodes\": 3,\r\n            \"targetLowPriorityNodes\": 0,\r\n            \"enableAutoScale\": false,\r\n            \"enableInterNodeCommunication\": false,\r\n            \"cloudServiceConfiguration\": {\r\n              \"osFamily\": \"4\",\r\n              \"osVersion\": \"*\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"executionInfo\": {\r\n        \"startTime\": \"2020-04-10T22:01:20.2920056Z\",\r\n        \"endTime\": \"2020-04-10T22:10:35.7439621Z\",\r\n        \"poolId\": \"TestSpecPrefix_0B60A923-3B0D-47A7-AEB8-962C8DA0F38D\",\r\n        \"terminateReason\": \"TaskFailed\"\r\n      },\r\n      \"onAllTasksComplete\": \"noaction\",\r\n      \"onTaskFailure\": \"performexitoptionsjobaction\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/jobs/testJobCompletesWhenTaskFails?api-version=2020-03-01.11.0",
+      "EncodedRequestUri": "L2pvYnMvdGVzdEpvYkNvbXBsZXRlc1doZW5UYXNrRmFpbHM/YXBpLXZlcnNpb249MjAyMC0wMy0wMS4xMS4w",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b0138fa4-81ad-41e8-b3df-3090daa31d24"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 10 Apr 2020 22:11:02 GMT"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.28207.03",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/13.0.20.15503",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "20865232-c859-41b6-a0b2-479f99c7d6dc"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 10 Apr 2020 22:11:02 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 202
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "2915bbd6-1252-405f-8173-6c00428146d9",
+    "AZURE_BATCH_ACCOUNT": "matthchrwestcentralus",
+    "AZURE_BATCH_ENDPOINT": "https://matthchrwestcentralus.westcentralus.batch.azure.com",
+    "AZURE_BATCH_RESOURCE_GROUP": "matthchrwestcentralus"
+  }
+}
