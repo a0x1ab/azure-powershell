@@ -273,7 +273,7 @@ jobs:
       targetType: inline
       workingDirectory: $(Build.SourcesDirectory)
       pwsh: true
-      script: .azure-pipelines/PipelineSteps/test-steps.ps1 -RepoRoot "$(Build.SourcesDirectory)" -Configuration "${{ variables.Configuration }}" -PowerShellPlatform "${{ variables.PowerShellPlatform }}" -TestFramework "${{ variables.testFramework }}"
+      script: .azure-pipelines/PipelineSteps/test-steps.ps1 -RepoRoot "$(Build.SourcesDirectory)" -Configuration "${{ variables.Configuration }}" -PowerShellPlatform "${{ variables.PowerShellPlatform }}" -TestFramework "${{ variables.testFramework }}" -DisableTestCoverage
   - task: PublishTestResults@2
     inputs:
       testRunner: VSTest
