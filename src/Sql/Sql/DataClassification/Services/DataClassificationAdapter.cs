@@ -285,12 +285,20 @@ namespace Microsoft.Azure.Commands.Sql.DataClassification.Services
 
         private static SensitivityLabelModel ToSensitivityLabelModel(SensitivityLabel sensitivityLabel)
         {
-            string[] idComponents = sensitivityLabel.Id.Split('/');
+            const string schemas = "/schemas/";
+            const string tables = "/tables/";
+            const string columns = "/columns/";
+            const string sensitivityLabels = "/sensitivityLabels/";
+            int indexOfSchema = sensitivityLabel.Id.IndexOf(schemas);
+            int indexOfTables = sensitivityLabel.Id.IndexOf(tables);
+            int indexOfColumns = sensitivityLabel.Id.IndexOf(columns);
+            int indexOfSensitivityLabels = sensitivityLabel.Id.IndexOf(sensitivityLabels);
+
             return new SensitivityLabelModel
             {
-                SchemaName = idComponents[12],
-                TableName = idComponents[14],
-                ColumnName = idComponents[16],
+                SchemaName = sensitivityLabel.Id.Substring(indexOfSchema + schemas.Length, indexOfTables - indexOfSchema - schemas.Length),
+                TableName = sensitivityLabel.Id.Substring(indexOfTables + tables.Length, indexOfColumns - indexOfTables - tables.Length),
+                ColumnName = sensitivityLabel.Id.Substring(indexOfColumns + columns.Length, indexOfSensitivityLabels - indexOfColumns - columns.Length),
                 SensitivityLabel = NullifyStringIfEmpty(sensitivityLabel.LabelName),
                 SensitivityLabelId = NullifyStringIfEmpty(sensitivityLabel.LabelId),
                 InformationType = NullifyStringIfEmpty(sensitivityLabel.InformationType),
