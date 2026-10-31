@@ -12,7 +12,7 @@
 # RootModule = ''
 
 # Version number of this module.
-ModuleVersion = '0.7.9'
+ModuleVersion = '0.8.0'
 
 # Supported PSEditions
 CompatiblePSEditions = 'Core', 'Desktop'
@@ -114,8 +114,7 @@ CmdletsToExport = 'Get-AzSecurityAlert', 'Set-AzSecurityAlert',
                'Set-AzSecurityAssessmentMetadata', 
                'Remove-AzSecurityAssessmentMetadata', 
                'Get-AzSecuritySubAssessment',
-			         'Get-AzSecurityTopology'
-
+			         'Get-AzAllowedConnections'
 
 # Variables to export from this module
 # VariablesToExport = @()
