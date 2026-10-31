@@ -27,29 +27,19 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Commands
     public class GetAzureRmManagedServicesAssignment : ManagedServicesCmdletBase
     {
         protected const string DefaultParameterSet = "Default";
-        protected const string ByResourceIdParameterSet = "ByResourceId";
-        protected const string ByIdParameterSet = "ById";
+        protected const string ByNameParameterSet = "ByName";
 
         [Parameter(Mandatory = false, ParameterSetName = DefaultParameterSet, HelpMessage = "The scope where the registration assignment is created.")]
-        [Parameter(Mandatory = false, ParameterSetName = ByIdParameterSet, HelpMessage = "The scope where the registration assignment is created.")]
+        [Parameter(Mandatory = false, ParameterSetName = ByNameParameterSet, HelpMessage = "The scope where the registration assignment is created.")]
         [ScopeCompleter]
         public string Scope { get; set; }
 
-        [Parameter(Mandatory = true, ParameterSetName = ByIdParameterSet, HelpMessage = "The Registration Assignment identifier.")]
+        [Parameter(Mandatory = true, ParameterSetName = ByNameParameterSet, HelpMessage = "The unique name of the Registration Assignment.")]
         [ValidateNotNullOrEmpty]
-        public string Id { get; set; }
-
-        [Parameter(
-            Mandatory = true,
-            ValueFromPipelineByPropertyName = true,
-            ParameterSetName = ByResourceIdParameterSet,
-            HelpMessage = "The fully qualified resource id of registration assignment.")]
-        [ValidateNotNullOrEmpty]
-        public string ResourceId { get; set; }
+        public string Name { get; set; }
 
         [Parameter(ParameterSetName = DefaultParameterSet, HelpMessage = "Whether to include registration definition details.")]
-        [Parameter(ParameterSetName = ByResourceIdParameterSet, HelpMessage = "Whether to include registration definition details.")]
-        [Parameter(ParameterSetName = ByIdParameterSet, HelpMessage = "Whether to include registration definition details.")]
+        [Parameter(ParameterSetName = ByNameParameterSet, HelpMessage = "Whether to include registration definition details.")]
         public SwitchParameter ExpandRegistrationDefinition { get; set; }
 
         public override void ExecuteCmdlet()
@@ -57,14 +47,9 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Commands
             string scope = null;
             string assignmentId = null;
 
-            if (this.IsParameterBound(x => x.ResourceId))
+            if (this.IsParameterBound(x => x.Name))
             {
-                assignmentId = this.ResourceId.GetResourceName();
-                scope = this.ResourceId.GetSubscriptionId().ToSubscriptionResourceId();
-            }
-            else if (this.IsParameterBound(x => x.Id))
-            {
-                assignmentId = this.Id;
+                assignmentId = this.Name;
                 scope = this.Scope ?? this.GetDefaultScope();
             }
             else if (this.IsParameterBound(x => x.Scope))
@@ -81,21 +66,21 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Commands
                 var results = this.PSManagedServicesClient.ListRegistrationAssignments(
                     scope: scope,
                     expandRegistrationDefinition: this.ExpandRegistrationDefinition);
-                this.WriteRegistrationAssignmentList(results);
+                this.WriteRegistrationAssignmentList(results, scope);
             }
             else
             {
                 // validate assignmentId.
                 if (!assignmentId.IsGuid())
                 {
-                    throw new ApplicationException("RegistrationAssignment must be a valid GUID.");
+                    throw new ApplicationException("Name must be a valid GUID.");
                 }
 
                 var result = this.PSManagedServicesClient.GetRegistrationAssignment(
                     scope: scope,
                     registrationAssignmentId: assignmentId,
                     expandRegistrationDefinition: this.ExpandRegistrationDefinition);
-                WriteObject(new PSRegistrationAssignment(result), true);
+                WriteObject(new PSGetRegistrationAssignment(result, scope), true);
             }
         }
     }

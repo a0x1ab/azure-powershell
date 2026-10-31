@@ -17,13 +17,13 @@
 Create, update, and delete registration assignments and registration definitions
 #>
 
-function New-AzManagedServicesAssignmentWithId
+function New-AzManagedServicesAssignmentWithName
 {
     [CmdletBinding()]
     param(
         [string] [Parameter()] $Scope,
-        [string] [Parameter()] $RegistrationDefinitionResourceId,
-        [Guid]   [Parameter()] $RegistrationAssignmentId
+        [string] [Parameter()] $RegistrationDefinitionName,
+        [string] [Parameter()] $Name
     )
 
     $profile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
@@ -36,29 +36,29 @@ function New-AzManagedServicesAssignmentWithId
         $cmdlet.Scope = $Scope
     }
 
-    if (-not ([string]::IsNullOrEmpty($RegistrationDefinitionResourceId)))
+    if (-not ([string]::IsNullOrEmpty($RegistrationDefinitionName)))
     {	
-        $cmdlet.RegistrationDefinitionResourceId = $RegistrationDefinitionResourceId
+        $cmdlet.RegistrationDefinitionName = $RegistrationDefinitionName
     }
 
-    if ($RegistrationAssignmentId -ne $null -and $RegistrationAssignmentId -ne [System.Guid]::Empty)
+    if ($Name -ne $null -and $Name -ne [System.Guid]::Empty)
     {
-		$cmdlet.RegistrationAssignmentId = $RegistrationAssignmentId
+		$cmdlet.Name = $Name
     }
 
     $cmdlet.ExecuteCmdlet()
 }
 
-function New-AzManagedServicesDefinitionWithId
+function New-AzManagedServicesDefinitionWithName
 {
     [CmdletBinding()]
     param(
-        [string] [Parameter()] $Name,
+        [string] [Parameter()] $DisplayName,
         [string] [Parameter()] $ManagedByTenantId,
         [string] [Parameter()] $PrincipalId,
         [string] [Parameter()] $RoleDefinitionId,
 		[string] [Parameter()] $Description,
-        [Guid]   [Parameter()] $RegistrationDefinitionId
+        [string] [Parameter()] $Name
     )
 
     $profile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
@@ -71,9 +71,9 @@ function New-AzManagedServicesDefinitionWithId
         $cmdlet.Description = $Description
     }
 
-    if (-not ([string]::IsNullOrEmpty($Name)))
+    if (-not ([string]::IsNullOrEmpty($DisplayName)))
     {
-        $cmdlet.Name = $Name
+        $cmdlet.DisplayName = $DisplayName
     }
 
     if (-not ([string]::IsNullOrEmpty($ManagedByTenantId)))
@@ -91,9 +91,9 @@ function New-AzManagedServicesDefinitionWithId
         $cmdlet.RoleDefinitionId = $RoleDefinitionId
     }
 
-    if ($RegistrationDefinitionId -ne $null -and $RegistrationDefinitionId -ne [System.Guid]::Empty)
+    if ($Name -ne $null -and $Name -ne [System.Guid]::Empty)
     {
-        $cmdlet.RegistrationDefinitionId = $RegistrationDefinitionId
+        $cmdlet.Name = $Name
     }
 
     $cmdlet.ExecuteCmdlet()
@@ -110,7 +110,7 @@ function Test-ManagedServices_CRUD
 	$definitionId = "1ccdb215-959a-48b9-bd7c-0584d461ea6c"
 
 	#put def
-	$definition = New-AzManagedServicesDefinitionWithId -ManagedByTenantId $managedByTenantId -RoleDefinitionId $roleDefinitionId -PrincipalId $principalId -Name $name -RegistrationDefinitionId $definitionId
+	$definition = New-AzManagedServicesDefinitionWithName -ManagedByTenantId $managedByTenantId -RoleDefinitionId $roleDefinitionId -PrincipalId $principalId -DisplayName $name -Name $definitionId
 
 	Assert-AreEqual $name $definition.Properties.Name
 	Assert-AreEqual $managedByTenantId $definition.Properties.ManagedByTenantId 
@@ -121,24 +121,26 @@ function Test-ManagedServices_CRUD
 	$getDef = Get-AzManagedServicesDefinition -Name $definitionId
 	Assert-NotNull $getDef
 	Assert-AreEqual $definition.Id $getDef.Id
+    Assert-NotNull $getDef.Scope
 
 	#put assignment
-	$assignment = New-AzManagedServicesAssignmentWithId `
-					-RegistrationDefinitionResourceId $definition.Id `
-					-RegistrationAssignmentId $assignmentId	
+	$assignment = New-AzManagedServicesAssignmentWithName `
+					-RegistrationDefinitionName $definition.Name `
+					-Name $assignmentId
 	Assert-NotNull $assignment
 
 	#get assignment
-	$getAssignment = Get-AzManagedServicesAssignment -Id $assignmentId -ExpandRegistrationDefinition
+	$getAssignment = Get-AzManagedServicesAssignment -Name $assignmentId -ExpandRegistrationDefinition
 	Assert-NotNull $getAssignment
 	Assert-AreEqual $assignment.Id $getAssignment.Id
 	Assert-AreEqual $definition.Id $getAssignment.Properties.RegistrationDefinitionId
+    Assert-AreEqual $getDef.Scope $getAssignment.Scope
 
 	#remove assignment
-	Remove-AzManagedServicesAssignment -Id $assignmentId
+	Remove-AzManagedServicesAssignment -Name $assignmentId
 	
 	#remove definition
-	Remove-AzManagedServicesDefinition -Id $definitionId
+	Remove-AzManagedServicesDefinition -Name $definitionId
 
 	#list assignments
 	$assignments = Get-AzManagedServicesAssignment
