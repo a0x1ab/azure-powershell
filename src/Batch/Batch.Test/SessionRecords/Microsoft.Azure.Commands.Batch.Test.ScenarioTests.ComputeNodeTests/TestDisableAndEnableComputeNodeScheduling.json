@@ -1,0 +1,1725 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/pools/testPool/nodes?api-version=2023-05-01.17.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzP2FwaS12ZXJzaW9uPTIwMjMtMDUtMDEuMTcuMA==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "8e1b1be3-aa83-48c8-8d9b-f5febb226cfe"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:22 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "effa4345-f149-42e1-99f4-fb00e03f4a79"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "e0df29b4-dd22-4c0a-a34b-480349cce3e9"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:23 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes\",\r\n  \"value\": [\r\n    {\r\n      \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n      \"url\": \"https://hoppeeastasia2.eastasia.batch.azure.com/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n      \"state\": \"rebooting\",\r\n      \"schedulingState\": \"enabled\",\r\n      \"stateTransitionTime\": \"2023-06-16T07:23:21.3771523Z\",\r\n      \"lastBootTime\": \"2023-06-16T06:54:12.462819Z\",\r\n      \"allocationTime\": \"2023-06-13T07:46:20.7222354Z\",\r\n      \"ipAddress\": \"10.218.0.6\",\r\n      \"affinityId\": \"TVM:tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n      \"vmSize\": \"standard_d1_v2\",\r\n      \"totalTasksRun\": 9,\r\n      \"totalTasksSucceeded\": 6,\r\n      \"runningTasksCount\": 0,\r\n      \"runningTaskSlotsCount\": 0,\r\n      \"recentTasks\": [],\r\n      \"startTask\": {\r\n        \"commandLine\": \"cmd /c echo hello\",\r\n        \"userIdentity\": {\r\n          \"autoUser\": {\r\n            \"scope\": \"pool\",\r\n            \"elevationLevel\": \"nonadmin\"\r\n          }\r\n        },\r\n        \"maxTaskRetryCount\": 0,\r\n        \"waitForSuccess\": true\r\n      },\r\n      \"startTaskInfo\": {\r\n        \"state\": \"completed\",\r\n        \"startTime\": \"2023-06-16T06:54:12.651819Z\",\r\n        \"endTime\": \"2023-06-16T06:54:12.729951Z\",\r\n        \"exitCode\": 0,\r\n        \"result\": \"success\",\r\n        \"retryCount\": 0\r\n      },\r\n      \"certificateReferences\": [],\r\n      \"isDedicated\": true,\r\n      \"endpointConfiguration\": {\r\n        \"inboundEndpoints\": [\r\n          {\r\n            \"name\": \"Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput\",\r\n            \"protocol\": \"tcp\",\r\n            \"frontendPort\": 3389,\r\n            \"backendPort\": 20000\r\n          }\r\n        ]\r\n      },\r\n      \"nodeAgentInfo\": {\r\n        \"lastUpdateTime\": \"2023-06-13T07:53:19.121974Z\",\r\n        \"version\": \"1.10.0\"\r\n      },\r\n      \"virtualMachineInfo\": {}\r\n    },\r\n    {\r\n      \"id\": \"tvmps_c3cdeb8c344b8b5cca4c1052f8fd5c239f09cffd64837afc6cbb2e073e15dab3_d\",\r\n      \"url\": \"https://hoppeeastasia2.eastasia.batch.azure.com/pools/testPool/nodes/tvmps_c3cdeb8c344b8b5cca4c1052f8fd5c239f09cffd64837afc6cbb2e073e15dab3_d\",\r\n      \"state\": \"reimaging\",\r\n      \"schedulingState\": \"enabled\",\r\n      \"stateTransitionTime\": \"2023-06-16T07:23:21.7378967Z\",\r\n      \"lastBootTime\": \"2023-06-16T06:55:27.593709Z\",\r\n      \"allocationTime\": \"2023-06-13T07:46:20.7222354Z\",\r\n      \"ipAddress\": \"10.218.0.5\",\r\n      \"affinityId\": \"TVM:tvmps_c3cdeb8c344b8b5cca4c1052f8fd5c239f09cffd64837afc6cbb2e073e15dab3_d\",\r\n      \"vmSize\": \"standard_d1_v2\",\r\n      \"totalTasksRun\": 7,\r\n      \"totalTasksSucceeded\": 3,\r\n      \"runningTasksCount\": 0,\r\n      \"runningTaskSlotsCount\": 0,\r\n      \"recentTasks\": [\r\n        {\r\n          \"taskUrl\": \"https://hoppeeastasia2.eastasia.batch.azure.com/jobs/testTerminateTaskJob/tasks/testTask2\",\r\n          \"jobId\": \"testTerminateTaskJob\",\r\n          \"taskId\": \"testTask2\",\r\n          \"taskState\": \"completed\",\r\n          \"executionInfo\": {\r\n            \"startTime\": \"2023-06-16T07:06:23.080101Z\",\r\n            \"endTime\": \"2023-06-16T07:06:23.572482Z\",\r\n            \"exitCode\": -1073741510,\r\n            \"failureInfo\": {\r\n              \"category\": \"UserError\",\r\n              \"code\": \"TaskEnded\",\r\n              \"message\": \"Task Was Ended by User Request\",\r\n              \"details\": [\r\n                {\r\n                  \"name\": \"AdditionalErrorCode\",\r\n                  \"value\": \"FailureExitCode\"\r\n                }\r\n              ]\r\n            },\r\n            \"result\": \"failure\",\r\n            \"retryCount\": 0,\r\n            \"requeueCount\": 0\r\n          }\r\n        }\r\n      ],\r\n      \"startTask\": {\r\n        \"commandLine\": \"cmd /c echo hello\",\r\n        \"userIdentity\": {\r\n          \"autoUser\": {\r\n            \"scope\": \"pool\",\r\n            \"elevationLevel\": \"nonadmin\"\r\n          }\r\n        },\r\n        \"maxTaskRetryCount\": 0,\r\n        \"waitForSuccess\": true\r\n      },\r\n      \"startTaskInfo\": {\r\n        \"state\": \"completed\",\r\n        \"startTime\": \"2023-06-16T06:55:28.965368Z\",\r\n        \"endTime\": \"2023-06-16T06:55:29.07475Z\",\r\n        \"exitCode\": 0,\r\n        \"result\": \"success\",\r\n        \"retryCount\": 0\r\n      },\r\n      \"certificateReferences\": [],\r\n      \"isDedicated\": true,\r\n      \"endpointConfiguration\": {\r\n        \"inboundEndpoints\": [\r\n          {\r\n            \"name\": \"Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput\",\r\n            \"protocol\": \"tcp\",\r\n            \"frontendPort\": 3389,\r\n            \"backendPort\": 20000\r\n          }\r\n        ]\r\n      },\r\n      \"nodeAgentInfo\": {\r\n        \"lastUpdateTime\": \"2023-06-13T07:48:55.051071Z\",\r\n        \"version\": \"1.10.0\"\r\n      },\r\n      \"virtualMachineInfo\": {}\r\n    },\r\n    {\r\n      \"id\": \"tvmps_cf431502d0b7a008b6d2fc36bf12888efcbda4c9272347c458f1792e50276106_d\",\r\n      \"url\": \"https://hoppeeastasia2.eastasia.batch.azure.com/pools/testPool/nodes/tvmps_cf431502d0b7a008b6d2fc36bf12888efcbda4c9272347c458f1792e50276106_d\",\r\n      \"state\": \"idle\",\r\n      \"schedulingState\": \"enabled\",\r\n      \"stateTransitionTime\": \"2023-06-16T07:19:26.25374Z\",\r\n      \"lastBootTime\": \"2023-06-13T07:52:52.129232Z\",\r\n      \"allocationTime\": \"2023-06-13T07:46:20.7222354Z\",\r\n      \"ipAddress\": \"10.218.0.4\",\r\n      \"affinityId\": \"TVM:tvmps_cf431502d0b7a008b6d2fc36bf12888efcbda4c9272347c458f1792e50276106_d\",\r\n      \"vmSize\": \"standard_d1_v2\",\r\n      \"totalTasksRun\": 8,\r\n      \"totalTasksSucceeded\": 2,\r\n      \"runningTasksCount\": 0,\r\n      \"runningTaskSlotsCount\": 0,\r\n      \"recentTasks\": [\r\n        {\r\n          \"taskUrl\": \"https://hoppeeastasia2.eastasia.batch.azure.com/jobs/testJobCompletesWhenTaskFails/tasks/taskId-1\",\r\n          \"jobId\": \"testJobCompletesWhenTaskFails\",\r\n          \"taskId\": \"taskId-1\",\r\n          \"taskState\": \"completed\",\r\n          \"executionInfo\": {\r\n            \"startTime\": \"2023-06-16T07:19:26.144372Z\",\r\n            \"endTime\": \"2023-06-16T07:19:26.222489Z\",\r\n            \"exitCode\": 3,\r\n            \"failureInfo\": {\r\n              \"category\": \"UserError\",\r\n              \"code\": \"FailureExitCode\",\r\n              \"message\": \"The task exited with an exit code representing a failure\",\r\n              \"details\": [\r\n                {\r\n                  \"name\": \"Message\",\r\n                  \"value\": \"The task process exited with an unexpected exit code\"\r\n                },\r\n                {\r\n                  \"name\": \"AdditionalErrorCode\",\r\n                  \"value\": \"FailureExitCode\"\r\n                }\r\n              ]\r\n            },\r\n            \"result\": \"failure\",\r\n            \"retryCount\": 0,\r\n            \"requeueCount\": 0\r\n          }\r\n        }\r\n      ],\r\n      \"startTask\": {\r\n        \"commandLine\": \"cmd /c echo hello\",\r\n        \"userIdentity\": {\r\n          \"autoUser\": {\r\n            \"scope\": \"pool\",\r\n            \"elevationLevel\": \"nonadmin\"\r\n          }\r\n        },\r\n        \"maxTaskRetryCount\": 0,\r\n        \"waitForSuccess\": true\r\n      },\r\n      \"startTaskInfo\": {\r\n        \"state\": \"completed\",\r\n        \"startTime\": \"2023-06-13T07:52:53.742761Z\",\r\n        \"endTime\": \"2023-06-13T07:52:53.805263Z\",\r\n        \"exitCode\": 0,\r\n        \"result\": \"success\",\r\n        \"retryCount\": 0\r\n      },\r\n      \"certificateReferences\": [],\r\n      \"isDedicated\": true,\r\n      \"endpointConfiguration\": {\r\n        \"inboundEndpoints\": [\r\n          {\r\n            \"name\": \"Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput\",\r\n            \"protocol\": \"tcp\",\r\n            \"frontendPort\": 3389,\r\n            \"backendPort\": 20000\r\n          }\r\n        ]\r\n      },\r\n      \"nodeAgentInfo\": {\r\n        \"lastUpdateTime\": \"2023-06-13T07:52:52.129232Z\",\r\n        \"version\": \"1.10.0\"\r\n      },\r\n      \"virtualMachineInfo\": {}\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "6f3fa613-09c6-4312-9c6b-421782876521"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:22 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "15eea783-71ae-499b-bcbd-e71940bb7632"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "aede961c-b900-4fc7-886f-fdf3fc17125f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:23 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "26797784-0390-42fc-8fdc-618af05f7ad1"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:28 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "1a8c5919-b321-4a2c-958f-c10d1b77ad80"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "0d25138b-6047-4017-9ccd-38f530c99df8"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:29 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b1b900cb-10b0-49ab-baa0-e95b71f50568"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:33 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "951bab78-c160-4f42-8b81-faea9cc02335"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "6df0f3ec-f997-452d-9b9a-322ca6d4fa4d"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:33 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b594304d-16dc-4d44-bbb2-17f81955de55"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:38 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "23cb9874-5ce8-4b3d-b6f1-184c6782ce06"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "350e315d-3806-4177-9d09-b25eced4300d"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:39 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "a9d44edc-a66b-4823-9a68-bfce9ab96963"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:43 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "3ddc2628-2fad-4a96-95a7-3a8a3526f680"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "e5b0a5dd-26fe-4f89-bc8f-d932f7cbab80"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:44 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "8e6d4c8b-eb91-4544-90cd-505849c7eb1d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:48 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "40974df9-b810-4ff7-9189-881caae6ec2e"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "cc5cd6e0-6573-41b8-a2bb-44f57c5e60d3"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:49 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "f12d13d4-978f-4a7f-996a-5ae6844e3851"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:53 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "d6b92d91-ab74-4fb4-9c9e-e794d0b0d621"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "8c2789cc-e82d-4983-86fd-ae1069c2a602"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:54 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "698800a3-46e6-47c7-b9de-4d6809c1af61"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:23:58 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "3f2a43c4-f299-4b54-9812-12040e1a6d3e"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "a82cb02f-f1d3-49b4-ace3-dbbcd8703efb"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:23:59 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "0c9a5660-cb8b-42fb-8697-8d7fa83d3955"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:04 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "ec226f5e-f8b2-4aea-aa1c-9332a0f1a02c"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "ec45330f-796a-4d88-857c-46faeedf2a1f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:05 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "63446f58-86b5-4d5c-833e-67cc52cdf69d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:09 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "f3a55501-ee35-4e35-b21d-b40c2e91b098"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "acc9c774-b192-4adc-a0e5-88757e2ee7f7"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:10 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "688f5889-15f0-40f5-8a03-a4c181f8e78b"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:14 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "65baff11-5ee3-4530-aecb-7a76969740ec"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "0614e06b-274d-49bd-88f6-36cc9ff78747"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:15 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b76c1511-11b5-4a9f-8edd-bc4abd85f4fd"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:19 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "8f1afbee-6270-47bb-9399-6a11ab43daa1"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "69280f1b-6756-44d0-924a-57e6fe9a9d10"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:20 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "473fa352-8296-47e1-b1ff-ffd712126dce"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:24 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "a36b89be-1d83-462f-986b-e6d960d27901"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "19218164-63c6-4867-b7e5-2b99cc23961f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:25 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "73a1c63a-38a9-4fb2-a594-7135496135f5"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:29 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "12d284d2-0b43-4e58-a5ce-de62631ef838"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "338c3f02-36fe-47e6-bccc-030d7b0e3cd8"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:30 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "edd87ce9-903f-4e85-b518-a8ecd31136a7"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:34 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "b4016712-03a6-4f9b-8180-ffd5c250ec40"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "3e77c0be-8a60-474a-92e3-70bf6f5a9ca5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:35 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "32afe4bc-b6f5-4f6c-a517-f9cdd10d98dd"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:39 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "9b9205ab-726f-44db-9c85-f14f9956e8f5"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "f3e7e53b-0a6f-4279-8519-4f14c42817bf"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:40 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "91dd9e02-2230-44ac-8101-81d71a43be45"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:44 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "655bfad2-56d2-4a43-b822-652e172edaf6"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "9e8f728c-da45-4b71-a33e-13e512248b4c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:46 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "40b1b224-7587-4c77-b9cd-473b195507c7"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:50 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "885d54cd-816b-4674-aace-e37b83eec1f3"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "443025a5-273d-4d2b-9e4b-d78416c18580"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:50 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "2ff93ddb-980f-4556-89ad-fc4412ed7ee5"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:24:55 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "2ce5642f-4a91-46ec-bc26-60fb286d185e"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "64ce4cb4-0514-401b-b105-f14280e021df"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:24:56 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "ee4143ae-e34c-41f4-b18f-098a4a14b415"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:00 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "1ef737c3-b42b-471e-893d-c940f381a423"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "c2614b53-a5a7-43bb-bbd7-824992f18c86"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:00 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "599c970d-9916-4728-aa72-1bcf0a09c897"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:05 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "36ec8d5d-d469-4322-8a18-abcee2ca3a4b"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "cb0e08d2-d7e3-41cb-93fb-18cd2f95e64e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:05 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "e8253857-6759-467a-b20e-f4ed0903a9d6"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:10 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "6ab9463e-e53c-47cf-b9b9-09ff6220cbb6"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "ef8ee01e-02bf-40c8-be23-8fe3db995a26"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:11 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "10cb71c5-522c-4f6b-a68a-085eedb07fc5"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:15 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "7bca9417-1332-4b5f-9c5d-ea39b2a2f0d4"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "1dcd7e6a-4250-4e49-bb9e-8319efdcf355"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:16 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "37b250d7-d904-44ee-897b-12d75a3c36c8"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:20 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "e908baae-8943-4fcb-93c2-8caeb07252b7"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "c4435c37-c407-41fd-882a-07d4ca89fd01"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:21 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"rebooting\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2Cstate",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3N0YXRl",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "54131fb3-3367-403a-ad06-6814ac14e64c"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:25 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "a5e72198-6bb6-4853-9d03-cb57f54cc367"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "b6e7d57c-a327-43f4-ab6a-f53acf8de9b7"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"idle\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjA=",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "c5a8acd6-d384-48e6-8338-be4ad1fea12a"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "b1cd04b7-809d-41b0-a41f-a3456020f066"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "17e1c7b0-276a-48f2-9d1b-6473d735e44d"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"url\": \"https://hoppeeastasia2.eastasia.batch.azure.com/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"state\": \"idle\",\r\n  \"schedulingState\": \"enabled\",\r\n  \"stateTransitionTime\": \"2023-06-16T07:25:22.287975Z\",\r\n  \"lastBootTime\": \"2023-06-16T07:25:22.018509Z\",\r\n  \"allocationTime\": \"2023-06-13T07:46:20.7222354Z\",\r\n  \"ipAddress\": \"10.218.0.6\",\r\n  \"affinityId\": \"TVM:tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"vmSize\": \"standard_d1_v2\",\r\n  \"totalTasksRun\": 9,\r\n  \"totalTasksSucceeded\": 6,\r\n  \"runningTasksCount\": 0,\r\n  \"runningTaskSlotsCount\": 0,\r\n  \"recentTasks\": [],\r\n  \"startTask\": {\r\n    \"commandLine\": \"cmd /c echo hello\",\r\n    \"userIdentity\": {\r\n      \"autoUser\": {\r\n        \"scope\": \"pool\",\r\n        \"elevationLevel\": \"nonadmin\"\r\n      }\r\n    },\r\n    \"maxTaskRetryCount\": 0,\r\n    \"waitForSuccess\": true\r\n  },\r\n  \"startTaskInfo\": {\r\n    \"state\": \"completed\",\r\n    \"startTime\": \"2023-06-16T07:25:22.194236Z\",\r\n    \"endTime\": \"2023-06-16T07:25:22.272356Z\",\r\n    \"exitCode\": 0,\r\n    \"result\": \"success\",\r\n    \"retryCount\": 0\r\n  },\r\n  \"certificateReferences\": [],\r\n  \"isDedicated\": true,\r\n  \"endpointConfiguration\": {\r\n    \"inboundEndpoints\": [\r\n      {\r\n        \"name\": \"Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput\",\r\n        \"protocol\": \"tcp\",\r\n        \"frontendPort\": 3389,\r\n        \"backendPort\": 20000\r\n      }\r\n    ]\r\n  },\r\n  \"nodeAgentInfo\": {\r\n    \"lastUpdateTime\": \"2023-06-13T07:53:19.121974Z\",\r\n    \"version\": \"1.10.0\"\r\n  },\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d/disablescheduling?api-version=2023-05-01.17.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZC9kaXNhYmxlc2NoZWR1bGluZz9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjA=",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "client-request-id": [
+          "b02b0294-2c2b-404d-ae53-5a8a51801a1d"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "b1cd04b7-809d-41b0-a41f-a3456020f066"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata; charset=utf-8"
+        ],
+        "Content-Length": [
+          "50"
+        ]
+      },
+      "RequestBody": "{\r\n  \"nodeDisableSchedulingOption\": \"terminate\"\r\n}",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "2770fc0a-7de3-4004-a573-a4fac3a6c052"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://hoppeeastasia2.eastasia.batch.azure.com/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d/disablescheduling"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2CschedulingState",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3NjaGVkdWxpbmdTdGF0ZQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "49383c22-dee0-462f-9870-2ad36dd8be3b"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "4ca6319b-dffa-4537-b19e-fb498d8aa009"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "8d67cc8c-b638-4d76-9a8e-707ef4aeaf2b"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:27 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"schedulingState\": \"disabled\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d?api-version=2023-05-01.17.0&$select=id%2CschedulingState",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZD9hcGktdmVyc2lvbj0yMDIzLTA1LTAxLjE3LjAmJHNlbGVjdD1pZCUyQ3NjaGVkdWxpbmdTdGF0ZQ==",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "client-request-id": [
+          "8ff6df54-5cf2-4776-8407-baa6c31f30e0"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "ea77d098-d9c5-4cb0-9efe-18b94100da76"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "ad21ea8c-f2e5-4bf5-803e-540ba047dd5f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:27 GMT"
+        ],
+        "Content-Type": [
+          "application/json; odata=minimalmetadata"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"odata.metadata\": \"https://hoppeeastasia2.eastasia.batch.azure.com/$metadata#nodes/@Element\",\r\n  \"id\": \"tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d\",\r\n  \"schedulingState\": \"enabled\",\r\n  \"virtualMachineInfo\": {}\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d/enablescheduling?api-version=2023-05-01.17.0",
+      "EncodedRequestUri": "L3Bvb2xzL3Rlc3RQb29sL25vZGVzL3R2bXBzXzY3NTkwZjZmZmRjMzc4OTFhYTA5ZGUwN2E0ZDE0ZTUxM2NlNzVmMmU5M2M3M2Y3ZjU1NmNkZjAwNzEwZDdiMmRfZC9lbmFibGVzY2hlZHVsaW5nP2FwaS12ZXJzaW9uPTIwMjMtMDUtMDEuMTcuMA==",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "client-request-id": [
+          "337cbb59-de8b-475b-92eb-7421231d10b6"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "ocp-date": [
+          "Fri, 16 Jun 2023 07:25:26 GMT"
+        ],
+        "x-ms-client-request-id": [
+          "1fbbfff0-4276-4bda-950a-c46ef6af3436"
+        ],
+        "User-Agent": [
+          "FxVersion/4.700.22.55902",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.22621",
+          "Microsoft.Azure.Batch.Protocol.BatchServiceClient/16.0.23.31502",
+          "AzurePowershell/Az1.0.0"
+        ],
+        "Content-Length": [
+          "0"
+        ]
+      },
+      "RequestBody": "",
+      "ResponseHeaders": {
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-HTTPAPI/2.0"
+        ],
+        "request-id": [
+          "50b0ecf0-4c2f-4234-946a-f42d9f51aac8"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "DataServiceVersion": [
+          "3.0"
+        ],
+        "DataServiceId": [
+          "https://hoppeeastasia2.eastasia.batch.azure.com/pools/testPool/nodes/tvmps_67590f6ffdc37891aa09de07a4d14e513ce75f2e93c73f7f556cdf00710d7b2d_d/enablescheduling"
+        ],
+        "Date": [
+          "Fri, 16 Jun 2023 07:25:27 GMT"
+        ]
+      },
+      "ResponseBody": "",
+      "StatusCode": 200
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "21abd678-18c5-4660-9fdd-8c5ba6b6fe1f",
+    "AZURE_BATCH_ACCOUNT": "hoppeeastasia2",
+    "AZURE_BATCH_ENDPOINT": "https://hoppeeastasia2.eastasia.batch.azure.com",
+    "AZURE_BATCH_RESOURCE_GROUP": "123"
+  }
+}
