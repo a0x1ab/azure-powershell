@@ -56,8 +56,8 @@ DotNetFrameworkVersion = '4.7.2'
 RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '2.10.2'; })
 
 # Assemblies that must be loaded prior to importing this module
-RequiredAssemblies = 'YamlDotNet.dll', 'AutoMapper.dll', 
-               'Microsoft.Azure.Management.ContainerService.dll', 
+RequiredAssemblies = 'YamlDotNet.dll', 'Microsoft.Azure.PowerShell.AutoMapper.dll', 
+               'Microsoft.Azure.PowerShell.Aks.Management.Sdk.dll', 
                'Aks.Autorest\bin\Az.Aks.private.dll'
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.
