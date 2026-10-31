@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PsModuleName>Synapse</PsModuleName>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Az.Test.props" />
+
+  <PropertyGroup>
+    <RootNamespace>$(LegacyAssemblyPrefix)$(PsModuleName)$(AzTestAssemblySuffix)</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Management.Synapse" Version="2.2.0-preview" />
+    <PackageReference Include="Microsoft.Azure.Synapse" Version="0.1.0-preview" />
+    <PackageReference Include="Microsoft.Azure.Management.Storage" Version="23.0.0" />
+    <PackageReference Include="Microsoft.Azure.Management.OperationalInsights" Version="0.21.0-preview" />
+    <PackageReference Include="Microsoft.Azure.Management.EventHub" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Azure.Management.Monitor" Version="0.25.3-preview" />
+  </ItemGroup>
+
+</Project>
