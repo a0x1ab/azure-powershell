@@ -29,6 +29,7 @@
 	- `Add-AzApplicationGatewayListener`
 	- `New-AzApplicationGatewayListener`
 * Added cmdlet 'Remove-AzApplicationGatewayFirewallCustomRule' to support removing custom rule in Firewall Policy.
+* Added support for new ErGWScale SKU - ErGwScale
 * Added property 'size' to firewallPolicy and firewallPolicyRuleCollectionGroup.
 
 ## Version 6.2.0
