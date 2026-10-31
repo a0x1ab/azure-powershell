@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PsModuleName>AnalysisServices</PsModuleName>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Az.Test.props" />
+
+  <PropertyGroup>
+    <RootNamespace>$(LegacyAssemblyPrefix)$(PsModuleName)$(AzTestAssemblySuffix)</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AnalysisServices.Dataplane\AnalysisServices.Dataplane.csproj" />
+    <ProjectReference Include="..\AnalysisServices.Management.Sdk\AnalysisServices.Management.Sdk.csproj" />
+  </ItemGroup>
+
+</Project>
