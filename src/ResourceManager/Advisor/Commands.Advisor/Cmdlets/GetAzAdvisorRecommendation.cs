@@ -62,11 +62,35 @@ namespace Microsoft.Azure.Commands.Advisor.Cmdlets
         public string ResourceGroupName { get; set; }
 
         /// <summary>
-        /// Gets or sets the Refresh.
+        /// Gets the list of recommendations associated with the subscription-Id.
         /// </summary>
-        [Parameter(ParameterSetName = "IdParameterSet", Mandatory = false, HelpMessage = "Regenerates the recommendations.")]
-        [Parameter(ParameterSetName = "NameParameterSet", Mandatory = false, HelpMessage = "Regenerates the recommendations.")]
-        public SwitchParameter Refresh { get; set; }
+        /// <returns></returns>
+        internal List<PsAzureAdvisorResourceRecommendationBase> GetRecommendations()
+        {
+            AzureOperationResponse<IPage<ResourceRecommendationBase>> operationResponseRecommendation = null;
+            List<ResourceRecommendationBase> entirePageLinkRecommendationData = new List<ResourceRecommendationBase>();
+            string nextPagelink = string.Empty;
+
+            do
+            {
+                if (string.IsNullOrEmpty(nextPagelink))
+                {
+                    operationResponseRecommendation = this.ResourceAdvisorClient.Recommendations.ListWithHttpMessagesAsync().Result;
+                }
+                else
+                {
+                    operationResponseRecommendation = this.ResourceAdvisorClient.Recommendations.ListNextWithHttpMessagesAsync(nextPagelink).Result;
+                }
+                nextPagelink = operationResponseRecommendation.Body.NextPageLink;
+
+                // Add current page items to the List 
+                entirePageLinkRecommendationData.AddRange(operationResponseRecommendation.Body.ToList());
+            }
+            while (!string.IsNullOrEmpty(nextPagelink));
+
+            // Convert to PsAzureAdvisorResourceRecommendationBase list and return 
+            return PsAzureAdvisorResourceRecommendationBase.GetFromResourceRecommendationBase(entirePageLinkRecommendationData);
+        }
 
         /// <summary>
         /// Executes the cmdlet.
@@ -74,8 +98,7 @@ namespace Microsoft.Azure.Commands.Advisor.Cmdlets
         public override void ExecuteCmdlet()
         {
             List<PsAzureAdvisorResourceRecommendationBase> results = new List<PsAzureAdvisorResourceRecommendationBase>();
-
-            AzureOperationResponse<IPage<ResourceRecommendationBase>> operationResponseRecommendation = null;
+            //AzureOperationResponse<IPage<ResourceRecommendationBase>> operationResponseRecommendation = null;
             List<ResourceRecommendationBase> entirePageLinkRecommendationData = new List<ResourceRecommendationBase>();
             AzureOperationResponse<ResourceRecommendationBase> recommendation = null;
 
@@ -89,47 +112,19 @@ namespace Microsoft.Azure.Commands.Advisor.Cmdlets
                     break;
 
                 case NameParameterSet:
-                    string nextPagelink = string.Empty;
-                    
-                    // Iterate the page-link if exists, if the first iteration retreives the data.
-                    do
-                    {
-                        if (string.IsNullOrEmpty(nextPagelink))
-                        {
-                            operationResponseRecommendation = this.ResourceAdvisorClient.Recommendations.ListWithHttpMessagesAsync().Result;
-                        }
-                        else
-                        {
-                            operationResponseRecommendation = this.ResourceAdvisorClient.Recommendations.ListWithHttpMessagesAsync(nextPagelink).Result;
-                        }
-                        // Advisor .net SDK is broken for the paging capability. So we will not use the paging until SDK is fixed.
-                        // nextPagelink = operationResponseRecommendation.Body.NextPageLink;
-
-                        // Add current page items to the List 
-                        entirePageLinkRecommendationData.AddRange(operationResponseRecommendation.Body.ToList());
-                    }
-                    while (!string.IsNullOrEmpty(nextPagelink));
-
-                    // Convert to PsAzureAdvisorResourceRecommendationBase list
-                    results = PsAzureAdvisorResourceRecommendationBase.GetFromResourceRecommendationBase(entirePageLinkRecommendationData);
+                    results = GetRecommendations();
 
                     // Filter out the resourcegroupname recommendations
                     if (!string.IsNullOrEmpty(this.ResourceGroupName))
                     {
-                        results = RecommendationHelper.RecommendationFilterByCategoryAndResource(results, string.Empty, this.ResourceGroupName);                    
+                        results = RecommendationHelper.RecommendationFilterByCategoryAndResource(results, string.Empty, this.ResourceGroupName);
                     }
-
                     break;
             }
 
             if (!string.IsNullOrEmpty(this.Category))
             {
                 results = RecommendationHelper.RecommendationFilterByCategoryAndResource(results, this.Category, string.Empty);
-            }
-
-            if (Refresh)
-            {
-                this.ResourceAdvisorClient.Recommendations.GenerateWithHttpMessagesAsync();
             }
 
             this.WriteObject(results, true);
