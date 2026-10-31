@@ -48,12 +48,13 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using CM = Microsoft.Azure.Management.Compute.Models;
 using SM = Microsoft.Azure.PowerShell.Cmdlets.Compute.Helpers.Storage.Models;
-using Microsoft.Azure.Commands.Compute;
 using Microsoft.Azure.PowerShell.Cmdlets.Compute.Helpers.Network.Models;
-
+using Microsoft.WindowsAzure.Commands.Common.CustomAttributes;
 
 namespace Microsoft.Azure.Commands.Compute
+
 {
+    [GenericBreakingChange("It is recommended to use parameter \"-PublicIpSku Standard\" in order to create a new VM with a Standard public IP.Specifying zone(s) using the \"-Zone\" parameter will also result in a Standard public IP.If \"-Zone\" is not specified, the VM will be created with a Basic public IP instead.Please note that the Standard SKU IPs will become the default behavior for VM creation in the future")]
     [Cmdlet("New", ResourceManager.Common.AzureRMConstants.AzureRMPrefix + "VM", SupportsShouldProcess = true, DefaultParameterSetName = "SimpleParameterSet")]
     [OutputType(typeof(PSAzureOperationResponse), typeof(PSVirtualMachine))]
     public class NewAzureVMCommand : VirtualMachineBaseCmdlet
@@ -116,6 +117,17 @@ namespace Microsoft.Azure.Commands.Compute
         [Parameter(ParameterSetName = SimpleParameterSet, Mandatory = false)]
         [ValidateNotNullOrEmpty]
         public string[] Zone { get; set; }
+
+        [Parameter(
+            ParameterSetName = SimpleParameterSet, 
+            Mandatory = false,
+            HelpMessage = "Specify public IP sku name")]
+        [Parameter(
+            ParameterSetName = DiskFileParameterSet,
+            Mandatory = false,
+            HelpMessage = "Specify public IP sku name")]
+        [PSArgumentCompleter("Basic","Standard")]
+        public string PublicIpSku { get; set; }
 
         [Parameter(
             ParameterSetName = DefaultParameterSet,
@@ -510,6 +522,15 @@ namespace Microsoft.Azure.Commands.Compute
                     }
                 }
 
+                //Override Zone logic if PublicIpSku is explicitly provided
+                PublicIPAddressStrategy.Sku publicIpSku;
+                if (_cmdlet.PublicIpSku != null) {
+                    publicIpSku = _cmdlet.PublicIpSku == "Basic" ? PublicIPAddressStrategy.Sku.Basic : PublicIPAddressStrategy.Sku.Standard;
+                }
+                else {
+                    publicIpSku = _cmdlet.Zone == null ? PublicIPAddressStrategy.Sku.Basic : PublicIPAddressStrategy.Sku.Standard;
+                }
+
                 var resourceGroup = ResourceGroupStrategy.CreateResourceGroupConfig(_cmdlet.ResourceGroupName);
                 var virtualNetwork = resourceGroup.CreateVirtualNetworkConfig(
                     name: _cmdlet.VirtualNetworkName, edgeZone: _cmdlet.EdgeZone, addressPrefix: _cmdlet.AddressPrefix);
@@ -519,7 +540,7 @@ namespace Microsoft.Azure.Commands.Compute
                     edgeZone: _cmdlet.EdgeZone,
                     domainNameLabel: _cmdlet.DomainNameLabel,
                     allocationMethod: _cmdlet.AllocationMethod,
-                    sku: _cmdlet.Zone == null ? PublicIPAddressStrategy.Sku.Basic : PublicIPAddressStrategy.Sku.Standard,
+                    sku: publicIpSku,
                     zones: _cmdlet.Zone);
 
                 _cmdlet.OpenPorts = ImageAndOsType.UpdatePorts(_cmdlet.OpenPorts);
@@ -653,6 +674,7 @@ namespace Microsoft.Azure.Commands.Compute
 
         async Task StrategyExecuteCmdletAsync(IAsyncCmdlet asyncCmdlet)
         {
+
             var client = new Client(DefaultProfile.DefaultContext);
 
             ResourceGroupName = ResourceGroupName ?? Name;
@@ -671,6 +693,14 @@ namespace Microsoft.Azure.Commands.Compute
             if (!this.IsParameterBound(c => c.Size))
             {
                 WriteInformation("No Size value has been provided. The VM will be created with the default size Standard_D2s_v3.", new string[] { "PSHOST" });
+            }
+
+            if (this.IsParameterBound(c => c.PublicIpSku))
+            {
+                if (this.PublicIpSku != "Basic" || this.PublicIpSku != "Standard")
+                {
+                    throw new InvalidDataException("Invalid data entry. Acceptable values for PublicIpSku are \"Basic\" or \"Standard\" only");
+                }
             }
 
             if (DiskFile != null)
