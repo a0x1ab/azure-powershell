@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Available Targets:
+
+  /t:Clean
+    Removes temporary build outputs.
+
+  /t:Build
+    Builds assemblies.
+
+  /t:Test
+    Runs tests
+
+  /t:Publish
+    Creates local nuget packages and MSI
+
+  /p:CodeSign=True
+    Code sign binaries, mainly for official release. Default is false.
+
+  /p:CodeSign=True;DelaySign=True
+    Test the code sign workflow locally.
+
+  /p:Scope
+    'ServiceManagement': service management
+    'AzureStorage': storage data plane cmdlets
+    'Stack': Azure Stack cmdlets
+    'Subfolder under src\ResourceManager': An individual cmdlet module
+    By default, it builds everything
+
+  /p:SkipHelp=True
+    Skips help generation, mainly for local builds to save time.
+
+  /p:SkipNugetRestore=True
+    Skips nuget restore, mainly for local builds to save time when you have already restored nugets.
+
+  /p:SkipDependencyAnalysis=True
+    Skips build validation, mainly for local builds to save time.
+
+  /p:QuickBuild=true
+    Same thing as doing SkipHelp, SkipNugetRestore, and SkipDependencyAnalysis
+-->
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(MSBuildThisFileDirectory)Repo.props" />
+
+  <!-- Define default build properties -->
+  <PropertyGroup>
+    <LibraryRoot>$(MSBuildThisFileDirectory)</LibraryRoot>
+    <LibrarySourceFolder>$(LibraryRoot)src</LibrarySourceFolder>
+    <LibraryToolsFolder>$(LibraryRoot)tools</LibraryToolsFolder>
+    <LibraryArtifactsFolder>$(LibraryRoot)artifacts</LibraryArtifactsFolder>
+    <LocalFeedFolder>$(LibraryToolsFolder)/LocalFeed</LocalFeedFolder>
+    <Configuration Condition=" '$(Configuration)' != 'Release'">Debug</Configuration>
+    <CodeSign>false</CodeSign>
+    <!--Set this true only if you want to test the code sign workflow locally-->
+    <DelaySign Condition =" '$(DelaySign)' == '' ">false</DelaySign>
+    <SignedOutputRootDir>$(LibraryRoot)signed</SignedOutputRootDir>
+    <PackageDirectory>$(LibraryRoot)artifacts</PackageDirectory>
+    <TestOutputDirectory>$(PackageDirectory)/Test</TestOutputDirectory>
+    <BuildInParallel Condition="'$(BuildInParallel)' == ''">true</BuildInParallel>
+    <NuGetPublishingSource Condition=" '$(NuGetPublishingSource)' == '' ">$(LibrarySourceFolder)</NuGetPublishingSource>
+    <Scope Condition="$(Scope) == ''" >All</Scope>
+    <TestsToRun Condition="$(TestsToRun) == ''" >All</TestsToRun>
+    <BuildTasksPath>$(LibraryToolsFolder)/BuildPackagesTask/Microsoft.Azure.Build.Tasks/bin/$(Configuration)</BuildTasksPath>
+    <StackPackageFolder>$(LibrarySourceFolder)/Stack</StackPackageFolder>
+    <NetCore Condition="'$(NetCore)' != 'true'">false</NetCore>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(NetCore) == 'true' ">
+    <Scope>Netcore</Scope>
+  </PropertyGroup>
+
+  <!-- Set Skips -->
+  <PropertyGroup>
+    <SkipHelp Condition =" '$(SkipHelp)' != 'true' ">false</SkipHelp>
+    <SkipNugetRestore Condition="'$(SkipNugetRestore)' != 'true' ">false</SkipNugetRestore>
+    <SkipDependencyAnalysis Condition="'$(SkipDependencyAnalysis)' != 'true' ">false</SkipDependencyAnalysis>
+  </PropertyGroup>
+
+  <!-- Skip everything that is not build/test/publish/etc -->
+  <PropertyGroup Condition="'$(QuickBuild)' == 'true'">
+    <SkipHelp>true</SkipHelp>
+    <SkipNugetRestore>true</SkipNugetRestore>
+    <SkipDependencyAnalysis>true</SkipDependencyAnalysis>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <LocalBuildTasks  Include="$(LibraryToolsFolder)\RepoTasks\RepoTasks.sln" Condition="'$(NetCore)' == 'false'" />
+    <StackSolution    Include="$(LibrarySourceFolder)\StackAdmin\Stack.sln" Condition="'$(Scope)' == 'All' or '$(Scope)' == 'Stack'" />
+    <StaticAnalysis   Include=".\tools\StaticAnalysis\StaticAnalysis.sln" />
+    <StaticAnalysisNetcore   Include=".\tools\StaticAnalysis\StaticAnalysisNetcore.sln" />
+    <LocalBuildTasks  Include="$(LibraryToolsFolder)\BuildPackagesTask\Microsoft.Azure.Build.Tasks.sln" />
+    <LocalBuildTasks  Include="$(LibraryToolsFolder)\RepoTasks\RepoTasks.sln" Condition="'$(NetCore)' == 'false'" />
+  </ItemGroup>
+
+  <!-- Tasks -->
+  <UsingTask TaskName="ValidateStrongNameSignatureTask" AssemblyFile="$(BuildTasksPath)\Microsoft.Azure.Build.Tasks.dll" />
+  <UsingTask TaskName="FilterOutAutoRestLibraries" AssemblyFile="$(BuildTasksPath)\Microsoft.Azure.Build.Tasks.dll" />
+  <UsingTask TaskName="DebugTask" AssemblyFile="$(BuildTasksPath)\Microsoft.Azure.Build.Tasks.dll" />
+  <UsingTask TaskName="VerifyAuthenticodeSignatureTask" AssemblyFile="$(BuildTasksPath)\Microsoft.Azure.Build.Tasks.dll" />
+  <UsingTask TaskName="FilesChangedTask" AssemblyFile="$(BuildTasksPath)\Microsoft.Azure.Build.Tasks.dll" />
+  <UsingTask TaskName="FilterTask" AssemblyFile="$(BuildTasksPath)\Microsoft.Azure.Build.Tasks.dll" />
+  <UsingTask TaskName="SetEnvVar" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll" >
+    <ParameterGroup>
+      <EnvName ParameterType="System.String" Required="true" />
+      <EnvValue ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System" />
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[System.Environment.SetEnvironmentVariable(EnvName, EnvValue);]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <!-- CI build related -->
+  <PropertyGroup>
+    <!--OnPremiseBuildTasks is not a good name, but CI server is using that, will update across soon-->
+    <CIToolsPath>$(OnPremiseBuildTasks)</CIToolsPath>
+    <OnPremiseBuild Condition=" Exists($(OnPremiseBuildTasks)) ">true</OnPremiseBuild>
+    <OnPremiseBuild Condition=" ! Exists($(OnPremiseBuildTasks)) ">false</OnPremiseBuild>
+  </PropertyGroup>
+
+  <UsingTask Condition=" $(OnPremiseBuild) " TaskName="CorporateValidation" AssemblyFile="$(CIToolsPath)\Microsoft.WindowsAzure.Tools.Build.Tasks.OnPremise.dll" />
+  <Import Condition=" $(OnPremiseBuild) " Project="$(CIToolsPath)\Microsoft.WindowsAzure.Build.OnPremise.msbuild" />
+  <Import Project="CodeSign.targets"/>
+
+  <UsingTask AssemblyFile="$(MSBuildProjectDirectory)\packages\xunit.runner.msbuild.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.runner.msbuild.dll" TaskName="Xunit.Runner.MSBuild.xunit" />
+
+  <!-- Clean the build in all configurations -->
+  <Target Name="Clean">
+    <Message Importance="high" Text="Cleaning Cmdlets..." />
+
+    <!-- Clean out the NuGet cache -->
+    <Exec Command="dotnet nuget locals global-packages --clear" ContinueOnError="WarnAndContinue" IgnoreExitCode="true" />
+
+    <!-- Remove Package, Publish, bin, obj, and TestResults directories -->
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;Remove-Item -Path $(PackageDirectory) -Recurse -Force -Confirm:$false -ErrorAction Ignore&quot;" ContinueOnError="WarnAndContinue" IgnoreExitCode="true" />
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;Get-ChildItem -Path $(MSBuildThisFileDirectory) -Recurse -Include 'bin','obj','TestResults' | Remove-Item -Recurse -Force -Confirm:$false -ErrorAction Ignore&quot;" ContinueOnError="WarnAndContinue" IgnoreExitCode="true" />
+  </Target>
+
+  <PropertyGroup>
+    <NuGetCommand>$(MSBuildProjectDirectory)\tools\NuGet.exe</NuGetCommand>
+    <LibraryNugetPackageFolder>$(LibrarySourceFolder)\packages</LibraryNugetPackageFolder>
+    <NuGetRestoreConfigFile>$(MSBuildProjectDirectory)\NuGet.Config</NuGetRestoreConfigFile>
+    <NuGetRestoreConfigSwitch>-ConfigFile &quot;$(NuGetRestoreConfigFile)&quot;</NuGetRestoreConfigSwitch>
+    <NuGetRestorePackageSetting>-PackagesDirectory $(LibraryNugetPackageFolder)</NuGetRestorePackageSetting>
+    <NuGetLocalBuildTaskPackages>-PackagesDirectory $(LibraryToolsFolder)\BuildPackagesTask\packages</NuGetLocalBuildTaskPackages>
+    <NuGetRepoTasksPackages>-PackagesDirectory $(LibraryToolsFolder)\RepoTasks\packages</NuGetRepoTasksPackages>
+
+    <PowerShellCommand Condition=" '$(PowerShellCommand)' == '' ">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellCommand>
+    <PowerShellCoreCommand Condition=" '$(PowerShellCoreCommand)' == '' ">pwsh</PowerShellCoreCommand>
+    <!-- All PowerShell commands have this prefix  -->
+    <PowerShellCommandPrefix>&quot;$(PowerShellCommand)&quot; -NonInteractive -NoLogo -NoProfile -Command</PowerShellCommandPrefix>
+    <PowerShellCoreCommandPrefix>$(PowerShellCoreCommand) -NonInteractive -NoLogo -NoProfile -Command</PowerShellCoreCommandPrefix>
+  </PropertyGroup>
+
+  <!--
+  Force nuget package restore so that packages that include .targets files
+  don't need to be checked into source control.
+  -->
+  <Target Name="RestoreNugetPackages" Condition="$(SkipNugetRestore) == 'false'">
+    <Message Importance="high" Text="Restore Nuget packages..." />
+    <!-- Restore packages for local build tasks-->
+    <Exec Command="$(NuGetCommand) restore %(LocalBuildTasks.FullPath) $(NuGetRestoreConfigSwitch) $(NuGetRestorePackageSetting)" ContinueOnError="false" />
+  </Target>
+
+  <Target Name="FilterBuild">
+    <Exec ContinueOnError="false" Command="&quot;$(PowerShellCommand)&quot; -NonInteractive -NoLogo -NoProfile -Command &quot; . $(LibraryToolsFolder)\CreateFilterMappings.ps1 &quot;" />
+
+    <!-- Get all of the files changed in the given pull request -->
+    <FilesChangedTask RepositoryOwner="Azure" RepositoryName="azure-powershell" PullRequestNumber="$(PullRequestNumber)">
+      <Output TaskParameter="FilesChanged" ItemName="FilesChanged" />
+    </FilesChangedTask>
+
+    <!-- Get the list of modules changed -->
+    <FilterTask FilesChanged="@(FilesChanged)" MapFilePath=".\ModuleMappings.json">
+      <Output TaskParameter="Output" ItemName="ModulesChanged" />
+    </FilterTask>
+    <Message Text="Filtering help generation and StaticAnalysis by the following modules:" />
+    <Message Text="%(ModulesChanged.Identity)" />
+    <Message Text="Total: @(ModulesChanged->Count())" />
+    <Message Text="" />
+
+    <!-- Get the list of solutions to build -->
+    <FilterTask FilesChanged="@(FilesChanged)" MapFilePath=".\SolutionMappings.json">
+      <Output TaskParameter="Output" ItemName="CmdletSolutionsToBuild" />
+    </FilterTask>
+    <Message Text="Filtering solutions to build by the following:" />
+    <Message Text="%(CmdletSolutionsToBuild.Identity)" />
+    <Message Text="Total: @(CmdletSolutionsToBuild->Count())" />
+    <Message Text="" />
+
+    <!--Get the list of tests to be run based on files changed from a specified PullRequestNumber. Mapping between paths and test DLLs is used to produce the list.-->
+    <FilterTask FilesChanged="@(FilesChanged)" MapFilePath=".\TestMappings.json">
+      <Output TaskParameter="Output" ItemName="XUnitTests" />
+    </FilterTask>
+    <Message Text="Using these test assemblies:" />
+    <Message Text="%(XUnitTests.Identity)" />
+    <Message Text="Total: @(XunitTests->Count())" />
+    <Message Text="" />
+
+    <!-- Restore packages -->
+    <Exec Command="$(NuGetCommand) restore %(CmdletSolutionsToBuild.FullPath) $(NuGetRestoreConfigSwitch) $(NuGetRestorePackageSetting)" ContinueOnError="false" />
+  </Target>
+
+  <!-- Build all flavors of the Cmdlets -->
+  <!-- TODO: Reimplement the FilterBuild and update RepoTasks to NetStandard -->
+  <!-- <Target Name="Build" DependsOnTargets="RestoreNugetPackages;BuildMsBuildTask;FilterBuild"> -->
+  <Target Name="Build">
+    <Message Importance="high" Text="Building Cmdlets..." />
+    <PropertyGroup>
+      <Scope>Netcore</Scope>
+    </PropertyGroup>
+    <MakeDir Directories="$(PackageDirectory)" Condition="'$(Scope)' != 'Stack'" />
+
+    <!-- Investigate why the ChangeLogCheck target removes the 8080th character -->
+    <!-- <CallTarget targets="ChangeLogCheck" ContinueOnError="false" /> -->
+
+    <!-- Build and create package content -->
+    <Exec Command="dotnet --version" />
+    <Exec Command="dotnet new sln -n Azure.PowerShell --force" />
+    <PropertyGroup Condition="'$(ExcludeAuthenticators)' == 'true'">
+      <AuthenticatorExclusions>$(LibraryRoot)src/**/Authenticators.csproj;</AuthenticatorExclusions>
+    </PropertyGroup>
+    <ItemGroup>
+      <ModuleCsprojFiles Include="$(LibraryRoot)src/**/*.csproj" Exclude="$(AuthenticatorExclusions)$(LibraryRoot)src/**/*.Test.csproj" />
+    </ItemGroup>
+    <!-- https://stackoverflow.com/a/35477012/294804 -->
+    <ItemGroup>
+      <ModuleCsprojFilesRelative Include="@(ModuleCsprojFiles)">
+        <RelativePath>$([MSBuild]::MakeRelative($(LibraryRoot), %(ModuleCsprojFiles.FullPath)))</RelativePath>
+      </ModuleCsprojFilesRelative>
+    </ItemGroup>
+    <Exec Command="dotnet sln Azure.PowerShell.sln add @(ModuleCsprojFilesRelative->'%(RelativePath)', ' ')" />
+    <Exec Command="dotnet sln Azure.PowerShell.sln add $(LibraryRoot)tools/Tools.Common/Tools.Common.Netcore.csproj $(LibraryRoot)tools/StaticAnalysis/StaticAnalysis.Netcore.csproj $(LibraryRoot)tools/VersionController/VersionController.Netcore.csproj" />
+    <Exec Command="dotnet publish Azure.PowerShell.sln -c $(Configuration)" />
+
+
+    <!-- TODO: <REMOVE THIS SECTION> -->
+    <!-- Delete powershell runtime files -->
+    <ItemGroup>
+      <RedundantDlls Include="$(PackageDirectory)\**\publish\Microsoft.Powershell.*.dll" />
+      <RedundantDlls Include="$(PackageDirectory)\**\publish\System*.dll" Exclude="$(PackageDirectory)\**\publish\System.Security.Cryptography.ProtectedData.dll" />
+      <RedundantDlls Include="$(PackageDirectory)\**\publish\Microsoft.VisualBasic.dll" />
+      <RedundantDlls Include="$(PackageDirectory)\**\publish\Microsoft.CSharp.dll" />
+      <RedundantDlls Include="$(PackageDirectory)\**\publish\Microsoft.CodeAnalysis.dll" />
+      <RedundantDlls Include="$(PackageDirectory)\**\publish\Microsoft.CodeAnalysis.CSharp.dll" />
+    </ItemGroup>
+    <Delete Files="@(RedundantDlls->'%(FullPath)')" />
+
+    <!-- Copy content of the publish folder one folders up -->
+    <ItemGroup>
+      <PackageContent Include="$(PackageDirectory)\**\publish\*.*" />
+      <SourceFile Include="@(PackageContent)">
+        <DestinationFolder>$([System.IO.Path]::Combine('%(RelativeDir)', '..', '%(FileName)%(Extension)'))</DestinationFolder>
+      </SourceFile>
+    </ItemGroup>
+    <Copy SourceFiles="@(SourceFile->'%(FullPath)')" DestinationFiles="@(SourceFile->'%(DestinationFolder)')" SkipUnchangedFiles="true" />
+
+    <!-- Delete build artifacts -->
+    <ItemGroup>
+      <GetAllFiles Include="$(PackageDirectory)\**\publish\*.*" />
+      <Artifacts Include="@(GetAllFiles->'%(RootDir)%(Directory)'->Distinct())" />
+    </ItemGroup>
+    <RemoveDir Directories="%(Artifacts.Identity)" ContinueOnError="true" />
+    <!-- TODO: </REMOVE THIS SECTION> -->
+
+
+    <!-- Update module manifests. -->
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\UpdateModules.ps1 -BuildConfig $(Configuration) -Scope $(Scope)&quot;" Condition="'$(CodeSign)' == 'false'" ContinueOnError="false" />
+    <!-- Generate the Help -->
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;Set-Variable -Name ProgressPreference -Value 'SilentlyContinue';. $(LibraryToolsFolder)\GenerateHelp.ps1 -ValidateMarkdownHelp -GenerateMamlHelp -BuildConfig $(Configuration)&quot;" Condition="'$(SkipHelp)' == 'false' And '$(RunStaticAnalysis)' == 'true'" ContinueOnError="false" />
+
+    <Exec ContinueOnError="false"
+      Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\NewOutputTypeIndex.ps1 -OutputFile $(PackageDirectory)\outputtypes.json -BuildConfig $(Configuration) &quot;" 
+      Condition="'$(CodeSign)' == 'true'"/>
+
+    <CallTarget targets="DependencyAnalysisNetcore" ContinueOnError="ErrorAndContinue" Condition="'$(RunStaticAnalysis)' == 'true'" />
+    <Exec Command="$(PowerShellCommandPrefix) &quot;. $(LibraryToolsFolder)\CheckAssemblies.ps1 -BuildConfig $(Configuration) &quot;" Condition="'$(RunStaticAnalysis)' == 'true'" />
+
+    <!-- Cleanup extraneous files. -->
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\CleanupBuild.ps1 -BuildConfig $(Configuration)&quot;" />
+
+    <Exec ContinueOnError="false"
+          Command="$(PowerShellCoreCommandPrefix) &quot; . $(LibraryToolsFolder)\NewHelpIndex.ps1 -OutputFile $(PackageDirectory)\index.json -BuildConfig $(Configuration) &quot;" 
+          Condition="'$(CodeSign)' == 'true'"/>
+
+    <CallTarget Targets="BinScopeCheck" Condition="'$(OnPremiseBuild)'" />
+
+    <CallTarget Targets="RunPoliCheck" Condition="'$(OnPremiseBuild)'" />
+
+    <CallTarget Targets="CodeSignBinaries" Condition="'$(CodeSign)' == 'true'" />
+
+    <Exec ContinueOnError="false" Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\NewOutputTypeIndex.ps1 -OutputFile $(PackageDirectory)\outputtypes.json -BuildConfig $(Configuration)&quot;" Condition="('$(Scope)' == 'All' or '$(Scope)' == 'Latest') and $(CodeSign) == 'true'" />
+
+    <Message Importance="high" Text="Running Static Analyser" />
+    <CallTarget targets="DependencyAnalysis" ContinueOnError="ErrorAndContinue" />
+    <!-- TODO: Implement CheckAssemblies.ps1 for Az. -->
+    <!-- <Exec Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\CheckAssemblies.ps1 -BuildConfig $(Configuration) &quot;" /> -->
+
+    <Exec ContinueOnError="false" Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\NewHelpIndex.ps1 -OutputFile $(PackageDirectory)\index.json -BuildConfig $(Configuration)&quot;" Condition="('$(Scope)' == 'All' or '$(Scope)' == 'Latest') and $(CodeSign) == 'true'" />
+  </Target>
+
+  <!-- Do everything possible except Publish -->
+  <Target Name="Full" DependsOnTargets="Clean;Build;Test" />
+
+  <Target Name="BuildMsBuildTask" DependsOnTargets="RestoreNugetPackages">
+    <Message Importance="high" Text="Building RepoTasks" />
+    <MSBuild Projects="@(LocalBuildTasks)" Targets="Build" Properties="Configuration=$(Configuration);Platform=Any CPU" />
+  </Target>
+
+  <Target Name="BuildInstaller" Condition="'$(Scope)' == 'All' or '$(Scope)' == 'Latest' or '$(Scope)' == 'Netcore'">
+    <Exec Command="$(PowerShellCommandPrefix) &quot;. Register-PSRepository -Name MSIcreationrepository -SourceLocation $(PackageDirectory) -InstallationPolicy Trusted &quot; " />
+    <Exec Command="$(PowerShellCommandPrefix) &quot;. $(LibraryRoot)\setup\generate.ps1 -repository MSIcreationrepository &quot; " />
+    <Exec Command="$(PowerShellCommandPrefix) &quot;. Unregister-PSRepository -Name MSIcreationrepository &quot; " />
+    <CallTarget Targets="CodeSignInstaller" Condition=" '$(CodeSign)' == 'true'" />
+  </Target>
+
+  <!-- Run Validation -->
+  <Target Name="DependencyAnalysis" Condition="'$(SkipDependencyAnalysis)' == 'false'">
+    <Message Importance="high" Text="Running dependency analysis..." />
+
+    <PropertyGroup>
+      <SkipHelpValue Condition=" '$(SkipHelp)' == 'true' ">-s</SkipHelpValue>
+    </PropertyGroup>
+    <!-- TODO: Use '-m @(ModulesChanged)' in command when FilterBuild is fixed. -->
+    <!-- <Exec Command="dotnet $(MSBuildThisFileDirectory)artifacts/StaticAnalysis/StaticAnalysis.Netcore.dll -p $(MSBuildThisFileDirectory)artifacts/$(Configuration) -r $(MSBuildThisFileDirectory)artifacts/StaticAnalysis $(SkipHelpValue) -u" /> -->
+
+    <OnError ExecuteTargets="StaticAnalysisErrorMessage" />
+  </Target>
+
+  <!-- Run Validation -->
+  <Target Name="DependencyAnalysisNetcore"
+          Condition="'$(SkipDependencyAnalysis)' == 'false'">
+
+    <MSBuild  Projects="@(StaticAnalysisNetcore)"
+              Targets="Build"
+              Properties="Configuration=Debug;Platform=Any CPU"
+              ContinueOnError="false" />
+
+    <Message Importance="high" Text="Running dependency analysis..." />
+
+    <PropertyGroup>
+        <SkipHelpValue Condition=" '$(SkipHelp)' == 'true' ">-s</SkipHelpValue>
+    </PropertyGroup>
+    <Exec Command="dotnet $(MSBuildProjectDirectory)\artifacts\StaticAnalysis.Netcore.dll -p $(MSBuildProjectDirectory)\artifacts\$(Configuration) -r $(MSBuildProjectDirectory)\artifacts $(SkipHelpValue) -u -m @(ModulesChanged)" />
+
+    <OnError ExecuteTargets="StaticAnalysisErrorMessage"/>
+  </Target>
+
+  <Target Name="StaticAnalysisErrorMessage">
+    <Error Text="StaticAnalysis has failed. Please follow the instructions on this doc: https://github.com/Azure/azure-powershell/blob/master/documentation/Debugging-StaticAnalysis-Errors.md" />
+  </Target>
+
+  <Target Name="ChangeLogCheck">
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;. $(LibraryToolsFolder)\CheckChangeLog.ps1 -FilesChanged '@(FilesChanged)'&quot;" ContinueOnError="false" Condition=" '$(Scope)' == 'All' or '$(Scope)' == 'Latest' " />
+    <OnError ExecuteTargets="ChangeLogErrorMessage" />
+  </Target>
+
+  <Target Name="ChangeLogErrorMessage">
+    <Error Text="Modified files were found with no update to their change log. Please add a snippet to the affected modules' change log." />
+  </Target>
+
+  <!-- Publish all packages -->
+  <Target Name="Publish">
+    <Message Importance="high" Text="Publishing Cmdlets using $(Scope) scope" />
+
+    <Error Condition=" '$(NuGetKey)' == '' " Text="You must provide the NuGetKey parameter to the build: /p:NuGetKey=YOUR_PUBLISHING_KEY" />
+
+    <Exec Command="$(PowerShellCommandPrefix) &quot;. $(LibraryToolsFolder)\PublishModules.ps1 -IsNetCore:$$(NetCore) -BuildConfig $(Configuration) -Scope $(Scope) -ApiKey $(NuGetKey) -RepositoryLocation \&quot;$(NuGetPublishingSource)\&quot; &quot; -NugetExe $(NuGetCommand)"
+          Condition="'$(Scope)' != 'Stack'"
+          ContinueOnError="false" />
+
+    <CallTarget Targets="BuildInstaller" Condition="'$(Scope)' =='All' or '$(Scope)' == 'Netcore'" />
+  </Target>
+
+  <Target Name="Test">
+    <Message Importance="high" Text="Running check in tests..." />
+    <PropertyGroup Condition="'$(ExcludeAuthenticators)' == 'true'">
+      <AuthenticatorExclusions>$(LibraryRoot)src/**/Authenticators.csproj;</AuthenticatorExclusions>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(TestsToRun)' != 'All'" >
+      <CoreTests>$(LibraryRoot)src/Compute/Compute.Test/Compute.Test.csproj;$(LibraryRoot)src/Network/Network.Test/Network.Test.csproj;$(LibraryRoot)src/Resources/Resources.Test/Resources.Test.csproj;$(LibraryRoot)src/Sql/Sql.Test/Sql.Test.csproj;$(LibraryRoot)src/Websites/Websites.Test/Websites.Test.csproj;</CoreTests>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Framework)' == ''">
+        <Framework>netcoreapp2.0</Framework>
+    </PropertyGroup>
+
+    <CallTarget Targets="BinScopeCheck" Condition="'$(OnPremiseBuild)'" />
+    <CallTarget Targets="RunPoliCheck" Condition="'$(OnPremiseBuild)'" />
+
+    <Message Importance="High" Text="Creating test output directory at '$(TestOutputDirectory)'" />
+    <MakeDir Directories="$(TestOutputDirectory)" ContinueOnError="false" />
+    <Exec Command="dotnet new sln -n Azure.PowerShell --force" />
+    <ItemGroup>
+      <ModuleCsprojFiles Include="$(LibraryRoot)src/**/*.csproj" Exclude="$(AuthenticatorExclusions)" Condition="'$(TestsToRun)' == 'All'" />
+      <ModuleCsprojFiles Include="$(LibraryRoot)src/**/*.csproj" Exclude="$(AuthenticatorExclusions)$(CoreTests)" Condition="'$(TestsToRun)' == 'NonCore'" />
+      <ModuleCsprojFiles Include="$(CoreTests)" Condition="'$(TestsToRun)' == 'Core'" />
+    </ItemGroup>
+    <!-- https://stackoverflow.com/a/35477012/294804 -->
+    <ItemGroup>
+      <ModuleCsprojFilesRelative Include="@(ModuleCsprojFiles)">
+        <RelativePath>$([MSBuild]::MakeRelative($(LibraryRoot), %(ModuleCsprojFiles.FullPath)))</RelativePath>
+      </ModuleCsprojFilesRelative>
+    </ItemGroup>
+    <Exec Command="dotnet sln Azure.PowerShell.sln add @(ModuleCsprojFilesRelative->'%(RelativePath)', ' ')" />
+    <Exec Command="dotnet sln Azure.PowerShell.sln add $(LibraryRoot)tools/ScenarioTest.ResourceManager/ScenarioTest.ResourceManager.csproj $(LibraryRoot)tools/TestFx/TestFx.csproj" />
+    <!-- https://github.com/Microsoft/msbuild/issues/3157#issuecomment-378002971 -->
+    <!-- https://github.com/xunit/xunit/issues/1154#issuecomment-405366373 -->
+    <Exec Command="dotnet test Azure.PowerShell.sln --filter &quot;AcceptanceType=CheckIn%26RunType!=DesktopOnly&quot; --configuration $(Configuration) --framework netcoreapp2.0 --logger trx --results-directory &quot;$(TestOutputDirectory)&quot;" />
+
+    <OnError ExecuteTargets="TestFailureErrorMessage" />
+  </Target>
+
+  <Target Name="TestNet472">
+     <Message Importance="high" Text="Running check in tests..." />
+    <PropertyGroup>
+      <AuthExclusions>$(LibraryRoot)src/**/Authenticators.csproj;</AuthExclusions>
+      <AutomationExclusions>$(LibraryRoot)src/**/Automation.Test.csproj;</AutomationExclusions>
+      <StorageExclusions>$(LibraryRoot)src/**/Storage.Test.csproj;</StorageExclusions>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(TestOutputDirectory)" ContinueOnError="false" />
+    <Exec Command="dotnet new sln -n Azure.PowerShell --force" />
+    <ItemGroup>
+      <ModuleCsprojFiles Include="$(LibraryRoot)src/**/*.csproj" Exclude="$(AuthExclusions);$(AutomationExclusions);$(StorageExclusions)"/>
+    </ItemGroup>
+    <!-- https://stackoverflow.com/a/35477012/294804 -->
+    <ItemGroup>
+      <ModuleCsprojFilesRelative Include="@(ModuleCsprojFiles)">
+        <RelativePath>$([MSBuild]::MakeRelative($(LibraryRoot), %(ModuleCsprojFiles.FullPath)))</RelativePath>
+      </ModuleCsprojFilesRelative>
+    </ItemGroup>
+    <Exec Command="dotnet sln Azure.PowerShell.sln add @(ModuleCsprojFilesRelative->'%(RelativePath)', ' ')" />
+    <Exec Command="dotnet sln Azure.PowerShell.sln add $(LibraryRoot)tools/ScenarioTest.ResourceManager/ScenarioTest.ResourceManager.csproj $(LibraryRoot)tools/TestFx/TestFx.csproj" />
+    <!-- https://github.com/Microsoft/msbuild/issues/3157#issuecomment-378002971 -->
+    <!-- https://github.com/xunit/xunit/issues/1154#issuecomment-405366373 -->
+    <Exec Command="dotnet build Azure.PowerShell.sln --configuration $(Configuration)" />
+    <Exec Command="dotnet new console -n Net472Tests" />
+    <Exec Command="dotnet add Net472Tests package xunit.runner.console --version 2.4.0" />
+    <Exec Command="dotnet restore --packages ./artifacts/tools -f --no-cache Net472Tests" />
+    <Exec Command="$(PowerShellCommandPrefix) &quot;$(LibraryToolsFolder)/TestNet472Modules.ps1 -TestExecPath '$(LibraryArtifactsFolder)/tools/xunit.runner.console/2.4.0/tools/net472/xunit.console.exe' &quot;" />
+    <OnError ExecuteTargets="TestFailureErrorMessage" />
+ </Target>
+
+  <Target Name="TestFailureErrorMessage">
+    <Error Text="Test failures occured, check the files in artifacts/Test" />
+  </Target>
+
+  <Target Name="BinScopeCheck">
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;$(MSBuildProjectDirectory)\tools\CheckBinScope.ps1 -BuildConfig $(Configuration) -CIToolsPath $(CIToolsPath)&quot;" ContinueOnError="False" />
+    <OnError ExecuteTargets="BinScopeErrorMessage" />
+  </Target>
+
+  <Target Name="BinScopeErrorMessage">
+    <Error Text="Binscope failed, please check the files in artifacts/BinScope" />
+  </Target>
+
+  <Target Name="RunPoliCheck">
+    <Exec Command="$(PowerShellCoreCommandPrefix) &quot;$(MSBuildProjectDirectory)\tools\CheckPoliCheck.ps1 -BuildConfig $(Configuration) -CIToolsPath $(CIToolsPath)&quot;" ContinueOnError="False" />
+    <OnError ExecuteTargets="PoliCheckErrorMessage" />
+  </Target>
+
+  <Target Name="PoliCheckErrorMessage">
+    <Error Text="PoliCheck failed with a Severity 1 issue, please check the report at in artifacts/PoliCheck-Scan.html" />
+  </Target>
+
+</Project>
