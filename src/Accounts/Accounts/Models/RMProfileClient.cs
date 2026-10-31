@@ -351,6 +351,7 @@ namespace Microsoft.Azure.Commands.ResourceManager.Common
         public IAzureContext SetCurrentContext(string subscriptionNameOrId, string tenantId, string name = null)
         {
             IAzureSubscription subscription = null;
+            List<IAzureSubscription> subscriptionList = null;
             IAzureTenant tenant = null;
             Guid subscriptionId;
             IAzureContext context = new AzureContext();
@@ -363,7 +364,9 @@ namespace Microsoft.Azure.Commands.ResourceManager.Common
                 }
                 else
                 {
-                    TryGetSubscriptionByName(tenantId, subscriptionNameOrId, out subscription);
+                    TryGetSubscriptionByName(tenantId, subscriptionNameOrId, out subscriptionList);
+                    subscription = subscriptionList.FirstOrDefault(s => s.GetTenant() == s.GetHomeTenant()) ??
+                    subscriptionList.FirstOrDefault();
                 }
 
                 if (subscription == null)
@@ -412,13 +415,12 @@ namespace Microsoft.Azure.Commands.ResourceManager.Common
             return subscription != null;
         }
 
-        public bool TryGetSubscriptionByName(string tenantId, string subscriptionName, out IAzureSubscription subscription)
+        public bool TryGetSubscriptionByName(string tenantId, string subscriptionName, out List<IAzureSubscription> subscriptions)
         {
             IEnumerable<IAzureSubscription> subscriptionList = ListSubscriptions(tenantId);
             subscriptionList = subscriptionList.Where(s => s.Name.Equals(subscriptionName, StringComparison.OrdinalIgnoreCase));
-            subscription = subscriptionList.FirstOrDefault(s => s.GetTenant() == s.GetHomeTenant()) ??
-                subscriptionList.FirstOrDefault();
-            return subscription != null;
+            subscriptions = subscriptionList.ToList();
+            return subscriptions.Count != 0;
         }
 
         private IAzureSubscription GetFirstSubscription(string tenantId)
