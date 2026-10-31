@@ -40,6 +40,9 @@
 * Added support of `AdditionalNic` Property in New-AzNetworkVirtualAppliance
 * Added the new cmdlet for supporting `AdditionalNic` Property
     - 'New-AzVirtualApplianceAdditionalNicProperty'
+* Updated cmdlet to add the property of RequestBodyEnforcement, RequestBodyInspectLimitInKB  and FileUploadEnforcement 
+    - `New-AzApplicationGatewayFirewallPolicySetting`
+
 
 ## Version 5.6.0
 * Updated `New-AzLoadBalancer` and `Set-AzLoadBalancer` to validate surface level parameters for global tier load balancers

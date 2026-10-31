@@ -33,7 +33,15 @@ namespace Microsoft.Azure.Commands.Network
         [ValidateSet("Disabled", "Enabled", IgnoreCase = true)]
         [ValidateNotNullOrEmpty]
         public string State { get; set; }
-        
+
+        [Parameter(Mandatory = false, HelpMessage = "Whether allow WAF to enforce request body limits.")]
+        [ValidateNotNullOrEmpty]
+        public bool RequestBodyEnforcement { get; set; }
+
+        [Parameter(Mandatory = false, HelpMessage = "Max inspection limit in KB for request body inspection for WAF.")]
+        [ValidateNotNullOrEmpty]
+        public int RequestBodyInspectLimitInKB { get; set; }
+
         [Parameter(
             HelpMessage = "Disable Request Body check.")]
         public SwitchParameter DisableRequestBodyCheck { get; set; }
@@ -42,6 +50,10 @@ namespace Microsoft.Azure.Commands.Network
            HelpMessage = "Maximum request body size in KB.")]
         [ValidateNotNullOrEmpty]
         public int MaxRequestBodySizeInKb { get; set; }
+
+        [Parameter(Mandatory = false, HelpMessage = "Whether allow WAF to enforce file upload limits.")]
+        [ValidateNotNullOrEmpty]
+        public bool FileUploadEnforcement { get; set; }
 
         [Parameter(
            HelpMessage = "Maximum fileUpload size in MB.")]
@@ -68,6 +80,16 @@ namespace Microsoft.Azure.Commands.Network
             if (!this.MyInvocation.BoundParameters.ContainsKey("State"))
             {
                 this.State = "Enabled";
+            }
+
+            if (!this.MyInvocation.BoundParameters.ContainsKey("RequestBodyEnforcement"))
+            {
+                this.RequestBodyEnforcement = true;
+            }
+
+            if (!this.MyInvocation.BoundParameters.ContainsKey("FileUploadEnforcement"))
+            {
+                this.FileUploadEnforcement = true;
             }
 
             if (!this.MyInvocation.BoundParameters.ContainsKey("MaxRequestBodySizeInKb"))
@@ -102,8 +124,11 @@ namespace Microsoft.Azure.Commands.Network
             {
                 Mode = this.Mode,
                 State = this.State,
+                RequestBodyEnforcement = this.RequestBodyEnforcement,
+                RequestBodyInspectLimitInKB = this.RequestBodyInspectLimitInKB,
                 RequestBodyCheck = this.DisableRequestBodyCheck.IsPresent ? false : true,
                 MaxRequestBodySizeInKb = this.MaxRequestBodySizeInKb,
+                FileUploadEnforcement = this.FileUploadEnforcement,
                 FileUploadLimitInMb = this.MaxFileUploadInMb,
                 CustomBlockResponseBody = this.CustomBlockResponseBody,
                 CustomBlockResponseStatusCode = this.CustomBlockResponseStatusCode,
