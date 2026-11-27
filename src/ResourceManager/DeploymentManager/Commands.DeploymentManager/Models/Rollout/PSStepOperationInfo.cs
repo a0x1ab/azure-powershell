@@ -1,75 +1,43 @@
-﻿namespace Microsoft.Azure.Commands.DeploymentManager.Models
+﻿// ----------------------------------------------------------------------------------
+//
+// Copyright Microsoft Corporation
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// http://www.apache.org/licenses/LICENSE-2.0
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// ----------------------------------------------------------------------------------
+
+namespace Microsoft.Azure.Commands.DeploymentManager.Models
 {
-    using System;
     using Microsoft.Azure.Management.DeploymentManager.Models;
 
-    public class PSStepOperationInfo
+    public class PSStepOperationInfo : PSBaseOperationInfo
     {
-        public PSStepOperationInfo(StepOperationInfo stepOperationInfo)
+        public PSStepOperationInfo(StepOperationInfo stepOperationInfo) : base(
+            stepOperationInfo?.StartTime,
+            stepOperationInfo?.EndTime,
+            stepOperationInfo?.LastUpdatedTime,
+            stepOperationInfo?.Error)
         {
-            this.DeploymentName = stepOperationInfo.DeploymentName;
-            this.CorrelationId = stepOperationInfo.CorrelationId;
-            this.StartTime = stepOperationInfo.StartTime;
-            this.EndTime = stepOperationInfo.EndTime;
-            this.LastUpdatedTime = stepOperationInfo.LastUpdatedTime;
-            this.Error = stepOperationInfo.Error;
+            this.DeploymentName = stepOperationInfo?.DeploymentName;
+            this.CorrelationId = stepOperationInfo?.CorrelationId;
         }
 
-		/// <summary>
-		/// Gets the name of the Azure Resource Manager deployment initiated as
-		/// part of the step.
-		/// </summary>
 		public string DeploymentName
 		{
 			get;
 			private set;
 		}
 
-		/// <summary>
-		/// Gets unique identifier to track the request for ARM-based
-		/// resources.
-		/// </summary>
 		public string CorrelationId
 		{
 			get;
 			private set;
 		}
-
-		/// <summary>
-		/// Gets start time of the action in UTC.
-		/// </summary>
-		public DateTime? StartTime
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// Gets end time of the action in UTC.
-		/// </summary>
-		public DateTime? EndTime
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// Gets last time in UTC this operation was updated.
-		/// </summary>
-		public DateTime? LastUpdatedTime
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// Gets or sets the errors, if any, for the action.
-		/// </summary>
-		public CloudErrorBody Error
-		{
-			get;
-			set;
-		}
-
     }
 }
