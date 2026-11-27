@@ -21,6 +21,11 @@ namespace Microsoft.Azure.Commands.Common
 {
     using EventListenerDelegate = Func<string, CancellationToken, Func<EventArgs>, Func<string, CancellationToken, Func<EventArgs>, Task>, System.Management.Automation.InvocationInfo, string, string, string, System.Exception, Task>;
     using GetParameterDelegate = Func<string, string, System.Management.Automation.InvocationInfo, string, string, object>;
+    // The contract that the generated Stage C `Module.cs` must match:
+    // (resourceId, moduleName, invocationInfo, correlationId) -> object
+    // where the returned object is a System.Management.Automation.RuntimeDefinedParameterDictionary
+    // of the Change Safety dynamic parameters. This mirrors GetParameterDelegate minus the trailing parameter-name arg.
+    using GetDynamicParametersDelegate = Func<string, string, System.Management.Automation.InvocationInfo, string, object>;
     using TelemetryDelegate = Action<string, System.Management.Automation.InvocationInfo, string, System.Management.Automation.PSCmdlet>;
     using GetTelemetryIdDelegate = Func<string>;
     using ModuleLoadPipelineDelegate = Action<string, string, Action<Func<HttpRequestMessage, CancellationToken, Action, Func<string, CancellationToken, Func<EventArgs>, Task>, Func<HttpRequestMessage, CancellationToken, Action, Func<string, CancellationToken, Func<EventArgs>, Task>, Task<HttpResponseMessage>>, Task<HttpResponseMessage>>>, Action<Func<HttpRequestMessage, CancellationToken, Action, Func<string, CancellationToken, Func<EventArgs>, Task>, Func<HttpRequestMessage, CancellationToken, Action, Func<string, CancellationToken, Func<EventArgs>, Task>, Task<HttpResponseMessage>>, Task<HttpResponseMessage>>>>;
@@ -55,6 +60,22 @@ namespace Microsoft.Azure.Commands.Common
         /// <para>name: The <see cref="string" /> parameter name being asked for</para>
         /// </example>
         public GetParameterDelegate GetParameterValue;
+
+        /// <summary>
+        /// The contract that the generated Stage C `Module.cs` must match.
+        /// The cmdlet will call this on write-verb cmdlets to obtain the Change Safety dynamic parameters.
+        /// </summary>
+        /// <example>
+        /// <code>
+        /// public object GetDynamicParametersValue(string resourceId, string moduleName, System.Management.Automation.InvocationInfo invocationInfo, string correlationId)
+        /// </code>
+        /// <para>resourceId: <c>string</c>containing the expected resource id (ie, ARM).</para>
+        /// <para>moduleName: <c>string</c>containing the name of the module being loaded.</para>
+        /// <para>invocationInfo: The <see cref="System.Management.Automation.InvocationInfo" /> from the cmdlet</para>
+        /// <para>correlationId: The <see cref="string" /> containing the correlation id for the cmdlet</para>
+        /// <para>returns: a <see cref="System.Management.Automation.RuntimeDefinedParameterDictionary" /> of the Change Safety parameters.</para>
+        /// </example>
+        public GetDynamicParametersDelegate GetDynamicParametersValue;
 
         public GetTelemetryIdDelegate GetTelemetryId;
 
