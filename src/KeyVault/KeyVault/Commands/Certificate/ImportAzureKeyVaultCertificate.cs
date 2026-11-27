@@ -27,6 +27,9 @@ using Microsoft.WindowsAzure.Commands.Utilities.Common;
 using Microsoft.Azure.Commands.Common.Exceptions;
 using Microsoft.Azure.Commands.KeyVault.Properties;
 
+using Newtonsoft.Json;
+using System.Text.Json;
+
 namespace Microsoft.Azure.Commands.KeyVault
 {
     /// <summary>
@@ -106,7 +109,24 @@ namespace Microsoft.Azure.Commands.KeyVault
         [Parameter(Mandatory = false,
                     ParameterSetName = ImportWithPrivateKeyFromStringParameterSet,
                     HelpMessage = "Specifies the password for the certificate and private key base64 encoded string to import.")]
+        [Parameter(Mandatory = false,
+                    ParameterSetName = ImportWithPrivateKeyFromCollectionParameterSet,
+                    HelpMessage = "Specifies the password for the certificate collection and private key to import.")]
         public SecureString Password { get; set; }
+
+        /// <summary>
+        /// File Path
+        /// </summary>
+        [Parameter(Mandatory = false,
+                   ParameterSetName = ImportCertificateFromFileParameterSet,
+                   HelpMessage = "Specifies the path to the file that contains the certificate policy to import to key vault.")]
+        [Parameter(Mandatory = false,
+                    ParameterSetName = ImportWithPrivateKeyFromStringParameterSet,
+                    HelpMessage = "Specifies the path to the file that contains the certificate policy to import to key vault.")]
+        [Parameter(Mandatory = false,
+                    ParameterSetName = ImportWithPrivateKeyFromCollectionParameterSet,
+                    HelpMessage = "Specifies the path to the file that contains the certificate policy to import to key vault.")]
+        public string PolicyPath { get; set; }
 
         /// <summary>
         /// Certificate Collection
@@ -153,16 +173,22 @@ namespace Microsoft.Azure.Commands.KeyVault
                 ValidateParameters();
 
                 PSKeyVaultCertificate certBundle = null;
+                PSKeyVaultCertificatePolicy policy = null;
+                if (!string.IsNullOrEmpty(PolicyPath))
+                {
+                    policy = PSKeyVaultCertificatePolicy.FromJsonFile(PolicyPath);
+                }
 
                 switch (ParameterSetName)
                 {
                     case ImportCertificateFromFileParameterSet:
+                        
                         // Pem file can't be handled by X509Certificate2Collection in dotnet standard
                         // Just read it as raw data and pass it to service side
                         if (IsPemFile(FilePath))
                         {
                             byte[] pemBytes = File.ReadAllBytes(FilePath);
-                            certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, pemBytes, Password, Tag?.ConvertToDictionary(), Constants.PemContentType);
+                            certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, pemBytes, Password, Tag?.ConvertToDictionary(), Constants.PemContentType, certPolicy: policy);
                         }
                         else
                         {
@@ -179,8 +205,9 @@ namespace Microsoft.Azure.Commands.KeyVault
 
                             if (doImport)
                             {
+                                
                                 byte[] base64Bytes = userProvidedCertColl.Export(X509ContentType.Pfx, Password?.ConvertToString());
-                                certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, base64Bytes, Password, Tag?.ConvertToDictionary());
+                                certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, base64Bytes, Password, Tag?.ConvertToDictionary(), certPolicy:policy);
                             }
                             else
                             {
@@ -194,12 +221,12 @@ namespace Microsoft.Azure.Commands.KeyVault
                         break;
 
                     case ImportWithPrivateKeyFromCollectionParameterSet:
-                        certBundle = this.DataServiceClient.ImportCertificate(VaultName, Name, CertificateCollection, Tag?.ConvertToDictionary());
+                        certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, CertificateCollection, Password, Tag?.ConvertToDictionary(), certPolicy: policy);
 
                         break;
 
                     case ImportWithPrivateKeyFromStringParameterSet:
-                        certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, CertificateString, Password, Tag?.ConvertToDictionary(), ContentType);
+                        certBundle = this.Track2DataClient.ImportCertificate(VaultName, Name, CertificateString, Password, Tag?.ConvertToDictionary(), ContentType, certPolicy: policy);
 
                         break;
                 }
